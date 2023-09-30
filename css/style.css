@@ -13,10 +13,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg-color: #2f2f2f;
-    --main-ac-color: #000000;
+    --main-bg-color: #035fa0;
+    --main-ac-color: #080032;
     --main-txt-color: #fcfcf4;
-    --hover-bg-color: #000dff;
+    --hover-bg-color: #ce3e00;
+    --hyperlink: #ea7623;
   }
 }
 
@@ -24,8 +25,9 @@
   :root {
     --main-bg-color: rgb(168, 177, 255);
     --main-ac-color: rgb(255, 255, 255);
-    --main-txt-color: #000;
-    --hover-bg-color: #ff6a1a;
+    --main-txt-color: #13007e;
+    --hover-bg-color: #00a2ff;
+    --hyperlink: #ea7623;
   }
 }
 
@@ -40,7 +42,7 @@ body {
 }
 
 a {
-  color: var(--main-txt-color);
+  color: var(--hyperlink);
   text-decoration-line: none;
 }
 
@@ -258,7 +260,7 @@ ul.nav li.left {
 .profile img {
   margin: auto;
   max-width: var(--main-img-size);
-  border-radius: 50%;
+  border-radius: 5%;
 }
 
 .card:hover {
