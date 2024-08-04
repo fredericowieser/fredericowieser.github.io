@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fred Wieser</title>
+    <link>https://hba.sid.one/</link>
+    <description>Recent content on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hba.sid.one/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ISIC Kaggle</title>
+      <link>https://hba.sid.one/projects/isic-kaggle/</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/projects/isic-kaggle/</guid>
+      
+      <description>ISIC Kaggle Competition </description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://hba.sid.one/about/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/about/</guid>
+      
+      <description>Hi&amp;hellip; Hi, I&amp;rsquo;m Fred. I&amp;rsquo;m passionate about technology and mathematics, blending my love for problem-solving with practical applications.
+Education I hold a BSc in Theoretical Physics from University College London, where I developed a solid foundation in analytical reasoning and computational physics. My studies ignited my interest in machine learning, leading me to pursue further education in this field.
+Interests In my free time, I enjoy exploring the intersections of technology and creativity.</description>
+      
+    </item>
+    
+    <item>
+      <title>Curiculum Vitae / Résume</title>
+      <link>https://hba.sid.one/cv/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/cv/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>#2 Multi-Player ELO Systems</title>
+      <link>https://hba.sid.one/blog/makig-a-hugo-blog-copy/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/blog/makig-a-hugo-blog-copy/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>#1 Making A Hugo Blog</title>
+      <link>https://hba.sid.one/blog/makig-a-hugo-blog/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hba.sid.one/blog/makig-a-hugo-blog/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
