@@ -6,7 +6,20 @@
     <description>Recent content on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asynchronous Python</title>
+      <link>https://fredericowieser.github.io/wieserpedia/cs--swe/asynchronous-python/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://fredericowieser.github.io/wieserpedia/cs--swe/asynchronous-python/</guid>
+      
+      <description>What is Asynchronous Programming? &amp;ldquo;Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events.
+These may be &amp;ldquo;outside&amp;rdquo; events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.&amp;rdquo; - Wikipedia
+One can also think that in a way asynchronous programming is analogous to the programmer giving up control of execution to the computer.</description>
+      
+    </item>
+    
     <item>
       <title>ISIC Kaggle</title>
       <link>https://fredericowieser.github.io/projects/isic-kaggle/</link>
@@ -44,21 +57,32 @@ Interests In my free time, I enjoy exploring the intersections of technology and
     
     <item>
       <title>#2 Multi-Player ELO Systems</title>
-      <link>https://fredericowieser.github.io/blog/makig-a-hugo-blog-copy/</link>
+      <link>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/makig-a-hugo-blog-copy/</guid>
+      <guid>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</guid>
       
       <description></description>
       
     </item>
     
     <item>
-      <title>#1 Making A Hugo Blog</title>
-      <link>https://fredericowieser.github.io/blog/makig-a-hugo-blog/</link>
-      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      <title>#2 Multi-Player ELO Systems</title>
+      <link>https://fredericowieser.github.io/blog/3-building-a/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/makig-a-hugo-blog/</guid>
+      <guid>https://fredericowieser.github.io/blog/3-building-a/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://fredericowieser.github.io/wieserpedia/cs--swe/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fredericowieser.github.io/wieserpedia/cs--swe/python/</guid>
       
       <description></description>
       

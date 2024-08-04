@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://fredericowieser.github.io/wieserpedia/cs--swe/asynchronous-python/</loc>
+    <lastmod>2024-08-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://fredericowieser.github.io/wieserpedia/</loc>
     <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,23 +17,28 @@
     <loc>https://fredericowieser.github.io/cv/</loc>
     <lastmod>2023-07-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://fredericowieser.github.io/wieserpedia/cs--swe/</loc>
+    <lastmod>2023-05-25T00:00:00-06:00</lastmod>
+  </url><url>
     <loc>https://fredericowieser.github.io/wieserpedia/maths/</loc>
     <lastmod>2023-05-25T00:00:00-06:00</lastmod>
   </url><url>
-    <loc>https://fredericowieser.github.io/blog/makig-a-hugo-blog-copy/</loc>
+    <loc>https://fredericowieser.github.io/</loc>
+    <lastmod>2024-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fredericowieser.github.io/blog/3-building-a/</loc>
     <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fredericowieser.github.io/blog/</loc>
     <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fredericowieser.github.io/</loc>
-    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fredericowieser.github.io/blog/makig-a-hugo-blog/</loc>
-    <lastmod>2024-07-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://fredericowieser.github.io/projects/</loc>
     <lastmod>2024-07-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fredericowieser.github.io/wieserpedia/cs--swe/python/</loc>
   </url><url>
     <loc>https://fredericowieser.github.io/categories/</loc>
   </url><url>
