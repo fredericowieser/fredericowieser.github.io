@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asynchronous programming model (APM) (iasyncresult) on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/</link>
+    <description>Recent content in asynchronous programming model (APM) (iasyncresult) on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/overview/</link>
+      <pubDate>Tue, 14 Feb 2023 17:14:31 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/overview/</guid>
+      
+      <description>Pattern Uses two methods: BeginOperationName and EndOperationName
+BeginOperationName
+Contains the same parameters as the synchronous version of the method and two additional parameters: An AsyncCallback delegate that references a method that is called when the async op completes A user-defined object Returns an IAsyncResult IAsyncResult
+Members: AsyncState AsyncWaitHandle CompletedSynchronously IsCompleted EndOperationName
+Contains the same parameters as the synchronous counterpart and an IAsyncResult parameter The IAsyncResult passed in must be the same one that originated from the BeginOperationName method Passing other IAsyncResult objects is undefined.</description>
+      
+    </item>
+    
+    <item>
+      <title>with delegates</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/with-delegates/</link>
+      <pubDate>Fri, 17 Feb 2023 08:54:08 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/asynchronous-programming-model/with-delegates/</guid>
+      
+      <description>Overview Delegates enable calling any synchronous method in an asynchronous manner.
+How it Works The CLR automatically defines BeginInvoke and EndInvoke methods for a delegate with the appropriate signature. This can then be used like the APM model.
+BeginInvoke Has same parameters as method to be executed asynchronously, plus: an AsyncCallback delegate that references the method to be called when the async call completes a user-defined object that passes information into the callback method Returns an IAsyncResult EndInvoke If called before async call is complete, blocks calling thread until it is.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

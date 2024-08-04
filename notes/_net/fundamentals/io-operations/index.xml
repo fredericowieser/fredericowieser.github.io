@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>io operations on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/io-operations/</link>
+    <description>Recent content in io operations on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/io-operations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/io-operations/overview/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/io-operations/overview/</guid>
+      
+      <description>Abstract [Documentation] The System.IO namespace contains types to:
+Read or write files Read or modify directories Read or write data streams Compress or decompress files Communicate via pipes and serial ports Asynchronous I/O: Synchronous I/O operations block the UI thread until complete. Use asynchronous operations to prevent this.
+Overview of Types for Files/Directories Type Static or Instance methods Description File static For manipulating files, creating FileStream objects FileInfo instance For manipulating files, creating FileStream objects Directory static For manipulating directories DirectoryInfo instance For manipulating directories Path both For manipulating paths See Notes on File IO.</description>
+      
+    </item>
+    
+    <item>
+      <title>pipes</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/io-operations/pipes/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/io-operations/pipes/</guid>
+      
+      <description>Overview [Documentation] Pipes provide means for interprocess communication. There are two types:
+Anonymous pipes provide interprocess communication on a local computer. Named pipes provide interprocess communication over a network. Pipe Type Communication
+Direction Server Instances Used for communication between&amp;hellip; Implemented Via Anonymous One-way Single Threads or between parent/child processes AnonymousPipeServerStream and AnonymousPipeClientStream Named Duplex Multiple Two processes over a network NamedPipeServerStream and NamedPipeClientStream </description>
+      
+    </item>
+    
+    <item>
+      <title>error handling</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/io-operations/error-handling/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/io-operations/error-handling/</guid>
+      
+      <description>Overview [Documentation] I/O methods throw these exceptions:
+IOException — the base class of all System.IO exceptions FileNotFoundException DirectoryNotFoundException DriveNotFoundException PathTooLongException OperationCanceledException UnauthorizedAccessException I/O methods wrap calls to the underlying operating system. If an I/O error occurs in code executed by the OS, the OS returns error information to the .NET I/O method. This error maps to a .NET exception type. For example, on Windows, ERROR_FILE_NOT_FOUND (0x02) maps to FileNotFoundException. However, the precise conditions under which this mapping succeeds varies.</description>
+      
+    </item>
+    
+    <item>
+      <title>streams</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/io-operations/streams/</link>
+      <pubDate>Sat, 22 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/io-operations/streams/</guid>
+      
+      <description>Overview [Documentation] A stream is a sequence of bytes that can be read from and written to.
+Streams involve three fundamental operations:
+Read – The transfer of data from a stream into a data structure. Write – The transfer or data from a data structure into a stream. Seek – Querying and modifying the current position within a stream. Depending on a stream&amp;rsquo;s underlying data source, a stream may only support some subset of these operations.</description>
+      
+    </item>
+    
+    <item>
+      <title>file io</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/io-operations/file-io/</link>
+      <pubDate>Wed, 10 Nov 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/io-operations/file-io/</guid>
+      
+      <description>Overview of Types for Files/Directories See here.
+File &amp;amp; Directory IO All methods return void unless otherwise specified.
+Files Goal Use Check for a file File.Exists (returns bool) Copy a file File.Copy FileInfo.CopyTo (returns FileInfo) Delete a file File.Delete, FileInfo.Delete Move/rename a file File.Move, FileInfo.MoveTo Retrieve a full path Path.GetFullPath Retrieve file name and extension Path.GetFileName Retrieve a file extension Path.GetExtension Change a file extension Path.ChangeExtension Text Files Goal Use Create a text file File.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

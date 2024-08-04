@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maui on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/</link>
+    <description>Recent content in maui on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 17 Sep 2022 17:04:25 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/maui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/overview/</link>
+      <pubDate>Sat, 17 Sep 2022 17:04:25 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/overview/</guid>
+      
+      <description>Overview Multi-platform Application User Interface. Generates native code for the target device. MAUI leverages WinUI 3 (via Windows App SDK) for Windows apps. Documentation: https://learn.microsoft.com/en-us/dotnet/maui/ Documentation: https://dotnet.microsoft.com/apps/maui Cross-Platform Each supported platform (iOS, Android, macOS, Windows) has its own set of APIs. There are also cross-platform APIs (phone dialer, device info, file system, geolocation, etc) that can be used which covers all platforms. .NET for iOS — AOT compilation to produce an ARM binary (.</description>
+      
+    </item>
+    
+    <item>
+      <title>app components</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-components/</link>
+      <pubDate>Fri, 02 Sep 2022 12:24:49 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-components/</guid>
+      
+      <description>Application Class The App class is instantiated and loaded by the boostrap code for each platform. It is the model of the application as a whole. Inherits default behaviors from Microsoft.Maui.Controls.Application. Creates an instance of AppShell and assigns it to the MainPage property. Handles lifecycle events (like when the app is sent to the background). AppShell Class An AppShell:
+Describes the hierarchy of an app Provides a common navigation experience via URIs Includes an integrated search handler An AppShell derives from the Shell class and contains three main hierarchical objects:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

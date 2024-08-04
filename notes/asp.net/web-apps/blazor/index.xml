@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blazor on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/blazor/</link>
+    <description>Recent content in blazor on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/blazor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/overview/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/overview/</guid>
+      
+      <description>Overview Blazor is a server-side rendered (Server) or client-side rendered (WASM) framework for web apps. Blazor does not use a request/response model.
+Advantages:
+Create UIs in combination of HTML and C# instead of JavaScript Share server-side and client-side app logic Render UI as HTML and CSS Integrate with Docker Build hybrid desktop &amp;amp; mobile apps Blazor apps are based on Razor components—an element of UI (like a page, dialog, or form).</description>
+      
+    </item>
+    
+    <item>
+      <title>test components</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/test-components/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/test-components/</guid>
+      
+      <description>Testing with bUnit - Overview bUnit extends other unit testing frameworks (xUnit, Nunit, MSTest, etc) for Blazor-specific unit tests.
+Features includes a semantic HTML comparer so that not all possible cases must be manually tested. supports dependency injection and passing parameters testing user interactions and event handlers testing IJSRuntime testing authorization mocking an HttpClient Simple Unit Test Example public void CanUpdatePiePrice() { // Arrange var pie = new Pie() { Name = &amp;#34;Sample pie&amp;#34;, Price = 12.</description>
+      
+    </item>
+    
+    <item>
+      <title>converting to hosted wasm app</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/converting-to-hosted-wasm-app/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/converting-to-hosted-wasm-app/</guid>
+      
+      <description>Overview The existing solution contains:
+BethanysPieShopHRM.Api BethanysPieShopHRM.App BethanysPieShopHRM.Shared Presently, BethanysPieShopHRM.App is a standalone Blazor WASM app.
+This process converts it to a hosted Blazor WASM app.
+BethanysPieShopHRM.Api dotnet add package Microsoft.AspNetCore.Components.WebAssembly.Server
+Program.cs
+// ... if (app.Environment.IsDevelopment()) { app.UseWebAssemblyDebugging(); } app.UseBlazorFrameworkFiles(); // needed to serve the app app.UseStaticFiles(); // the Blazor app will be hosted as static files // ... // if an incoming request cannot be routed, re-route it to index.</description>
+      
+    </item>
+    
+    <item>
+      <title>blazor hosting models</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-hosting-models/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-hosting-models/</guid>
+      
+      <description>Overview Regardless of the hosting model chosen, the way Razor components are built is the same. The same Razor components can be used with any of the hosting models, unchanged.
+Blazor Server Hosts Razor components on the server in an ASP.NET Core app.
+UI updates are handled via a SignalR connection using WebSockets protocol The state on the server with each associated client is called a circuit Circuits can tolerate temporary network interruptions If the app is opened in multiple tabs, each tab is a separate circuit Circuits are terminated gracefully by closing a browser tab or navigating to an external URL Interrupted circuits are maintained for a configurable amount of time The runtime stays on the server: The runtime executes the C# code; sends UI requests from the browser to the server; applies UI updates to a rendered component that are sent back to the browser The client runs the Blazor script (blazor.</description>
+      
+    </item>
+    
+    <item>
+      <title>application state</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/application-state/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/application-state/</guid>
+      
+      <description>Overview Application state for the current-running instance of the application can be saved and shared between Components.
+Create some class to store state:
+public class ApplicationState { // create a property/field for each piece of data to be stored public int NumberOfMessages { get; set; } = 0; } Add the instance to DI:
+builder.Services.AddScoped&amp;lt;ApplicationState&amp;gt;(); Inject it and use it:
+[Inject] public ApplicationState? ApplicationState { get; set; } int a = ApplicationState.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

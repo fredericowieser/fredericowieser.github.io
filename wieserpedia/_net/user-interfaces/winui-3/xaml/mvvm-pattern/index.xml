@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mvvm pattern on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/</link>
+    <description>Recent content in mvvm pattern on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>executing logic in a viewmodel</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/executing-logic-in-a-viewmodel/</link>
+      <pubDate>Sun, 18 Dec 2022 20:02:53 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/executing-logic-in-a-viewmodel/</guid>
+      
+      <description>First Technique to Execute Logic in a ViewModel Bind events to methods with x:Bind
+Assume an Add method in the ViewModel that should be called every time a Button is clicked in the View:
+Okay Approach Use the Button&amp;rsquo;s Click event; install an event handler in the View&amp;rsquo;s code-behind file:
+Disadvantage: An event handler needs to be installed in the code-behind file for every method of the ViewModel that needs to be called.</description>
+      
+    </item>
+    
+    <item>
+      <title>binding visibility with x bind</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/binding-visibility-with-x-bind/</link>
+      <pubDate>Sun, 18 Dec 2022 19:48:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/binding-visibility-with-x-bind/</guid>
+      
+      <description>Bind the Visibility property with x:Bind MainViewModel.cs
+public class MainViewModel : INotifyPropertyChanged { private readonly ICustomerDataProvider _customerDataProvider; private CustomerItemViewModel? _selectedCustomer; public MainViewModel(ICustomerDataProvider customerDataProvider) { // … } public ObservableCollection&amp;lt;CustomerItemViewModel&amp;gt; Customers { get; } = new(); public CustomerItemViewModel? SelectedCustomer { get =&amp;gt; _selectedCustomer; set { if (_selectedCustomer != null) { _selectedCustomer = value; RaisePropertyChanged(); RaisePropertyChanged(nameof(IsCustomerSelected)); } } } public bool IsCustomerSelected =&amp;gt; SelectedCustomer is not null; public event PropertyChangedEventHandler? PropertyChanged; public Task LoadAsync() { // … if (customers is not null) foreach (var customer in customers) Customers.</description>
+      
+    </item>
+    
+    <item>
+      <title>x bind vs binding</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/x-bind-vs-binding/</link>
+      <pubDate>Sun, 18 Dec 2022 19:13:17 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/x-bind-vs-binding/</guid>
+      
+      <description>Overview Prefer x:Bind over Binding whenever possible.
+Binding &amp;lt;TextBlock Text={&amp;#34;Binding Path=…}&amp;#34;/&amp;gt; Resolves binding path at runtime Data Sources ElementName, Source, or RelativeSource Uses DataContext if none of the above are set x:Bind &amp;lt;TextBlock Text={&amp;#34;x:Bind Path=…}&amp;#34;/&amp;gt; Resolves binding path a compile time Creates C# code behind the scenes Data Sources Does not use data sources. Uses Root object of XAML document (an instance of the class that is specified with the x:Class attribute) Advantages of x:Bind Better performance Compile-time errors Better debugging experience (ability to step into genereated data binding code) Example with x:Bind MainWindow.</description>
+      
+    </item>
+    
+    <item>
+      <title>create another viewmodel</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/create-another-viewmodel/</link>
+      <pubDate>Wed, 14 Dec 2022 19:21:02 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/create-another-viewmodel/</guid>
+      
+      <description>Create a ViewModel for a Customer CustomerItemViewModel.cs
+public class CustomerItemViewModel : ViewModelBase { private readonly Customer _model; public CustomerItemViewModel(Customer model) { _model = model; } public int Id =&amp;gt; _model.Id; public string? FirstName { get =&amp;gt; _model.Firstname set { if (_model.Firstname != value) { _model.Firstname = value; RaisePropertyChanged(); } } } public string? LastName { get =&amp;gt; _model.Lastname set { if (_model.Lastname!= value) { _model.Lastname= value; RaisePropertyChanged(); } } } public bool IsDeveloper { get =&amp;gt; _model.</description>
+      
+    </item>
+    
+    <item>
+      <title>refactor logic into a viewmodelbase class</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/refactor-logic-into-a-viewmodelbase-class/</link>
+      <pubDate>Wed, 14 Dec 2022 19:09:48 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/refactor-logic-into-a-viewmodelbase-class/</guid>
+      
+      <description>Refactor Logic into a ViewModelBase Class Move the INotifyPropertyChanged interface into a base class so that it can be moved into other ViewModels:
+MainViewModel.cs
+public class MainViewModel : INotifyPropertyChanged { … } ViewModelBase.cs
+public class ViewModelBase : INotifyPropertyChanged { // Moved from MainViewModel: public event PropertyChangedEventHandler? PropertyChanged; // Moved from MainViewModel: // Change access modifier to protected to call this from subclasses: protected virtual void RaisePropertyChanged(string? propertyName = null) { // The sender is this MainViewModel instance; PropertyChanged?</description>
+      
+    </item>
+    
+    <item>
+      <title>notify data binding when property changes</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/notify-data-binding-when-property-changes/</link>
+      <pubDate>Wed, 14 Dec 2022 18:56:52 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/notify-data-binding-when-property-changes/</guid>
+      
+      <description>Notify the Data Binding when Property Changes Implement the INotifyPropertyChanged interface on the ViewModel:
+MainViewModel.cs
+public class MainViewModel : INotifyPropertyChanged { private readonly ICustomerDataProvider _customerDataProvider; private Customer? _selectedCustomer; // Using an interface prevents MainViewModel from being tightly coupled to DataProvider public MainViewModel(ICustomerDataProvider customerDataProvider) { … } // A collection type that notifies the data binding when items are added or removed public ObservableCollection&amp;lt;Customer&amp;gt; Customers { get; } = new(); public Customer?</description>
+      
+    </item>
+    
+    <item>
+      <title>create a viewmodel</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/create-a-viewmodel/</link>
+      <pubDate>Wed, 14 Dec 2022 18:55:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/create-a-viewmodel/</guid>
+      
+      <description>Creating New Folder &amp;gt; ViewModel; MainViewModel.cs
+MainViewModel.cs
+public class MainViewModel { private readonly ICustomerDataProvider _customerDataProvider; // Using an interface prevents MainViewModel from being tightly coupled to DataProvider public MainViewModel(ICustomerDataProvider customerDataProvider) { _customerDataProvider = customerDataProvider; } // A collection type that notifies the data binding when items are added or removed public ObservableCollection&amp;lt;Customer&amp;gt; Customers { get; } = new(); public Task LoadAsync() { if (Customers.Any()) // Customers were loaded already return; var customers = await _customerDataProvider.</description>
+      
+    </item>
+    
+    <item>
+      <title>add a property</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/add-a-property/</link>
+      <pubDate>Wed, 14 Dec 2022 18:55:12 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/add-a-property/</guid>
+      
+      <description>Add a SelectedCustomer Property This is the current state. The Text property of the TextBox is bound to the SelectedItem property of the ListView so that the FirstName of the selected customer displays in the TextBox.
+However, the binding was achieved through UI logic in XAML. The ViewModel has no idea what Customer is selected.
+To solve for this, created a SelectedCustomer property in the ViewModel and bind it to the SelectedItem in the ListView.</description>
+      
+    </item>
+    
+    <item>
+      <title>using viewmodel</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/using-viewmodel/</link>
+      <pubDate>Mon, 12 Dec 2022 20:58:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/using-viewmodel/</guid>
+      
+      <description>Using ViewModel for the MainWindow MainWindow.xaml
+&amp;lt;!-- Set a name on the grid so we can reference it in the code-behind: --&amp;gt; &amp;lt;Window … &amp;lt;Grid Background=&amp;#34;#222222&amp;#34; x:Name=&amp;#34;root&amp;#34;&amp;gt; MainWindow.xaml.cs
+public sealed partial class MainWindow : Window { public MainViewModel ViewModel { get; } public MainWindow() { this.InitializeComponent(); Title = &amp;#34;Customers App&amp;#34;; ViewModel = new MainViewModel(new CustomerDataProvider()); root.DataContext = ViewModel; // &amp;lt;— Assign the ViewModel to the DataContext root.Loaded += Root_Loaded; // &amp;lt;— Load the data of the ViewModel when the View gets loaded: } // This event handler gets called when root Grid is loaded: private async void Root_Loaded(object sender, RoutedEventArgs e) { await ViewModel.</description>
+      
+    </item>
+    
+    <item>
+      <title>mvvm pattern</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/mvvm-pattern/</link>
+      <pubDate>Mon, 12 Dec 2022 17:00:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/mvvm-pattern/mvvm-pattern/</guid>
+      
+      <description>Model View ViewModel Pattern View .xaml and corresponding .xaml.cs file Visual elements (like ListView) ViewModel This is a model that is actually made for the View (hence &amp;ldquo;ViewModel&amp;rdquo;) Contains UI logic ViewModel uses the Model The View is connected to the ViewModel via data bindings A ViewModel instance is assigned to the View&amp;rsquo;s DataContext property to enable this Usually contains a LoadAsync() method that uses the DataProvider to fill the Customers property In the View&amp;rsquo;s code-behind, create an event handler for the Loaded event.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

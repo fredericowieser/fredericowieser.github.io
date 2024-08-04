@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>probability and statistics on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/</link>
+    <description>Recent content in probability and statistics on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/data-science/probability-and-statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/overview/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/overview/</guid>
+      
+      <description>Concepts Null hypothesis A default hypothesis that a quantity to be measured is zero (null).
+The null hypothesis is true if data values are drawn from the hypothesized distribution. p-value The probability of obtaining observed, or more extreme, results when the null hypothesis is true.
+The probability that an observed difference could have just occurred by chance. A p-value near zero provides evidence against the null hypothesis. t-test A t-test automatically tests the null hypothesis that the mean value of the data is zero.</description>
+      
+    </item>
+    
+    <item>
+      <title>introduction</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/introduction/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/introduction/</guid>
+      
+      <description>Overview Notes from John Walker: https://www.fourmilab.ch/rpkp/experiments/statistics.html.
+Definitions $\sigma$ = standard deviation $\sigma^2$ = variance Permutations The number of permutations of $n$ different things taken $n$ at a time is $n!$.
+The number of permutations of $n$ different things taken $x$ at a time is $\binom{n}{x}$ and calculated as $\frac{n!}{x!(n-x)!}$ where ${n}$ and ${x}$ are positive integers.
+Flipping a Coin If a coin is flipped four times, there are 16 possible outcomes:</description>
+      
+    </item>
+    
+    <item>
+      <title>randomness</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/randomness/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/randomness/</guid>
+      
+      <description>Overview From https://www.random.org/randomness
+Randomness — that which cannot be predicted by humans.
+Pseudo-Random Number Generators (PRNGs) PRNGs are algorithms that use mathematical formulae or simply precalculated tables to produce sequences of numbers that appear random. Modern algorithms of PRNGs are so good that they look truly random.
+Using a PRNG is akin to rolling a die many times and writing down the results. The PNRG returns the next result on the list.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

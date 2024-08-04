@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">quality 7 all | Fred Wieser</title>
+<meta property="og:title" content="quality 7 all | Fred Wieser" />
+<meta name="twitter:title" content="quality 7 all | Fred Wieser" />
+<meta itemprop="name" content="quality 7 all | Fred Wieser" />
+<meta name="application-name" content="quality 7 all | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-all/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-all/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/notes/">
+                        W
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">quality 7 all</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-09-12T00:00:00-06:00" itemprop="datePublished"> 12 Sep 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># NOTE: Requires **VS2019 16.7** or later</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Rules from &#39;7.0&#39; release with &#39;All&#39; analysis mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Description: Rules with enabled-by-default state from &#39;7.0&#39; release with &#39;All&#39; analysis mode. Rules that are first released in a version later than &#39;7.0&#39; are disabled.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>is_global <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>global_level <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">-100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1000: Do not declare static members on generic types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1000.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1001: Types that own disposable fields should be disposable</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1001.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1002: Do not expose generic lists</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1002.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1003: Use generic event handler instances</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1003.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1008: Enums should have zero value</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1008.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1010: Generic interface should also be implemented</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1010.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1012: Abstract types should not have public constructors</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1012.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1016: Mark assemblies with assembly version</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1016.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1018: Mark attributes with AttributeUsageAttribute</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1018.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1019: Define accessors for attribute arguments</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1019.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1024: Use properties where appropriate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1024.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1027: Mark enums with FlagsAttribute</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1027.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1028: Enum Storage should be Int32</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1028.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1030: Use events where appropriate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1030.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1031: Do not catch general exception types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1031.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1032: Implement standard exception constructors</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1032.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1033: Interface methods should be callable by child types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1033.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1034: Nested types should not be visible</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1034.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1036: Override methods on comparable types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1036.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1040: Avoid empty interfaces</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1040.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1041: Provide ObsoleteAttribute message</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1041.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1043: Use Integral Or String Argument For Indexers</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1043.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1044: Properties should not be write only</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1044.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1046: Do not overload equality operator on reference types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1046.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1047: Do not declare protected member in sealed type</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1047.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1050: Declare types in namespaces</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1050.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1051: Do not declare visible instance fields</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1051.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1052: Static holder types should be Static or NotInheritable</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1052.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1054: URI-like parameters should not be strings</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1054.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1055: URI-like return values should not be strings</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1055.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1056: URI-like properties should not be strings</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1056.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1058: Types should not extend certain base types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1058.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1061: Do not hide base class methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1061.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1062: Validate arguments of public methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1062.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1063: Implement IDisposable Correctly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1063.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1064: Exceptions should be public</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1064.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1065: Do not raise exceptions in unexpected locations</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1065.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1066: Implement IEquatable when overriding Object.Equals</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1066.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1067: Override Object.Equals(object) when implementing IEquatable&lt;T&gt;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1067.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1068: CancellationToken parameters must come last</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1068.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1069: Enums values should not be duplicated</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1069.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1070: Do not declare event fields as virtual</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1070.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1200: Avoid using cref tags with a prefix</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1200.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1303: Do not pass literals as localized parameters</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1303.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1304: Specify CultureInfo</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1304.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1305: Specify IFormatProvider</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1305.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1307: Specify StringComparison for clarity</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1307.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1308: Normalize strings to uppercase</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1308.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1309: Use ordinal string comparison</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1309.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1310: Specify StringComparison for correctness</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1310.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1311: Specify a culture or use an invariant version</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1311.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1401: P/Invokes should not be visible</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1401.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1419: Provide a parameterless constructor that is as visible as the containing type for concrete types derived from &#39;System.Runtime.InteropServices.SafeHandle&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1419.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1421: This method uses runtime marshalling even when the &#39;DisableRuntimeMarshallingAttribute&#39; is applied</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1421.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1507: Use nameof to express symbol names</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1507.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1508: Avoid dead conditional code</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1508.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1700: Do not name enum values &#39;Reserved&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1700.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1707: Identifiers should not contain underscores</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1707.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1708: Identifiers should differ by more than case</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1708.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1710: Identifiers should have correct suffix</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1710.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1711: Identifiers should not have incorrect suffix</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1711.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1712: Do not prefix enum values with type name</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1712.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1713: Events should not have &#39;Before&#39; or &#39;After&#39; prefix</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1713.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1715: Identifiers should have correct prefix</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1715.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1716: Identifiers should not match keywords</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1716.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1720: Identifier contains type name</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1720.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1721: Property names should not match get methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1721.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1724: Type names should not match namespaces</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1724.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1725: Parameter names should match base declaration</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1725.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1727: Use PascalCase for named placeholders</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1727.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1802: Use literals where appropriate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1802.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1805: Do not initialize unnecessarily</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1805.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1806: Do not ignore method results</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1806.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1810: Initialize reference type static fields inline</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1810.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1812: Avoid uninstantiated internal classes</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1812.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1813: Avoid unsealed attributes</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1813.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1814: Prefer jagged arrays over multidimensional</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1814.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1815: Override equals and operator equals on value types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1815.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1816: Dispose methods should call SuppressFinalize</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1816.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1819: Properties should not return arrays</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1819.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1820: Test for empty strings using string length</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1820.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1821: Remove empty Finalizers</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1821.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1822: Mark members as static</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1822.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1823: Avoid unused private fields</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1823.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1824: Mark assemblies with NeutralResourcesLanguageAttribute</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1824.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1825: Avoid zero-length array allocations</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1825.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1826: Do not use Enumerable methods on indexable collections</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1826.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1827: Do not use Count() or LongCount() when Any() can be used</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1827.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1828: Do not use CountAsync() or LongCountAsync() when AnyAsync() can be used</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1828.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1829: Use Length/Count property instead of Count() when available</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1829.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1830: Prefer strongly-typed Append and Insert method overloads on StringBuilder</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1830.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1832: Use AsSpan or AsMemory instead of Range-based indexers when appropriate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1832.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1833: Use AsSpan or AsMemory instead of Range-based indexers when appropriate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1833.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1834: Consider using &#39;StringBuilder.Append(char)&#39; when applicable</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1834.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1835: Prefer the &#39;Memory&#39;-based overloads for &#39;ReadAsync&#39; and &#39;WriteAsync&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1835.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1836: Prefer IsEmpty over Count</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1836.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1837: Use &#39;Environment.ProcessId&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1837.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1838: Avoid &#39;StringBuilder&#39; parameters for P/Invokes</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1838.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1839: Use &#39;Environment.ProcessPath&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1839.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1840: Use &#39;Environment.CurrentManagedThreadId&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1840.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1841: Prefer Dictionary.Contains methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1841.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1842: Do not use &#39;WhenAll&#39; with a single task</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1842.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1843: Do not use &#39;WaitAll&#39; with a single task</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1843.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1844: Provide memory-based overrides of async methods when subclassing &#39;Stream&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1844.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1845: Use span-based &#39;string.Concat&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1845.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1846: Prefer &#39;AsSpan&#39; over &#39;Substring&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1846.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1847: Use char literal for a single character lookup</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1847.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1848: Use the LoggerMessage delegates</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1848.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1849: Call async methods when in an async method</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1849.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1850: Prefer static &#39;HashData&#39; method over &#39;ComputeHash&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1850.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1851: Possible multiple enumerations of &#39;IEnumerable&#39; collection</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1851.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1852: Seal internal types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1852.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1853: Unnecessary call to &#39;Dictionary.ContainsKey(key)&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1853.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1854: Prefer the &#39;IDictionary.TryGetValue(TKey, out TValue)&#39; method</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1854.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA1855: Prefer &#39;Clear&#39; over &#39;Fill&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA1855.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2000: Dispose objects before losing scope</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2000.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2002: Do not lock on objects with weak identity</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2002.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2007: Consider calling ConfigureAwait on the awaited task</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2007.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2008: Do not create tasks without passing a TaskScheduler</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2008.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2009: Do not call ToImmutableCollection on an ImmutableCollection value</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2009.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2011: Avoid infinite recursion</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2011.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2012: Use ValueTasks correctly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2012.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2016: Forward the &#39;CancellationToken&#39; parameter to methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2016.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2019: Improper &#39;ThreadStatic&#39; field initialization</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2019.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2020: Prevent from behavioral change</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2020.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2100: Review SQL queries for security vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2100.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2101: Specify marshaling for P/Invoke string arguments</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2101.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2109: Review visible event handlers</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2109.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2119: Seal methods that satisfy private interfaces</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2119.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2153: Do Not Catch Corrupted State Exceptions</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2153.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2201: Do not raise reserved exception types</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2201.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2207: Initialize value type static fields inline</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2207.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2208: Instantiate argument exceptions correctly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2208.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2211: Non-constant fields should not be visible</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2211.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2213: Disposable fields should be disposed</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2213.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2214: Do not call overridable methods in constructors</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2214.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2215: Dispose methods should call base class dispose</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2215.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2216: Disposable types should declare finalizer</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2216.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2217: Do not mark enums with FlagsAttribute</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2217.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2218: Override GetHashCode on overriding Equals</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2218.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2219: Do not raise exceptions in finally clauses</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2219.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2224: Override Equals on overloading operator equals</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2224.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2225: Operator overloads have named alternates</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2225.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2226: Operators should have symmetrical overloads</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2226.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2227: Collection properties should be read only</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2227.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2229: Implement serialization constructors</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2229.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2231: Overload operator equals on overriding value type Equals</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2231.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2234: Pass system uri objects instead of strings</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2234.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2235: Mark all non-serializable fields</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2235.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2237: Mark ISerializable types with serializable</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2237.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2241: Provide correct arguments to formatting methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2241.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2242: Test for NaN correctly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2242.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2243: Attribute string literals should parse correctly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2243.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2244: Do not duplicate indexed element initializations</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2244.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2245: Do not assign a property to itself</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2245.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2246: Assigning symbol and its member in the same statement</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2246.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2248: Provide correct &#39;enum&#39; argument to &#39;Enum.HasFlag&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2248.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2249: Consider using &#39;string.Contains&#39; instead of &#39;string.IndexOf&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2249.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2250: Use &#39;ThrowIfCancellationRequested&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2250.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2251: Use &#39;string.Equals&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2251.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2252: This API requires opting into preview features</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2252.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2253: Named placeholders should not be numeric values</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2253.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2254: Template should be a static expression</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2254.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2300: Do not use insecure deserializer BinaryFormatter</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2300.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2301: Do not call BinaryFormatter.Deserialize without first setting BinaryFormatter.Binder</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2301.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2302: Ensure BinaryFormatter.Binder is set before calling BinaryFormatter.Deserialize</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2302.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2305: Do not use insecure deserializer LosFormatter</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2305.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2310: Do not use insecure deserializer NetDataContractSerializer</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2310.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2311: Do not deserialize without first setting NetDataContractSerializer.Binder</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2311.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2312: Ensure NetDataContractSerializer.Binder is set before deserializing</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2312.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2315: Do not use insecure deserializer ObjectStateFormatter</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2315.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2321: Do not deserialize with JavaScriptSerializer using a SimpleTypeResolver</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2321.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2322: Ensure JavaScriptSerializer is not initialized with SimpleTypeResolver before deserializing</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2322.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2326: Do not use TypeNameHandling values other than None</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2326.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2327: Do not use insecure JsonSerializerSettings</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2327.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2328: Ensure that JsonSerializerSettings are secure</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2328.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2329: Do not deserialize with JsonSerializer using an insecure configuration</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2329.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2330: Ensure that JsonSerializer has a secure configuration when deserializing</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2330.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2350: Do not use DataTable.ReadXml() with untrusted data</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2350.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2351: Do not use DataSet.ReadXml() with untrusted data</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2351.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2352: Unsafe DataSet or DataTable in serializable type can be vulnerable to remote code execution attacks</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2352.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2353: Unsafe DataSet or DataTable in serializable type</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2353.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2354: Unsafe DataSet or DataTable in deserialized object graph can be vulnerable to remote code execution attacks</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2354.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2355: Unsafe DataSet or DataTable type found in deserializable object graph</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2355.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2356: Unsafe DataSet or DataTable type in web deserializable object graph</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2356.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2361: Ensure auto-generated class containing DataSet.ReadXml() is not used with untrusted data</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2361.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA2362: Unsafe DataSet or DataTable in auto-generated serializable type can be vulnerable to remote code execution attacks</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA2362.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3001: Review code for SQL injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3001.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3002: Review code for XSS vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3002.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3003: Review code for file path injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3003.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3004: Review code for information disclosure vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3004.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3005: Review code for LDAP injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3005.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3006: Review code for process command injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3006.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3007: Review code for open redirect vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3007.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3008: Review code for XPath injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3008.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3009: Review code for XML injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3009.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3010: Review code for XAML injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3010.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3011: Review code for DLL injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3011.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3012: Review code for regex injection vulnerabilities</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3012.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3061: Do Not Add Schema By URL</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3061.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3075: Insecure DTD processing in XML</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3075.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3076: Insecure XSLT script processing</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3076.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3077: Insecure Processing in API Design, XmlDocument and XmlTextReader</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3077.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA3147: Mark Verb Handlers With Validate Antiforgery Token</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA3147.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5350: Do Not Use Weak Cryptographic Algorithms</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5350.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5351: Do Not Use Broken Cryptographic Algorithms</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5351.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5358: Review cipher mode usage with cryptography experts</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5358.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5359: Do Not Disable Certificate Validation</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5359.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5360: Do Not Call Dangerous Methods In Deserialization</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5360.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5361: Do Not Disable SChannel Use of Strong Crypto</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5361.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5362: Potential reference cycle in deserialized object graph</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5362.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5363: Do Not Disable Request Validation</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5363.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5364: Do Not Use Deprecated Security Protocols</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5364.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5365: Do Not Disable HTTP Header Checking</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5365.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5366: Use XmlReader for &#39;DataSet.ReadXml()&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5366.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5367: Do Not Serialize Types With Pointer Fields</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5367.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5368: Set ViewStateUserKey For Classes Derived From Page</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5368.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5369: Use XmlReader for &#39;XmlSerializer.Deserialize()&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5369.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5370: Use XmlReader for XmlValidatingReader constructor</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5370.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5371: Use XmlReader for &#39;XmlSchema.Read()&#39;</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5371.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5372: Use XmlReader for XPathDocument constructor</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5372.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5373: Do not use obsolete key derivation function</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5373.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5374: Do Not Use XslTransform</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5374.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5375: Do Not Use Account Shared Access Signature</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5375.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5376: Use SharedAccessProtocol HttpsOnly</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5376.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5377: Use Container Level Access Policy</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5377.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5378: Do not disable ServicePointManagerSecurityProtocols</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5378.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5379: Ensure Key Derivation Function algorithm is sufficiently strong</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5379.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5380: Do Not Add Certificates To Root Store</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5380.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5381: Ensure Certificates Are Not Added To Root Store</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5381.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5382: Use Secure Cookies In ASP.NET Core</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5382.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5383: Ensure Use Secure Cookies In ASP.NET Core</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5383.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5384: Do Not Use Digital Signature Algorithm (DSA)</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5384.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5385: Use Rivest-Shamir-Adleman (RSA) Algorithm With Sufficient Key Size</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5385.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5386: Avoid hardcoding SecurityProtocolType value</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5386.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5387: Do Not Use Weak Key Derivation Function With Insufficient Iteration Count</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5387.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5388: Ensure Sufficient Iteration Count When Using Weak Key Derivation Function</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5388.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5389: Do Not Add Archive Item&#39;s Path To The Target File System Path</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5389.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5390: Do not hard-code encryption key</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5390.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5391: Use antiforgery tokens in ASP.NET Core MVC controllers</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5391.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5392: Use DefaultDllImportSearchPaths attribute for P/Invokes</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5392.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5393: Do not use unsafe DllImportSearchPath value</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5393.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5394: Do not use insecure randomness</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5394.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5395: Miss HttpVerb attribute for action methods</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5395.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5396: Set HttpOnly to true for HttpCookie</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5396.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5397: Do not use deprecated SslProtocols values</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5397.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5398: Avoid hardcoded SslProtocols values</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5398.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5399: HttpClients should enable certificate revocation list checks</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5399.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5400: Ensure HttpClient certificate revocation list check is not disabled</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5400.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5401: Do not use CreateEncryptor with non-default IV</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5401.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5402: Use CreateEncryptor with the default IV </span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5402.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5403: Do not hard-code certificate</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5403.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5404: Do not disable token validation checks</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5404.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># CA5405: Do not always skip token validation in delegates</span>
+</span></span><span style="display:flex;"><span>dotnet_diagnostic.CA5405.severity <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">warning</span>
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

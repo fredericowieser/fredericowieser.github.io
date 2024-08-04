@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>types on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/</link>
+    <description>Recent content in types on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>modifiers</title>
+      <link>http://localhost:1313/notes/_net/types/modifiers/</link>
+      <pubDate>Fri, 25 Nov 2022 21:11:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/modifiers/</guid>
+      
+      <description>Access Modifiers public – Access is unrestricted. private – Access is limited to this type in this assembly only. protected – Access is limited to this type or derivatives, or derivatives in a referenced assembly. internal – Access is limited to this assembly only. protected internal – Combination of protected + internal. private protected – Combination of private + protected. Modifier This Assembly (Derived Type) This Assembly (Other Type) External Assembly (Derived Type) External Assembly (Other Type) public yes yes yes yes private no no no no protected yes no yes no internal yes yes no no protected (internal) yes yes yes no private (internal) yes no no no Other Modifiers virtual – This member may be overridden in a derived type.</description>
+      
+    </item>
+    
+    <item>
+      <title>class vs struct vs record</title>
+      <link>http://localhost:1313/notes/_net/types/class-vs-struct-vs-record/</link>
+      <pubDate>Thu, 03 Nov 2022 18:41:48 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/class-vs-struct-vs-record/</guid>
+      
+      <description> Type / Feature Memory Semantics Mutability Equality Class heap reference mutable reference Record heap reference immutable value Struct stack value mutable value (inefficient) </description>
+      
+    </item>
+    
+    <item>
+      <title>equality and equivalence</title>
+      <link>http://localhost:1313/notes/_net/types/equality-and-equivalence/</link>
+      <pubDate>Wed, 16 Feb 2022 16:37:48 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/equality-and-equivalence/</guid>
+      
+      <description>Equality Comparisons Two types of Equality:
+Equivalence (value equality) Identity (reference equality) Reference Equality (Identity) Objects have the same identity (or reference equality) if they refer to the same location in memory.
+Comparisons Use ReferenceEquals:
+areEqual = Object.ReferenceEquals(var1, var2); Notes Never test for reference equality on strings. Although string is a reference type, its equality operators have been overridden to make them behave like value types.
+Value Equality (Equivalence) Objects have the same equivalence (or value equality) based on abstract definitions.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

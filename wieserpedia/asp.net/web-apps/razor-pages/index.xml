@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>razor pages on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/</link>
+    <description>Recent content in razor pages on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/overview/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/overview/</guid>
+      
+      <description>Overview Use Razor Pages for coding page-focused scenarios more productively than using Controllers and Views.
+ASP.NET Core Razor Pages can co-exist in the same project with ASP.NET Core MVC.
+Project type = ASP.NET Core Web App (webapp, razor)
+Enabling Razor Pages Like so:
+// … builder.Services.AddRazorPages(); // Adds services for Razor Pages to the app // … // Routing in Razor Pages is different from MVC. This method registers Razor Pages as endpoints in IEndpointRouteBuilder: app.</description>
+      
+    </item>
+    
+    <item>
+      <title>routing</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/routing/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/routing/</guid>
+      
+      <description>Overview Routing in Razor Pages is file-based. URLs are routed to pages based on their location in the filesystem:
+URL Path / or /Index /Pages/Index.cshtml /Contact /Pages/Contact.cshtml /Store or /Store/Index.html /Pages/Store/Index.cshtml URL Maps to this Razor page www.example.com Pages/Index.cshtml www.example.com/index Pages/Index.cshtml www.example.com/products Pages/Products/Index.cshtml www.example.com/products/create Pages/Products/Create.cshtml </description>
+      
+    </item>
+    
+    <item>
+      <title>razor pages contact us form</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/razor-pages-contact-us-form/</link>
+      <pubDate>Wed, 19 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/razor-pages-contact-us-form/</guid>
+      
+      <description>Overview In Program.cs:
+builder.Services.AddDbContext&amp;lt;CustomerDbContext&amp;gt;(options =&amp;gt; options.UseInMemoryDatabase(&amp;#34;name&amp;#34;)); The data model using System.ComponentModel.DataAnnotations; namespace RazorPagesContacts.Models { public class Customer { public int Id { get; set; } [Required, StringLength(10)] public string? Name { get; set; } } } The database context using Microsoft.EntityFrameworkCore; namespace RazorPagesContacts.Data { public class CustomerDbContext : DbContext { public CustomerDbContext (DbContextOptions&amp;lt;CustomerDbContext&amp;gt; options) : base(options) { } public DbSet&amp;lt;RazorPagesContacts.Models.Customer&amp;gt; Customer =&amp;gt; Set&amp;lt;RazorPagesContacts.Models.Customer&amp;gt;(); } } The view Pages/Customers/Create.cshtml
+@page @model RazorPagesContacts.</description>
+      
+    </item>
+    
+    <item>
+      <title>partial views</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/partial-views/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/partial-views/</guid>
+      
+      <description>Overview In Razor Pages, Partial Views work like they do in MVC.</description>
+      
+    </item>
+    
+    <item>
+      <title>pagemodel</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/pagemodel/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/pagemodel/</guid>
+      
+      <description>PageModel Razor Pages use a C# class called PageModel to:
+define data properties and associated operations for that model&amp;rsquo;s Razor page define page handlers (like OnGet) for requests sent to that page PageModel supports keeping all page-specifc logic and properties in their own namespace &amp;amp; directory.
+A Page with a PageModel Pages/Index2.cshtml
+@page @using RazorPagesIntro.Pages @model Index2Model &amp;lt;h2&amp;gt;Separate page model&amp;lt;/h2&amp;gt; &amp;lt;p&amp;gt; @Model.Message &amp;lt;/p&amp;gt; That page&amp;rsquo;s code-behind: Pages/Index2.cshtml.cs
+using Microsoft.AspNetCore.Mvc.RazorPages; using Microsoft.</description>
+      
+    </item>
+    
+    <item>
+      <title>razor tag helpers</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/razor-tag-helpers/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/razor-tag-helpers/</guid>
+      
+      <description>Overview Tag Helpers extend standard HTML elements. They provide extra server-side attributes for an HTML element.
+Partial Tag Helper Asynchronously renders a partial view.
+Note that the name attribute accepts the partial view&amp;rsquo;s name without its file extension:
+&amp;lt;partial name=&amp;#34;_ValidationScriptsPartial&amp;#34; /&amp;gt; This is equivalent to Razor HTML Helper syntax:
+@{await Html.RenderPartialAsync(&amp;#34;_ValidationScriptsPartial&amp;#34;);} Label Tag Helper Extends the HTML &amp;lt;label&amp;gt; element: The asp-for attribute accepts a PageModel property. The value of the PageModel&amp;rsquo;s Name property will be rendered as the content for the element.</description>
+      
+    </item>
+    
+    <item>
+      <title>scaffolding</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/scaffolding/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/razor-pages/scaffolding/</guid>
+      
+      <description>Overview A model can be scaffolded so that the scaffolding tool creates the CRUD operations for that model:
+Under Pages/ add a folder for the model being scaffolded Right-click that folder &amp;gt; Add &amp;gt; New scaffolded item &amp;gt; Razor Pages using Entity Framework (CRUD) &amp;gt; Select a Model class &amp;gt; select + button in Data context class In lab-tutorial-razor-pages, this creates /Pages/Movies/Create.cshtml, /Delete.cshtml, /Details.cshtml, and /Edit.cshtml</description>
+      
+    </item>
+    
+  </channel>
+</rss>

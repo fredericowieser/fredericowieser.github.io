@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>architecture decision records on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/</link>
+    <description>Recent content in architecture decision records on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/overview/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/overview/</guid>
+      
+      <description>Abstract An architecture decision record (ADR) is a document that captures an important architecture decision made over the course of developing a system along with its context and consequences.
+Templates Simple From https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/templates/decision-record-template-by-michael-nygard/index.md
+Balanced From https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/templates/decision-record-template-madr/index.md
+Detailed From https://github.com/joelparkerhenderson/architecture-decision-record/blob/main/templates/decision-record-template-by-jeff-tyree-and-art-akerman/index.md
+Examples See https://github.com/joelparkerhenderson/architecture-decision-record/tree/main/examples/.</description>
+      
+    </item>
+    
+    <item>
+      <title>template balanced</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-balanced/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-balanced/</guid>
+      
+      <description>[short title of solved problem and solution] Status: [proposed | rejected | accepted | deprecated | … | superseded by ADR-0005] Deciders: [list everyone involved in the decision] Date: [YYYY-MM-DD when the decision was last updated] Technical Story: [description | ticket/issue URL] Context and Problem Statement [Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.</description>
+      
+    </item>
+    
+    <item>
+      <title>template detailed</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-detailed/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-detailed/</guid>
+      
+      <description>Issue Describe the architectural design issue you’re addressing, leaving no questions about why you’re addressing this issue now. Following a minimalist approach, address and document only the issues that need addressing at various points in the life cycle.
+Decision Clearly state the architecture’s direction—that is, the position you’ve selected.
+Status The decision’s status, such as pending, decided, or approved.
+Group You can use a simple grouping—such as integration, presentation, data, and so on—to help organize the set of decisions.</description>
+      
+    </item>
+    
+    <item>
+      <title>template simple</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-simple/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/architecture-decision-records/template-simple/</guid>
+      
+      <description>Title Status What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+Context What is the issue that we&amp;rsquo;re seeing that is motivating this decision or change?
+Decision What is the change that we&amp;rsquo;re proposing and/or doing?
+Consequences What becomes easier or more difficult to do because of this change?</description>
+      
+    </item>
+    
+  </channel>
+</rss>

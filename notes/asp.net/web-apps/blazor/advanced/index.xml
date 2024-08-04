@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>advanced on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/blazor/advanced/</link>
+    <description>Recent content in advanced on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/blazor/advanced/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js interop</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/advanced/js-interop/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/advanced/js-interop/</guid>
+      
+      <description>Overview .NET can invoke JavaScript and vice-versa. IJSRuntime is automatically registered as a service by the Blazor framework. Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-7.0 https://learn.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/call-javascript-from-dotnet?view=aspnetcore-7.0 Warning: JavaScript code must only be executed after the Component is fully rendered. Invoke JavaScript from the OnAfterRenderAsync method.
+Prerendering Invoking JavaScript is not possible during prerendering.
+JavaScript Locations In &amp;lt;body&amp;gt; markup Place the JavaScript inside the closing &amp;lt;/body&amp;gt; element of wwwroot/index.html (Blazor WASM) or Pages/_Host.cshtml (Blazor Server):
+&amp;lt;body&amp;gt; .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

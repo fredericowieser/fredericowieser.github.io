@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asynchronous programming on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/</link>
+    <description>Recent content in asynchronous programming on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 16 Feb 2022 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/overview/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/overview/</guid>
+      
+      <description>Abstract [Documentation] [Documentation] Asynchronous programming allows for the execution of long-running operations that do not block the main thread.
+Concepts:
+Synchronous operations complete sequentially; the next task does not start until the previous finishes. Asynchronous operations allow for starting a task then, while waiting for that task to finish, starting another. Parallel operations use multiple threads to execute several asynchronous tasks. They are deterministic: the order in which the tasks will complete is known.</description>
+      
+    </item>
+    
+    <item>
+      <title>async</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/async/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/async/</guid>
+      
+      <description>Overview [Documentation] The async modifier specifies that a method, lambda, or anonymous method is asynchronous.
+An async method runs synchronously until it reaches an await expression. At this point, the method is suspended until the awaited task is complete. In the meantime, control returns to the caller of the async method. An async method does not run on their own thread by default. Behind the scenes, the the C# compiler transforms the method into a state machine.</description>
+      
+    </item>
+    
+    <item>
+      <title>threads</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/threads/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/threads/</guid>
+      
+      <description>Overview Object –&amp;gt; CriticalFinalizerObject –&amp;gt; Thread
+Creates and controls a thread, sets its priority, and gets its status. Documentation: https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread?view=net-6.0 Synchronizing Access to Shared Resources Monitor Synchronize access to objects.
+The Monitor class allows you to synchronize access to a region of code by taking and releasing a lock on a particular object by calling the Monitor.Enter, Monitor.TryEnter, and Monitor.Exit methods. You can also use the Monitor class to ensure that no other thread is allowed to access a section of application code being executed by the lock owner, unless the other thread is executing the code using a different locked object.</description>
+      
+    </item>
+    
+    <item>
+      <title>processing tasks</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/processing-tasks/</link>
+      <pubDate>Wed, 23 Nov 2022 10:36:13 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/processing-tasks/</guid>
+      
+      <description>Processing Tasks as They Complete [Documentation] Task.WhenAny allows for starting multiple tasks at the same time and processing them one by one in the order in which they complete instead of the order in which they are started.
+static async Task SumPageSizesAsync() { var stopwatch = Stopwatch.StartNew(); IEnumerable&amp;lt;Task&amp;lt;int&amp;gt;&amp;gt; downloadTasksQuery = from url in s_urlList select ProcessUrlAsync(url, s_client); // Start each Task since LINQ uses deferred execution otherwise: List&amp;lt;Task&amp;lt;int&amp;gt;&amp;gt; downloadTasks = downloadTasksQuery.</description>
+      
+    </item>
+    
+    <item>
+      <title>task</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task/</link>
+      <pubDate>Wed, 23 Nov 2022 09:58:39 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task/</guid>
+      
+      <description>Overview In C#, Thread and Task are both types used for asynchronous operations. Task is a higher level of abstraction than Thread.
+System.Threading.Tasks contains types for writing concurrent and asynchronous code.
+TaskFactory — static methods for creating and starting tasks. TaskScheduler — thread scheduling infrastructure. Task — a wrapper around a thread that enables easier management. System.Threading.Tasks.Extensions.ValueTask is a lightweight implementation of a generalized task-returning value.
+Task and Task&amp;lt;T&amp;gt; [Documentation] Task represents a single asynchronous operation that does not return a value.</description>
+      
+    </item>
+    
+    <item>
+      <title>continuations</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/continuations/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/continuations/</guid>
+      
+      <description>Continuations A continuation task (continuation) is an async task that is invoked by another task (the antecedent) when the antecedent finishes. Continuations allow descendant operations to consume the results of an ancestor. In this way, you can chain tasks. A continuation is created in the WaitingForActivation state and activated automatically when its antecedent task completes. Blocking Continuations, like any Task, do not block the current thread.
+To block until a continuation finishes, call Task.</description>
+      
+    </item>
+    
+    <item>
+      <title>parallel async io</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/parallel-async-io/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/parallel-async-io/</guid>
+      
+      <description>Parallel Asynchronous I/O Simple Example public async Task SimpleParallelWriteAsync() { string folder = Directory.CreateDirectory(&amp;#34;tempfolder&amp;#34;).Name; IList&amp;lt;Task&amp;gt; writeTaskList = new List&amp;lt;Task&amp;gt;(); for (int index = 11; index &amp;lt;= 20; ++ index) { string fileName = $&amp;#34;file-{index:00}.txt&amp;#34;; string filePath = $&amp;#34;{folder}/{fileName}&amp;#34;; string text = $&amp;#34;In file {index}{Environment.NewLine}&amp;#34;; writeTaskList.Add(File.WriteAllTextAsync(filePath, text)); } await Task.WhenAll(writeTaskList); // This will write all 10 files in parallel. } Fine Control Example public async Task ProcessMultipleWritesAsync() { IList&amp;lt;FileStream&amp;gt; sourceStreams = new List&amp;lt;FileStream&amp;gt;(); try { string folder = Directory.</description>
+      
+    </item>
+    
+    <item>
+      <title>async io</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/async-io/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/async-io/</guid>
+      
+      <description>Async Async reduces the need for threads in server-based applications. If the app uses a dedicated thread per response and 1,000 requests are handled simultaneously, 1,000 threads are needed. Async operations don&amp;rsquo;t need to use a thread during the wait. They use the existing I/O completion thread briefly at the end.
+Asynchronous I/O – Writing Write Example public async Task SimpleWriteAsync() { string filePath = &amp;#34;simple.txt&amp;#34;; string text = $&amp;#34;Hello World&amp;#34;; await File.</description>
+      
+    </item>
+    
+    <item>
+      <title>await</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/await/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/await/</guid>
+      
+      <description>Await The await keyword marks a point where the method cannot continue until the awaited async operation is complete.
+It suspends this method and yields control back to the caller until then. It signs up the rest of the method as a continuation. It does not run on its own thread (unless called via Task.Run()). Example
+async Task&amp;lt;int&amp;gt; GetTaskOfResultAsync() { int hours = 0; await Task.Delay(0); return hours; } // This calls the async method: Task&amp;lt;int&amp;gt; returnedTaskTResult = GetTaskOfResultAsync(); // This awaits the Task that the method returns and &amp;#34;unwraps&amp;#34; the int it holds: int intResult = await returnedTaskTResult; Awaiting Task.</description>
+      
+    </item>
+    
+    <item>
+      <title>cancellation</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/cancellation/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/cancellation/</guid>
+      
+      <description>Overview Cancellation allows asynchronous or long-running operations to stop cleanly.
+Some objects invoke long-running, cancelable operations. These objects can pass a CancellationToken to those downstream operation. Downstream operations can pass that same token to other operations. When the cancellation token is invoked, it is a cancellation request; it means that the operation should stop as soon as possible after any required cleanup is performed. A single token can cancel multiple asynchronous invocations.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web development on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/</link>
+    <description>Recent content in web development on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github flavored markdown</title>
+      <link>http://localhost:1313/wieserpedia/web-development/github-flavored-markdown/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/github-flavored-markdown/</guid>
+      
+      <description>Overview GitHub-Flavored Markdown is an extended markdown syntax by GitHub.
+Collapsible Sections &amp;lt;details&amp;gt;&amp;lt;summary&amp;gt;CLICK ME&amp;lt;/summary&amp;gt; &amp;lt;p&amp;gt; #### We can hide anything, even code! ```ruby puts &amp;#34;Hello World&amp;#34; \``` &amp;lt;/p&amp;gt; &amp;lt;/details&amp;gt; CLICK ME We can hide anything, even code! puts &amp;#34;Hello World&amp;#34; Code Blocks See also: linguist/languages.yml at master · github/linguist
+``` function test() { console.log(&amp;#34;notice the blank line before this function?&amp;#34;); } ``` Syntax Highlighting ```ruby require &amp;#39;redcarpet&amp;#39; markdown = Redcarpet.new(&amp;#34;Hello World!</description>
+      
+    </item>
+    
+  </channel>
+</rss>

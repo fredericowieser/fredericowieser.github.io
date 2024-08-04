@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generative ai on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/data-science/ai/generative-ai/</link>
+    <description>Recent content in generative ai on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/data-science/ai/generative-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>large language models</title>
+      <link>http://localhost:1313/wieserpedia/data-science/ai/generative-ai/large-language-models/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/ai/generative-ai/large-language-models/</guid>
+      
+      <description>Overview Large Language Model — A generative AI model that receives natural language text as input and generates text as output.
+Components neural network parameters weights tuning Input and Output Prompts The input of the large language model.
+A prompt may be an instruction specifying the type of output is expected of the model. Example instructions: Summarizing a text (&amp;ldquo;Summarize the following and extract insights&amp;rdquo;) Creative ideation and design (&amp;ldquo;Write an assignment for high school students including four open-ended questions about Louis XIV and his court&amp;rdquo;) Q&amp;amp;A (&amp;ldquo;Who is Louis XIV and why is he an important historical character?</description>
+      
+    </item>
+    
+  </channel>
+</rss>

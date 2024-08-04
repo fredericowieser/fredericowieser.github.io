@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/testing/</link>
+    <description>Recent content in testing on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/testing/overview/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/overview/</guid>
+      
+      <description>Abstract [Documentation] .NET supports various testing paradigms.
+Types of Tests Unit tests — test individual components or methods (&amp;ldquo;units of work&amp;rdquo;). They only test code within the developer&amp;rsquo;s control and not infrastructure. Integration tests — tests two or more components&amp;rsquo; ability to function together (their &amp;ldquo;integration&amp;rdquo;). Load tests — tests whether a system can handle a specified load. Testing Frameworks xUnit — free; open-source; a project of the .NET Foundation. NUnit — ported from JUnit; a project of the .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

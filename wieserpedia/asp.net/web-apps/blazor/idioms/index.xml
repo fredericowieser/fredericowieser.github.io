@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idioms on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/idioms/</link>
+    <description>Recent content in idioms on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/idioms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pagination</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/idioms/pagination/</link>
+      <pubDate>Sat, 20 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/idioms/pagination/</guid>
+      
+      <description>From Pluralsight/Building a Data-driven ASP.NET Core 6 Blazor Server Application with EF Core
+Overview Pagination allows you to limit the number of results you return per page and allows the user to request more results by specifying a page number.
+Implement Pagination Implementing pagination functionality involves:
+Counting the total number of records the Component has Specifying the number of records to show per page Using the above, counting the total number of pages (pages = records / recordsPerPage) Updating the logic to account for invalid page requests such as 0 or a number greater than the total number of pages Updating the page routes to include a pagination parameter EmployeeOverview.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

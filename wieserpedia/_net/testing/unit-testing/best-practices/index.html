@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">best practices | Fred Wieser</title>
+<meta property="og:title" content="best practices | Fred Wieser" />
+<meta name="twitter:title" content="best practices | Fred Wieser" />
+<meta itemprop="name" content="best practices | Fred Wieser" />
+<meta name="application-name" content="best practices | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/testing/unit-testing/best-practices/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/testing/unit-testing/best-practices/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">best practices</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-10-22T00:00:00-06:00" itemprop="datePublished"> 22 Oct 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usdotnetcoretestingunit-testing-best-practices">Overview [<a href="https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices">Documentation</a>]</h1>
+<p>Use these best practices when developing unit tests.</p>
+<h2 id="avoid-dependencies-in-unit-tests">Avoid Dependencies in Unit Tests</h2>
+<p>Use dependency injection and the <a href="https://deviq.com/explicit-dependencies-principle">Explicit Dependencies Principle</a>.</p>
+<h2 id="naming-tests">Naming Tests</h2>
+<p>Tests should have a 3-part name: {MethodBeingTested}{ScenarioToTest}{ExpectedBehavior}. Consider:</p>
+<p><r>Bad</r>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Test_Single() { <span style="color:#8b949e;font-style:italic">/* ... */</span> }
+</span></span></code></pre></div><p><g>Good</g>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Add_SingleNumber_ReturnsSameNumber() { <span style="color:#8b949e;font-style:italic">/* ... */</span> }
+</span></span></code></pre></div><h2 id="arrange-act-assert">Arrange, Act, Assert</h2>
+<ol>
+<li><em>Arrange</em> the objects by creating them and setting them up as necessary.</li>
+<li><em>Act</em> on an object.</li>
+<li><em>Assert</em> that something is expected.</li>
+</ol>
+<p>Consider:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Add_EmptyString_ReturnsZero()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> stringCalculator = <span style="color:#ff7b72">new</span> StringCalculator();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> actual = stringCalculator.Add(<span style="color:#a5d6ff">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex;"><span>    Assert.Equal(<span style="color:#a5d6ff">0</span>, actual);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="avoid-multiple-acts">Avoid Multiple &lsquo;Act&rsquo;s</h2>
+<p>One act per test makes it clear which act is failing and ensures the test is only focused on a single case.</p>
+<h2 id="write-minimally-passing-tests">Write Minimally Passing Tests</h2>
+<p>The input to the unit test should be the simplest possible input that verifies the expected behavior.<br>
+For example, use 0 as input to some method instead of some other number when 0 would verify the behavior of that method.</p>
+<h2 id="avoid-magic-strings">Avoid Magic Strings</h2>
+<p>Use constants instead.<br>
+<r>Bad</r>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Add_BigNumber_ThrowsException()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> stringCalculator = <span style="color:#ff7b72">new</span> StringCalculator();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Action actual = () =&gt; stringCalculator.Add(<span style="color:#a5d6ff">&#34;1001&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Throws&lt;OverflowException&gt;(actual);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><g>Good</g>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">void</span> Add_MaximumSumResult_ThrowsOverflowException()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> stringCalculator = <span style="color:#ff7b72">new</span> StringCalculator();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">const</span> <span style="color:#ff7b72">string</span> MAXIMUM_RESULT = <span style="color:#a5d6ff">&#34;1001&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Action actual = () =&gt; stringCalculator.Add(MAXIMUM_RESULT);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Throws&lt;OverflowException&gt;(actual);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="avoid-logic-and-flow-control">Avoid Logic and Flow Control</h2>
+<p>Avoid <code>if</code>, <code>while</code>, <code>for</code>, <code>switch</code>, etc, to avoid introducing bugs in a unit test. If logic is required,
+consider splitting up the test into multiple tests.</p>
+<h2 id="prefer-helper-methods-over-setup-and-teardown-methods">Prefer Helper Methods over Setup and Teardown Methods</h2>
+<p>This improves readability and avoids sharing state between tests.</p>
+<p><r>Bad</r>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> StringCalculator stringCalculator;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> StringCalculatorTests()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    stringCalculator = <span style="color:#ff7b72">new</span> StringCalculator();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Add_TwoNumbers_ReturnsSumOfNumbers()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This instance of StringCalculator is from shared state in the test class:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> result = stringCalculator.Add(<span style="color:#a5d6ff">&#34;0,1&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Equal(<span style="color:#a5d6ff">1</span>, result);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><g>Good</g>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">private</span> StringCalculator CreateDefaultStringCalculator()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">new</span> StringCalculator();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Add_TwoNumbers_ReturnsSumOfNumbers()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Uses a helper method to create a StringCalculator:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> stringCalculator = CreateDefaultStringCalculator();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> actual = stringCalculator.Add(<span style="color:#a5d6ff">&#34;0,1&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Equal(<span style="color:#a5d6ff">1</span>, actual);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="validate-private-methods-by-unit-testing-public-methods">Validate Private Methods by Unit Testing Public Methods</h2>
+<p>Since private methods are an implementation detail, the only result that matters is whether the public method
+that uses the private method validates.</p>
+<h2 id="stub-static-references">Stub Static References</h2>
+<p>Consider the scenario where production code includes calls to static references (like <code>DateTime.Now</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> GetDiscountedPrice(<span style="color:#ff7b72">int</span> price)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> price / <span style="color:#a5d6ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> price;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To solve for this, wrap the code that needs to be controlled in an interface and have the production code
+depend on that interface:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">interface</span> <span style="color:#f0883e;font-weight:bold">IDateTimeProvider</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    DayOfWeek DayOfWeek();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> GetDiscountedPrice(<span style="color:#ff7b72">int</span> price, IDateTimeProvider dateTimeProvider)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> price / <span style="color:#a5d6ff">2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> price;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The test suite can now be created:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> GetDiscountedPrice_NotTuesday_ReturnsFullPrice()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> priceCalculator = <span style="color:#ff7b72">new</span> PriceCalculator();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> dateTimeProviderStub = <span style="color:#ff7b72">new</span> Mock&lt;IDateTimeProvider&gt;();
+</span></span><span style="display:flex;"><span>    dateTimeProviderStub.Setup(dtp =&gt; dtp.DayOfWeek()).Returns(DayOfWeek.Monday);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> actual = priceCalculator.GetDiscountedPrice(<span style="color:#a5d6ff">2</span>, dateTimeProviderStub);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Equals(<span style="color:#a5d6ff">2</span>, actual);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> priceCalculator = <span style="color:#ff7b72">new</span> PriceCalculator();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> dateTimeProviderStub = <span style="color:#ff7b72">new</span> Mock&lt;IDateTimeProvider&gt;();
+</span></span><span style="display:flex;"><span>    dateTimeProviderStub.Setup(dtp =&gt; dtp.DayOfWeek()).Returns(DayOfWeek.Tuesday);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> actual = priceCalculator.GetDiscountedPrice(<span style="color:#a5d6ff">2</span>, dateTimeProviderStub);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Assert.Equals(<span style="color:#a5d6ff">1</span>, actual);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

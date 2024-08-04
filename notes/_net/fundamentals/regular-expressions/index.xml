@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regular expressions on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/regular-expressions/</link>
+    <description>Recent content in regular expressions on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/regular-expressions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>regular expressions</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/regular-expressions/overview/</link>
+      <pubDate>Sat, 22 Jan 2022 08:22:40 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/regular-expressions/overview/</guid>
+      
+      <description>Abstract [Documentation] The .NET regular expression engine is a backtracking regular expression matcher. It employs a nondeterministic finite automation (NFA) engine like that used in Perl, Python, and other languages.
+Regex Engine Type [more information] Examples Processing driven by&amp;hellip; Guaranteed to find longest match possible May test same character twice Supports backtracking Can match backreferences Can capture sub-expressions Deterministic Finite Automation .NET, Perl, Python, Tcl Input string Yes No (faster) No No No Traditional Nondeterministic Finite Automation awk, egrep, lex Regular expression pattern No Yes (slower) Yes Yes Yes POSIX Nondeterministic Finite Automation N/A Regular expression pattern Yes Yes (slowest) Yes Yes Yes In .</description>
+      
+    </item>
+    
+    <item>
+      <title>constructs</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/regular-expressions/constructs/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/regular-expressions/constructs/</guid>
+      
+      <description>Abstract These notes contain various .NET regular expression constructs used for forming regular expressions.
+Anchors Anchors cause a match to succeed or fail depending on the current position, but do not advance through the string.
+Anchor Match must… Example Matches ^ or \A start at beginning of string $ or \Z occur at the end of the string or before the \n \z occur at the end of the string \G occur at point where previous match ended \G\d\ &amp;ldquo;(1)&amp;rdquo; &amp;ldquo;(3)&amp;rdquo; &amp;ldquo;(5)&amp;rdquo; in (1)(3)(5)[7](9) \b occur on a boundary between a \w and a \W character \B NOT occur on a \b boundary Character Escapes Escaped char Matches \a Bell character \b Backspace \t Tab \r Carriage return (note: this is not the same as \n) \v Vertical tab \f Form feed \n Newline \e Escape key (\u001b) \\ Back slash Character Classes Class Matches any single… [ae] character in the group (case-sensitive) [^aei] character NOT in the group (case-sensitive) [A-Z] character in the range .</description>
+      
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/regular-expressions/performance/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/regular-expressions/performance/</guid>
+      
+      <description>Regular Expression Engine Performance Considerations There are five techniques for coupling the regex engine to a regex pattern:
+Instantiate a RegEx object (interpreted regular expressions) Call a static pattern-matching method (interpreted) Instantiate a RegEx object with the Compiled option (compiled regular expressions) Create a RegEx object and save it to a standalone assembly (Regex.CompileToAssembly) Use the .NET regular expression source generator, RegexGenerator (requires .NET 7+) Technique Invoked via Construction Cost Execution Cost Considerations Use case Interpreted new Regex() a Regex static method Low High Cost is incurred each instantiation A Regex that is called infrequently and high performance cost is acceptable Compiled RegexOptions.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

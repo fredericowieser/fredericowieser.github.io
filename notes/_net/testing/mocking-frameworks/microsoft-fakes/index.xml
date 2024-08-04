@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microsoft fakes on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/</link>
+    <description>Recent content in microsoft fakes on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/overview/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/overview/</guid>
+      
+      <description>Overview [Documentation] Availability: Visual Studio Enterprise Edition, Visual Studio 2019 Update 6+
+Code isolation is a testing strategy that isolates code under test from the rest of the application. This allows for testing the specific functionality of the code in isolation. If a test fails, the cause is in the isolated code, not somewhere else. It also enables testing code even if other parts of the application are not yet functional.</description>
+      
+    </item>
+    
+    <item>
+      <title>shims</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/shims/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/shims/</guid>
+      
+      <description>Overview [Documentation] A shim is code that intercepts a call to a method and diverts it to shim code within a test. Use shims when you need to isolate your code from external assemblies.
+Caution: Tests involving shim types cannot run concurrently. This is not enforced by the Fakes runtime.
+Example: Creating and Using Shims Create a class: // HexFile.cs public class HexFile { public string[] Records { get; private set; } public HexFile(string path) { this.</description>
+      
+    </item>
+    
+    <item>
+      <title>stubs</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/stubs/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/microsoft-fakes/stubs/</guid>
+      
+      <description>Overview [Documentation] A stub is a small piece of code that replaces another component during testing.
+Using stubs effectively requires application design such that each component depends only on interfaces, not other components:
+Example: Creating and Using Stubs Create an interface:
+// IStockFeed.cs public interface IStockFeed { int GetSharePrice(string company); } Create a class that uses the interface:
+// StockAnalyzer.cs public class StockAnalyzer { private IStockFeed stockFeed; public StockAnalyzer(IStockFeed feed) { stockFeed = feed; } public int GetContosoPrice() { return stockFeed.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>extension methods on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/linq/extension-methods/</link>
+    <description>Recent content in extension methods on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/linq/extension-methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>examples</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/extension-methods/examples/</link>
+      <pubDate>Sun, 08 May 2022 18:54:48 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/extension-methods/examples/</guid>
+      
+      <description>Where Where accepts a Func&amp;lt;string, bool&amp;gt; delegate. For each string passed to the function, it returns a bool value.
+Targeting a Named Method static bool NameLongerThanFour(string name) =&amp;gt; name.length &amp;gt; 4; var query = names.Where(new Func&amp;lt;string, bool&amp;gt;(NameLongerThanFour)); Roslyn can instantiate the delegate for us so we can simplify:
+var query = names.Where(NameLongerThanFour); Targeting a Lambda Expression var query = names.Where(name =&amp;gt; name.Length &amp;gt; 4); OrderBy &amp;amp; ThenBy var query = names .</description>
+      
+    </item>
+    
+    <item>
+      <title>extension methods</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/extension-methods/extension-methods/</link>
+      <pubDate>Mon, 02 May 2022 07:55:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/extension-methods/extension-methods/</guid>
+      
+      <description>LINQ Extension Methods LINQ extension methods are static methods of Enumerable type in System.LINQ and appended to any sequence.
+Sequences are types which implement IEnumerable like arrays, generic collections, etc.
+Method Syntax Some queries must be expressed as a method call. Most commonly, the queries return a singleton numeric value, such as Sum, Max, Min, Average, etc:
+List&amp;lt;int&amp;gt; numbers1 = new() { 5, 4, 1, 3, 9, 8, 6 }; List&amp;lt;int&amp;gt; numbers2 = new() { 15, 14, 11, 13, 19, 18, 16 }; double average = numbers1.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

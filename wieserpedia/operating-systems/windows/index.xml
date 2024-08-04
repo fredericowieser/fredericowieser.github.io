@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/operating-systems/windows/</link>
+    <description>Recent content in windows on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/operating-systems/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows 11 shortcuts</title>
+      <link>http://localhost:1313/wieserpedia/operating-systems/windows/windows-11-shortcuts/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/operating-systems/windows/windows-11-shortcuts/</guid>
+      
+      <description>Overview These notes are select Windows 11 keyboard/trackpad shortcuts. They are not all-inclusive.
+Windows Key Shortcut Action Win + D Show Desktop Win + E Explorer Win + H Hear (voice typing) Win + I Settings Win + K Cast Win + L Lock Win + M Minimize All Win + R Run Win + S Search Win + V Clipboard history Win + X Quick Link menu Win + .</description>
+      
+    </item>
+    
+    <item>
+      <title>windows sandbox</title>
+      <link>http://localhost:1313/wieserpedia/operating-systems/windows/windows-sandbox/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/operating-systems/windows/windows-sandbox/</guid>
+      
+      <description>Overview A virtualized instance of Windows to run applications in isolation (&amp;ldquo;sandboxed&amp;rdquo; from the host machine).
+Documentation: https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview Installing From Administrator PowerShell:
+Enable-WindowsOptionalFeature -FeatureName &amp;#34;Containers-DisposableClientVM&amp;#34; -All -Online Search for Windows Sandbox in start menu.</description>
+      
+    </item>
+    
+    <item>
+      <title>cmd</title>
+      <link>http://localhost:1313/wieserpedia/operating-systems/windows/cmd/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/operating-systems/windows/cmd/</guid>
+      
+      <description>Disk Management Recover flash drive diskpart list disk select disk *#* clean create partition primary --optional-- list volume select volume *#* format fs=ntfs quick Files &amp;amp; Directories dir /p wildcard search # Pause at each screen dir /s wildcard search # traverse through Subdirectories as well
+Find Local Administrators net localgroup administrators
+Mapping Drives net use # show list of mapped drives net use DRIVE: PATH # map PATH to DRIVE net use DRIVE: PATH /persistent:Yes # make this drive mapping persistent net use DRIVE: PATH /user:USER PASSWORD # make this mapping with USER PASSWORD credentials net use DRIVE: /delete # delete this drive mapping net use * /delete # delete all mapped drives</description>
+      
+    </item>
+    
+  </channel>
+</rss>

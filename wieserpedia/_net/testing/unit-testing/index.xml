@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unit testing on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/</link>
+    <description>Recent content in unit testing on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 22 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/testing/unit-testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/overview/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/overview/</guid>
+      
+      <description>Abstract [Documentation] Unit testing:
+reduces the amount of time needed to perform functional tests, which require running the application and performing a series of steps. protects against regression. serves as executable documentation. helps ensure code is less coupled. Good unit tests are fast (run in milliseconds), isolated (have no dependencies), repeatable (always return the same results), self-checking (identify whether they pass or fail), and timely (shouldn&amp;rsquo;t take a disproportionately long time to write).</description>
+      
+    </item>
+    
+    <item>
+      <title>best practices</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/best-practices/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/best-practices/</guid>
+      
+      <description>Overview [Documentation] Use these best practices when developing unit tests.
+Avoid Dependencies in Unit Tests Use dependency injection and the Explicit Dependencies Principle.
+Naming Tests Tests should have a 3-part name: {MethodBeingTested}{ScenarioToTest}{ExpectedBehavior}. Consider:
+Bad:
+[Fact] public void Test_Single() { /* ... */ } Good:
+public void Add_SingleNumber_ReturnsSameNumber() { /* ... */ } Arrange, Act, Assert Arrange the objects by creating them and setting them up as necessary. Act on an object.</description>
+      
+    </item>
+    
+    <item>
+      <title>code coverage tooling</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/code-coverage-tooling/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/code-coverage-tooling/</guid>
+      
+      <description>Overview [Documentation] Types of code coverage tools:
+DataCollectors — monitor test execution and collect information about test runs. Part of VSTest; built into Visual Studio. Report generators — use data collected by DataCollectors to generate (often HTML-formatted) reports. ReportGenerator Coverlet — a cross-platform code-coverage tool for .NET. An alternative to VSTest. xUnit integrates with Coverlet. dotnet-coverage </description>
+      
+    </item>
+    
+    <item>
+      <title>unit testing with mstest</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-mstest/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-mstest/</guid>
+      
+      <description>Overview [Documentation] [Documentation] See also: https://github.com/microsoft/testfx/blob/main/docs/README.md
+MSTest unit tests are created with dotnet new mstest -o TestProjectName.
+MSTest Attributes TestClass and TestMethod The TestClass attribute declares a class that contains unit tests and, optionally, initialization or cleanup methods. The TestMethod attribute declares a test method. Test methods must:
+be public void or public Task or public async Task be parameterless Unit tests projects can contain other classes that do not have the [TestClass] attribute, and test classes can contain other methods that do not have the [TestMethod] attribute.</description>
+      
+    </item>
+    
+    <item>
+      <title>unit testing with nunit</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-nunit/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-nunit/</guid>
+      
+      <description>Overview [Documentation] See also: https://docs.nunit.org/articles/nunit/intro.html
+NUnit unit tests are created with dotnet new nunit -o TestProjectName.
+Note: NUnit still uses Setup and Teardown methods, which is no longer considered best practice.
+NUnit Attributes see inline comments.
+using NUnitFramework; namespace Prime.UnitTests.Services; [TestFixture] // Declares a class that contains unit tests. public class PrimeService_IsPrimeShould { private PrimeService _primeService; [SetUp] // Equivalent to a test class constructor. public void SetUp() { _primeService = new PrimeService(); } [Test] // Declares a test method.</description>
+      
+    </item>
+    
+    <item>
+      <title>unit testing with xunit</title>
+      <link>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-xunit/</link>
+      <pubDate>Sun, 22 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/testing/unit-testing/unit-testing-with-xunit/</guid>
+      
+      <description>Overview [Documentation] See also: https://xunit.net/#documentation
+xUnit unit tests are created with dotnet new xunit -o TestProjectName.
+xUnit Attributes Fact Used to declare a test method that is run by the test runner:
+using Xunit; using Prime.Services; namespace Prime.UnitTests.Services; public class PrimeService_IsPrimeShould { [Fact] public void IsPrime_InputIs1_ReturnFalse() { var primeService = new PrimeService(); bool result = primeService.IsPrime(1); Assert.False(result, &amp;#34;1 should not be prime&amp;#34;); } } Theory and InlineData These attributes work together to test multiple values.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

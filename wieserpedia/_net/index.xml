@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.net on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/</link>
+    <description>Recent content in .net on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>.net application models</title>
+      <link>http://localhost:1313/wieserpedia/_net/application-models/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/application-models/</guid>
+      
+      <description>Overview This mindmap shows .NET application models and their relationships.</description>
+      
+    </item>
+    
+    <item>
+      <title>generic host</title>
+      <link>http://localhost:1313/wieserpedia/_net/generic-host/</link>
+      <pubDate>Sun, 26 Jun 2022 19:15:58 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/generic-host/</guid>
+      
+      <description>Generic Host A host is an object that encapsulates an app&amp;rsquo;s resources and lifetime functionality. This allows for control over the app&amp;rsquo;s startup and graceful shutdown.
+Examples: Dependency Injection, Logging, Configuration, IHostedService implementations Generic Host is represented by the HostBuilder type.
+Namespace: Microsoft.Extensions.Hosting Documentation: https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host Process When a host starts, it calls IHostedService.StartAsync on each implementation of IHostedService registered in the service container&amp;rsquo;s collection of hosted services. If the implementation is a worker service, it calls BackgroundService.</description>
+      
+    </item>
+    
+    <item>
+      <title>benchmarking</title>
+      <link>http://localhost:1313/wieserpedia/_net/benchmarking/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/benchmarking/</guid>
+      
+      <description>Benchmarking dotnet add package BenchmarkDotNet
+Program.cs
+using BenchmarkDotNet.Running; public static void Main() { BenchmarkRunner.Run&amp;lt;SomeBenchmarks&amp;gt;(); } SomeBenchmarks.cs
+using BenchmarkDotNet.Attributes; // [Benchmark] public class SomeBenchmarks { … public SomeBenchmarks() { … [Benchmark(Baseline = true)] public string SomeTest() { … } [Benchmark] public string SomeOtherTest() { … } } } Then:
+dotnet run --configuration release</description>
+      
+    </item>
+    
+    <item>
+      <title>index and range</title>
+      <link>http://localhost:1313/wieserpedia/_net/index-and-range/</link>
+      <pubDate>Sun, 09 Jan 2022 19:17:18 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/index-and-range/</guid>
+      
+      <description>Index Normally, the index is an integer passed to the indexer of an array:
+int index = 3; Person p = people[index]; // The fourth Person in the array. The Index value type can identify position.
+Creating This index counts from the start:
+Index i1 = new(value: 3); or
+Index i2 = 3; This index counts from the end:
+Index i3 = new(value: 7, fromEnd: true); or
+Index i4 = ^7 Range The Range value type uses Index values to indicate the start and end of its range.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

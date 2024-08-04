@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>collections on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/collections/</link>
+    <description>Recent content in collections on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/collections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/types/collections/overview/</link>
+      <pubDate>Wed, 16 Feb 2022 16:22:14 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/collections/overview/</guid>
+      
+      <description>Collections Collections of objects. Documentation: https://docs.microsoft.com/en-us/dotnet/api/system.collections?view=net-6.0 Namespaces System.Collections — .NET Framework 1.0; Legacy; System.Collections.Generic — .NET Framework 2.0; no thread synchronization System.Collections.Concurrent — .NET Framework 4.0; thread-safe Common Features All collections implement the ICollection/&amp;lt;T&amp;gt; interface. This means they must have a Count property. All collections implement the IEnumerable/&amp;lt;T&amp;gt; interface, which allows them to be iterated over with foreach. This interface requires GetEnuemrator(), which returns an object that implements IEnumerator. The IEnumerator object must have methods MoveNext() and Reset() and property Current that contains the current item in the collection.</description>
+      
+    </item>
+    
+    <item>
+      <title>spans</title>
+      <link>http://localhost:1313/notes/_net/types/collections/spans/</link>
+      <pubDate>Sun, 09 Jan 2022 18:14:15 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/collections/spans/</guid>
+      
+      <description>Spans Spans are a window into the original array. Spans only work with arrays. Spans uses Index and Range types.
+string name = &amp;#34;Samantha Jones&amp;#34;; int lengthOfFirst = name.indexOf(&amp;#39; &amp;#39;); // The length of the first name. int lengthOfLast = name.Length - lengthofFirst - 1; // The length of the last name. ReadOnlySpan&amp;lt;char&amp;gt; nameAsSpan = name.AsSpan(); // Convert the string to a span. ReadOnlySpan&amp;lt;char&amp;gt; firstNameSpan = nameAsSpan[0..lengthOfFirst]; ReadOnlySpan&amp;lt;char&amp;gt; lastNameSpan = nameAsSpan[^lengthOfLast.</description>
+      
+    </item>
+    
+    <item>
+      <title>concurrent</title>
+      <link>http://localhost:1313/notes/_net/types/collections/concurrent/</link>
+      <pubDate>Thu, 23 Dec 2021 11:36:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/collections/concurrent/</guid>
+      
+      <description>System.Collections.Concurrent Efficient, thread-safe operations for access collection items from multiple threads. Concurrent collection classes do not require user code to take any locks when accessing items.
+BlockingCollection&amp;lt;T&amp;gt; — provides blocking &amp;amp; bounding capabilities; Producer threads block if not slots are available or if collection is full. Consumer threads block if collection is empty. Class can be used as backing store to provide blocking &amp;amp; bounding for any collection that implements IEnumerable&amp;lt;T&amp;gt;.</description>
+      
+    </item>
+    
+    <item>
+      <title>iterators</title>
+      <link>http://localhost:1313/notes/_net/types/collections/iterators/</link>
+      <pubDate>Fri, 19 Nov 2021 14:40:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/collections/iterators/</guid>
+      
+      <description>Iterators Iterators are objects that traverse a container. They yield return each element one at a time.
+Each time yield return is reached, the current location in code is remembered. The next time the iterator is called, execution restarts from that location. Iterators return IEnumerable, IEnumberable or IEnumerator, IEnumerator. In asynchronous operations, they return IAsyncEnumerable or IAsyncEnumerator. Iterators can be a method or a get accessor. Creating Iterator Methods public IEnumerable&amp;lt;int&amp;gt; EvenSequence(int firstnum, int lastnum) { for (var number = firstnum, number &amp;lt;= lastnum, number++) { if (number % 2 == 0) { yield return number; // When this statement is reached, an expression is returned, and the } // current location in code is remembered.</description>
+      
+    </item>
+    
+    <item>
+      <title>arrays</title>
+      <link>http://localhost:1313/notes/_net/types/collections/arrays/</link>
+      <pubDate>Sat, 06 Nov 2021 11:43:18 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/collections/arrays/</guid>
+      
+      <description>Arrays Use arrays when working with a fixed number of strongly typed items. Arrays are objects that have properties and methods in the System.Array class. An array&amp;rsquo;s length (the number of elements it has) and its dimensions are set when the array instance is created and cannot be changed. Arrays implement IList and IEnumerable. Single-dimensional arrays also implement IList and IEnumerable. Declaring Declare a single-dimensional array of 5 integers:
+int[1] a1 = new int[5]; // Or declare an array variable without creating it… int[] a2; // …and then use the new operator when assigning a new array to this variable: a2 = new int[] { 1, 3, 5, 7, 9 }; Initializing Declare and initialize a single-dimensional array of 5 integers:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

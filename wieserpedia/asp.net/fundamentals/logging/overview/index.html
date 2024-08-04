@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">overview | Fred Wieser</title>
+<meta property="og:title" content="overview | Fred Wieser" />
+<meta name="twitter:title" content="overview | Fred Wieser" />
+<meta itemprop="name" content="overview | Fred Wieser" />
+<meta name="application-name" content="overview | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/fundamentals/logging/overview/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/fundamentals/logging/overview/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">overview</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-01-13T00:00:00-06:00" itemprop="datePublished"> 13 Jan 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="abstract-documentationhttpslearnmicrosoftcomen-usaspnetcorefundamentalsloggingviewaspnetcore-70">Abstract [<a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p>ASP.NET Core supports logging with built-in and third-party logging providers:  Console, Debug, Event Tracing, Windows Event Log, TraceSource, Azure App Service, Azure Application Insights.</p>
+<ul>
+<li><a href="../../../../_net/fundamentals/logging/overview">Notes on Logging in .NET</a> apply to these notes as well.</li>
+<li>Documentation:
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-logging/?view=aspnetcore-7.0">HTTP Logging in .NET Core and ASP.NET Core | Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/w3c-logger/?view=aspnetcore-7.0">W3CLogger in .NET Core and ASP.NET Core | Microsoft Learn</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="default-logging-providers">Default Logging Providers</h1>
+<p>The default ASP.NET Core web app templates call <code>WebApplication.CreateBuilder</code> which adds the <code>Console</code>, <code>Debug</code>, <code>EventSource</code> and <code>EventLog</code> (Windows) logging providers.</p>
+<p>Logs created with the default providers are displayed in:</p>
+<ul>
+<li>Visual Studio&rsquo;s Debug output window (when debugging)</li>
+<li>Visual Studio&rsquo;s ASP.NET Core Web Server window</li>
+<li>The console window if running with <code>dotnet run</code>.</li>
+</ul>
+<p>To change the logging providers:<br>
+<code>Program.cs</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder();
+</span></span><span style="display:flex;"><span>builder.Host.ConfigureLogging(logging =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    logging.ClearProviders();
+</span></span><span style="display:flex;"><span>    logging.AddConsole();
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><details>
+<summary>
+Default log levels and all default providers:
+</summary>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;Logging&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;LogLevel&#34;</span>: { <span style="color:#8b949e;font-style:italic">// No provider, LogLevel applies to all the enabled providers.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Error&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;Microsoft.Hosting.Lifetime&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Debug&#34;</span>: { <span style="color:#8b949e;font-style:italic">// Debug provider.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span> <span style="color:#8b949e;font-style:italic">// Overrides preceding LogLevel:Default setting.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Console&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;IncludeScopes&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft.AspNetCore.Mvc.Razor.Internal&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft.AspNetCore.Mvc.Razor.Razor&#34;</span>: <span style="color:#a5d6ff">&#34;Debug&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft.AspNetCore.Mvc.Razor&#34;</span>: <span style="color:#a5d6ff">&#34;Error&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;EventSource&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;EventLog&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;AzureAppServicesFile&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;IncludeScopes&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;AzureAppServicesBlob&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;IncludeScopes&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;ApplicationInsights&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></details>
+<h1 id="creating-logs">Creating Logs</h1>
+<p>To create logs, resolve an <code>ILogger&lt;TCategoryName&gt;</code> service from DI and call logging methods like <code>LogInformation</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">SomeClass</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> ILogger&lt;SomeClass&gt; _logger;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> SomeMethod(ILogger&lt;SomeClass&gt; logger) {
+</span></span><span style="display:flex;"><span>        _logger = logger;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task OnGetAsync() {
+</span></span><span style="display:flex;"><span>        _logger.LogInformation(<span style="color:#a5d6ff">&#34;SomeClass OnGetAsync.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="configure-logging">Configure Logging</h1>
+<p>Logging configuration is provided by the <code>Logging</code> section of <code>appsettings.ENVIRONMENT.json</code> files:</p>
+<p><code>appsettings.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;Logging&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;LogLevel&#34;</span>: { <span style="color:#8b949e;font-style:italic">// LogLevel applies to all the enabled providers.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Error&#34;</span>, <span style="color:#8b949e;font-style:italic">// Default logging, Error and higher.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span> <span style="color:#8b949e;font-style:italic">// All Microsoft* categories, Warning and higher.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Debug&#34;</span>: { <span style="color:#8b949e;font-style:italic">// Debug provider.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>, <span style="color:#8b949e;font-style:italic">// Overrides preceding LogLevel:Default setting.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>        <span style="color:#7ee787">&#34;Microsoft.Hosting&#34;</span>: <span style="color:#a5d6ff">&#34;Trace&#34;</span> <span style="color:#8b949e;font-style:italic">// Debug:Microsoft.Hosting category.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;EventSource&#34;</span>: { <span style="color:#8b949e;font-style:italic">// EventSource provider.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span> <span style="color:#8b949e;font-style:italic">// All categories of EventSource provider.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>Logging</code> property can contain <code>LogLevel</code> and logging provider properties.  See <a href="../../../../_net/fundamentals/logging/overview#concepts">Notes on Log Levels</a>.</p>
+<h1 id="creating-logs-in-programcs">Creating Logs in Program.cs</h1>
+<p>The logger is available in <code>app</code> immediately after calling <code>builder.Builder()</code>:
+<code>Program.cs</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> app = builder.Build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>app.Logger.LogInformation(<span style="color:#a5d6ff">&#34;Adding Routes&#34;</span>);
+</span></span><span style="display:flex;"><span>app.MapGet(<span style="color:#a5d6ff">&#34;/&#34;</span>, () =&gt; <span style="color:#a5d6ff">&#34;Hello World!&#34;</span>);
+</span></span><span style="display:flex; background-color:#6e7681"><span>app.Logger.LogInformation(<span style="color:#a5d6ff">&#34;Starting the app&#34;</span>);
+</span></span><span style="display:flex;"><span>app.Run();
+</span></span></code></pre></div><p>The loggers can also be modified before building:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> logger = LoggerFactory.Create(config =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    config.AddConsole();
+</span></span><span style="display:flex;"><span>}).CreateLogger(<span style="color:#a5d6ff">&#34;Program&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> app = builder.Build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.MapGet(<span style="color:#a5d6ff">&#34;/&#34;</span>, () =&gt; <span style="color:#a5d6ff">&#34;Hello World!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.MapGet(<span style="color:#a5d6ff">&#34;/Test&#34;</span>, <span style="color:#ff7b72">async</span> context =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    logger.LogInformation(<span style="color:#a5d6ff">&#34;Testing logging in Program.cs&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">await</span> context.Response.WriteAsync(<span style="color:#a5d6ff">&#34;Testing&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.Run();
+</span></span></code></pre></div><h1 id="aspnet-core-and-ef-core-logging-categories">ASP.NET Core and EF Core Logging Categories</h1>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft.AspNetCore</td>
+<td>General ASP.NET Core diagnostics.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.DataProtection</td>
+<td>Which keys were considered, found, and used.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.HostFiltering</td>
+<td>Hosts allowed.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.Hosting</td>
+<td>How long HTTP requests took to complete and what time they started. Which hosting startup assemblies were loaded.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.Mvc</td>
+<td>MVC and Razor diagnostics. Model binding, filter execution, view compilation, action selection.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.Routing</td>
+<td>Route matching information.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.Server</td>
+<td>Connection start, stop, and keep alive responses. HTTPS certificate information.</td>
+</tr>
+<tr>
+<td>Microsoft.AspNetCore.StaticFiles</td>
+<td>Files served.</td>
+</tr>
+<tr>
+<td>Microsoft.EntityFrameworkCore</td>
+<td>General Entity Framework Core diagnostics. Database activity and configuration, change detection, migrations.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="filtering">Filtering</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#filters">these notes</a>.</p>
+<h1 id="log-categories">Log Categories</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#categories">these notes</a>.</p>
+<h1 id="log-event-ids">Log Event IDs</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#event-ids">these notes</a>.</p>
+<h1 id="log-message-templates">Log Message Templates</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#message-templates">these notes</a>.</p>
+<h1 id="exceptions">Exceptions</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#exceptions">these notes</a>.</p>
+<h1 id="scopes">Scopes</h1>
+<p>See <a href="../../../../_net/fundamentals/logging/overview#log-scopes">these notes</a>.</p>
+<h2 id="activitytrackingoptions">ActivityTrackingOptions</h2>
+<p>Logging providers implicitly create a scope object with <code>SpanId</code>, <code>TraceId</code>, <code>ParentId</code>, <code>Baggage</code> and <code>Tags</code>.  This is configured via <code>ActivityTrackingOptions</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> loggerFactory = LoggerFactory.Create(logging =&gt;
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>      logging.Configure(options =&gt;
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>          options.ActivityTrackingOptions = ActivityTrackingOptions.SpanId
+</span></span><span style="display:flex;"><span>                                              | ActivityTrackingOptions.TraceId
+</span></span><span style="display:flex;"><span>                                              | ActivityTrackingOptions.ParentId
+</span></span><span style="display:flex;"><span>                                              | ActivityTrackingOptions.Baggage
+</span></span><span style="display:flex;"><span>                                              | ActivityTrackingOptions.Tags;
+</span></span><span style="display:flex;"><span>      }).AddSimpleConsole(options =&gt;
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>          options.IncludeScopes = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>  });
+</span></span></code></pre></div><p>More information: <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0#automatically-log-scope-with-spanid-traceid-parentid-baggage-and-tags">https://learn.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-7.0#automatically-log-scope-with-spanid-traceid-parentid-baggage-and-tags</a></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

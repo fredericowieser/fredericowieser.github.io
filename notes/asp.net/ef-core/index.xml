@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ef core on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/ef-core/</link>
+    <description>Recent content in ef core on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/ef-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/overview/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/overview/</guid>
+      
+      <description>From Microsoft Learn / Entity Framework / Entity Framework Core
+Abstract Entity Framework (EF) Core is a data access technology that can serve as an object-relational mapper (OR/M). It supports various database providers.
+Data access is performed using a model that includes entity classes and a context object that represents a session with a database.
+An entity is a database.
+An entity set is a table in the database.
+Model development approaches Generate a model from an existing database Hand code a model to match a database Use EF Migrations to create a database from a model Installing Install EF Core w/SQL Server Database Provider dotnet add package Microsoft.</description>
+      
+    </item>
+    
+    <item>
+      <title>json columns</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/json-columns/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/json-columns/</guid>
+      
+      <description>Overview Availability: EF Core 7
+Relational databases support columns that contain JSON documents. This allows relational databases to provide some of the functionality document databases, thereby creating a hybrid between the two. EF Core&amp;rsquo;s support for JSON documents in EF Core 7 is provider-agnostic with an implementation for SQL Server. Documentation: https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#json-columns </description>
+      
+    </item>
+    
+    <item>
+      <title>blazor server considerations</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/blazor-server-considerations/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/blazor-server-considerations/</guid>
+      
+      <description>Overview Blazor Server&amp;rsquo;s stateful app framework requires a special approach to use EF Core. For example, in Blazor Server apps, scoped services registrations can be problematic because the instance is shared across components within a user&amp;rsquo;s circuit. DbContext is not thread safe and not designed for concurrent use.
+There are two patterns:
+Context-per-operation Context-per-component Context-per-operation Use this approach by default:
+using var context = new SomeContext(); return away context.SomeEntities.ToListAsync(); In this pattern, use a flag to prevent multiple concurrent operations:</description>
+      
+    </item>
+    
+    <item>
+      <title>database schemas</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/database-schemas/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/database-schemas/</guid>
+      
+      <description>Overview EF Core provides two approaches of keeping the EF Core model and database schema in sync:
+Migrations Reverse Engineering (scaffolding) </description>
+      
+    </item>
+    
+    <item>
+      <title>dbcontext</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/dbcontext/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/dbcontext/</guid>
+      
+      <description>Lifetime The lifetime of DbContext begins when the instance is created and ends when it is disposed. It lasts for a unit of work.
+A unit of work keeps track of everything you do during a business transaction that can affect the database. When you&amp;rsquo;re done, it figures out everything that needs to be done to alter the database as a result of the work.&amp;quot;
+Threading and Concurrency DbContext is not thread-safe.</description>
+      
+    </item>
+    
+    <item>
+      <title>models</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/models/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/models/</guid>
+      
+      <description>Overview EF Core uses a metadata model to describe how the app&amp;rsquo;s entity types are mapped to the underlying database. Models are configured with:
+Fluent API Data annotations Conventions Conventions are not covered in these notes.
+The above order describes the precedence EF Core takes when applying configuration.
+Fluent API Override the OnModelCreating method in the derived context and use fluent API to configure the model.
+Fluent API configuration will override data annotations and conventions.</description>
+      
+    </item>
+    
+    <item>
+      <title>querying data</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/querying-data/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/querying-data/</guid>
+      
+      <description>Overview EF Core uses LINQ to query data from the database.
+Loading all data using var context = new BloggingContext(); var blogs = context.Blogs.ToList(); Loading a single entity using var context = new BloggingContext(); var blog = context.Blogs.Single(b =&amp;gt; b.BlogId == 1); Filtering using var context = new BloggingContext(); var blogs = context.Blogs.Where(b =&amp;gt; b.Url.Contains(&amp;#34;dotnet&amp;#34;)) .ToList(); </description>
+      
+    </item>
+    
+    <item>
+      <title>relationships</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/relationships/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/relationships/</guid>
+      
+      <description>Overview Relationships define how two entities relate to each other.
+public class Blog { public int Id { get; set; } // Primary Key public string Name { get; set; } public virtual Uri SiteUri { get; set; } public ICollection&amp;lt;Post&amp;gt; Posts { get; } } public class Post { public string Title { get; set; } public string Content { get; set; } public DateTime PublishedOn { get; set; } public Archived { get; set; } public int BlogId { get; set; } // Foreign Key public Blog Blog { get; set; } } Above:</description>
+      
+    </item>
+    
+    <item>
+      <title>concurrency</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/concurrency/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/concurrency/</guid>
+      
+      <description>Handling Concurrency Conflicts Handling Concurrent Deletes When a concurrent delete of a database row is detected, EF Core throws a DbUpdateConcurrencyException exception. Handle this exception to handle the conflict.
+Handling Concurrent Updates A concurrent update of a database row can be detected. This requires a Timestamp property with attribute:
+[Timestamp] public byte[]? Timestamp { get; set; } Then, add a migration and update the database:
+PM&amp;gt; Add-Migration AddTimestamp PM&amp;gt; update-database </description>
+      
+    </item>
+    
+    <item>
+      <title>implement a database</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/implement-a-database/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/implement-a-database/</guid>
+      
+      <description>From Pluralsight/Building a Data-driving ASP.NET Core 6 Blazor Server Application
+Implement a Database with EF Core in an ASP.NET Core Blazor Web App Create Model classes Data/Models/Employee.cs
+public class Employee { public int Id { get; set; } // Primary Key [Required] // even though it&amp;#39;s nullable, this property is required [StringLength(50)] public string? FirstName { get; set; } [Required] [StringLength(50)] public string? LastName { get; set; } public bool IsDeveloper { get; set; } [Required] // an Employee MUST be in a Department public int?</description>
+      
+    </item>
+    
+    <item>
+      <title>migrations and updates</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/migrations-and-updates/</link>
+      <pubDate>Tue, 16 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/migrations-and-updates/</guid>
+      
+      <description>Migrate a Database via a SQL File Create a SQL file that migrates a database already in production:
+PM&amp;gt; script-migration This outputs a SQL file.
+Apply Migrations at Runtime This is not recommended in production; development only.
+Program.cs
+// ... var app = builder.Build(); if (app.Environment.IsDevelopment()) { await EnsureDatabaseIsMigrated(app.Services); async Task EnsureDatabaseIsMigrated(IServiceProvider services) { using var scope = services.CreateScope(); using var ctx = scope.ServiceProvider.GetService&amp;lt;EmployeeManagerDbContext&amp;gt;(); // if database does not exist, create it, and then run all pending migrations: if (ctx is not null) await ctx.</description>
+      
+    </item>
+    
+    <item>
+      <title>from pluralsight aspnet core 6 fundamentals</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/from-pluralsight-aspnet-core-6-fundamentals/</link>
+      <pubDate>Mon, 01 May 2023 13:34:12 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/from-pluralsight-aspnet-core-6-fundamentals/</guid>
+      
+      <description>(Notes from Pluralsight/ASP.NET Core 6 Fundamentals)
+Overview Prior to Entity Framework Core, the approach to bring data into a web app was ADO.NET. This was low-level and required developers to know a lot of SQL. EF Core makes this easier.
+EF Core looks for a property named Id or ClassNameId and makes that the Primary Key in the database.
+EF Core Change Tracking The EF Core Data context keeps tracks of changes in data objects and updates them in the database.</description>
+      
+    </item>
+    
+    <item>
+      <title>from razor pages in ef core in aspnet core</title>
+      <link>http://localhost:1313/notes/asp.net/ef-core/from-razor-pages-in-ef-core-in-aspnet-core/</link>
+      <pubDate>Tue, 25 Apr 2023 12:36:11 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/ef-core/from-razor-pages-in-ef-core-in-aspnet-core/</guid>
+      
+      <description>Notes from Razor Pages with Entity Framework Core in ASP.NET Core - Tutorial 1 of 8 | Microsoft Learn
+Creating a Database Program.cs
+using (var scope = app.Services.CreateScope()) { var services = scope.ServiceProvider; var context = services.GetRequiredService&amp;lt;SchoolContext&amp;gt;(); context.Database.EnsureCreated(); // DbInitializer.Initialize(context); } The EnsureCreated method checks if the database exists. If not, it creates the database and schema.
+This allows for the following workflow for data model changes:
+Delete the database Change the data model (ie: add an EmailAddress field) Run the app EnsureCreated will create a database with the new schema When data exists that cannot be lost, use migrations instead of EnsureCreated.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>user interfaces on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/</link>
+    <description>Recent content in user interfaces on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 17 Sep 2022 17:04:25 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

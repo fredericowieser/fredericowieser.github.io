@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>delegates on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/reference-types/delegates/</link>
+    <description>Recent content in delegates on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/reference-types/delegates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>patterns</title>
+      <link>http://localhost:1313/notes/_net/types/reference-types/delegates/patterns/</link>
+      <pubDate>Thu, 21 Jul 2022 08:27:56 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/reference-types/delegates/patterns/</guid>
+      
+      <description>Delegates support minimal coupling between components.
+Example with LINQ Where Method The Where method uses a delegate that determines which elements of a sequence pass the filter:
+// Numbers where, for each number n, n is less than 10: var smallNumbers = numbers.Where(n =&amp;gt; n &amp;lt; 10); The prototype for Where:
+public static IEnumerable&amp;lt;TSource&amp;gt; Where&amp;lt;TSource&amp;gt; (this IEnumerable&amp;lt;TSource&amp;gt; source, Func&amp;lt;TSource, bool&amp;gt; predicate); Loose coupling is achieved because:
+There is no need to implement an interface There is no need to derive from a base class Example by Building a Logger Delegate public static class Logger { public static Action&amp;lt;string&amp;gt; WriteMessage; public static void LogMessage(string msg) { // The compiler generates an `Invoke` method for any delegate type declared.</description>
+      
+    </item>
+    
+    <item>
+      <title>action func predicate</title>
+      <link>http://localhost:1313/notes/_net/types/reference-types/delegates/action-func-predicate/</link>
+      <pubDate>Sun, 08 May 2022 17:27:26 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/reference-types/delegates/action-func-predicate/</guid>
+      
+      <description>Built-in Delegates Built-in types Action, Func, and Predicate are special delegates that can be used without having to define a new delegate.
+Action An Action delegate points to a method that has no return type.
+It is used to perform an action using the arguments of the delegate.
+class Program { static void Main(string[] args) { Action&amp;lt;string&amp;gt; log = new Action&amp;lt;string&amp;gt;(LogInfo); // The delegate. log.Invoke(&amp;#34;Testing 1 2 3&amp;#34;); } static void LogInfo(string message) { // The method with no return type.</description>
+      
+    </item>
+    
+    <item>
+      <title>delegates</title>
+      <link>http://localhost:1313/notes/_net/types/reference-types/delegates/delegates/</link>
+      <pubDate>Sun, 02 Jan 2022 20:36:26 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/reference-types/delegates/delegates/</guid>
+      
+      <description>Delegates Delegates represent references to methods with the same signature as the delegate.
+Note: Unlike in overloading, for delegates, a method must have the same return type as the delegate.
+They provide another way (instead of the dot operator) to call a method.
+They are defined in namespace scope (like a class).
+They support chaining (multiple methods can be called on a single event).
+Delegates have built-in support for async operations that run on a different thread.</description>
+      
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>http://localhost:1313/notes/_net/types/reference-types/delegates/events/</link>
+      <pubDate>Sat, 06 Nov 2021 11:28:28 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/reference-types/delegates/events/</guid>
+      
+      <description>Events Events in C# (tutorialsteacher.com)
+Events in C# - Code Maze (code-maze.com)
+Events in C# explained. Everyone that understands English knows… | by Dinesh Jethoe | Medium
+Events are notifications sent by one class to another that some event has occurred. They are specialized delegates.
+Events are commonly used in GUIs; you subscribe to events raised by controls such as buttons.
+Events are encapsulated delegates.
+The class that sends (raises) an event is the publisher; the class that receives (handles) the event is the subscriber.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

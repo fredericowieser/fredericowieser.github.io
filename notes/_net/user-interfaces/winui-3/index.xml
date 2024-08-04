@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>winui 3 on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/</link>
+    <description>Recent content in winui 3 on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/user-interfaces/winui-3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/overview/</link>
+      <pubDate>Fri, 09 Dec 2022 19:58:34 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/overview/</guid>
+      
+      <description>WinUI Windows UI library — the native UI framework of Windows 10/11
+Build desktop applications with C# or C++ Part of the Windows App SDK Abstract UI is defined in XAML; logic is defined in C# Uses MVVM pattern via data binding between UI and UI logic Creating a WinUI Project Visual Studio &amp;gt; Project Type &amp;gt; WinUI &amp;gt; Blank App, Packaged (single project) or Blank App, Packaged with Windows Application Packaging Project (two projects)</description>
+      
+    </item>
+    
+    <item>
+      <title>controls</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/controls/</link>
+      <pubDate>Thu, 05 Jan 2023 19:25:29 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/controls/</guid>
+      
+      <description>Overview Control — a UI element that displays content or enables interaction.
+Alphabetical Index of Controls
+3 Steps to Using Controls Add a control to the UI Set properties on the control Add code to the control&amp;rsquo;s event handlers Add a Control Use Blend for Visual Studio or Visual Studio XAML Designer or add the control via code.
+Note: controls added via code are not visible in XAML Designer. Set the Control&amp;rsquo;s Name and Properties Set the control&amp;rsquo;s x:Name attribute:</description>
+      
+    </item>
+    
+    <item>
+      <title>project structure</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/project-structure/</link>
+      <pubDate>Mon, 02 Jan 2023 16:54:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/project-structure/</guid>
+      
+      <description>App Class The App class is the app&amp;rsquo;s entry point Defined in App.xaml and App.xaml.cs Derives from Microsoft.UI.Xaml.Application InitializeComponent method parses contents of App.xaml OnLaunched method is invoked when app is launched creates and activates a new instance of MainWindow App.xaml
+&amp;lt;Application x:Class=&amp;#34;LuckyNumbers.App&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&amp;#34; xmlns:x=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml&amp;#34; xmlns:local=&amp;#34;using:LuckyNumbers&amp;#34;&amp;gt; &amp;lt;Application.Resources&amp;gt; &amp;lt;ResourceDictionary&amp;gt; &amp;lt;ResourceDictionary.MergedDictionaries&amp;gt; &amp;lt;XamlControlsResources xmlns=&amp;#34;using:Microsoft.UI.Xaml.Controls&amp;#34; /&amp;gt; &amp;lt;!-- Other merged dictionaries here --&amp;gt; &amp;lt;/ResourceDictionary.MergedDictionaries&amp;gt; &amp;lt;!-- Other app resources here --&amp;gt; &amp;lt;/ResourceDictionary&amp;gt; &amp;lt;/Application.Resources&amp;gt; &amp;lt;/Application&amp;gt; App.xaml.cs
+public partial class App : Application { public App() { this.</description>
+      
+    </item>
+    
+    <item>
+      <title>debugging</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/debugging/</link>
+      <pubDate>Sun, 01 Jan 2023 17:22:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/debugging/</guid>
+      
+      <description>Live Visual Tree Debug &amp;gt; Windows &amp;gt; Live Visual Tree
+Toggle between showing all WinUI XAML or just XAML you have written:
+Show all elements in the MainWindow:
+The numbers indicate how many children (direct and indirect) each element contains:
+Click to enable a toolbar that floats over the app UI:
+Select Element—select an element in UI and it will be selected in Live Visual Tree:
+Click brackets to navigate to this element:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

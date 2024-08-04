@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">layouts | Fred Wieser</title>
+<meta property="og:title" content="layouts | Fred Wieser" />
+<meta name="twitter:title" content="layouts | Fred Wieser" />
+<meta itemprop="name" content="layouts | Fred Wieser" />
+<meta name="application-name" content="layouts | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/layouts/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/layouts/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">layouts</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-01-02T20:33:28-07:00" itemprop="datePublished"> 2 Jan 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p>XAML layout system supports automatic resizing of elements, layout panels, and visual states</p>
+<h1 id="implementing-responsive-layouts-with-xaml">Implementing Responsive Layouts with XAML</h1>
+<p>Achieved by using the appropriate layout properties and panels to reposition, resize, and reflow content fluidly.</p>
+<h2 id="layout-properties">Layout Properties</h2>
+<h3 id="height--width">Height &amp; Width</h3>
+<ul>
+<li>Set to <code>Auto</code> or use star sizing (which is the default)</li>
+<li>To set constraints, set <code>MinWidth</code>/<code>MaxWidth</code> and <code>MinHeight</code>/<code>MaxHeight</code>.</li>
+<li>To read value at runtime, use <code>ActualHeight</code>/<code>ActualWidth</code></li>
+</ul>
+<h3 id="alignment">Alignment</h3>
+<ul>
+<li>Use <code>HorizontalAlignment</code>/<code>VerticalAlignment</code></li>
+</ul>
+<h3 id="visibility">Visibility</h3>
+<ul>
+<li>The <code>Visibility</code> enum can be <code>Visible</code> or <code>Collapsed</code>.</li>
+<li>Replace sections of a UI by revealing one panel and collapsing another.</li>
+</ul>
+<h2 id="layout-panels">Layout Panels</h2>
+<table>
+<thead>
+<tr>
+<th>Panel control</th>
+<th>Fluid UI support</th>
+<th>Element arrangement</th>
+<th>Layering</th>
+<th>Stretch values for hor/ver alignment</th>
+<th>Child content larger than panel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvas</td>
+<td>None</td>
+<td>Positioned absolutely with Canvas.Top and Canvas.Left</td>
+<td>Yes via Canvas.Zindex</td>
+<td>Ignored</td>
+<td>Not clipped; Not constrained</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Yes for resizingchild elements</td>
+<td>Rows and columns usingGrid.Row and Grid.Column</td>
+<td>?</td>
+<td>Respected</td>
+<td>Clipped;Constrained</td>
+</tr>
+<tr>
+<td>RelativePanel</td>
+<td></td>
+<td>In relation to edge or center of panel and inrelation to each other. Positioned using variousattached properties.</td>
+<td>?</td>
+<td>Ignored unless attachedproperties for alignmentcause stretching.</td>
+<td>Clipped;Constrained</td>
+</tr>
+<tr>
+<td>StackPanel</td>
+<td></td>
+<td>Stacked in a single line horizontally or vertically</td>
+<td>?</td>
+<td>Respected in the directionopposite of the Orientationproperty.</td>
+<td>Clipped;Not constrained(must be manuallyconstrained)</td>
+</tr>
+<tr>
+<td>VariableSizedWrapGrid</td>
+<td></td>
+<td>Rows and columns that automatically wrap toa new row/column whenMaximumRowsOrColumns is reached.</td>
+<td></td>
+<td>Ignored</td>
+<td>Clipped;Constrained</td>
+</tr>
+</tbody>
+</table>
+<h1 id="visual-states">Visual States</h1>
+<p>Use <em>visual states</em> to make significant UI changes based on changes to window size or other changes.
+You can define visual states for your UI and apply them when the window width/height crosses a threshold.
+You define visual states for screen sizes.</p>
+<ul>
+<li>A <code>VisualState</code> defines property values applied to an element when it is in a particular state.</li>
+<li>A <code>VisualStateManager</code> groups <code>VisualStates</code> and applies the appropriate <code>VisualState</code> when conditions are met.</li>
+<li>An <code>AdaptiveTrigger</code> sets the threshold.</li>
+<li>Alternatively, <code>VisualStateManager</code>.<code>GoToState</code> can also be called directly.</li>
+</ul>
+<h2 id="set-visual-states-in-code">Set Visual States in Code</h2>
+<ul>
+<li>Use <code>VisualStateManager</code>.<code>GoToState</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;Page</span> <span style="color:#f85149">...</span>
+</span></span><span style="display:flex;"><span>    SizeChanged=<span style="color:#a5d6ff">&#34;CurrentWindow_SizeChanged&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;Grid&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;VisualStateManager.VisualStateGroups&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;VisualStateGroup&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">&lt;!-- This is the default visual state. When applied, the values defined in the XAML page are applied. --&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;VisualState</span> x:Name=<span style="color:#a5d6ff">&#34;DefaultState&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;Storyboard&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;/Storyboard&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;/VisualState&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">&lt;!-- This visual state… --&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;VisualState</span> x:Name=<span style="color:#a5d6ff">&#34;WideState&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;Storyboard&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;ObjectAnimationUsingKeyFrames</span>
+</span></span><span style="display:flex;"><span>                            Storyboard.TargetProperty=<span style="color:#a5d6ff">&#34;SplitView.DisplayMode&#34;</span>
+</span></span><span style="display:flex;"><span>                            Storyboard.TargetName=<span style="color:#a5d6ff">&#34;mySplitView&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#7ee787">&lt;DiscreteObjectKeyFrame</span> KeyTime=<span style="color:#a5d6ff">&#34;0&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#7ee787">&lt;DiscreteObjectKeyFrame.Value&gt;</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#8b949e;font-style:italic">&lt;!-- …changes the display mode of the SplitView to Inline… --&gt;</span>
+</span></span><span style="display:flex;"><span>                                    <span style="color:#7ee787">&lt;SplitViewDisplayMode&gt;</span>Inline<span style="color:#7ee787">&lt;/SplitViewDisplayMode&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#7ee787">&lt;/DiscreteObjectKeyFrame.Value&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#7ee787">&lt;/DiscreteObjectKeyFrame&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;/ObjectAnimationUsingKeyFrames&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;ObjectAnimationUsingKeyFrames</span>
+</span></span><span style="display:flex;"><span>                            Storyboard.TargetProperty=<span style="color:#a5d6ff">&#34;SplitView.IsPaneOpen&#34;</span>
+</span></span><span style="display:flex;"><span>                            Storyboard.TargetName=<span style="color:#a5d6ff">&#34;mySplitView&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#8b949e;font-style:italic">&lt;!-- …and opens the pane. --&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#7ee787">&lt;DiscreteObjectKeyFrame</span> KeyTime=<span style="color:#a5d6ff">&#34;0&#34;</span> Value=<span style="color:#a5d6ff">&#34;True&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;/ObjectAnimationUsingKeyFrames&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;/Storyboard&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;/VisualState&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;/VisualStateGroup&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;/VisualStateManager.VisualStateGroups&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;SplitView</span> x:Name=<span style="color:#a5d6ff">&#34;mySplitView&#34;</span> DisplayMode=<span style="color:#a5d6ff">&#34;CompactInline&#34;</span> IsPaneOpen=<span style="color:#a5d6ff">&#34;False&#34;</span> CompactPaneLength=<span style="color:#a5d6ff">&#34;20&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">&lt;!-- SplitView content --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;SplitView.Pane&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">&lt;!-- Pane content --&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;/SplitView.Pane&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;/SplitView&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/Grid&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/Page&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// The WideState visual state is applied…</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">private</span> <span style="color:#ff7b72">void</span> CurrentWindow_SizeChanged(<span style="color:#ff7b72">object</span> sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …here in the SizeChanged event handler when the window width &gt; 640 effective pixels.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (e.Size.Width &gt; <span style="color:#a5d6ff">640</span>)
+</span></span><span style="display:flex;"><span>        VisualStateManager.GoToState(<span style="color:#ff7b72">this</span>, <span style="color:#a5d6ff">&#34;WideState&#34;</span>, <span style="color:#79c0ff">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">else</span>
+</span></span><span style="display:flex;"><span>        VisualStateManager.GoToState(<span style="color:#ff7b72">this</span>, <span style="color:#a5d6ff">&#34;DefaultState&#34;</span>, <span style="color:#79c0ff">false</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="set-visual-states-in-xaml">Set Visual States in XAML</h2>
+<p>Since Windows 10, it is easier to define visual states in XAML than code (like above). This example is the same as above:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;Page</span> <span style="color:#f85149">...</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;Grid&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">&lt;!-- VisualStateGroups MUST be attached to the first child of the root for triggers to work automatically. --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;VisualStateManager.VisualStateGroups&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;VisualStateGroup&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;VisualState&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;VisualState.StateTriggers&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#8b949e;font-style:italic">&lt;!-- VisualState to be triggered when the window width is &gt;=640 effective pixels. --&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;AdaptiveTrigger</span> MinWindowWidth=<span style="color:#a5d6ff">&#34;640&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;/VisualState.StateTriggers&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;VisualState.Setters&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;Setter</span> Target=<span style="color:#a5d6ff">&#34;mySplitView.DisplayMode&#34;</span> Value=<span style="color:#a5d6ff">&#34;Inline&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#7ee787">&lt;Setter</span> Target=<span style="color:#a5d6ff">&#34;mySplitView.IsPaneOpen&#34;</span> Value=<span style="color:#a5d6ff">&#34;True&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#7ee787">&lt;/VisualState.Setters&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7ee787">&lt;/VisualState&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;/VisualStateGroup&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;/VisualStateManager.VisualStateGroups&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;SplitView</span> x:Name=<span style="color:#a5d6ff">&#34;mySplitView&#34;</span> DisplayMode=<span style="color:#a5d6ff">&#34;CompactInline&#34;</span> IsPaneOpen=<span style="color:#a5d6ff">&#34;False&#34;</span> CompactPaneLength=<span style="color:#a5d6ff">&#34;20&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">&lt;!-- SplitView content --&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;SplitView.Pane&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">&lt;!-- Pane content --&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&lt;/SplitView.Pane&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;/SplitView&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/Grid&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/Page&gt;</span>
+</span></span></code></pre></div><h2 id="visual-states-and-attached-properties">Visual States and Attached Properties</h2>
+<p>When you set the value for an attached property (but not a regular property), surround the attached property name in parantheses:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;Setter</span> Target=<span style="color:#a5d6ff">&#34;myTextBox.(RelativePanel.AlignHorizontalCenterWithPanel)&#34;</span> Value=<span style="color:#a5d6ff">&#34;True&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h2 id="custom-state-triggershttpslearnmicrosoftcomen-uswindowsappsdesignlayoutlayouts-with-xamlcustom-state-triggers"><a href="https://learn.microsoft.com/en-us/windows/apps/design/layout/layouts-with-xaml#custom-state-triggers">Custom State Triggers</a></h2>
+<p>Created by extending the StateTrigger class.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

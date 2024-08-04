@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webview2 on Fred Wieser</title>
+    <link>http://localhost:1313/notes/edge/webview2/</link>
+    <description>Recent content in webview2 on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/edge/webview2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/edge/webview2/overview/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/edge/webview2/overview/</guid>
+      
+      <description>Overview [Documentation] Edge WebView2 is a control that allows for embedding web technologies (HTML/CSS/JS) into native apps. It uses Microsoft Edge as the rendering engine to display the web content in the app.
+WebView2 provides a hybrid approach between the extremes of websites and PWAs on one end of the spectrum and fully native apps on the other end.
+Supported platforms:
+.NET Framework 4.5+ .NET Core 3.1 .NET 5 .NET 6 WinUI 2.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yaml on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/yaml/</link>
+    <description>Recent content in yaml on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/yaml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>yaml</title>
+      <link>http://localhost:1313/wieserpedia/web-development/yaml/yaml/</link>
+      <pubDate>Sun, 15 Jan 2023 19:56:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/yaml/yaml/</guid>
+      
+      <description>YAML key: value # A key-value pair complexMap: # A map that contains a kvp and another map key: value key2: # A key that references another map subKey: value items: # A list - item 1 - item 2 itemsMap: # A list of maps - map1: value map1Prop: value - map2: value map2Prop: value </description>
+      
+    </item>
+    
+  </channel>
+</rss>

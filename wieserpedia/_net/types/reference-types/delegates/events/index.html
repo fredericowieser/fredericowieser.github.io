@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">events | Fred Wieser</title>
+<meta property="og:title" content="events | Fred Wieser" />
+<meta name="twitter:title" content="events | Fred Wieser" />
+<meta itemprop="name" content="events | Fred Wieser" />
+<meta name="application-name" content="events | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/types/reference-types/delegates/events/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/types/reference-types/delegates/events/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">events</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2021-11-06T11:28:28-06:00" itemprop="datePublished"> 6 Nov 2021 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="events">Events</h1>
+<p><a href="https://www.tutorialsteacher.com/csharp/csharp-event">Events in C# (tutorialsteacher.com)</a><br>
+<a href="https://code-maze.com/csharp-events/">Events in C# - Code Maze (code-maze.com)</a><br>
+<a href="https://medium.com/@dinesh.jethoe/events-in-c-explained-4a464b110fdc">Events in C# explained. Everyone that understands English knows… | by Dinesh Jethoe | Medium</a></p>
+<p>Events are notifications sent by one class to another that some event has occurred. They are specialized delegates.<br>
+Events are commonly used in GUIs; you subscribe to events raised by controls such as buttons.<br>
+Events are encapsulated delegates.</p>
+<p>The class that sends (<em>raises</em>) an event is the <em>publisher</em>; the class that receives (<em>handles</em>) the event is the <em>subscriber</em>.<br>
+When an event has many subscribers, the event handlers are invoked synchronously when the event is raised.</p>
+<h1 id="subscribe-to-events-via-visual-studio">Subscribe to Events via Visual Studio</h1>
+<ol>
+<li><strong>Design view</strong> &gt; right-click form/control for which you want an event handler &gt; <strong>Properties</strong> &gt; <strong>Events</strong> icon</li>
+<li>Double-click the event you want to create, such as Load.</li>
+<li>This is the auto-generated <em>event handler</em> that is invoked when the event is raised:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">private</span> <span style="color:#ff7b72">void</span> Form1_Load(<span style="color:#ff7b72">object</span> sender, System.EventArgs e) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="4">
+<li>This is the auto-generated <em>subscription</em> to the event:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">this</span>.Load += <span style="color:#ff7b72">new</span> System.EventHandler(<span style="color:#ff7b72">this</span>.Form1_Load);
+</span></span></code></pre></div><h1 id="subscribe-to-events-programmatically">Subscribe to Events Programmatically</h1>
+<p>// Define an event handler method whose signature matches the delegate signature for the event:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">void</span> HandleCustomEvent(<span style="color:#ff7b72">object</span> sender, System.EventArgs e) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Assume an object `publisher` has an event named `RaiseCustomEvent`.</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Register the event handler with the event:</span>
+</span></span><span style="display:flex;"><span>publisher.RaiseCustomEvent += HandleCustomEvent;
+</span></span></code></pre></div><h1 id="subscribe-to-events-with-an-anonymous-function">Subscribe to Events with an Anonymous Function</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// ONLY use an anonymous function if you don&#39;t have to unsubscribe from the event later:</span>
+</span></span><span style="display:flex;"><span>publisher.RaiseCustomEvent += (<span style="color:#ff7b72">object</span> o, System.EventArgs e) =&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">string</span> s = o.ToString() + <span style="color:#a5d6ff">&#34; &#34;</span> + e.ToString();
+</span></span><span style="display:flex;"><span>    Console.WriteLine(s);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="unsubscribing">Unsubscribing</h1>
+<p>Unsubscribe from events before you dispose of subscriber objects to prevent resource leaks.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Like so:</span>
+</span></span><span style="display:flex;"><span>publisher.RaiseCustomEvent -= HandleCustomEvent;
+</span></span></code></pre></div><h1 id="publish-events-based-on-eventhandler-pattern">Publish Events Based on EventHandler Pattern</h1>
+<p>All events in the .NET class library are based on the <code>EventHandler</code> delegate, which is defined as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> EventHandler(<span style="color:#ff7b72">object</span> sender, EventArgs e);
+</span></span></code></pre></div><p>Remember that <code>EventHandler</code> is a delegate, not an actual <em>event handler</em>. The <em>event handler</em> is a method whose signature matches the <code>EventHandler</code> delegate definition and is invoked when the event is raised.</p>
+<ol>
+<li>(Optional if sending custom data with event).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// At a scope visible to your publisher AND subscriber classes, declare the class for your custom data and add members</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// to hold the data:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">CustomEventArgs</span> : EventArgs 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> CustomEventArgs(<span style="color:#ff7b72">string</span> message) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Message = message;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Message { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>(Optional if using the non-generic version of EventHandler).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Declare a delegate in the publishing class (with a name ending in &#34;EventHandler&#34;):</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> CustomEventHandler(<span style="color:#ff7b72">object</span> sender, CustomEventArgs args);
+</span></span></code></pre></div><ol start="3">
+<li>Declare the event in the publishing class 1 of 3 ways:
+3a. If you have no custom <code>EventArgs</code> class:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// The event type is the non-generic EventHandler delegate.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> EventHandler RaiseCustomEvent;
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// The delegate need not be defined because it is already in the System namespace.</span>
+</span></span></code></pre></div><p>3b. If you are using the non-generic EventHandler and have a custom class derived from EventArgs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Use the delegate from step 2 as the type:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> CustomEventHandler RaiseCustomEvent;
+</span></span></code></pre></div><p>3c. If you are using the generic version, you do not need a custom delegate.
+In the publishing class, specify your event type as <code>EventHandler&lt;CustomEventArgs&gt;</code> (where <code>CustomEventArgs</code>
+is the name of your own class).</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> EventHandler&lt;CustomEventArgs&gt; RaiseCustomEvent;
+</span></span></code></pre></div><h1 id="complete-example">Complete Example</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Define a class to hold custom event info:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">CustomEventArgs</span> : EventArgs 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> CustomEventArgs(<span style="color:#ff7b72">string</span> message) { Message = message; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Message { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Class that defines the event and publishes it for subscription:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Publisher</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Declare the event using EventHandler&lt;T&gt;:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> EventHandler&lt;CustomEventArgs&gt; RaiseCustomEvent;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> DoSomething() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    OnRaiseCustomEvent(<span style="color:#ff7b72">new</span> CustomEventArgs(<span style="color:#a5d6ff">&#34;Event triggered&#34;</span>));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Wrap event invocations with protected virtual method to allow derived classes to override event invocation behavior</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">protected</span> <span style="color:#ff7b72">virtual</span> <span style="color:#ff7b72">void</span> OnRaiseCustomEvent(CustomEventArgs e) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Make a temporary copy of the event to avoid possibility of a race condition if the last subscriber unsubscribes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// immediately after the null check and before the event is raised:</span>
+</span></span><span style="display:flex;"><span>    EventHandler&lt;CustomEventArgs&gt; raiseEvent = RaiseCustomEvent;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// If the event is not null (meaning there *are* subscribers):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (raiseEvent != <span style="color:#79c0ff">null</span>) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Format the string to send inside the CustomEventArgs parameter:</span>
+</span></span><span style="display:flex;"><span>        e.Message += <span style="color:#a5d6ff">$&#34; at {DateTime.Now}&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Raise the event.</span>
+</span></span><span style="display:flex;"><span>        raiseEvent(<span style="color:#ff7b72">this</span>, e);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Class that subscribes to an event and handles the event:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Subscriber</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> <span style="color:#ff7b72">string</span> _id;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Subscriber(<span style="color:#ff7b72">string</span> id, Publisher pub) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _id = id;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Subscribe to the event:</span>
+</span></span><span style="display:flex;"><span>        pub.RaiseCustomEvent += HandleCustomEvent;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Define what actions to take when the event is raised:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">void</span> HandleCustomEvent(<span style="color:#ff7b72">object</span> sender, CustomEventArgs e) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">$&#34;{_id} received this message: {e.Message}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Program</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> Main() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> pub = <span style="color:#ff7b72">new</span> Publisher();
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> sub1 = <span style="color:#ff7b72">new</span> Subscriber(<span style="color:#a5d6ff">&#34;sub1&#34;</span>, pub);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> sub2 = <span style="color:#ff7b72">new</span> Subscriber(<span style="color:#a5d6ff">&#34;sub2&#34;</span>, pub);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Call the method that raises the event.</span>
+</span></span><span style="display:flex;"><span>        pub.DoSomething();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Keep the console window open</span>
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">&#34;Press any key to continue...&#34;</span>);
+</span></span><span style="display:flex;"><span>        Console.ReadLine();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="event-modifiers">Event Modifiers</h1>
+<p><code>virtual</code></p>
+<h1 id="other-examples-somewhat-confusing">Other Examples (somewhat confusing)</h1>
+<h2 id="example-1">Example 1</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// … more implementation …</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> EventHandler? Shout; <span style="color:#8b949e;font-style:italic">// Delegate field.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> AngerLevel;  <span style="color:#8b949e;font-style:italic">// Data field.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Poke() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        AngerLevel++;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (AngerLevel &gt;= <span style="color:#a5d6ff">3</span>) 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (Shout != <span style="color:#79c0ff">null</span>) 
+</span></span><span style="display:flex;"><span>            { <span style="color:#8b949e;font-style:italic">// If there is an event handler…</span>
+</span></span><span style="display:flex;"><span>                Shout(<span style="color:#ff7b72">this</span>, EventArgs.Empty); <span style="color:#8b949e;font-style:italic">// …then call the delegate.</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The inner if statement can be simplified like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Shout?.Invoke(<span style="color:#ff7b72">this</span>, EventArgs.Empty);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> Harry_Shout(<span style="color:#ff7b72">object?</span> sender, EventArgs e) 
+</span></span><span style="display:flex;"><span>{ <span style="color:#8b949e;font-style:italic">// The Event Handler(?).</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (sender <span style="color:#ff7b72">is</span> <span style="color:#79c0ff">null</span>) { <span style="color:#ff7b72">return</span>; } <span style="color:#8b949e;font-style:italic">// It has a signature that matches that of the delegate.</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    Person p = (Person)sender; <span style="color:#8b949e;font-style:italic">// Cast the Object type to a Person type.</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#a5d6ff">$&#34;{p.Name} is this angry: {p.AngerLevel}.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>harry.Shout += Harry_Shout; <span style="color:#8b949e;font-style:italic">// Assigns the method to the delegate field. Note the += operator.</span>
+</span></span></code></pre></div><h2 id="example-2">Example 2</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyList</span>&lt;T&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">protected</span> <span style="color:#ff7b72">virtual</span> <span style="color:#ff7b72">void</span> OnChanged() =&gt;<span style="color:#8b949e;font-style:italic">// This method raises the Changed event.</span>
+</span></span><span style="display:flex;"><span>    Changed?.Invoke(<span style="color:#ff7b72">this</span>, EventArgs.Empty);
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> EventHandler Changed; <span style="color:#8b949e;font-style:italic">// Event declaration; the type must be a delegate.</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">EventExample</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">int</span> s_changeCount;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> ListChanged(<span style="color:#ff7b72">object</span> sender, EventArgs e) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        s_changeCount++;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> Usage() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> names = <span style="color:#ff7b72">new</span> MyList&lt;<span style="color:#ff7b72">string</span>&gt;();
+</span></span><span style="display:flex;"><span>        names.Changed += <span style="color:#ff7b72">new</span> EventHandler(ListChanged); <span style="color:#8b949e;font-style:italic">// Event Handlers are attached with +=. This</span>
+</span></span><span style="display:flex;"><span>        names.Add(<span style="color:#a5d6ff">&#34;Liz&#34;</span>); <span style="color:#8b949e;font-style:italic">// attaches an event handler to the Changed event.</span>
+</span></span><span style="display:flex;"><span>        names.Add(<span style="color:#a5d6ff">&#34;Martha&#34;</span>);
+</span></span><span style="display:flex;"><span>        Console.WriteLine(s_changeCount); <span style="color:#8b949e;font-style:italic">// &#34;3&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Event handlers are detached with <code>-=</code>.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

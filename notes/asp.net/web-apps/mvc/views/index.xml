@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>views on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/mvc/views/</link>
+    <description>Recent content in views on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/mvc/views/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/mvc/views/overview/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/mvc/views/overview/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+Overview A view is an HTML template as a .cshtml file with embedded Razor markup (code that interactions w/HTML to render a page).
+Views handle data presentation and user interaction.
+Views are organized like this where each folder on Views/ is named for each of the app&amp;rsquo;s controllers:
+In Views/Home, when a user requests either Index, Contact, or About, the Home controller determines which of the views is used to build and return that page to the user.</description>
+      
+    </item>
+    
+    <item>
+      <title>view components</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/mvc/views/view-components/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/mvc/views/view-components/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+Overview View components are view content that does require code to execute in order to render.
+They only display partial content. They consist of a class and a view (much like a Controller and a View). They have their own code that executes to render content. They support dependency injection. They have a &amp;ldquo;code part&amp;rdquo; placed in /Components/ViewComponentName.cs They have a &amp;ldquo;view part&amp;rdquo; placed in /Shared/Components/ViewComponentName/Default.</description>
+      
+    </item>
+    
+    <item>
+      <title>partial views</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/mvc/views/partial-views/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/mvc/views/partial-views/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+Partial Views A partial view is a regular view that&amp;rsquo;s used as part of another view. Partial views exist both in MVC apps (Views/) and Razor Pages apps (Pages/). They can also be placed in /Views/Shared/. By convention, their filename starts with _.
+Partial views depend on data passed to them from a calling (parent) view. They do not depend on code to execute to render content.</description>
+      
+    </item>
+    
+    <item>
+      <title>passing data</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/mvc/views/passing-data/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/mvc/views/passing-data/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+ViewModels ViewModels (strongly typed) If you specify a model type in the view, we call this a ViewModel. An instance of the ViewModel is passed to the view from the action.
+ViewModels are either stored in Models/ or Viewmodels/.
+Address.cs
+namespace WebApplication1.ViewModels { public class Address { public string Name { get; set; } public string Street { get; set; } public string City { get; set; } public string State { get; set; } public string PostalCode { get; set; } } } Define a model with @model.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

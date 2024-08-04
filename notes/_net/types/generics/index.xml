@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>generics on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/generics/</link>
+    <description>Recent content in generics on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/generics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/types/generics/overview/</link>
+      <pubDate>Sun, 07 Nov 2021 19:58:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/generics/overview/</guid>
+      
+      <description>Generics Generics are classes, structures, interfaces and methods that have placeholders (type parameters) for one or more of the types that they store or use. They allow you to pass types as parameters, similar to how you can pass objects as parameters. They defer the specification of one or more types until the class/method has been instantiated (a constructed generic class).
+A generic class cannot be used as-is because it is not a type; it is a blueprint for a type.</description>
+      
+    </item>
+    
+    <item>
+      <title>generic interfaces</title>
+      <link>http://localhost:1313/notes/_net/types/generics/generic-interfaces/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/generics/generic-interfaces/</guid>
+      
+      <description>Overview Generic interfaces are type-safe counterparts to non-generic interfaces for ordering and equality comparisons and for functionality shared by generic collection types.
+Availability: .NET 7 Framework-provided Generic Interfaces For Equality and Ordering Comparisons System.IComparable&amp;lt;T&amp;gt; — methods for ordering comparisons System.IEquatable&amp;lt;T&amp;gt; — methods for equality comparisons IComparer&amp;lt;T&amp;gt; — define an ordering comparison for types that do not implement IComparable&amp;lt;T&amp;gt; IEqualityComparer&amp;lt;T&amp;gt; — define an equality comparison for types that do not implement IEquatable&amp;lt;T&amp;gt; For Collection Functionality ICollection&amp;lt;T&amp;gt; — the basic interface for generic collection types; methods for adding, removing, copying, and enumerating elements; inherits from IEnumerable&amp;lt;T&amp;gt; and IEnumerable.</description>
+      
+    </item>
+    
+    <item>
+      <title>generic delegates</title>
+      <link>http://localhost:1313/notes/_net/types/generics/generic-delegates/</link>
+      <pubDate>Thu, 28 Apr 2022 20:40:46 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/generics/generic-delegates/</guid>
+      
+      <description>Overview Below are generic delegates useful for manipulating arrays and lists.
+Action&amp;lt;T&amp;gt; Represents a method that performs some action on an element of the specified type.
+Usage:
+Create a method that performs the desired action on an element Create an instance of the Action&amp;lt;T&amp;gt; delegate Pass the array and the delegate to the Array.ForEach static generic method Note: List&amp;lt;T&amp;gt; also has a ForEach method that uses an Action&amp;lt;T&amp;gt; delegate, but this method is not generic.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

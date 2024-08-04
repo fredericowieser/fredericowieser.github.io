@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>components on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/</link>
+    <description>Recent content in components on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/overview/</link>
+      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/overview/</guid>
+      
+      <description>Abstract A component is an element of UI — a page, dialog, button, form, etc — that is built into a .NET assembly. It includes layout and logic.
+Components can be nested, reused, shared among projects, and used in MVC and Razor Pages apps.
+High-level Process for Building Components Create ComponentName.razor under /Pages (if the Component produces a page) or /Shared (otherwise) If the Component requires CSS styling, add it to a code-behind in ComponentName.</description>
+      
+    </item>
+    
+    <item>
+      <title>navlink and navmenu components</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/navlink-and-navmenu-components/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/navlink-and-navmenu-components/</guid>
+      
+      <description>NavLink Use a NavLink component in place of HTML hyperlink elements (&amp;lt;a&amp;gt;) for navigation links. A NavLink component toggles an active CSS class to help a user understand which page is active among the navigation links.
+Optionally, assign a CSS class name to NavLink.ActiveClass to apply a custom CSS class to the rendered link when the current route matches.
+Any attributes not defined by the component are passed through to the anchor element, like this target attribute:</description>
+      
+    </item>
+    
+    <item>
+      <title>childcontent, renderfragment, and templated components</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/childcontent-renderfragment-and-templated-components/</link>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/childcontent-renderfragment-and-templated-components/</guid>
+      
+      <description>Child Components via ChildContent Components can set the content of another Component.
+Creating Define a ChildContent component parameter of type RenderFragment:
+Shared/SomeChild.razor
+&amp;lt;div class=&amp;#34;card w-25&amp;#34; style=&amp;#34;margin-bottom:15px&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;card-header font-weight-bold&amp;#34;&amp;gt;Child content&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;card-body&amp;#34;&amp;gt;@ChildContent&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; @code { [Parameter] public RenderFragment? ChildContent { get; set; } } The Component that uses the child component provides the content that it renders:
+@page &amp;#34;/render-fragment-parent&amp;#34; &amp;lt;h1&amp;gt;Render child content&amp;lt;/h1&amp;gt; &amp;lt;SomeChild&amp;gt; Content of the child component is supplied by the parent component.</description>
+      
+    </item>
+    
+    <item>
+      <title>html &lt;head&gt; element components</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/html-head-element-components/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/html-head-element-components/</guid>
+      
+      <description>Overview Some Razor Components modify the HTML &amp;lt;head&amp;gt; element&amp;rsquo;s content of a page.
+HTML &amp;lt;title&amp;gt; Element and PageTitle Component Set the page&amp;rsquo;s title with a PageTitle component. This renders the HTML &amp;lt;title&amp;gt; element to a HeadOutlet component:
+@page &amp;#34;/set-title&amp;#34; &amp;lt;h1&amp;gt;Setting title&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;Title: @title&amp;lt;/p&amp;gt; &amp;lt;PageTitle&amp;gt;@title&amp;lt;/PageTitle&amp;gt; @code { private string title = &amp;#34;Title set by component&amp;#34;; } HTML &amp;lt;head&amp;gt; Element and HeadContent Component Set the content of the &amp;lt;head&amp;gt; element with a HeadContent component.</description>
+      
+    </item>
+    
+    <item>
+      <title>css isolation</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/css-isolation/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/css-isolation/</guid>
+      
+      <description>Overview CSS can be isolated to individual pages, views, and Components.
+CSS isolation occurs at build time. Blazor rewrites CSS selectors to match the markup rendered by the Component. These rewritten CSS styles are then bundled as a static asset.
+Isolate CSS for a Component To enable Component-level isolation, create a .razor.css file matching the name of the .razor file of the Component in the same folder.
+Isolate CSS for a Child Component Use the ::deep pseudo-element to any descendant elements in the parent Component&amp;rsquo;s .</description>
+      
+    </item>
+    
+    <item>
+      <title>generic types</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/generic-types/</link>
+      <pubDate>Tue, 13 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/generic-types/</guid>
+      
+      <description>Generically-typed Parameters Use @typeparam directive:
+@typeparam TItem &amp;lt;!-- or: --&amp;gt; @typeparam TEntity where TEntity : IEntity Example Shared/ListGenericTypeItems.razor
+&amp;lt;!-- This Component, ListGenericTypeItems, will be typed as TExample: --&amp;gt; @typeparam TExample @if (ExampleList is not null) { &amp;lt;ul&amp;gt; @foreach (var item in ExampleList) { &amp;lt;li&amp;gt;@item&amp;lt;/li&amp;gt; } &amp;lt;/ul&amp;gt; } @code { [Parameter] public IEnumerable&amp;lt;TExample&amp;gt;? ExampleList{ get; set; } } This allows you to set the type parameter of a Component that renders a ListGenericTypeItems:</description>
+      
+    </item>
+    
+    <item>
+      <title>quickgrid component</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/quickgrid-component/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/quickgrid-component/</guid>
+      
+      <description>Overview Availability: ASP.NET Core 7 (Preview)
+QuickGrid is an experimental Component for quickly displaying data in tabular form. It is highly optimized.
+QuickGrid is in preview in ASP.NET Core 7 and not officially supported until ASP.NET Core 8 or later.
+QuickGrid sample site: https://aspnet.github.io/quickgridsamples/
+Installing dotnet add package microsoft.aspnetcore.components.quickgrid --prerelease Using @page &amp;#34;/quickgrid-example&amp;#34; @using Microsoft.AspNetCore.Components.QuickGrid &amp;lt;QuickGrid Items=&amp;#34;@people&amp;#34;&amp;gt; &amp;lt;PropertyColumn Property=&amp;#34;@(p =&amp;gt; p.PersonId)&amp;#34; Sortable=&amp;#34;true&amp;#34; /&amp;gt; &amp;lt;PropertyColumn Property=&amp;#34;@(p =&amp;gt; p.Name)&amp;#34; Sortable=&amp;#34;true&amp;#34; /&amp;gt; &amp;lt;PropertyColumn Property=&amp;#34;@(p =&amp;gt; p.</description>
+      
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/events/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/events/</guid>
+      
+      <description>Overview DOM events can be assigned an event handler to execute code when the event is triggered:
+@onsomeDOMevent=&amp;quot;Delegate&amp;quot;
+Example
+&amp;lt;button @onclick=&amp;#34;SaveEmployee&amp;#34;&amp;gt;Save&amp;lt;/button&amp;gt; @code { private void SaveEmployee() { … } } Default Event Arguments Some events support event arguments. For example:
+@onclick passes MouseEventArgs @onkeydown passes KeyboardEventArgs Example
+&amp;lt;button @onclick=&amp;#34;ShowLocation&amp;#34;&amp;gt;Show&amp;lt;/button&amp;gt; @code { private void ShowLocation(MouseEventArgs e) { } } EventCallback When an event occurs in a child Component, use EventCallback to trigger code to execute in the parent Component:</description>
+      
+    </item>
+    
+    <item>
+      <title>parameters</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/parameters/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/parameters/</guid>
+      
+      <description>Component Parameters Parameters allow Components to pass data from one another. The [Parameter] attribute on a public auto property (no get/set logic) of a receiving Component defines it as a parameter:
+PanelBody.cs
+public class PanelBody { public string? Text { get; set; } public string? Style { get; set; } } Shared/ParameterChild.razor
+&amp;lt;div class=&amp;#34;card w-25&amp;#34; style=&amp;#34;margin-bottom:15px&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;card-header font-weight-bold&amp;#34;&amp;gt;@Title&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;card-body&amp;#34; style=&amp;#34;font-style:@Body.Style&amp;#34;&amp;gt; @Body.Text &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; @code { [Parameter] public string Title { get; set; } = &amp;#34;Set By Child&amp;#34;; [Parameter] public PanelBody Body { get; set; } = new() { Text = &amp;#34;Set by child.</description>
+      
+    </item>
+    
+    <item>
+      <title>classes and nesting</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/classes-and-nesting/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/classes-and-nesting/</guid>
+      
+      <description>Component Classes ComponentBase is the base class for Razor components. It implements IComponent.
+Components are generated as C# partial classes. They can either be written as:
+A single file with C# @code blocks, HTML markup, and Razor markup, like: Pages/Counter.razor
+@page &amp;#34;/counter&amp;#34; &amp;lt;PageTitle&amp;gt;Counter&amp;lt;/PageTitle&amp;gt; &amp;lt;h1&amp;gt;Counter&amp;lt;/h1&amp;gt; &amp;lt;p role=&amp;#34;status&amp;#34;&amp;gt;Current count: @currentCount&amp;lt;/p&amp;gt; &amp;lt;button class=&amp;#34;btn btn-primary&amp;#34; @onclick=&amp;#34;IncrementCount&amp;#34;&amp;gt;Click me&amp;lt;/button&amp;gt; @code { private int currentCount = 0; private void IncrementCount() { currentCount++; } } Or, HTML and Razor markup in a .</description>
+      
+    </item>
+    
+    <item>
+      <title>data binding</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/data-binding/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/data-binding/</guid>
+      
+      <description>One-way Data Binding Data from the code-behind is bound in the UI in a one-way mode:
+&amp;lt;h1 class=&amp;#34;page-title&amp;#34;&amp;gt; Details for @FirstName @LastName &amp;lt;/h1&amp;gt; @code { public string FirstName { get; set; } public string LastName { get; set; } } Or in a form control, such as an input:
+&amp;lt;!-- changing the value of the input, changing the value in the UI will not change it in the Employee instance --&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; class=&amp;#34;form-control-plaintext&amp;#34;&amp;gt; @Employee.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

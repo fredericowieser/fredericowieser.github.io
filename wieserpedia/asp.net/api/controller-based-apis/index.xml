@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>controller based apis on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/</link>
+    <description>Recent content in controller based apis on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 14 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. overview (controllers)</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/overview/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/overview/</guid>
+      
+      <description>Overview [Documentation] Controllers are classes that derive from ControllerBase. If derived from Controller, this would add support for views (for handling web pages rather than API requests). Controllers are activated and disposed on a per-request basis. Knowledge of MVC controllers is needed to use them in controller-based APIs. See Notes on MVC Controllers.
+High-Level Process The high-level process for implementing controller-based APIs:
+VS &amp;gt; File &amp;gt; New &amp;gt; Project &amp;gt; ASP.</description>
+      
+    </item>
+    
+    <item>
+      <title>2. action return types</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/action-return-types/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/action-return-types/</guid>
+      
+      <description>Overview [Documentation] There are four options for return types for web API controller action methods:
+Specific type IActionResult ActionResult&amp;lt;T&amp;gt; HttpResults Specific Type Use when there are no known conditions against which to safeguard.
+Considerations for Specific Types IEnumerable&amp;lt;T&amp;gt; or IAsyncEnumerable&amp;lt;T&amp;gt; ASP.NET Core buffers the result of actions that return IEnumerable&amp;lt;T&amp;gt; before writing them to the response:
+[HttpGet(&amp;#34;syncsale&amp;#34;)] public IEnumerable&amp;lt;Product&amp;gt; GetOnSaleProducts() { var products = _productContext.Products.OrderBy(p =&amp;gt; p.Name).ToList(); foreach (var product in products) if (product.</description>
+      
+    </item>
+    
+    <item>
+      <title>3. formatting responses</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/formatting-responses/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/formatting-responses/</guid>
+      
+      <description>Overview [Documentation] Some actions, like those that derive from ActionResult like JsonResult and ContentResult, return results in specific formats (JSON and plain text, respectively). Others, like actions that return objects that are not IActionResult types, are serialized with an IOutputFormatter.
+By default, Ok returns JSON-formatted data:
+[HttpGet] public IActionResult Get() =&amp;gt; Ok(_todoItemStore.GetList()); To return plain text, use ContentResult and Content:
+[HttpGet(&amp;#34;Version&amp;#34;)] public ContentResult GetVersion() =&amp;gt; Content(&amp;#34;v1.0.0&amp;#34;); For actions with multiple return types, return IActionResult.</description>
+      
+    </item>
+    
+    <item>
+      <title>4. error handling</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/error-handling/</link>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/error-handling/</guid>
+      
+      <description>Overview [Documentation] Notes on Error Handling in ASP.NET Core apply.
+Exception Handling In non-development environments:
+Call UseExceptionHandler to add exception handling middleware:
+Program.cs var app = builder.Build(); app.UseHttpsRedirection(); if (!app.Environment.IsDevelopment()) app.UseExceptionHandler(&amp;#34;/error&amp;#34;); app.UseAuthorization(); app.MapControllers(); app.Run(); Configure a controller action to respond to the /error route: SomeController.cs [Route(&amp;#34;/error&amp;#34;)] // If using OpenAPI, mark this action with [ApiExplorerSettings(IgnoreApi = true)] to exclude this // error handler action from the app&amp;#39;s OpenAPI specification: public IActionResult HandleError() =&amp;gt; Problem(); If using exception handling middleware in both development and non-development environments:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

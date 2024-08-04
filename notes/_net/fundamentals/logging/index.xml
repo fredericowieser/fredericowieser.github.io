@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/logging/</link>
+    <description>Recent content in logging on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/logging/overview/</link>
+      <pubDate>Wed, 22 Jun 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/logging/overview/</guid>
+      
+      <description>Abstract [Documentation] .NET&amp;rsquo;s logging API supports a variety of built-in and third-party logging providers.
+Concepts Logging providers — an implementation of ILogger&amp;lt;T&amp;gt; that outputs logs Logging categories — a string associated with each log message Logging levels: Trace = 0 (Warning: may contain sensitive app data; do not enable in production) Debug = 1 (Caution: may produce a high volume of logs) Information = 2 (default if no level specified) Warning = 3 (errors and conditions that do not cause the app to fail) Error = 4 (errors and exceptions in the scope of the current operation (not app-wide) that cannot be handled) Critical = 5 (failures that require immediate attention) None = 6 (use this level to suppress log messages) Providers [Documentation] Built-in providers include:</description>
+      
+    </item>
+    
+    <item>
+      <title>console log provider</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/logging/console-log-provider/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/logging/console-log-provider/</guid>
+      
+      <description>Overview Availability: .NET 5
+Documentation: https://learn.microsoft.com/en-us/dotnet/core/extensions/console-log-formatter
+The Console log provider supports three formatting options: Simple, Systemd, and Json.
+Registering To register any one of the formatters, use the Add{TYPE}Console extension method:
+using Microsoft.Extensions.Logging; using ILoggerFactory loggerFactory = LoggerFactory.Create(builder =&amp;gt; builder.AddSimpleConsole(options =&amp;gt; { options.IncludeScopes = true; options.SingleLine = true; options.TimestampFormat = &amp;#34;HH:mm:ss &amp;#34;; })); Registering via Configuration File { &amp;#34;Logging&amp;#34;: { &amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Information&amp;#34;, &amp;#34;Microsoft&amp;#34;: &amp;#34;Warning&amp;#34;, &amp;#34;Microsoft.Hosting.Lifetime&amp;#34;: &amp;#34;Information&amp;#34; }, &amp;#34;Console&amp;#34;: { &amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Information&amp;#34;, &amp;#34;Microsoft&amp;#34;: &amp;#34;Warning&amp;#34;, &amp;#34;Microsoft.</description>
+      
+    </item>
+    
+    <item>
+      <title>logging for libraries</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/logging/logging-for-libraries/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/logging/logging-for-libraries/</guid>
+      
+      <description>Overview [Documentation] These notes provide guidance on exposing logging in a library in a way that is consistent with other .NET libraries and frameworks.
+ILoggerFactory vs. Injecting ILogger&amp;lt;T&amp;gt; When you need a logger object that can be passed on to multiple classes in the library, use ILoggerFactory. When you need a logger object that is only used in one class and never shared, use a constructor-injected ILogger&amp;lt;T&amp;gt;. Prefer Source-Generated Logging // This partial class is static so it can be used to create extensions on ILogger: internal static partial class LogMessages { // The source-generated LoggerMessageAttribute: [LoggerMessage( Message = &amp;#34;Sold {quantity} of {description}&amp;#34;, Level = LogLevel.</description>
+      
+    </item>
+    
+    <item>
+      <title>high performance logging</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/logging/high-performance-logging/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/logging/high-performance-logging/</guid>
+      
+      <description>Overview [Documentation] High-performance logging is achieved with LoggerMessage. This class exposes functionality to create delegates that can be cached. This approach requires fewer object allocations and reduced computational overhead vs. ILogger.
+Create a logger message LoggerMessage.Define(LogLevel, EventId, String) configures an Action delegate that represents a log message. Each log message is stored in a static field created by Define.
+private static readonly Action&amp;lt;ILogger, Exception&amp;gt; s_failedToProcessWorkItem; The delegate is assigned:
+s_failedToProcessWorkItem = LoggerMessage.</description>
+      
+    </item>
+    
+    <item>
+      <title>very high performance logging (source generation)</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/logging/very-high-performance-logging/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/logging/very-high-performance-logging/</guid>
+      
+      <description>Overview Availability: .NET 6
+Documentation: https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator
+The LoggerMessageAttribute, part of Microsoft.Extensions.Logging, source-generates performant logging APIs. The auto-generated code relies on ILogger and LoggerMessage.Define.
+This implementation is significantly faster than other approaches).
+Usage Use LoggerMessageAttribute on partial logging methods:
+public static partial class Log { [LoggerMessage( EventId = 0, Level = LogLevel.Critical, Message = &amp;#34;Could not open socket to `{hostName}`&amp;#34;)] public static partial void CouldNotOpenSocket(ILogger logger, string hostName); } The method does not have to be static.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linq on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/linq/</link>
+    <description>Recent content in linq on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/linq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linq and files</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/linq-and-files/</link>
+      <pubDate>Mon, 14 Nov 2022 20:11:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/linq-and-files/</guid>
+      
+      <description>For all examples:
+string startFolder = @&amp;#34;*path*&amp;#34;; System.IO.DirectoryInfo dir = new(startFolder); IEnumerable&amp;lt;System.IO.FileInfo&amp;gt; fileList = dir.GetFiles(&amp;#34;*.*&amp;#34;, System.IO.SearchOption.AllDirectories); Query for Files by Attribute or Name var fileQuery = from file in fileList where file.Extension == &amp;#34;.txt&amp;#34; orderby file.Name select file; Find the Newest File var newestFile = (from file in fileQuery orderby file.CreationTime select new { file.FullName, file.CreationTime }) .Last(); Group Files by Extension int trimLength = startFolder.Length; var queryGroupByExt = from file in fileList group file by File.</description>
+      
+    </item>
+    
+    <item>
+      <title>linq and strings</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/linq-and-strings/</link>
+      <pubDate>Mon, 14 Nov 2022 20:11:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/linq-and-strings/</guid>
+      
+      <description>For all examples:
+string startFolder = @&amp;#34;*path*&amp;#34;; System.IO.DirectoryInfo dir = new(startFolder); IEnumerable&amp;lt;System.IO.FileInfo&amp;gt; fileList = dir.GetFiles(&amp;#34;*.*&amp;#34;, System.IO.SearchOption.AllDirectories); Query for Files by Attribute or Name var fileQuery = from file in fileList where file.Extension == &amp;#34;.txt&amp;#34; orderby file.Name select file; Find the Newest File var newestFile = (from file in fileQuery orderby file.CreationTime select new { file.FullName, file.CreationTime }) .Last(); Group Files by Extension int trimLength = startFolder.Length; var queryGroupByExt = from file in fileList group file by File.</description>
+      
+    </item>
+    
+    <item>
+      <title>plinq</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/plinq/</link>
+      <pubDate>Mon, 09 May 2022 19:48:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/plinq/</guid>
+      
+      <description>PLINQ Parallel LINQ. Enable multiple threads to execute a query.
+// Single-threaded: int[] fibonacciNumbers = numbers .Select(number =&amp;gt; Fibonacci(number)) .ToArray(); // Multi-threaded: int[] fibonacciNumbers = numbers .AsParallel() .Select(number =&amp;gt; Fibonacci(number)) .OrderBy(number =&amp;gt; number) // Parallel execution can cause results to become disordered. .ToArray(); </description>
+      
+    </item>
+    
+    <item>
+      <title>subqueries</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/subqueries/</link>
+      <pubDate>Wed, 27 Apr 2022 18:56:35 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/subqueries/</guid>
+      
+      <description>Subqueries A query clause may itself contain a query expression (a subquery). Each subquery starts with its own from clause that does not necessarily point to the same data source as the first from clause.
+var queryGroupMax = from student in students // for each student in the `students` sequence… group student by student.Year into studentGroup // …group the student by `.Year` into new variable `studentGroup`. select new { Level = studentGroup.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

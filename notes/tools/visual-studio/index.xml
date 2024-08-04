@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visual studio on Fred Wieser</title>
+    <link>http://localhost:1313/notes/tools/visual-studio/</link>
+    <description>Recent content in visual studio on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/tools/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>code reuse</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/code-reuse/</link>
+      <pubDate>Fri, 08 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/code-reuse/</guid>
+      
+      <description>Overview These notes discuss the differences between project references, file references, class libraries, and shared projects in Visual Studio.
+References A reference is an entry in a project file that Visual Studio uses to locate a code component.
+Consider buildable project A which references buildable project B. Since B (like A) produces an assembly, you can reference either the project (project reference) or the assembly (file reference).
+Project References A project reference is a references to a project&amp;rsquo;s code even if it contains an assembly.</description>
+      
+    </item>
+    
+    <item>
+      <title>code analysis</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/code-analysis/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/code-analysis/</guid>
+      
+      <description>Overview [Documentation] [Documentation] See notes on code analysis.</description>
+      
+    </item>
+    
+    <item>
+      <title>http files</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/http-files/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/http-files/</guid>
+      
+      <description>Overview [Documentation] [Documentation] Availability: ASP.NET Core 8? (documentation is unclear), Visual Studio 2022 v17.6+
+HTTP files in Visual Studio allow you to create HTTP requests. You can use the editor to create and send requests and view responses.
+File Format The sequence is important:
+Variables HTTP request Headers (optional) Body (optional) The request must be in the format HTTP_METHOD URL HTTP_VERSION where HTTP_VERSION is optional and is one of HTTP/1.1 HTTP/2 HTTP/3.</description>
+      
+    </item>
+    
+    <item>
+      <title>msbuild</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/msbuild/</link>
+      <pubDate>Tue, 14 Mar 2023 21:16:15 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/msbuild/</guid>
+      
+      <description>MSBuild Runs build processes to build apps. Used by Visual Studio to build. Used by dotnet build to build. Project (.proj) Files XML-based Properties Key-value pairs used to configure builds.
+Always inside a &amp;lt;PropertyGroup&amp;gt; tag:
+&amp;lt;PropertyGroup&amp;gt; &amp;lt;BuildDir&amp;gt;Build&amp;lt;/BuildDir&amp;gt; &amp;lt;/PropertyGroup&amp;gt; Conditionals &amp;lt;SomeProperty Condition=&amp;#34;condition&amp;#34;&amp;gt;DefaultValue&amp;lt;/SomeProperty&amp;gt; Items Inputs into the build system; usually files.
+Grouped into item types based on user-defined item names. Item types are used in tasks which use the individual items to perform the steps of the build process.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

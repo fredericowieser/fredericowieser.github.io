@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fundamentals on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/</link>
+    <description>Recent content in fundamentals on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>app startup</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/app-startup/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/app-startup/</guid>
+      
+      <description>Overview Startup is asynchronous and automatic via blazor.server.js or blazor.webassembly.js. The Blazor &amp;lt;script&amp;gt; tag is in wwwroot/index.html (WASM) or Pages/_Host.cshtml (Server).
+Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup?view=aspnetcore-7.0 Manually Starting Blazor Add autostart=&amp;quot;false&amp;quot; to the Blazor &amp;lt;script&amp;gt; tag.
+Place a script that calls Blazor.start() after the &amp;lt;script&amp;gt; tag inside the closing &amp;lt;body&amp;gt; tag.
+JavaScript Initializers JS initializers execute logic before and after a Blazor app loads.
+More: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup?view=aspnetcore-7.0#javascript-initializers</description>
+      
+    </item>
+    
+    <item>
+      <title>error handling</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/error-handling/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/error-handling/</guid>
+      
+      <description>ErrorBoundary Blazor apps do not have a middleware processing pipeline that can be handled for global error handling. Instead, use the ErrorBoundary component.
+The ErrorBoundary component renders its child content normally, and renders error UI when an unhandled exception occurs.
+Example: wrapping the body content of the app&amp;rsquo;s main layout in Shared/MainLayout.razor:
+&amp;lt;main&amp;gt; &amp;lt;article class=&amp;#34;content px-4&amp;#34;&amp;gt; &amp;lt;ErrorBoundary&amp;gt; @Body &amp;lt;/ErrorBoundary&amp;gt; &amp;lt;/article&amp;gt; &amp;lt;/main&amp;gt; CascadingValue As an alternative to ErrorBoundary, use an error processing component as a cascading value to handle errors in a centralized way.</description>
+      
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/logging/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/logging/</guid>
+      
+      <description>Overview At default log levels, and with no additional providers:
+Blazor Server logs to the server-side .NET console in Development environment at LogLevel.Information or higher. Blazor WASM logs to the client-side browser developer tools console at LogLevel.Information or higher. Notes &amp;amp; Documentation
+Notes on Logging in .NET apply to these notes as well. Notes on Logging in ASP.NET Core apply to these notes as well. Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/logging?view=aspnetcore-7.0 Logging in Components Injecting an ILogger&amp;lt;T&amp;gt; Pages/Counter1.</description>
+      
+    </item>
+    
+    <item>
+      <title>signalr</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/signalr/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/signalr/</guid>
+      
+      <description>Overview </description>
+      
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/configuration/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/configuration/</guid>
+      
+      <description>Overview For Blazor Server, see the ASP.NET Core Configuration section. For Blazor WASM, see the Blazor WASM Configuration section </description>
+      
+    </item>
+    
+    <item>
+      <title>depenency injection</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/depenency-injection/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/fundamentals/depenency-injection/</guid>
+      
+      <description>Default Services HttpClient (Scoped) IJSRuntime (Server=Scoped, WASM=Singleton) — an instance of a JavaScript runtime where JS calls are dispatched NavigationManager (Server=Scoped, WASM=Singleton) — helpers for working with URIs and navigation state Requesting Services in Components Inject services into components using @inject directive:
+@page &amp;#34;/customer-list&amp;#34; @* Inject type into property *@ @inject IDataAccess DataRepository @if (customers != null) { &amp;lt;ul&amp;gt; @foreach (var customer in customers) { &amp;lt;li&amp;gt;@customer.FirstName @customer.LastName&amp;lt;/li&amp;gt; } &amp;lt;/ul&amp;gt; } @code { private IReadOnlyList&amp;lt;Customer&amp;gt;?</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pipelines on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/</link>
+    <description>Recent content in pipelines on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pipelines</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/overview/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/overview/</guid>
+      
+      <description>Abstract [Documentation] Pipelines are designed to simplify high performance I/O operations with .NET.
+Pipelines are available in System.IO.Pipelines Nuget package.
+Pipe Pipe is used to create a PipeReader/PipeWriter pair, accessible via properties on the Pipe. All data written in the PipeWriter is available in the PipeReader:
+var pipe = new Pipe(); PipeReader reader = pipe.Reader; PipeWriter writer = pipe.Writer; async Task ProcessLinesAsync(Socket socket) { var pipe = new Pipe(); Task writing = FillPipeAsync(socket, pipe.</description>
+      
+    </item>
+    
+    <item>
+      <title>pipereader</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/pipereader/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/pipereader/</guid>
+      
+      <description>Overview PipeReader manages memory on the caller&amp;rsquo;s behalf.
+Always call PipeReader.AdvanceTo after calling PipeReader.ReadAsync:
+ReadAsync returns a ReadOnlySequence&amp;lt;byte&amp;gt; that is only valid until the call to AdvanceTo. Using the return value after the call to AdvanceTo throws an exception. PipeReader.AdvanceTo takes two SequencePosition arguments: one that marks how much data was consumed, and one that marks how much of the buffer was observed.
+Consumed — When data is marked as consumed, the pipe returns the memory to the underlying buffer pool.</description>
+      
+    </item>
+    
+    <item>
+      <title>pipewriter</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/pipewriter/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/io-operations/pipelines/pipewriter/</guid>
+      
+      <description>Overview PipeWriter manages buffers for writing on the caller&amp;rsquo;s behalf. It implements IBufferWriter&amp;lt;byte&amp;gt; to get access to buffers to perform writes without extra buffer copies:
+async Task WriteHelloAsync(PipeWriter writer, CancellationToken cancellationToken = default) { // Request a buffer of at least 5 bytes from the PipeWriter. Memory&amp;lt;byte&amp;gt; memory = writer.GetMemory(5); // Write directly into the buffer. int written = Encoding.ASCII.GetBytes(&amp;#34;Hello&amp;#34;.AsSpan(), memory.Span); // Tell the writer how many bytes were written. writer.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on Fred Wieser</title>
+    <link>http://localhost:1313/notes/cli/powershell/</link>
+    <description>Recent content in powershell on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/cli/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/cli/powershell/overview/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/overview/</guid>
+      
+      <description>Automatic Variables Variable Description $$ Returns the last token in the last line received by the session $^ Returns the first token in the last line received by the session $? Returns bool if the last command succeeded $_ Alias to $PSItem. Returns the current object in the pipeline object. Use in commands that perform an action on every object in the pipeline. $Error Returns an array of error objects of the most recent errors $HOME Returns the full path of the user&amp;rsquo;s home directory (same as $env:USERPROFILE) $Host An object that represents the current host application for PowerShell $isCoreCLR $isLinux $isMacOS $isWindows $LASTEXITCODE Returns the exit code of the last native program or PowerShell script ran $PROFILE The full path of the posh profile for the current user and current host application $PSHOME The full path of the installation directory for posh $PWD The current working directory $StackTrace The stack trace for the most recent error Chaining Commands Run cmd2 only if cmd1 succeeds: cmd1 &amp;amp;&amp;amp; cmd2</description>
+      
+    </item>
+    
+    <item>
+      <title>openssh</title>
+      <link>http://localhost:1313/notes/cli/powershell/openssh/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/openssh/</guid>
+      
+      <description>Public-key Cryptography / Asymmetric Encryption Generate a public/private keypair Use ssh-keygen to generate a public/private keypair: ssh-keygen -t ed25519 The keys are stored in ~./ssh as id_ed25519 and id_ed25519.pub Trust the public key on OpenSSH Server Add the contents of id_ed25519.pub to ./ssh/authorized_keys</description>
+      
+    </item>
+    
+    <item>
+      <title>scripting</title>
+      <link>http://localhost:1313/notes/cli/powershell/scripting/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/scripting/</guid>
+      
+      <description>Flow Control For for ($i=1; $i -le 10; $i++) { # ... } Foreach foreach ($item in $collection) { # ... } Multi-line Statements $x = &amp;#34;Some really long ` value&amp;#34; Strings Concatenating $x = &amp;#34;together&amp;#34; Write-Host &amp;#34;Smushed$x&amp;#34; # or... Write-Host &amp;#34;Smushed$($x)&amp;#34; </description>
+      
+    </item>
+    
+  </channel>
+</rss>

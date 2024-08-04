@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>architecting modern web apps on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/</link>
+    <description>Recent content in architecting modern web apps on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1 traditional web apps vs spas</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/1-traditional-web-apps-vs-spas/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/1-traditional-web-apps-vs-spas/</guid>
+      
+      <description>Documentation: https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/
+Traditional Web Apps Perform most app logic on the server Choose when: Client-side requirements are simple (or even read-only) (search engines; blogs; CMS public-facing apps) App needs to function in browsers without JavaScript Single Page Applications Perform most UI logic in web browser and communicate with the web server via APIs Using CI/CD may be more difficult Choose when: App must expose a rich UI with many features SPAs load more quickly; user actions are more responsive SPAs support incremental updates, saving partially completed forms/docs; drag-and-drop; disconnected mode Team is familiar with JavaScript / TypeScript / Blazor WASM App must already expose an API for other clients Blazor (Blazor Server or Blazor WASM) Build rich UIs (like with SPA) but without significant JavaScript Choose when App must expose a rich UI with many features Team is more comfortable with .</description>
+      
+    </item>
+    
+    <item>
+      <title>2 architectural principles</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/2-architectural-principles/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/2-architectural-principles/</guid>
+      
+      <description>Design Principles Principles | DevIQ
+Separation of concerns Software should be separated based on the kind of work it performs.
+The behavior responsible for choosing which items to format should be kept separate from the behavior responsible for formatting the items; these behaviors are only incidentally related to one another. Encapsulation Parts of an application should be encapsulated (insulated) from other parts.
+App components and layers should be able to adjust their internal implementation without breaking their collaborators.</description>
+      
+    </item>
+    
+    <item>
+      <title>3 common web app architectures</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/3-common-web-app-architectures/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/3-common-web-app-architectures/</guid>
+      
+      <description>Monolithic application An entire application deployed as a single unit.
+When it needs to scale horizontally, the entire app is duplicated. Generally a single project compiled to a single assembly deployed as a single unit. Organization of a Monolithic Application
+Separation of concerns is achieved through folders.
+&amp;ldquo;N-Layer&amp;rdquo; architecture apps Most common layers: User Interface (UI) Business Logic (BLL) Data Access (DAL) Users make requests through the UI, which interacts only with the BLL.</description>
+      
+    </item>
+    
+    <item>
+      <title>4 common client side web technologies</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/4-common-client-side-web-technologies/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/4-common-client-side-web-technologies/</guid>
+      
+      <description>Complex web apps achieve separation of concerns by separating page content (HTML), layout and styling (CSS), and behavior (JavaScript).
+HTML HTML elements represent formatted text, images, form inputs, and other structures.
+CSS CSS controls the look and layout of HTML elements. CSS styles can be applied to:
+CSS preprocessors CSS stylesheets do not support conditional logic, variables, or other programming language features.
+CSS preprocessors (like Sass (Ruby-based) and LESS (JavaScript-based)) add this support.</description>
+      
+    </item>
+    
+    <item>
+      <title>6 working with data</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/6-working-with-data/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/6-working-with-data/</guid>
+      
+      <description>EF Core vs. Micro-ORM (Dapper) EF Core abstracts SQL from the developer, but also has more overhead due to translating LINQ expressions to SQL and change tracking on entities. Dapper is more lightweight and focuses on performance.
+Comparison EF Core private readonly CatalogContext _context; public async Task&amp;lt;IEnumerable&amp;lt;CatalogType&amp;gt;&amp;gt; GetCatalogTypes() { return await _context.CatalogTypes.ToListAsync(); } Dapper private readonly SqlConnection _conn; public async Task&amp;lt;IEnumerable&amp;lt;CatalogType&amp;gt;&amp;gt; GetCatalogTypesWithDapper() { return await _conn.QueryAsync&amp;lt;CatalogType&amp;gt;(&amp;#34;SELECT * FROM CatalogType&amp;#34;); } SQL vs NoSQL Relational databases (like SQL) map objects to tables and rows.</description>
+      
+    </item>
+    
+    <item>
+      <title>7 testing asp net core mvc apps</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/7-testing-asp-net-core-mvc-apps/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/7-testing-asp-net-core-mvc-apps/</guid>
+      
+      <description>Overview </description>
+      
+    </item>
+    
+    <item>
+      <title>8 development process for azure</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/8-development-process-for-azure/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/8-development-process-for-azure/</guid>
+      
+      <description>Overview </description>
+      
+    </item>
+    
+    <item>
+      <title>9 azure hosting recommendations</title>
+      <link>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/9-azure-hosting-recommendations/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/reading/architecting-modern-web-apps/9-azure-hosting-recommendations/</guid>
+      
+      <description>Overview </description>
+      
+    </item>
+    
+  </channel>
+</rss>

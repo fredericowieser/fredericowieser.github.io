@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scottplot.net on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/scottplot.net/</link>
+    <description>Recent content in scottplot.net on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/3rd-party-libraries/scottplot.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/scottplot.net/overview/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/scottplot.net/overview/</guid>
+      
+      <description>ScottPlot ScottPlot is a plotting library for .NET.
+Documentation: https://scottplot.net/cookbook/4.1/category/quickstart/#scatter-plot Versions There are two major versions of ScottPlot:
+4.1 — stable 5.0 — beta Creating Plots A ScottPlot.Plot can hold one or more Plottables:
+using ScottPlot; // width = 350 var plot = new Plot(350, 350); Scatter Plots Documentation: https://scottplot.net/cookbook/4.1/#scatter-plot
+Simple // sample data double[] xs = DataGen.Consecutive(51); double[] sin = DataGen.Sin(51); double[] cos = DataGen.Cos(51); // add two scatter plots: plot.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">progressive web app (pwa) | Fred Wieser</title>
+<meta property="og:title" content="progressive web app (pwa) | Fred Wieser" />
+<meta name="twitter:title" content="progressive web app (pwa) | Fred Wieser" />
+<meta itemprop="name" content="progressive web app (pwa) | Fred Wieser" />
+<meta name="application-name" content="progressive web app (pwa) | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/progressive-web-app-pwa/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/progressive-web-app-pwa/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">progressive web app (pwa)</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-07-23T00:00:00-06:00" itemprop="datePublished"> 23 Jul 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p>A Blazor WASM PWA is a SPA that uses modern browser APIs and capabilities to behave like a desktop app. <em>Progressive</em> means that:</p>
+<ul>
+<li>A user may discover the app within their browser (like any other SPA)</li>
+<li>Later, the user <em>progresses</em> to installing it on their OS.</li>
+</ul>
+<p>Blazor PWAs can be created from project templates or existing Blazor WASM apps can be converted to PWAs.</p>
+<ul>
+<li>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0">https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0</a></li>
+</ul>
+<h1 id="creating-from-cli">Creating from CLI</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>dotnet new blazorwasm -o APPNAME --pwa
+</span></span></code></pre></div><h1 id="converting-existing-blazor-wasm-app-to-pwa">Converting Existing Blazor WASM app to PWA</h1>
+<ol>
+<li>Update the project file:<br>
+<code>SomeProject.csproj</code>
+<ol>
+<li>
+<p>Add the <code>ServiceWOrkerAssetsManifest</code> to a <code>PropertyGroup</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;ServiceWorkerAssetsManifest&gt;</span>service-worker-assets.js<span style="color:#7ee787">&lt;/ServiceWorkerAssetsManifest&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/PropertyGroup&gt;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Add this <code>ServiceWorker</code> to an <code>ItemGroup</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;ItemGroup&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#7ee787">&lt;ServiceWorker</span> Include=<span style="color:#a5d6ff">&#34;wwwroot\service-worker.js&#34;</span> 
+</span></span><span style="display:flex;"><span>                PublishedContent=<span style="color:#a5d6ff">&#34;wwwroot\service-worker.published.js&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/ItemGroup&gt;</span>
+</span></span></code></pre></div></li>
+</ol>
+</li>
+<li>Obtain the static assets:
+<ol>
+<li>Create a new, separate PWA project:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>dotnet new blazorwasm -o TempProject --pwa
+</span></span></code></pre></div></li>
+<li>From that project, find these files and copy them to your current project&rsquo;s <code>wwwroot</code> folder: <code>icon-512.png</code>, <code>manifest.json</code>, <code>service-worker.js</code>, <code>service-worker.published.js</code></li>
+<li>In your current project&rsquo;s <code>wwwroot/index.html</code> file:
+<ol>
+<li>Add these two &lt;link&gt; elements:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">link</span> href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;manifest.json&#34;</span> rel<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;manifest&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">link</span> rel<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;apple-touch-icon&#34;</span> sizes<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;512x512&#34;</span> href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;icon-512.png&#34;</span> /&gt;
+</span></span></code></pre></div></li>
+<li>Add this &lt;script&gt; tag inside the closing &lt;/body&gt; tag immediately after the <code>blazor.webassembly.js</code> script tag:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>       ...
+</span></span><span style="display:flex;"><span>       &lt;<span style="color:#7ee787">script</span>&gt;navigator.serviceWorker.register(<span style="color:#a5d6ff">&#39;service-worker.js&#39;</span>);
+</span></span><span style="display:flex;"><span>   &lt;/<span style="color:#7ee787">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>``
+</span></span></code></pre></div></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="offline-support">Offline Support</h1>
+<p>By default, apps created with the PWA template have support for running offline.  This is enabled by the service workers included in the template:</p>
+<ul>
+<li><code>wwwroot/service-worker.js</code> — used during development</li>
+<li><code>wwwroot/service-worker.published.js</code> — used after app is published'</li>
+</ul>
+<h2 id="considerations">Considerations</h2>
+<p>Offline support is only relevant if:</p>
+<ul>
+<li>The primary data store is local to the browser (like when using localStorage or IndexedDB).</li>
+<li>There is a requirement for the user to view the data offline.</li>
+<li>The goal is to guarantee that the app loads immediately regardless of network conditions.</li>
+</ul>
+<p>Offline support is only enabled when published (not in development).</p>
+<h2 id="cache-first-fetch-strategy">Cache-first Fetch Strategy</h2>
+<p><code>service-worker.published.js</code> resolves request using a <em>cache-first</em> strategy: the service worker will prefer to return cached content, regardless of whether the user has network access, and <em>even if newer content</em> is available on the server.</p>
+<p>To prevent this, update this script in <code>wwwroot/index.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">script</span>&gt;
+</span></span><span style="display:flex;"><span>    navigator.serviceWorker.register(<span style="color:#a5d6ff">&#39;/service-worker.js&#39;</span>, {updateViaCache<span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#39;none&#39;</span>});
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">script</span>&gt;
+</span></span></code></pre></div><p>The service worker tries to serve cached content whenever available.  If none is available for a certain URL, then it falls back on a network request.  This logic is in the <code>onFetch</code> function in <code>service-worker.published.js</code>.</p>
+<h3 id="server-rendered-pages">Server-rendered Pages</h3>
+<p>The service worker resolves requests by returning cached content for <code>/index.html</code> — regardless of the requested URL.  Specifically, it intercepts requests and resolves them using <code>/index.html</code>.  If your app has certain URLs that must return server-rendered HTML, edit the logic in the service worker:<br>
+<code>service-worker.published.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#ff7b72">const</span> shouldServeIndexHtml <span style="color:#ff7b72;font-weight:bold">=</span> event.request.mode <span style="color:#ff7b72;font-weight:bold">===</span> <span style="color:#a5d6ff">&#39;navigate&#39;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#8b949e;font-style:italic">// Add this line:
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span> <span style="color:#ff7b72;font-weight:bold">&amp;&amp;</span> <span style="color:#ff7b72;font-weight:bold">!</span>event.request.url.includes(<span style="color:#a5d6ff">&#39;/CERTAIN-URL/&#39;</span>);
+</span></span></code></pre></div><h3 id="controlling-asset-caching">Controlling Asset Caching</h3>
+<p>Modify asset caching by editing the logic in <code>onInstall</code> in <code>service-worker.published.js</code>.  By default, the cache includes <code>.html</code>, <code>.css</code>, <code>.js</code>, and <code>.wasm</code> files.</p>
+<p>It also includes all static assets in <code>wwwroot</code>.  If there are millions of these assets, the service worker will fetch and cache them all.  Implement logic in <code>onInstall</code> to control which subset should be fetched and cached.</p>
+<p>To add additional resources that are not present in wwwroot (and, by extension, not in the asset cache), add <code>ItemGroup</code> entries in the project file:<br>
+<code>SomeProject.csproj</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;ItemGroup&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;ServiceWorkerAssetsManifestItem</span> Include=<span style="color:#a5d6ff">&#34;MyDirectory\AnotherFile.json&#34;</span>
+</span></span><span style="display:flex;"><span>                                     RelativePath=<span style="color:#a5d6ff">&#34;MyDirectory\AnotherFile.json&#34;</span>
+</span></span><span style="display:flex;"><span>                                     AssetUrl=<span style="color:#a5d6ff">&#34;files/AnotherFile.json&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/ItemGroup&gt;</span>
+</span></span></code></pre></div><p>Note that this will <em>not</em> cause the item to be published in wwwroot; publishing output most be controlled separately.</p>
+<h2 id="background-updates">Background Updates</h2>
+<p>Blazor PWA apps automatically try to update themselves in the background.  Here&rsquo;s how this works:</p>
+<ul>
+<li>When compiled, the project generates a service worker assets manifest (<code>service-worker-assets.js</code>) that lists all the static resources the app requires and hashes of those resources.</li>
+<li>Each time the user visits the app, the browser re-requests <code>service-worker.js</code> and the assets manifest.
+<ul>
+<li>The files are compared byte-for-byte.</li>
+<li>If either has changed, the service worker attempts to install a new version of itself.
+<ul>
+<li>To do this, it creates a new, separate cache and populates it with the sources listed in the assets manifest. (This logic is in the <code>onInstall</code> function in <code>service-worker.published.js</code>.)</li>
+<li>If successful, the new service worker enters a <em>waiting for activation</em> state.
+<ul>
+<li>When the user closes all instances of the app, the new service worker enters the <em>active</em> state and the old service worker and its cache are deleted.</li>
+<li>Note: During development, <a href="https://web.dev/service-worker-lifecycle/#skip-waiting">this phase can be skipped</a>.</li>
+</ul>
+</li>
+<li>If not successful, the new service worker is discarded, and the process is attempted again the next time the user visits the app.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="considerations-1">Considerations</h3>
+<ul>
+<li>If you deploy backward-incompatible API schema changes before all users have upgraded the app, the client app will break for users who have not yet updated.
+<ul>
+<li>Block users from using incompatible older versions of the app.   Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration">ServiceWorkerRegistration</a> to determine whether the app is up to date and, if not, prevent usage until it is.</li>
+</ul>
+</li>
+</ul>
+<h1 id="push-notifications">Push Notifications</h1>
+<p>The mechanism for sending push notifications is implemented in the backend server.  For an example, <a href="https://github.com/dotnet-presentations/blazor-workshop/blob/main/docs/09-progressive-web-app#sending-push-notifications">see here</a>.</p>
+<p>The mechanism for receiving a push notification is implemented in the service worker file.  For an example, <a href="https://github.com/dotnet-presentations/blazor-workshop/blob/main/docs/09-progressive-web-app#displaying-notifications">see here</a>.</p>
+<h1 id="authenticationhttpslearnmicrosoftcomen-usaspnetcoreblazorprogressive-web-appviewaspnetcore-70tabsvisual-studiointeraction-with-authentication"><a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0&amp;tabs=visual-studio#interaction-with-authentication">Authentication</a></h1>
+<p>The PWA template supports authentication.  To implement authentication in an offline PWA:</p>
+<ol>
+<li>Replace the <code>AccountClaimsPrincipleFactory&lt;TAccount&gt;</code> with a factory that stores the last signed-in user and users the stored user when the app is offline.</li>
+<li>Queue operations while the app is offline and apply them when it reconnects.</li>
+<li>During sign out, clear the stored user.</li>
+</ol>
+<p>See <a href="https://github.com/SteveSandersonMS/CarChecker">this sample app</a> for details.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

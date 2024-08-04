@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/</link>
+    <description>Recent content in design on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>silhouettes</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/silhouettes/</link>
+      <pubDate>Thu, 05 Jan 2023 18:49:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/silhouettes/</guid>
+      
+      <description>App Silhouettes Common pattern of relationship between elements such as app layering, menus, navigation, commanding, and content areas.
+Top Navigation silhouette NavigationView is used in content layer Navigation is on same row as commands
+Menu Bar silhouette MenuBar used as the base layer along with a CommandBar
+Left Navigation silhouette NavigationView on top of app&amp;rsquo;s base layer
+Tab View silhouette TabView on app&amp;rsquo;s base layer</description>
+      
+    </item>
+    
+    <item>
+      <title>commanding</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/commanding/</link>
+      <pubDate>Mon, 02 Jan 2023 17:19:09 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/commanding/</guid>
+      
+      <description>Overview Command elements are interactive UI elements that let users perform actions (send an email, delete an item, submit a form). Command interfaces are composed of common command elements, the command surfaces that host them, the interactions they support, and the experience they provide.
+Command elements Buttons—trigger an immediate action Lists—present items in an interactive list or grid (drop-down list, list box, list view, grid view) Selection controls—select from a few options (CheckBox, RadioButton, toggle switch) Calendar, date and time pickers—view/modify date and time info (calendar date picker, calendar view, date picker, time picker) Predictive text entry—Provide suggestions as users type (AutoSuggestBox) Command surfaces App canvas (content area)</description>
+      
+    </item>
+    
+  </channel>
+</rss>

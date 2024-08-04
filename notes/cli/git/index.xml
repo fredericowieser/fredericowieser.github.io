@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Fred Wieser</title>
+    <link>http://localhost:1313/notes/cli/git/</link>
+    <description>Recent content in git on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/cli/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/cli/git/overview/</link>
+      <pubDate>Wed, 26 May 2021 10:13:25 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/overview/</guid>
+      
+      <description>Git A distributed version control system
+Concepts commit – save the state of your project (take a snapshot of all files and store a reference to that snapshot)
+File States unmodified – file has not been changed modified – file has been changed but not committed staged – file has been marked to go into next commit snapshot committed – file stored in database untracked – files in your working directory that were not in last snapshot and not in staging tracked – files Git knows about: unmodified, modified, and staged file states Sections of a Git Project working – a single checkout of one version of the project staging – a file, generally in the Git directory, of information about what goes into the next commit (aka index) repository – metadata and database of the project Git Command Groups Main Commands Command Description add Add file contents to the index am Apply a series of patches from a mailbox archive Create an archive of files from a named tree bisect Use binary search to find the commit that introduced a bug branch List, create, or delete branches bundle Move objects and refs by archive checkout Switch branches or restore working tree files cherry-pick Apply the changes introduced by some existing commits citool Graphical alternative to git-commit clean Remove untracked files from the working tree clone Clone a repository into a new directory commit Record changes to the repository describe Give an object a human readable name based on an available ref diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository format-patch Prepare patches for e-mail submission gc Cleanup unnecessary files and optimize the local repository gitk The Git repository browser grep Print lines matching a pattern gui A portable graphical interface to Git init Create an empty Git repository or reinitialize an existing one log Show commit logs maintenance Run tasks to optimize Git repository data merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink notes Add or inspect object notes pull Fetch from and integrate with another repository or a local branch push Update remote refs along with associated objects range-diff Compare two commit ranges (e.</description>
+      
+    </item>
+    
+    <item>
+      <title>commit signatures</title>
+      <link>http://localhost:1313/notes/cli/git/commit-signatures/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/commit-signatures/</guid>
+      
+      <description>Overview Commits and tags can be signed via GPG, SSH, or S/MIME.
+GPG signatures have the advantage over SSH signatures in that they can expire or be revoked.
+GitHub automatically uses GPG to sign commits made via the web interface. The GPG public key is available at https://github.com/web-flow.gpg.
+Verification Statuses Default statuse Verified — commit is signed and signature verified Unverified — commit is signed but signature could not be verified No verification status — commit is not signed Vigilant mode statuses Verified — commit signed, signature verified, committer is the only vigilant-mode author Partially verified — commit signed, signature verified, commit has an author who is not the committer and not a vigilant-mode author Unverified — either: Commit signed, signature could not be verified Commit not signed, committer has enabled vigilant mode Commit not signed, author has enabled vigilant mode Using GPG Key Commit Signatures Generate a New GPG Key gpg --full-generate-key Follow the prompts.</description>
+      
+    </item>
+    
+    <item>
+      <title>credential manager</title>
+      <link>http://localhost:1313/notes/cli/git/credential-manager/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/credential-manager/</guid>
+      
+      <description>Overview Provides secure credential storage. Was previously called credential-manager-core Accessed via git credential-manager &amp;lt;subcommand&amp;gt; Documentation: https://github.com/git-ecosystem/git-credential-manager </description>
+      
+    </item>
+    
+    <item>
+      <title>cloning</title>
+      <link>http://localhost:1313/notes/cli/git/cloning/</link>
+      <pubDate>Sun, 23 Oct 2022 16:10:04 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/cloning/</guid>
+      
+      <description>Cloning a Repository git clone &amp;lt;url&amp;gt; &amp;lt;directory&amp;gt; – executes md directory &amp;gt; cd directory &amp;gt; git init &amp;gt; git remote add &amp;gt; git fetch &amp;gt; git checkout
+sets local master branch to track remote master branch Cloning with Other Credentials In the URL, add the username: https://username@github.com/username/repository.git</description>
+      
+    </item>
+    
+    <item>
+      <title>status</title>
+      <link>http://localhost:1313/notes/cli/git/status/</link>
+      <pubDate>Sun, 23 Oct 2022 16:09:14 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/status/</guid>
+      
+      <description>Viewing File Status git status [--short] – returns the state of files in the repository and branch</description>
+      
+    </item>
+    
+    <item>
+      <title>commit</title>
+      <link>http://localhost:1313/notes/cli/git/commit/</link>
+      <pubDate>Sun, 23 Oct 2022 16:07:37 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/commit/</guid>
+      
+      <description>Committing Changes Each commit is a snapshot of a project that can be reverted to later.
+git commit – commits changes and launches text editor to get a commit message git commit -m &amp;quot;&amp;lt;message&amp;gt;&amp;quot; – commits changes and logs the commit with git commit -a -m &amp;quot;&amp;lt;msg&amp;gt;&amp;quot; – adds (stages) every file that is already tracked; commits; logs with </description>
+      
+    </item>
+    
+    <item>
+      <title>gitignore</title>
+      <link>http://localhost:1313/notes/cli/git/gitignore/</link>
+      <pubDate>Sun, 23 Oct 2022 16:07:20 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/gitignore/</guid>
+      
+      <description>Overview gitignore files specify intentional untracked files that Git should ignore.
+Order of Precedence Patterns from the command line Patterns from .gitignore file in same directory Patterns from .gitignore file in parent directories up to the top level of the working tree Patterns from $GIT_DIR/info/exclude Patterns from the file specified by core.excludesFile Pattern Format # for comments
+\ for escapes
+/ as the directory separator char
+/ at the end of a pattern matches directories only !</description>
+      
+    </item>
+    
+    <item>
+      <title>merging</title>
+      <link>http://localhost:1313/notes/cli/git/merging/</link>
+      <pubDate>Sun, 23 Oct 2022 16:07:02 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/merging/</guid>
+      
+      <description>Merging Branches git merge &amp;lt;branch&amp;gt; merge branch into the current branch
+Managing Merge Conflicts View conflicts with git status. After resolving conflicts, run git add on each file to stage it, which marks it resolved in git. Use git mergetool for a GUI tool to resolve merge conflicts. </description>
+      
+    </item>
+    
+    <item>
+      <title>diffs</title>
+      <link>http://localhost:1313/notes/cli/git/diffs/</link>
+      <pubDate>Sun, 23 Oct 2022 16:06:17 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/diffs/</guid>
+      
+      <description>Viewing Staged and Unstaged Changes git diff – compare working directory to staging git diff --staged – compare staging to last commit git difftool[--tool-help] – use a GUI tool to compare changes</description>
+      
+    </item>
+    
+    <item>
+      <title>add remove rename</title>
+      <link>http://localhost:1313/notes/cli/git/add-remove-rename/</link>
+      <pubDate>Sun, 23 Oct 2022 16:06:02 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/add-remove-rename/</guid>
+      
+      <description>Add Files git add path # adds path to Staging Removing Files From Tracking and Working Directory git rm --cached &amp;lt;file&amp;gt; # untrack file; ADD FOLDER TO .gitignore FIRST git rm -r --cached &amp;lt;folder&amp;gt; # untrack folder; ADD FOLDER TO .gitignore FIRST git rm &amp;lt;file&amp;gt; # delete and untrack &amp;lt;file&amp;gt;; at next commit, file will be removed and no longer tracked Moving/Renaming Files git mv &amp;lt;from&amp;gt; &amp;lt;to&amp;gt; </description>
+      
+    </item>
+    
+    <item>
+      <title>logs</title>
+      <link>http://localhost:1313/notes/cli/git/logs/</link>
+      <pubDate>Sun, 23 Oct 2022 16:05:41 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/logs/</guid>
+      
+      <description>Logs git log – return commits made in this repository git log vX.X..vY.Y | helper-script &amp;gt; changelogs/Y.Y
+generate changelogs see also: https://github.com/github-changelog-generator/github-changelog-generator see also: https://pypi.org/project/gitchangelog/ git log &amp;lt;branch&amp;gt; – return commits of branch --all – return commits of all branches -&amp;lt;n&amp;gt; – return only the last n entries --after &amp;lt;date&amp;gt; – only return results after ; format of is either YYY-MM-DD or relative --before &amp;lt;date&amp;gt; – only return results before --all – return commit history for all branches --decorate – return where the branch pointers are pointing --follow – list version history for a file, including renames --graph – return an ASCII graph depicting branch and merge history --no-merges – do not return merge commits --pretty – return pretty-printed results --pretty=oneline – return each commit on a single line.</description>
+      
+    </item>
+    
+    <item>
+      <title>tagging</title>
+      <link>http://localhost:1313/notes/cli/git/tagging/</link>
+      <pubDate>Sun, 23 Oct 2022 16:05:23 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/tagging/</guid>
+      
+      <description>Tagging Tags apply to commits.
+git tag --list – return existing tags git tag -a &amp;lt;tag&amp;gt; -m &amp;quot;&amp;lt;msg&amp;gt;&amp;quot; – create annotated tag named for pending commit with tagging message git show &amp;lt;tag&amp;gt; – return information on git tag -a &amp;lt;tag&amp;gt; [checksum] – tag commit [checksum] as after the fact; [checksum] can be partial git push &amp;lt;remote&amp;gt; &amp;lt;tag&amp;gt; – push to git push &amp;lt;remote&amp;gt; --tags – push all tags to git tag -d &amp;lt;tag&amp;gt; – delete from local repository git push &amp;lt;remote&amp;gt; --delete &amp;lt;tag&amp;gt; – delete from repository</description>
+      
+    </item>
+    
+    <item>
+      <title>remotes</title>
+      <link>http://localhost:1313/notes/cli/git/remotes/</link>
+      <pubDate>Sun, 23 Oct 2022 16:05:11 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/remotes/</guid>
+      
+      <description>Remote Repositories git fetch &amp;lt;remote&amp;gt; – retrieve all data from remote repository since last fetch (or clone) does not modify working directory; requires merging git fetch --all – fetch from all remotes git pull – executes fetch &amp;gt; merge git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt; – push to repository git remote -v – return remote repositories, their shortnames, and URLs git remote add &amp;lt;remote&amp;gt; &amp;lt;url&amp;gt; – add a new Git remote repository git remote show &amp;lt;remote&amp;gt; – return information about repository, including if you&amp;rsquo;re up-to-date.</description>
+      
+    </item>
+    
+    <item>
+      <title>undoing changes</title>
+      <link>http://localhost:1313/notes/cli/git/undoing-changes/</link>
+      <pubDate>Sun, 23 Oct 2022 16:04:59 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/undoing-changes/</guid>
+      
+      <description>Exploring Previous Commits Review Commit History git log -n --oneline — review the previous n commits git log --branches=* — view all commits across all branches git branch -a — return a list of all known branches Access a Previous Commit Use git checkout COMMIT-ID to load a previous commit.
+Normally, HEAD points to main or some other local branch. When checking out a previous commit, HEAD no longer points to a branch; it is detached.</description>
+      
+    </item>
+    
+    <item>
+      <title>help</title>
+      <link>http://localhost:1313/notes/cli/git/help/</link>
+      <pubDate>Sun, 23 Oct 2022 16:04:18 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/help/</guid>
+      
+      <description>Getting Help git help &amp;lt;verb&amp;gt; – get manpage-level help on git &amp;lt;verb&amp;gt; --help – get manpage-level help on man git-&amp;lt;verb&amp;gt; – get manpage-level help on git &amp;lt;verb&amp;gt; -h – get concise help on </description>
+      
+    </item>
+    
+    <item>
+      <title>updating git</title>
+      <link>http://localhost:1313/notes/cli/git/updating-git/</link>
+      <pubDate>Sun, 23 Oct 2022 16:04:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/updating-git/</guid>
+      
+      <description>Upgrading git update-git-for-windows</description>
+      
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://localhost:1313/notes/cli/git/configuration/</link>
+      <pubDate>Sun, 23 Oct 2022 09:52:51 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/configuration/</guid>
+      
+      <description>Configuration Config Files /etc/git/gitconfig or C:\Program Files\Git\etc\gitconfig — config for all users on the system (--system) ~/.git — config for all repositories of the current user (--global) ~ is $HOME on Windows .git/ — config for this repository only (--local (default)) Configuration Commands git config [scope] &amp;lt;key&amp;gt; &amp;lt;value&amp;gt; set configuration &amp;lt;key&amp;gt; to &amp;lt;value&amp;gt; Checking Configuration git config --list — list all configuration settings Git can find Note: Git uses the last value for each unique key it sees git config &amp;lt;key&amp;gt; return the value of &amp;lt;key&amp;gt; git config --show-origin &amp;lt;key&amp;gt; return the origin (configuration file) of &amp;lt;key&amp;gt; and its value One-Time Config git config --global user.</description>
+      
+    </item>
+    
+    <item>
+      <title>sterilizing a repo</title>
+      <link>http://localhost:1313/notes/cli/git/sterilizing-a-repo/</link>
+      <pubDate>Fri, 04 Mar 2022 20:41:48 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/sterilizing-a-repo/</guid>
+      
+      <description> git clone --mirror https://github.com/user/repo.git java -jar bfg.jar --delete-folders &amp;quot;{one,two,three}&amp;quot; repo.git cd repo.git git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive git push </description>
+      
+    </item>
+    
+    <item>
+      <title>troubleshooting</title>
+      <link>http://localhost:1313/notes/cli/git/troubleshooting/</link>
+      <pubDate>Tue, 21 Dec 2021 16:57:18 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/troubleshooting/</guid>
+      
+      <description>Git is not respecting .gitignore git rm -rf --cached . git add . Line endings (&amp;ldquo;LF will be replaced by CRLF&amp;rdquo;) Files with Unix-style (LF) line endings will be replaced by Windows-style (CRLF) line endings when running on Windows. This is likely because Git&amp;rsquo;s core.autocrlf setting is true.
+To prevent this:
+git config --system core.autocrlf false # per-system solution git config --global core.autocrlf false # per-user solution git config --local core.</description>
+      
+    </item>
+    
+    <item>
+      <title>patterns</title>
+      <link>http://localhost:1313/notes/cli/git/patterns/</link>
+      <pubDate>Wed, 18 Aug 2021 10:28:58 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/patterns/</guid>
+      
+      <description>Overview Common patterns when using git.
+Repositories Initializing a Repository Go to the project&amp;rsquo;s directory git init Go to GitHub and create repository git remote add &amp;lt;repository name&amp;gt; &amp;lt;GitHub URL&amp;gt; git add . git commit -m &amp;quot;Initial commit.&amp;quot; git pull &amp;lt;name&amp;gt; main – Only needed if anything was added to GitHub repository directly (like README). git push --set-upstream &amp;lt;name&amp;gt; main Renaming repositories git mv &amp;lt;old&amp;gt; &amp;lt;new&amp;gt; git commit git push git remote rename &amp;lt;old&amp;gt; &amp;lt;new&amp;gt; git remote set-url --add &amp;lt;new&amp;gt; &amp;lt;URL&amp;gt; git remote set-url --delete &amp;lt;new&amp;gt; &amp;lt;old URL&amp;gt; GitHub &amp;gt; repository &amp;gt; Settings &amp;gt; Rename Rename local directory Cleaning a Remote Repository git remote prune origin</description>
+      
+    </item>
+    
+    <item>
+      <title>branching</title>
+      <link>http://localhost:1313/notes/cli/git/branching/</link>
+      <pubDate>Sun, 30 May 2021 18:28:35 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/git/branching/</guid>
+      
+      <description>Managing Branches git branch BRANCH – create a new branch named branch (but don&amp;rsquo;t switch to it) HEAD will still point to the current branch git branch – return current branches --merged BRANCH – return branches that have merged into current branch or branch --no-merged BRANCH – return branches that have not merged into current branch or branch --list – list all branches in the repo --all --delete BRANCH – delete BRANCH --move OLD-BRANCH-NAME NEW-BRANCH-NAME – rename branch from OLD-BRANCH-NAME to NEW-BRANCH-NAME --set-upstream-to REMOTE/BRANCH-NAME [LOCAL-BRANCH] – track remote branch at REMOTE/BRANCH-NAME to LOCAL-BRANCH -v – return current branches and last commit on each branch -vv – return current branches, last commit, tracking, and position of current branch Switching Branches Switching branches changes files in your working directory to match your last commit on this branch.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openapi on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/api/openapi/</link>
+    <description>Recent content in openapi on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/api/openapi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nswag</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/openapi/nswag/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/openapi/nswag/</guid>
+      
+      <description>Overview [Documentation] NSwag is an implementation of OpenAPI in ASP.NET Core.
+Unlike Swashbuckle, it also includes code generation capabilities.
+Installation dotnet add package NSwag.AspNetCore Configuration Program.cs
+// ... var builder = WebApplication.CreateBuilder(args); builder.Services.AddControllers(); builder.Services.AddOpenApiDocument(); if (app.Environment.IsDevelopment()) { // Add OpenAPI 3.0 document serving middleware // Available at: http://localhost:&amp;lt;port&amp;gt;/swagger/v1/swagger.json app.UseOpenApi(); // Add web UIs to interact with the document // Available at: http://localhost:&amp;lt;port&amp;gt;/swagger app.UseSwaggerUi3(); } // ... Configuring API Information and Description Program.</description>
+      
+    </item>
+    
+    <item>
+      <title>openapi and swagger</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/openapi/openapi-and-swagger/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/openapi/openapi-and-swagger/</guid>
+      
+      <description>Overview [Documentation] OpenAPI — a language-agnostic specification for describing REST APIs. Swagger OpenAPI started as Swagger; Swagger was donated to the OpenAPI Initiative in 2015. Swagger is a family of open source and commercial products from SmartBear that work with the OpenAPI specification. OpenAPI spec A document, usually openapi.json, that describes the capabilities of an API.
+It is generated from the XML and attribute annotations within controllers and models. Example: openapi.</description>
+      
+    </item>
+    
+    <item>
+      <title>swashbuckle</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/api/openapi/swashbuckle/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/api/openapi/swashbuckle/</guid>
+      
+      <description>Overview [Documentation] Swashbuckle is an implementation of OpenAPI in ASP.NET Core.
+It has 3 main components:
+Swashbuckle.AspNetCore.Swagger — a Swagger object model and middleware Swashbuckle.AspNetCore.SwaggerGen — a Swagger generator that builds a SwaggerDocument from routes, controllers and models Swashbuckle.AspNetCore.SwaggerUI — an embedded version of Swagger UI Installation dotnet add package swashbuckle.aspnetcore Configuration Program.cs
+// ... builder.Services.AddControllers(); // This is required for minimal APIs: builder.Services.AddEndpointsApiExplorer(); // Adds the Swagger generator: builder.Services.AddSwaggerGen(); if (app.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

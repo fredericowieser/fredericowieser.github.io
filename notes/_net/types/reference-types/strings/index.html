@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">strings | Fred Wieser</title>
+<meta property="og:title" content="strings | Fred Wieser" />
+<meta name="twitter:title" content="strings | Fred Wieser" />
+<meta itemprop="name" content="strings | Fred Wieser" />
+<meta name="application-name" content="strings | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/notes/_net/types/reference-types/strings/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/notes/_net/types/reference-types/strings/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/notes/">
+                        W
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">strings</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2021-11-06T16:38:02-06:00" itemprop="datePublished"> 6 Nov 2021 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="stringshttpsdocsmicrosoftcomen-usdotnetapisystemstringviewnet-60"><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0">Strings</a></h1>
+<p>A sequence of UTF-16 code units.<br>
+Stored internally as a sequential read-only collection of <code>Char</code> objects.</p>
+<ul>
+<li><code>Length</code> property represents the number of <code>Char</code> objects contained, not the number of code units.</li>
+<li>To access the individual code points, use <code>StringInfo</code></li>
+</ul>
+<p>The <code>string</code> keyword looks like a type but is actually an alias for the type <code>String</code></p>
+<h1 id="empty-strings">Empty Strings</h1>
+<p>Empty strings are represented as <code>&quot;&quot;</code><br>
+However, to create empty strings, use the constant <code>String.Empty</code> This avoids null reference exceptions.</p>
+<h1 id="comparisons">Comparisons</h1>
+<h2 id="case-sensitive-ordinal-comparisons">Case-sensitive, Ordinal Comparisons</h2>
+<ul>
+<li><code>String.Equals</code></li>
+<li><code>==</code> (<code>String.Equality</code>)</li>
+<li><code>!=</code> (<code>String.Inequality</code>)</li>
+</ul>
+<h2 id="case-insensitive-ordinal-comparisons">Case-insensitive, Ordinal Comparisons</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>string1.Equals(string2, StringComparison.OrdinalIgnoreCase)  
+</span></span><span style="display:flex;"><span>String.Compare(string1, string2, StringComparison.OrdinalIgnoreCase)  
+</span></span></code></pre></div><h1 id="constructing">Constructing</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">string</span> x = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">string</span> x = String.Empty;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">char</span>[] letters = { <span style="color:#a5d6ff">&#39;A&#39;</span>, <span style="color:#a5d6ff">&#39;B&#39;</span>, <span style="color:#a5d6ff">&#39;C&#39;</span> };
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">string</span> x = <span style="color:#ff7b72">new</span> <span style="color:#ff7b72">string</span>(letters); <span style="color:#8b949e;font-style:italic">// Use the constructor only when creating a string from a char, char[], or sybte.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">string</span> x = <span style="color:#a5d6ff">&#34;str&#34;</span>;
+</span></span></code></pre></div><h1 id="accessing">Accessing</h1>
+<p>Use <code>String.IsNullOrEmpty(string)</code> to verify the value of a string before accessing it.</p>
+<h1 id="formatted-strings">Formatted Strings</h1>
+<p>Use <code>string.Format()</code> for formatted strings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">string</span> result = <span style="color:#ff7b72">string</span>.Format(<span style="color:#a5d6ff">&#34;{0} and {1}&#34;</span>, var1, var2)
+</span></span></code></pre></div><h1 id="interpolated-strings">Interpolated Strings</h1>
+<p>String interpolation achieves the same results as string formatting.</p>
+<p><g>Availability: C#11</g>: Newlines are permitted in string interpolations.</p>
+<p>Use <code>$</code> for interpolated strings: <code>interpolationExpression,alignment:formatString</code></p>
+<h2 id="alignment">Alignment</h2>
+<p>Alignment is expressed as a signed integer n indicating preferred field width.<br>
+If n is less than the length of the string, it is ignored.<br>
+If n is positive, the field is right-aligned.<br>
+If n is negative, the field is left-aligned.</p>
+<h2 id="formats">Formats</h2>
+<table>
+<thead>
+<tr>
+<th>d</th>
+<th>6/15/2009</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>Monday, June 15, 2009</td>
+</tr>
+<tr>
+<td>f</td>
+<td>Monday, June 15, 2009 1:45 PM</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Monday, June 15, 2009 1:45:30 PM</td>
+</tr>
+<tr>
+<td>g</td>
+<td>6/15/2009 1:45 PM</td>
+</tr>
+<tr>
+<td>G</td>
+<td>6/15/2009 1:45:30 PM</td>
+</tr>
+<tr>
+<td>M/M</td>
+<td>June 15</td>
+</tr>
+<tr>
+<td>O/o (roundtrip pattern)</td>
+<td>2009-06-15T13:45:30.0000000-07:00</td>
+</tr>
+<tr>
+<td>R/r (RFC1123 pattern)</td>
+<td>Mon, 15 Jun 2009 20:45:30 GMT</td>
+</tr>
+<tr>
+<td>s (sortable pattern)</td>
+<td>2009-06-15T13:45:30</td>
+</tr>
+<tr>
+<td>t</td>
+<td>1:45 PM</td>
+</tr>
+<tr>
+<td>T</td>
+<td>1:45:30 PM</td>
+</tr>
+<tr>
+<td>u (universal sortable)</td>
+<td>2009-06-15 13:45:30Z</td>
+</tr>
+<tr>
+<td>U (universal full)</td>
+<td>Monday, June 15, 2009 8:45:30 PM</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>June 2009</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numeric-formats">Numeric Formats</h2>
+<table>
+<thead>
+<tr>
+<th>C/C</th>
+<th>$123.46</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D/d</td>
+<td>1234</td>
+</tr>
+<tr>
+<td>E/e</td>
+<td>1.052033E+003</td>
+</tr>
+<tr>
+<td>F/f</td>
+<td>1234.57</td>
+</tr>
+<tr>
+<td>G/g</td>
+<td>-123.456</td>
+</tr>
+<tr>
+<td>N/n</td>
+<td>1,234.57</td>
+</tr>
+<tr>
+<td>P/p</td>
+<td>100.00 %</td>
+</tr>
+<tr>
+<td>R/r</td>
+<td>123456789.12345678</td>
+</tr>
+<tr>
+<td>X/x</td>
+<td>FF</td>
+</tr>
+</tbody>
+</table>
+<p>Currency:</p>
+<ul>
+<li><code>{var1:C}</code></li>
+</ul>
+<p>Dates:</p>
+<ul>
+<li><code>{var1:d}</code> (mm/dd/yyyy)</li>
+<li><code>{var1:D}</code> (dayname, month dd, yyyy)</li>
+</ul>
+<p>Times:</p>
+<ul>
+<li><code>{var1:t}</code> (h:mm AM)</li>
+<li><code>{var1:T}</code> (h:mm:ss AM)</li>
+</ul>
+<p>Numbers:</p>
+<ul>
+<li><code>{var1:N}</code> (thousands separators, 2 digits of precision)</li>
+<li><code>{var1:N4}</code> (thousands separators, 4 digits of precision)</li>
+</ul>
+<p>Percentage:</p>
+<ul>
+<li><code>{var1:P2}</code> (2 digits of precision)</li>
+</ul>
+<h2 id="ternary-operator-in-interpolated-expression">Ternary operator in interpolated expression</h2>
+<p>Since <code>:</code> has special meaning in interpolation expressions, when using it as the conditional operator, wrap it in parentheses:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#a5d6ff">$&#34;My house is: {(a &lt; 1 ? &#34;</span>red<span style="color:#a5d6ff">&#34; : &#34;</span>blue<span style="color:#a5d6ff">&#34;)}&#34;</span>
+</span></span></code></pre></div><h1 id="verbatim-strings">Verbatim Strings</h1>
+<p>Verbatim strings will keep their whitespace and print escapes verbatim:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Console.WriteLine(<span style="color:#a5d6ff">@&#34; c:\source\repos(this is where your code goes)&#34;</span>);
+</span></span></code></pre></div><p>Verbatim and interpolated strings can be combined.</p>
+<p>Use double quotation marks to embed a literal quotation mark in a verbatim string.</p>
+<h1 id="raw-string-literals">Raw String Literals</h1>
+<p><g>Availability: C# 11</g></p>
+<p>Raw string literals eliminate all need to escape content. They:</p>
+<ul>
+<li>Start with at least three quotes (<code>&quot;&quot;&quot;</code>)</li>
+<li>End in the same number of quotes</li>
+</ul>
+<p>Newlines following the opening quote and preceding the closing quote are not included in the content.</p>
+<h2 id="raw-string-literals-and-string-interpolation">Raw String Literals and String Interpolation</h2>
+<p>Use multiple <code>$</code> characters to denote how many consecutive braces start/end an interpolation.<br>
+In this example, two braces start/end an interpolation and the third is printed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> location = <span style="color:#f85149">$</span><span style="color:#a5d6ff">$&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    You are at {{{Longitude}}, {{Latitude}}}
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">&#34;&#34;&#34;</span>;
+</span></span></code></pre></div><h1 id="utf-8-string-literals">UTF-8 String Literals</h1>
+<p><g>Availability: C# 11</g><br>
+By default, strings in .NET are stored in UTF-16 encoding.  To encode a string as UTF-8, suffix it with <code>u8</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>ReadOnlySpan&lt;<span style="color:#ff7b72">byte</span>&gt; AuthWithTrailingSpace = <span style="color:#ff7b72">new</span> <span style="color:#ff7b72">byte</span>[] { <span style="color:#a5d6ff">0x41</span>, <span style="color:#a5d6ff">0x55</span>, <span style="color:#a5d6ff">0x54</span>, <span style="color:#a5d6ff">0x48</span>, <span style="color:#a5d6ff">0x20</span> };
+</span></span><span style="display:flex;"><span>ReadOnlySpan&lt;<span style="color:#ff7b72">byte</span>&gt; AuthStringLiteral = <span style="color:#a5d6ff">&#34;AUTH &#34;</span>u8;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">byte</span>[] AuthStringLiteral = <span style="color:#a5d6ff">&#34;AUTH &#34;</span>u8.ToArray();
+</span></span></code></pre></div><p>Notes:</p>
+<ul>
+<li>UTF-8 string literals cannot be combined with string interpolation.</li>
+<li>UTF-8 string literals cannot be used as the default value for an optional parameter (they are runtime constants, not compile-time constants).</li>
+</ul>
+<h1 id="unicode-escape-sequences">Unicode Escape Sequences</h1>
+<p><code>\unnnn</code></p>
+<h1 id="encoding--decoding-strings">Encoding / Decoding Strings</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">string</span> someString = <span style="color:#a5d6ff">&#34;This is some string.&#34;</span>;
+</span></span><span style="display:flex;"><span>Encoding encoder = Encoding.ASCII; <span style="color:#8b949e;font-style:italic">// Or .UTF7, .UTF8, .Unicode, .UTF32, .Default (which is UTF-8)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">byte</span>[] encoded = encoder.GetBytes(someString); <span style="color:#8b949e;font-style:italic">// Encode the string into a byte array.</span>
+</span></span><span style="display:flex;"><span>encoded.Length; <span style="color:#8b949e;font-style:italic">// Returns the number of bytes the encoding needed.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">string</span> decoded = encoder.GetString(someString); <span style="color:#8b949e;font-style:italic">// Decode the byte array back into a string.</span>
+</span></span></code></pre></div><h1 id="properties">Properties</h1>
+<ul>
+<li><code>Length</code> — Return the length of the string.</li>
+</ul>
+<h1 id="methods">Methods</h1>
+<ul>
+<li><code>String.IsNullOrEmpty(string)</code> — Boolean if string is null or empty.</li>
+<li><code>String.IsNullOrWhiteSpace(string)</code> — Boolean if string is null or whitespace.</li>
+<li><code>String.Join(&quot;sep&quot;, collection)</code> — Concatenates elements of collection and separates each with sep.</li>
+<li><code>String.Concat(str1, str2)</code> — Concatenates two string variables. Same as + operator.
+<ul>
+<li>.NET creates a new string in memory. Poor performance in loops.</li>
+</ul>
+</li>
+</ul>
+<h2 id="searching">Searching</h2>
+<ul>
+<li><code>Contains(&quot;substr&quot;)</code> — Boolean if str is in string.</li>
+<li><code>StartsWith(&quot;substr&quot;)</code> — Boolean if string starts with str.</li>
+<li><code>EndsWith(&quot;substr&quot;)</code></li>
+<li><code>IndexOf(&quot;substr&quot;)</code> — Return the index of the first occurrence of substr in string.</li>
+<li><code>LastIndexOf(&quot;substr&quot;)</code> — Return the index of the last occurrence of substr in string.</li>
+<li><code>IndexOfAny(&quot;substr&quot;)</code> — Return the index of the first occurrence of any of substr where substr is a comma-separated list.</li>
+<li><code>Substring(s, n)</code> — Return the substring at starting index s extending for n characters.</li>
+</ul>
+<h2 id="manipulating">Manipulating</h2>
+<p>All methods and operators that appear to modify a string actually  — return a new string object.</p>
+<ul>
+<li><code>Insert</code></li>
+<li><code>Remove(s, n)</code> — Remove the substring starting at index s for n characters.</li>
+<li><code>Replace(&quot;substr1&quot;, &quot;substr2&quot;, ignoreCase=)</code> — Replace substr1 with substr2.
+<ul>
+<li><code>ignoreCase</code> is boolean and optional.</li>
+<li>If <code>substr2</code> is null, all occurrences of <code>substr1</code> are removed.</li>
+</ul>
+</li>
+<li><code>Split(&quot;delim&quot;, options)</code> — Returns a string array containing subsets of the string split at delim.
+<ul>
+<li>options can be <code>StringSplitOptions.RemoveEmptyEntries</code> and <code>TrimEntries</code></li>
+</ul>
+</li>
+<li><code>ToCharArray()</code> — Convert the string to a character array
+<ul>
+<li>This allows you to use array methods like <code>Reverse()</code></li>
+</ul>
+</li>
+<li><code>ToLower()</code> — Return a lowercased string.</li>
+<li><code>ToUpper()</code> — Return an uppercased string.</li>
+<li><code>Trim('c')</code> — Return a string with character c trimmed.</li>
+</ul>
+<h2 id="whitespace">Whitespace</h2>
+<ul>
+<li><code>PadLeft(n, char)</code> — Add n spaces to the left. Optionally, use char instead of spaces.</li>
+<li><code>PadRight(n, char)</code></li>
+<li><code>TrimStart() </code>— Return a string with leading whitespace trimmed.</li>
+<li><code>TrimEnd()</code> — Return a string with trailing whitespace trimmed.</li>
+<li><code>Trim()</code> — Return a string with leading and trailing whitespace trimmed.</li>
+</ul>
+<h1 id="determine-if-string-represents-numeric-value">Determine if String Represents Numeric Value</h1>
+<p>Use <code>TryParse</code> methods of numeric types.</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debugging on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/debugging/</link>
+    <description>Recent content in debugging on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Dec 2021 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/debugging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/debugging/overview/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/debugging/overview/</guid>
+      
+      <description>Breakpoint Stop execution when this is reached to allow you to inspect the state.
+Add/remove a breakpoint Click to left of line number (red dot).
+Conditional breakpoint Stop execution only if condition is true.
+Add/remove a conditional breakpoint Right-click to the left of the line number.
+Watch panel Track a variable state across time or functions.
+Click + button to add a variable to watch, or; Right-click variable in Variables panel and select Add to watch.</description>
+      
+    </item>
+    
+    <item>
+      <title>process</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/debugging/process/</link>
+      <pubDate>Sun, 16 Jan 2022 15:08:53 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/debugging/process/</guid>
+      
+      <description>Process Class (System.Diagnostics) | Microsoft Docs Object –&amp;gt; MarshalByRefObject –&amp;gt; Component –&amp;gt; Process
+Provides access to local and remote processes. Manages local processes.
+Properties VirtualMemorySize64 // The amount of virtual memory, in bytes, allocated for the process WorkingSet64 // The amount of physical memory, in bytes, allocated for the process </description>
+      
+    </item>
+    
+    <item>
+      <title>stopwatch</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/debugging/stopwatch/</link>
+      <pubDate>Fri, 24 Dec 2021 15:52:31 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/debugging/stopwatch/</guid>
+      
+      <description>Stopwatch Object –&amp;gt; Stopwatch
+Example Stopwatch sw = new Stopwatch(); sw.Start(); // … sw.Stop(); TimeSpan ts = sw.Elapsed; // Calling sw.Start() again here resumes the stopwatch at the elapsed time it was stopped Methods StartNew() — Start a new stopwatch timer Reset() — Reset a timer Restart() — Reset a timer and start it
+Properties Elapsed ElapsedMilliseconds ElapsedTicks — Ticks elapsed since stopwatch started/stopped Frequency — Ticks per second
+Note: (1000L * 1000L * 1000L) / frequency = nanoseconds per tick IsHighResolution — If true, using system&amp;rsquo;s high-resolution performance counter.</description>
+      
+    </item>
+    
+    <item>
+      <title>trace</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/debugging/trace/</link>
+      <pubDate>Wed, 15 Dec 2021 14:59:09 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/debugging/trace/</guid>
+      
+      <description>Trace Object –&amp;gt; Debug
+Prefer ILogger over System.Diagnostics.Debug and System.Diagnostics.Trace.
+Methods and properties to debug code.
+This class can be used for both DEBUG and RELEASE compilation modes.</description>
+      
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/debugging/debug/</link>
+      <pubDate>Wed, 15 Dec 2021 14:32:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/debugging/debug/</guid>
+      
+      <description>Debug Object –&amp;gt; Debug
+Prefer ILogger over System.Diagnostics.Debug and System.Diagnostics.Trace.
+Methods and properties to debug code.
+This class can only be used when the application is compiled in DEBUG mode.
+Enabling Debugging Either:
+Add #define DEBUG (or #define TRACE) to the top of the file, or; Add the /d:DEBUG or /d:TRACE flag when compiling. Adding Trace Listeners Trace Listeners are shared by both Debug and Trace and used to output debug/trace information:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

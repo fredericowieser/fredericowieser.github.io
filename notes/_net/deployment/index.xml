@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deployment on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/deployment/</link>
+    <description>Recent content in deployment on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/deployment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>trimming</title>
+      <link>http://localhost:1313/notes/_net/deployment/trimming/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/deployment/trimming/</guid>
+      
+      <description>Overview Assembly trimming removes unused parts of libraries from the application package, thereby reducing size.
+Trimming is only available for self-contained deployments.
+Considerations Trimming has known incompatibilities. See https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/incompatibilities
+Enabling To enable trimming:
+Enable trimming in the project file:
+SomeProject.csproj &amp;lt;PropertyGroup&amp;gt; &amp;lt;PublishTrimmed&amp;gt;true&amp;lt;/PublishTrimmed&amp;gt; &amp;lt;/PropertyGroup&amp;gt; Publish the app as self-contained Via CLI: dotnet publish -r &amp;lt;RUNTIME-ID&amp;gt; Note: The -p:PublishTrimmed=true switch is not required if trimming is enabled in the project file. Via Visual Studio: Right-click project in Solution Explorer &amp;gt; Publish More actions &amp;gt; Edit Profile settings dialog &amp;gt; Set the Deployment mode &amp;gt; Set the Target runtime &amp;gt; Check Trim unused code &amp;gt; Save Publish Trimming Options The following MSBuild properties and items change trimming behavior.</description>
+      
+    </item>
+    
+    <item>
+      <title>single file deployment</title>
+      <link>http://localhost:1313/notes/_net/deployment/single-file-deployment/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/deployment/single-file-deployment/</guid>
+      
+      <description>Overview Single-file deployment bundles all application-dependent files into a single binary. This deployment method is supported for both framework-dependent and self-contained apps.
+Documentation: https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli Publishing a Single-file App Update the project file:
+csproj &amp;lt;PropertyGroup&amp;gt; &amp;lt;PublishSingleFile&amp;gt;true&amp;lt;/PublishSingleFile&amp;gt; &amp;lt;/PropertyGroup&amp;gt; Publish the app for a specific runtime identifier: dotnet publish -r &amp;lt;runtime-identifier&amp;gt; Alternatively, an app can be published as a single file without updating the project file:
+dotnet publish -r &amp;lt;runtime-identifier&amp;gt; -p:PublishSingleFile=true --self-contained &amp;lt;true|false&amp;gt; Considerations Excluding Certain Files Update the project file:</description>
+      
+    </item>
+    
+    <item>
+      <title>native aot deployment</title>
+      <link>http://localhost:1313/notes/_net/deployment/native-aot-deployment/</link>
+      <pubDate>Fri, 25 Nov 2022 20:53:06 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/deployment/native-aot-deployment/</guid>
+      
+      <description>Overview Publishing as Native AOT produces a self-contained app that has been ahead-of-time compiled into native code.
+Advantages:
+Faster startup time Smaller memory footprint Limitations:
+Availability: GA: .NET 7: Console applications only Preview: ASP.NET Core 8 All limitations of trimming apply. All limitations of single-file deployments apply. No dynamic loading (Assembly.LoadFile) No runtime code generation (System.Reflection.Emit) Apps include required runtime libraries (like all self-contained apps), so their size is larger than framework-dependent apps.</description>
+      
+    </item>
+    
+    <item>
+      <title>publishing</title>
+      <link>http://localhost:1313/notes/_net/deployment/publishing/</link>
+      <pubDate>Wed, 16 Feb 2022 16:42:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/deployment/publishing/</guid>
+      
+      <description>Publishing dotnet publish [options] &amp;lt;proj|sltn&amp;gt; # Publish the application and its dependencies for hosting. --arch &amp;lt;x64|x86 # Specify the target architecture. Don&amp;#39;t use `--runtime`. --configuration Debug|Release --framework net6.0|net5.0|… # Specify the target .NET framework. --output &amp;lt;path # Specify the output directory. --self-contained &amp;lt;true|false&amp;gt; # Publish the .NET runtime with the application. Use with `--runtime`. --runtime &amp;lt;RID&amp;gt; # Specify the target runtime environment. Use with `--self-contained`. RIDs: win-x64, win10-x64, win-x86, linux-x64, rhel-x64</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming models on Fred Wieser</title>
+    <link>http://localhost:1313/notes/software-engineering/programming-models/</link>
+    <description>Recent content in programming models on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/software-engineering/programming-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>asynchronous programming</title>
+      <link>http://localhost:1313/notes/software-engineering/programming-models/asynchronous-programming/</link>
+      <pubDate>Sun, 28 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/programming-models/asynchronous-programming/</guid>
+      
+      <description>Blocking A blocking activity causes the thread (entire application) to hang.
+Potentially blocking activities: web access, database access, working with files, working with images, WCF.
+Multitasking (from Modern Cross-Platform Development) Processes &amp;amp; Threads Process – has resources like memory and threads allocated to it. Threads – execute code, statement by statement. By default, each process has only one thread. Preemptive Multitasking Simulates parallel execution of tasks.
+Divides processor time among threads into time slices.</description>
+      
+    </item>
+    
+    <item>
+      <title>asynchronous vs parallel vs concurrent</title>
+      <link>http://localhost:1313/notes/software-engineering/programming-models/asynchronous-vs-parallel-vs-concurrent/</link>
+      <pubDate>Thu, 16 Feb 2023 14:38:58 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/programming-models/asynchronous-vs-parallel-vs-concurrent/</guid>
+      
+      <description>Overview Asynchronous — executing a task one one thread while awaiting completion of another task currently being executed on another thread. Concurrency — executing the same task on two threads. Non-deterministic (the order in which different pieces of the task are complete is not known). Parallel — executing the same task on two threads. Deterministic (the order in which different pieces of the task are complete is known). </description>
+      
+    </item>
+    
+    <item>
+      <title>multitasking and multithreading</title>
+      <link>http://localhost:1313/notes/software-engineering/programming-models/multitasking-and-multithreading/</link>
+      <pubDate>Sat, 19 Mar 2022 16:03:07 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/programming-models/multitasking-and-multithreading/</guid>
+      
+      <description>Multitasking In cooperative multitasking, the OS never initiates a context switch from one process to another. Processes voluntarily yield control periodically or when idle or when blocked.
+In preemtive multitasking, the OS initiates context switching through interruptions based on its scheduler.
+Processors Processes split themselves into multiple logical cores per physical core if they support multithreading.
+Multiprocessing A system supports multiprocessing if it has multiple processors or multiple processor cores on a single integrated circuit.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

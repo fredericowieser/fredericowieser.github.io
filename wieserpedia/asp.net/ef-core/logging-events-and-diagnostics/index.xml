@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging events and diagnostics on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/ef-core/logging-events-and-diagnostics/</link>
+    <description>Recent content in logging events and diagnostics on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/ef-core/logging-events-and-diagnostics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/ef-core/logging-events-and-diagnostics/overview/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/ef-core/logging-events-and-diagnostics/overview/</guid>
+      
+      <description>Logging Mechanisms Quick Reference Mechanism Async Scope Registered Intended Use Simple logging No Per context Context configuration Development-time logging Microsoft.Extensions.Logging No Per context DI or context configuration Production logging Events No Per context Any time Reaching to EF events Interceptors Yes Per context Context configuration Manipulating EF operations Diagnostics listeners No Process Globally Application diagnostics Simple logging Use LogTo when configuring a DbContext instance:
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =&amp;gt; optionsBuilder.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

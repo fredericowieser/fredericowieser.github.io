@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Fred Wieser</title>
+    <link>http://localhost:1313/notes/docker/</link>
+    <description>Recent content in docker on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker compose</title>
+      <link>http://localhost:1313/notes/docker/docker-compose/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/docker/docker-compose/</guid>
+      
+      <description>Overview Docker Compose helps to define and share multi-container apps. It defines an application stack in a single file.
+Docker Compose automatically creates a network for an application stack.
+Example This docker run command&amp;hellip;
+docker run -dp 3000:3000 \ -w /app -v &amp;#34;$(pwd):/app&amp;#34; \ --network todo-app \ -e MYSQL_HOST=mysql \ -e MYSQL_USER=root \ -e MYSQL_PASSWORD=secret \ -e MYSQL_DB=todos \ node:18-alpine \ sh -c &amp;#34;yarn install &amp;amp;&amp;amp; yarn run dev&amp;#34; &amp;hellip;and this one&amp;hellip;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

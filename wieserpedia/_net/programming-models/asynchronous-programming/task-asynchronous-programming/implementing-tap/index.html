@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">implementing tap | Fred Wieser</title>
+<meta property="og:title" content="implementing tap | Fred Wieser" />
+<meta name="twitter:title" content="implementing tap | Fred Wieser" />
+<meta itemprop="name" content="implementing tap | Fred Wieser" />
+<meta name="application-name" content="implementing tap | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/implementing-tap/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/implementing-tap/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">implementing tap</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-11-21T22:06:15-07:00" itemprop="datePublished"> 21 Nov 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usdotnetstandardasynchronous-programming-patternsimplementing-the-task-based-asynchronous-pattern">Overview [<a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern">Documentation</a>]</h1>
+<p>The TAP pattern can be implemented via the C# compiler, manually, or in a hybrid of both.</p>
+<h1 id="creating-tap-methods">Creating TAP Methods</h1>
+<h2 id="compiler-approach">Compiler Approach</h2>
+<p>Create TAP methods by using the <code>async</code> keyword. Compiler will automatically perform necessary transformations to implement TAP.</p>
+<ul>
+<li>TAP methods must return <code>Task</code> or <code>Task&lt;T&gt;</code>.</li>
+<li>Any exceptions that go unhandled in body of task are marshalled to the output task and task ends in <code>Faulted</code> state.
+<ul>
+<li>Except when an <code>OperationCanceledException</code> goes unhandled; then task ends in <code>Canceled</code> state.</li>
+</ul>
+</li>
+</ul>
+<h2 id="manual-approach">Manual Approach</h2>
+<ol>
+<li>Create a <code>TaskCompletionSource&lt;TResult&gt;</code> object</li>
+<li>Perform the async operation</li>
+<li>When the async operation completes, call <code>{Try}SetResult</code>, <code>{Try}SetException</code>, or <code>{Try}SetCanceled</code></li>
+<li>Return the resulting task</li>
+</ol>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> Task&lt;<span style="color:#ff7b72">int</span>&gt; ReadTask(<span style="color:#ff7b72">this</span> Stream stream, <span style="color:#ff7b72">byte</span>[] buffer, <span style="color:#ff7b72">int</span> offset, <span style="color:#ff7b72">int</span> count, <span style="color:#ff7b72">object</span> state)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> tcs = <span style="color:#ff7b72">new</span> TaskCompletionSource&lt;<span style="color:#ff7b72">int</span>&gt;(); <span style="color:#8b949e;font-style:italic">// #1</span>
+</span></span><span style="display:flex;"><span>    stream.BeginRead(buffer, offset, count, ar =&gt; <span style="color:#8b949e;font-style:italic">// #2</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">try</span> { 
+</span></span><span style="display:flex;"><span>            tcs.SetResult(stream.EndRead(ar)); <span style="color:#8b949e;font-style:italic">// #3</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">catch</span> (Exception exc) { 
+</span></span><span style="display:flex;"><span>            tcs.SetException(exc); 
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }, state);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> tcs.Task; <span style="color:#8b949e;font-style:italic">// #4</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="hybrid-approach">Hybrid Approach</h2>
+<p>This method verifies arguments outside the compiler-generated async method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> Task&lt;<span style="color:#ff7b72">int</span>&gt; MethodAsync(<span style="color:#ff7b72">string</span> input)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (input == <span style="color:#79c0ff">null</span>) 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">throw</span> <span style="color:#ff7b72">new</span> ArgumentNullException(<span style="color:#a5d6ff">&#34;input&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> MethodAsyncInternal(input);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">private</span> <span style="color:#ff7b72">async</span> Task&lt;<span style="color:#ff7b72">int</span>&gt; MethodAsyncInternal(<span style="color:#ff7b72">string</span> input)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// code that uses await goes here</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="workloads">Workloads</h1>
+<p>If a method is purely computational, it should be exposed only as a synchronous operation.<br>
+If a method is I/O bound, it should be exposed only as an asynchronous operation.</p>
+<h2 id="compute-bound-tasks">Compute-bound Tasks</h2>
+<ul>
+<li>Use <code>Task.Run</code> (a shortcut to <code>TaskFactory.StartNew</code> which is no longer recommended). Tasks created this way target the thread pool.
+<ul>
+<li>Use <code>TaskFactory.StartNew</code> only when fine-grained control is required.</li>
+</ul>
+</li>
+<li>Use constructors of <code>Task</code> type or the <code>Start</code> method to generate and schedule a task separately.
+<ul>
+<li>Public method must only return tasks that have been started.</li>
+</ul>
+</li>
+<li>Use overloads of <code>Task.ContinueWith</code> method which creates a new task that is scheduled when another completes.</li>
+<li>Use <code>TaskFactory.ContinueWhenAll</code> and <code>ContinueWhenAny</code> to create a new task that is scheduled when all/any of the supplied tasks complete.</li>
+</ul>
+<h3 id="cancellation-in-compute-bound-tasks">Cancellation in Compute-bound Tasks</h3>
+<p>In compute-bound tasks, a <code>CancellationToken</code> can be passed to the async code that monitors for the token, or the <code>Run</code> or <code>StartNew</code> methods.</p>
+<p>Example</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This task renders an image.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">internal</span> Task&lt;Bitmap&gt; RenderAsync(ImageData data, CancellationToken cancellationToken)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> Task.Run(() =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> bmp = <span style="color:#ff7b72">new</span> Bitmap(data.Width, data.Height);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">int</span> y = <span style="color:#a5d6ff">0</span>; y &lt; data.Height; y++)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// At each iteration, it polls the cancellation token and throws if cancellation is requested.</span>
+</span></span><span style="display:flex;"><span>            cancellationToken.ThrowIfCancellationRequested();
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">int</span> x = <span style="color:#a5d6ff">0</span>; x &lt; data.Width; x++)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">// render pixel [x,y] into bmp</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> bmp;
+</span></span><span style="display:flex;"><span>    }, cancellationToken);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Compute-bound tasks end in <code>Canceled</code> if:</p>
+<ol>
+<li>Cancellation request arrives before task moves to <code>Running</code> state, or</li>
+<li>An <code>OperationCanceledException</code> goes unhandled in the body of the task, that exception contains the same <code>CancellationToken</code> that is passed in, and the token shows cancellation is requested.</li>
+</ol>
+<p>If another exception goes unhandled in body of task, task ends in <code>Faulted</code> state.</p>
+<ul>
+<li>Any attempts to await task or access its result causes an exception to be thrown.</li>
+</ul>
+<h2 id="io-bound-tasks-documentationhttpslearnmicrosoftcomen-usdotnetstandardasynchronous-programming-patternsimplementing-the-task-based-asynchronous-patternio-bound-tasks">IO-bound Tasks [<a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern#io-bound-tasks">Documentation</a>]</h2>
+<p>Use <code>TaskCompletionSource&lt;TResult&gt;</code> to create a task that is not backed by a thread for its entire execution.</p>
+<ul>
+<li>Exposes a Task property and returns a <code>Task&lt;TResult&gt;</code> instance.</li>
+<li>Lifecycle controlled by methods on the type such as <code>SetResult</code>, <code>SetException</code>, <code>SetCanceled</code>.</li>
+</ul>
+<h2 id="mixed-compute-bound-and-io-bound">Mixed (Compute-bound and I/O-bound)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task&lt;Bitmap&gt; DownloadDataAndRenderImageAsync(CancellationToken cancellationToken)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> imageData = <span style="color:#ff7b72">await</span> DownloadImageDataAsync(cancellationToken); <span style="color:#8b949e;font-style:italic">// I/O-bound</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">await</span> RenderAsync(imageData, cancellationToken); <span style="color:#8b949e;font-style:italic">// Compute-bound</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

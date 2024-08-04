@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/web/</link>
+    <description>Recent content in web on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rate limiting</title>
+      <link>http://localhost:1313/notes/_net/web/rate-limiting/</link>
+      <pubDate>Fri, 03 Mar 2023 09:35:03 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/web/rate-limiting/</guid>
+      
+      <description>Overview Availability: .NET 7
+Rate limiting is built into .NET 7.
+Built-in Rate Limiting Algorithms Namespace System.Threading.RateLimiting Abstract type RateLimiter
+Use:
+RateLimiter limiter = new ConcurrencyLimiter( new ConcurrencyLimiterOptions( permitLimit: 2, queueProcessingOrder: QueueProcessingOrder.OldestFirst, queueLimit: 2 )); Concurrency limit Define a maximum number of concurrent requests that can access a resource.
+Token bucket limit A bucket is filled with tokens. Each request permanently consumes a token. At interval, more tokens are added to the bucket.</description>
+      
+    </item>
+    
+    <item>
+      <title>webutility</title>
+      <link>http://localhost:1313/notes/_net/web/webutility/</link>
+      <pubDate>Sat, 27 Nov 2021 16:34:18 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/web/webutility/</guid>
+      
+      <description>WebUtility Object –&amp;gt; WebUtility
+Methods for encoding/decoding URLs when processing web requests.
+Methods WebUtility.HtmlDecode(s) // Convert HTML-encoded string s into a string. WebUtility.HtmlEncode(s) // Convert string s into a HTML-encoded string. WebUtility.UrlDecode(s) // Convert URL-encoded string s into a string. WebUtility.UrlEncode(s) // Convert string s into a URL-encoded string. </description>
+      
+    </item>
+    
+  </channel>
+</rss>

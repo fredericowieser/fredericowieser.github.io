@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>moq on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/</link>
+    <description>Recent content in moq on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/overview/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/overview/</guid>
+      
+      <description>Abstract [Documentation] Moq is a simple, minimalistic mocking framework.
+Installation dotnet add package Moq In test project:
+using Moq; // If mocking a class with a protected member: using Moq.Protected; Overview Assumptions Assume this interface:
+public interface IDateTimeProvider { DayOfWeek DayOfWeek(); string Name { get; set; } } Assume a concrete class with one method with two overloads:
+public class RateCalculator { public decimal GetPayRate(decimal baseRate) { return DateTime.Now.DayOfWeek == DayOfWeek.</description>
+      
+    </item>
+    
+    <item>
+      <title>mocking events</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/mocking-events/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/mocking-events/</guid>
+      
+      <description>Overview Assuming this code:
+public class MessageEventArgs : EventArgs { public string Message { get; set; } } public interface IService { event EventHandler&amp;lt;MessageEventArgs&amp;gt; Sent; event EventHandler&amp;lt;MessageEventArgs&amp;gt; Received; Task SendAsync(string message); void Send(string message); string Receive(); Task&amp;lt;string&amp;gt; ReceiveAsync(); } Function Calls In this approach, an event (Sent) is raised when a configured function (which, in this case, is a method with no return value, Send()) is invoked:
+// ARRANGE var mock = new Mock&amp;lt;IService&amp;gt;(); mock.</description>
+      
+    </item>
+    
+    <item>
+      <title>mocking httpclient</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/mocking-httpclient/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/mocking-httpclient/</guid>
+      
+      <description>Overview Since HttpClient is not backed by an interface, the approach to get an HttpClient for testing is different:
+Mock HttpMessageHandler: var handlerMock = new Mock&amp;lt;HttpMessageHandler&amp;gt;(MockBehavior.Strict); Set up the mock: // Call Protected() since since HttpMessageHandler&amp;#39;s constructor is protected: handlerMock.Protected() // Override HttpMessageHandler&amp;#39;s protected internal abstract SendAsync method: .Setup&amp;lt;Task&amp;lt;HttpResponseMessage&amp;gt;&amp;gt;(&amp;#34;SendAsync&amp;#34;, ItExpr.IsAny&amp;lt;HttpRequestMessage&amp;gt;(), ItExpr.IsAny&amp;lt;CancellationToken&amp;gt;()) .ReturnsAsync(new HttpResponseMessage() { StatusCode = HttpStatusCode.OK, Content = new StringContent(httpGetResponseStringContent) }); Pass the mocked HttpMessageHandler to the HttpClient constructor to get a test HttpClient: var httpClient = new HttpClient(handlerMock.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuring mocks — properties</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-properties/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-properties/</guid>
+      
+      <description>Overview Credit: https://hamidmosalla.com/2017/08/03/moq-working-with-setupget-verifyget-setupset-verifyset-setupproperty/
+Examples in these notes use this system:
+public interface IPropertyManager { string FirstName { get; set; } string LastName { get; set; } void MutateFirstName(string name); } public class PropertyManager : IPropertyManager { public string FirstName { get; set; } public string LastName { get; set; } public void MutateFirstName(string name) =&amp;gt; this.FirstName = name; } class PropertyManagerConsumer { private readonly IPropertyManager _propertyManager; public PropertyManagerConsumer(IPropertyManager propertyManager) =&amp;gt; _propertyManager = propertyManager; public void ChangeName(string name) =&amp;gt; _propertyManager.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuring mocks with matchers</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-with-matchers/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-with-matchers/</guid>
+      
+      <description>Overview Argument matchers can be used for configuring and verifying methods and properties.
+Some test examples below use this system:
+public class Service { private readonly IFoo _foo; public Service(IFoo foo) =&amp;gt; _foo = foo ?? throw new ArgumentNullException(nameof(foo)); public void Ping() =&amp;gt; _foo.DoSomething(&amp;#34;PING&amp;#34;); } public interface IFoo { bool DoSomething(string command); } And are arranged like this:
+var mock = new Mock&amp;lt;IFoo&amp;gt;(); var sut = new Service(mock.Object); Configuring Method Calls with Matchers It.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuring mocks — methods</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-methods/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/configuring-mocks-methods/</guid>
+      
+      <description>Overview Credit: https://docs.educationsmediagroup.com/unit-testing-csharp/moq Credit: https://softchris.github.io/pages/dotnet-moq.html#creating-our-first-mock
+Mocks are configured using the Setup() and Returns() methods. This configuration, also known as instruction, tells the mock to answer with a certain response if a method or property is called.
+Some test examples below use this system:
+public class Service { private readonly IFoo _foo; public Service(IFoo foo) =&amp;gt; _foo = foo ?? throw new ArgumentNullException(nameof(foo)); public void Ping() =&amp;gt; _foo.DoSomething(&amp;#34;PING&amp;#34;); } public interface IFoo { bool DoSomething(string command); } And are arranged like this:</description>
+      
+    </item>
+    
+    <item>
+      <title>verifying mocks</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/verifying-mocks/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/verifying-mocks/</guid>
+      
+      <description>Overview Credit: https://docs.educationsmediagroup.com/unit-testing-csharp/moq
+Verifications are conducted after production code has been called. They verify that a certain method/property was called with specific arguments.
+Test examples below use this interface:
+public interface IService { void Send(string message); Task SendAsync(string message); event EventHandler&amp;lt;MessageEventArgs&amp;gt; Sent; string ContentType { get; set; } } Implicit Verification The implicit approach involves calling Verifiable() at the end of each configuration to mark the mock to be verified:</description>
+      
+    </item>
+    
+    <item>
+      <title>more features</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/more-features/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/more-features/</guid>
+      
+      <description>Overview These notes provide links to other features of Moq not covered in other notes.
+Customizing Mock Behavior When instantiating a mock, pass the MockBehavior enum to customize the behavior:
+var mock = new Mock&amp;lt;IService&amp;gt;(MockBehavior.Strict); Behaviors:
+Strict — throw an exception whenever a method or property is invoked without a matching configuration Loose (default) — return a default value instead of throwing an exception Callbacks See https://docs.educationsmediagroup.com/unit-testing-csharp/moq/callbacks
+Implicit Mocks When mocking interfaces that don&amp;rsquo;t need any configuration or verification, use implicit mocks:</description>
+      
+    </item>
+    
+    <item>
+      <title>end-to-end example</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/end-to-end-example/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/moq/end-to-end-example/</guid>
+      
+      <description>Abstract Credit: https://methodpoet.com/unit-testing-with-moq/
+These notes provide an end-to-end example of unit testing a system with Moq.
+Assumptions Assume this system under test:
+public interface IBookService { string GetISBNFor(string bookTitle); IEnumerable&amp;lt;string&amp;gt; GetBooksForCategory(string categoryId); } public interface IEmailSender { public void SendEmail(string to, string subject, string body); } public class AccountService { private IBookService _bookService; private IEmailSender _emailSender; public AccountService(IBookService bookService, IEmailSender emailSender) { _bookService = bookService; _emailSender = emailSender; } public IEnumerable&amp;lt;string&amp;gt; GetAllBooksForCategory(string categoryId) { var allBooks = _bookService.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

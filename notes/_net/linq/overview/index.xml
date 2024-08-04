@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>overview on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/linq/overview/</link>
+    <description>Recent content in overview on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/linq/overview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/linq/overview/overview/</link>
+      <pubDate>Wed, 20 Apr 2022 10:06:47 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/linq/overview/overview/</guid>
+      
+      <description>Abstract LINQ (Language-Integrated Query) is a set of technologies that integrates query capabilities directly into C#.
+Architecture LINQ consists of:
+Extensions methods (required) – Where, OrderBy, Select, etc LINQ providers (required) – LINQ to Objects, LINQ to Entities, LINQ to XML, LINQ to SQL Lambda expressions (optional) – can be used instead of named methods. LINQ query syntax (optional) – from, in, where, orderby, etc. Queryable Types Queryable types are those types that can be queried via LINQ.</description>
+      
+    </item>
+    
+    <item>
+      <title>query operators</title>
+      <link>http://localhost:1313/notes/_net/linq/overview/query-operators/</link>
+      <pubDate>Sat, 05 Nov 2022 22:15:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/linq/overview/query-operators/</guid>
+      
+      <description>Query Operations LINQ queries can be filtered, sorted (ordered), grouped, joined, and selected:
+Filtering &amp;amp; Sorting (Ordering) var queryA = from cust in customers where cust.City == &amp;#34;London&amp;#34; // this is the *filter* orderby cust.Name ascending // this is the *sorter* select cust; Grouping The group clause results in queryG being typed IEnumerable&amp;lt;IGrouping&amp;lt;string, Customer&amp;gt;&amp;gt;.
+Each group itself contains a key and a sequence that consists of all members of that group:</description>
+      
+    </item>
+    
+    <item>
+      <title>data transformations</title>
+      <link>http://localhost:1313/notes/_net/linq/overview/data-transformations/</link>
+      <pubDate>Sat, 05 Nov 2022 22:14:36 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/linq/overview/data-transformations/</guid>
+      
+      <description>Data Transformations LINQ can transform data. It can use a source sequence as input, modify it, and create a new output sequence.
+Join Multiple Inputs into One Output Sequence Assume:
+class Student(string First, string Last, int ID, string Street, string City, List&amp;lt;int&amp;gt; Scores) class Teacher(string First, string Last, int ID, string City) List&amp;lt;Student&amp;gt; students = new() { … }; List&amp;lt;Teacher&amp;gt; teachers = new() { … }; string peopleInDenver = ( from student in students where student.</description>
+      
+    </item>
+    
+    <item>
+      <title>queries</title>
+      <link>http://localhost:1313/notes/_net/linq/overview/queries/</link>
+      <pubDate>Sat, 05 Nov 2022 21:40:53 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/linq/overview/queries/</guid>
+      
+      <description>Query A query is an expression that specifies what information to retrieve from a data source. Optionally, it also specifies how the resulting data should be sorted, grouped, and shaped when returned.
+A query and the results it produces are distinct.
+A query is stored in a query variable and initialized with a query expression.
+3 Parts of a Query Operation&amp;lt; int[] numbers = new int[7] { 0, 1, 2, 3, 4, 5, 6 }; // (1) Obtain the data source // The *query expression* in *query syntax*: IEnumerable&amp;lt;int&amp;gt; numQuery = // (2) Create the query and store it in the *query variable* (`numQuery`) from num in numbers // Must begin with `from` where (num % 2) == 0 select num; // Must end with `select` or `group` foreach (int num in numQuery) { // (3) Execute the query (data retrieved here) Console.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">shims | Fred Wieser</title>
+<meta property="og:title" content="shims | Fred Wieser" />
+<meta name="twitter:title" content="shims | Fred Wieser" />
+<meta itemprop="name" content="shims | Fred Wieser" />
+<meta name="application-name" content="shims | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/testing/mocking-frameworks/microsoft-fakes/shims/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/testing/mocking-frameworks/microsoft-fakes/shims/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">shims</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-10-07T00:00:00-06:00" itemprop="datePublished"> 7 Oct 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usvisualstudiotestusing-shims-to-isolate-your-application-from-other-assemblies-for-unit-testingviewvs-2022tabscsharp">Overview [<a href="https://learn.microsoft.com/en-us/visualstudio/test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing?view=vs-2022&amp;tabs=csharp">Documentation</a>]</h1>
+<p>A <em>shim</em> is code that intercepts a call to a method and diverts it to shim code within a test. Use shims when
+you need to isolate your code from external assemblies.</p>
+<p><o>Caution</o>: Tests involving shim types <strong>cannot</strong> run concurrently. <r>This is not enforced by the Fakes runtime</r>.</p>
+<h2 id="example-creating-and-using-shims">Example: Creating and Using Shims</h2>
+<ol>
+<li>Create a class:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// HexFile.cs</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">HexFile</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span>[] Records { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> HexFile(<span style="color:#ff7b72">string</span> path)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">this</span>.Records = System.IO.File.ReadAllLines(path);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>Create a test project.</li>
+<li>From the test project, add a project reference to HexFile.</li>
+<li>Add a Fakes Assembly:
+<ol>
+<li>Solution Explorer &gt; <strong>TestProject</strong> &gt; [<strong>Assemblies</strong>, <strong>Projects</strong> or <strong>Packages</strong>]</li>
+<li>Right-click the <code>System</code> assembly &gt; <strong>Add Fakes Assembly</strong><br>
+<img src="select-system-assembly.png" alt="Visual Studio screenshot showing the system assembly being selected"></li>
+</ol>
+</li>
+<li>Modify <code>Fakes/mscorlib.fakes</code> to exclude types that cannot be used with shims:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;Fakes</span> xmlns=<span style="color:#a5d6ff">&#34;http://schemas.microsoft.com/fakes/2011/&#34;</span> Diagnostic=<span style="color:#a5d6ff">&#34;true&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;Assembly</span> Name=<span style="color:#a5d6ff">&#34;mscorlib&#34;</span> Version=<span style="color:#a5d6ff">&#34;4.0.0.0&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;StubGeneration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Clear/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/StubGeneration&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;ShimGeneration&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Clear/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Add</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.File&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileStreamAsyncResult&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileSystemEnumerableFactory&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileInfoResultHandler&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileSystemInfoResultHandler&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileStream+FileStreamReadWriteTask&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;Remove</span> FullName=<span style="color:#a5d6ff">&#34;System.IO.FileSystemEnumerableIterator&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/ShimGeneration&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/Fakes&gt;</span>
+</span></span></code></pre></div></li>
+<li>Create a Unit Test</li>
+<li>Modify the default <code>UnitTest1.cs</code> file with this test method:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[TestMethod]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> TestFileReadAllLine()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#8b949e;font-style:italic">// Important: each ShimContext must be disposed, so wrap in using():</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">using</span> (ShimsContext.Create())
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>        System.IO.Fakes.ShimFile.ReadAllLinesString = (s) =&gt; <span style="color:#ff7b72">new</span> <span style="color:#ff7b72">string</span>[] { <span style="color:#a5d6ff">&#34;Hello&#34;</span>, <span style="color:#a5d6ff">&#34;World&#34;</span>, <span style="color:#a5d6ff">&#34;Shims&#34;</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> target = <span style="color:#ff7b72">new</span> HexFile(<span style="color:#a5d6ff">&#34;this_file_doesnt_exist.txt&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Assert.AreEqual(<span style="color:#a5d6ff">3</span>, target.Records.Length);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>Run the test.</li>
+</ol>
+<h1 id="shim-behavior">Shim Behavior</h1>
+<p>Each generated shim type receives an <code>IShimBehavior</code> through the <code>ShimBase&lt;T&gt;.InstanceBehavior</code> property. Whenever a client calls a member
+<em>that has not been shimmed</em>, this behavior is invoked. If no behavior has been set, it uses <code>ShimBehaviors.Current</code> which throws
+a <code>NotImplementedException</code> by default.</p>
+<p>This example changes the behavior so that the shim either does nothing or returns the default value of the return type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> shim = <span style="color:#ff7b72">new</span> ShimMyClass();
+</span></span><span style="display:flex;"><span>shim.InstanceBehavior = ShimBehaviors.DefaultValue; <span style="color:#8b949e;font-style:italic">//return default(T) or do nothing</span>
+</span></span></code></pre></div><p>To change the behavior globally for all shims where behavior has not been set, use <code>ShimBehaviors.Current</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimBehaviors.Current = ShimBehaviors.DefaultValue;
+</span></span></code></pre></div><h2 id="identifying-interaction-with-external-dependencies">Identifying Interaction with External Dependencies</h2>
+<p>By setting <code>Behavior</code> property of a shim type to <code>ShimBehaviors.NotImplemented</code>, any access to a member of that type throws a <code>NotImplementedException</code>. This
+can serve as a signal during testing to indicate code is attempting to access an external component:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimMyClass.Behavior = ShimBehaviors.NotImplemented;
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// or, use this shorthand:</span>
+</span></span><span style="display:flex;"><span>ShimMyClass.BehaveAsNotImplemented();
+</span></span></code></pre></div><h2 id="invoke-the-original-method-form-within-a-shim-method">Invoke the Original Method form Within a Shim Method</h2>
+<p>In this example, the use case might be writing text to the file system after validating the file name passed to a the method. To achieve this, there are
+two approaches:</p>
+<ol>
+<li>Encapsulate a call to the original method using a delegate and <code>ShimsContext.ExecuteWithoutShims()</code>:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimFile.WriteAllTextStringString = (fileName, content) =&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    ShimsContext.ExecuteWithoutShims(() =&gt; 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">&#34;enter&#34;</span>);
+</span></span><span style="display:flex;"><span>        File.WriteAllText(fileName, content);
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">&#34;leave&#34;</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div></li>
+<li>Nullify the shim, call the original method, then restore the shim:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimsDelegates.Action&lt;<span style="color:#ff7b72">string</span>, <span style="color:#ff7b72">string</span>&gt; shim = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span>shim = (fileName, content) =&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span> 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">&#34;enter&#34;</span>);
+</span></span><span style="display:flex;"><span>        ShimFile.WriteAllTextStringString = <span style="color:#79c0ff">null</span>; <span style="color:#8b949e;font-style:italic">// remove shim in order to call original method</span>
+</span></span><span style="display:flex;"><span>        File.WriteAllText(fileName, content);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">finally</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        ShimFile.WriteAllTextStringString = shim; <span style="color:#8b949e;font-style:italic">// restore shim</span>
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">&#34;leave&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// initialize the shim</span>
+</span></span><span style="display:flex;"><span>ShimFile.WriteAllTextStringString = shim;
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="shimming-systemenvironment">Shimming System.Environment</h2>
+<p>See <a href="https://learn.microsoft.com/en-us/visualstudio/test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing?view=vs-2022&amp;tabs=csharp#shimming-systemenvironment">here</a>.</p>
+<h1 id="shimming-different-types-of-methods">Shimming Different Types of Methods</h1>
+<h2 id="shims-for-static-methods">Shims for Static Methods</h2>
+<p>For static methods, a shim type has properties that hold shims. The properties only have a setter. This setter is used to attach a delegate to the targeted method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//code under test</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">int</span> MyMethod() { ... }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Attach a shim to <code>MyMethod</code> that always returns 5:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimMyClass.MyMethod = () =&gt; <span style="color:#a5d6ff">5</span>;
+</span></span></code></pre></div><h2 id="shims-for-instance-methods-all-instances">Shims for Instance Methods (All Instances)</h2>
+<p>For instance methods, properties that hold shims are placed in a nested type named <code>AllInstances</code> (because the shim is for all instances of the method):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// code under test</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> MyMethod() { ... }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Attach a shim to <code>MyMethod</code> that always returns 5 (regardless of the instance):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimMyClass.AllInstances.MyMethod = () =&gt; <span style="color:#a5d6ff">5</span>;
+</span></span></code></pre></div><h2 id="shims-for-instance-methods-single-instance">Shims for Instance Methods (Single Instance)</h2>
+<p>For instance methods where only a single instance is shimmed, properties that hold these shims are instance methods of the shim type itself:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// code under test</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> MyMethod() { ... }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Create two shim types for <code>MyMethod</code>, one that always returns 5 and one that always returns 10:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> myClass1 = <span style="color:#ff7b72">new</span> ShimMyClass()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    MyMethod = () =&gt; <span style="color:#a5d6ff">5</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> myClass2 = <span style="color:#ff7b72">new</span> ShimMyClass { 
+</span></span><span style="display:flex;"><span>    MyMethod = () =&gt; <span style="color:#a5d6ff">10</span> 
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Access the shimmed type instance either through the <code>Instance</code> property&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> shim = <span style="color:#ff7b72">new</span> ShimMyClass();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> instance = shim.Instance;
+</span></span></code></pre></div><p>&hellip;or directly via an implicit conversion:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> shim = <span style="color:#ff7b72">new</span> ShimMyClass();
+</span></span><span style="display:flex;"><span>MyClass instance = shim; <span style="color:#8b949e;font-style:italic">// implicit cast retrieves the runtime instance</span>
+</span></span></code></pre></div><h2 id="shims-for-constructors">Shims for Constructors</h2>
+<p>Every constructor is represented as a static method named <code>Constructor</code> within the shim type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> MyClass(<span style="color:#ff7b72">int</span> <span style="color:#ff7b72">value</span>) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">this</span>.Value = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Create a shim type for the constructor that will always return -5:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span>ShimMyClass.ConstructorInt32 = (@this, <span style="color:#ff7b72">value</span>) =&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> shim = <span style="color:#ff7b72">new</span> ShimMyClass(@this) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        ValueGet = () =&gt; -<span style="color:#a5d6ff">5</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Each shim type exposes two constructors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ShimMyClass() { } <span style="color:#8b949e;font-style:italic">// Use this one when a new instance is needed </span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ShimMyClass(MyClass instance) : <span style="color:#ff7b72">base</span>(instance) { } <span style="color:#8b949e;font-style:italic">// Use this one only in constructor shims</span>
+</span></span></code></pre></div><h2 id="shims-for-static-constructors">Shims for Static Constructors</h2>
+<p>Shim types expose a static method <code>StaticConstructor</code> to shim the static constructor of a type.</p>
+<h2 id="shims-for-finalizers">Shims for Finalizers</h2>
+<p>Finalizers are not supported in Fakes.</p>
+<h2 id="shims-for-base-members">Shims for Base Members</h2>
+<p>To create shimmed properties of base members, create a shim of the base type, a shim of the child type, then input child type shim into the constructor of the base shim:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">abstract</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyBase</span> { <span style="color:#8b949e;font-style:italic">// the base type</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> MyMethod() { ... }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyChild</span> : MyBase { } <span style="color:#8b949e;font-style:italic">// the child type</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span><span style="color:#ff7b72">var</span> child = <span style="color:#ff7b72">new</span> ShimMyChild(); <span style="color:#8b949e;font-style:italic">// a shim of the child</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span><span style="color:#ff7b72">new</span> ShimMyBase(child) { MyMethod = () =&gt; <span style="color:#a5d6ff">5</span> }; <span style="color:#8b949e;font-style:italic">// input the shim of the child into the constructor of the base shim</span>
+</span></span></code></pre></div><h1 id="shimmed-types-of-interfaces">Shimmed Types of Interfaces</h1>
+<p>When a shimmed type implements an interface, a method named <code>Bind</code> is generated that allows it to bind all the members for that interface at once:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyClass</span> : IEnumerable&lt;<span style="color:#ff7b72">int</span>&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IEnumerator&lt;<span style="color:#ff7b72">int</span>&gt; GetEnumerator() { ... }
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Shim all implementations of <code>IEnumerable&lt;int&gt;</code> in <code>MyClass</code> by calling <code>Bind</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// unit test code</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> shimMyClass = <span style="color:#ff7b72">new</span> ShimMyClass();
+</span></span><span style="display:flex;"><span>shimMyClass.Bind(<span style="color:#ff7b72">new</span> List&lt;<span style="color:#ff7b72">int</span>&gt; { <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span> });
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

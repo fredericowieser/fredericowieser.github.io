@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>navigation on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/</link>
+    <description>Recent content in navigation on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>implementing basic navigation</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/implementing-basic-navigation/</link>
+      <pubDate>Mon, 02 Jan 2023 17:38:12 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/implementing-basic-navigation/</guid>
+      
+      <description>A TextBlock &amp;lt;TextBlock x:Name=&amp;#34;pageTitle&amp;#34; Text=&amp;#34;Page 1&amp;#34; /&amp;gt; A HyperlinkButton &amp;lt;HyperlinkButton Content=&amp;#34;Click to go to page 2&amp;#34; Click=&amp;#34;HyperlinkButton_Click&amp;#34; HorizontalAlignment=&amp;#34;Center&amp;#34;/&amp;gt; Code-behind:
+// Handle the Click event of the HyperlinkButton: private void HyperlinkButton_Click(object sender, RoutedEventArgs e) { this.Frame.Navigate(typeof(Page2)); } </description>
+      
+    </item>
+    
+    <item>
+      <title>navigation</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/navigation/</link>
+      <pubDate>Mon, 02 Jan 2023 17:27:02 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/navigation/navigation/</guid>
+      
+      <description>Overview An app is a collection of pages. Navigation is the act of moving between pages and within a page.
+Navigation Structures Flat/Lateral Pages exist side by side Able to navigate from one page to another in any order Hierarchical Each child page has one parent, but a parent can have more than one child. To reach a child page, you must navigate through parent. Navigation Controls Frame Any app with multiple pages uses a Frame The app&amp;rsquo;s main page contains a Frame and a primary navigation element like a navigation view control.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

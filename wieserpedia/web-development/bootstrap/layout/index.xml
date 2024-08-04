@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>layout on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/</link>
+    <description>Recent content in layout on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 16 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/bootstrap/layout/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>utilities</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/utilities/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/utilities/</guid>
+      
+      <description>Overview Utilities for layouts.
+Documentation: https://getbootstrap.com/docs/5.3/layout/utilities/ Display utilities — for responsively toggling values of the display property Flex utilities — if you need to add display: flex to an element, do so with .d-flex Spacing utilities — for margin and padding Visibility utilities — for toggling visibility </description>
+      
+    </item>
+    
+    <item>
+      <title>breakpoints</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/breakpoints/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/breakpoints/</guid>
+      
+      <description>Overview Documentation: https://getbootstrap.com/docs/5.3/layout/breakpoints/ Customizable widths that determine how responsive layout behaves across device or viewport sizes. The building blocks of responsive design. Used to control when layout can be adapted at a particular viewport or device size. Works in conjunction with CSS media queries. Available Breakpoints Also referred to as grid tiers. Holds containers at width multiples of 12:
+Breakpoint Class infix Dimensions Extra small None &amp;lt;576px Small sm ≥576px Medium md ≥768px Large lg ≥992px Extra large xl ≥1200px Extra extra large xxl ≥1400px Customizable via scss/_variables.</description>
+      
+    </item>
+    
+    <item>
+      <title>grid</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/grid/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/grid/</guid>
+      
+      <description>Overview Bootstrap&amp;rsquo;s grid system uses a series of containers, rows and columns to layout and align content. Built with flexbox.
+Documentation: https://getbootstrap.com/docs/5.3/layout/grid/ Containers center and horizontally pad content. Rows are wrappers for columns. Each column has horizontal padding (gutter). Gutters themselves are also customizable. Note: flexbox has known bugs.
+Basic Usage &amp;lt;div class=&amp;#34;container text-center&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;row&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; Column &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; Column &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; Column &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; Auto-layout columns Breakpoint-specific column classes for easy column sizing without explicit numbered classes (ie: .</description>
+      
+    </item>
+    
+    <item>
+      <title>containers</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/containers/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/containers/</guid>
+      
+      <description>Overview Documentation: https://getbootstrap.com/docs/5.3/layout/containers/ A build block that contains, pads, and aligns content within a given device or viewport. Required when using default grid system. Can be nested, but most layotus do not require this. 3 Containers .container — sets a max-width at each responsive breakpoint .container-&amp;lt;breakpoint&amp;gt; — uses width: 100% until the specified breakpoint .container-fluid — sets width: 100% at all breakpoints Comparison:
+Extra small &amp;lt;576px Small ≥576px Medium ≥768px Large ≥992px X-Large ≥1200px XX-Large ≥1400px .</description>
+      
+    </item>
+    
+    <item>
+      <title>columns</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/columns/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/layout/columns/</guid>
+      
+      <description>Overview How to modify columns with options for alignment, ordering, and offsetting. Using column classes to manage widths of non-grid elements.
+When building grid layouts, all content goes into columns. Bootstrap has predefined classes for creating layouts. Alignment Vertical Alignment Change the align-items-* classes:
+&amp;lt;div class=&amp;#34;container text-center&amp;#34;&amp;gt; &amp;lt;!-- also, align-items-center and align-items-end: --&amp;gt; &amp;lt;div class=&amp;#34;row align-items-start&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; One of three columns &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; One of three columns &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col&amp;#34;&amp;gt; One of three columns &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; Change the alignment on individual columns with align-self-*:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>random numbers on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/</link>
+    <description>Recent content in random numbers on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 27 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>system.security.cryptography.randomnumbergenerator</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/system.security.cryptography.randomnumbergenerator/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/system.security.cryptography.randomnumbergenerator/</guid>
+      
+      <description>Overview A cryptographically-secure random number generator. Implements IDisposable.
+Documentation: https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.randomnumbergenerator?view=net-7.0 Use Create a random number generator:
+using System.Security.Cryptography; using var rng = new RandomNumberGenerator.Create(); byte[5] fiveBytes = rng.GetBytes(5); // 5 random byte values. var tenBytes = new byte[10]; rng.GetBytes(tenBytes); // Fills tenBytes with random byte values. RandomNumberGenerator.GetInt32(11); // Random integer &amp;gt;= 0 and &amp;lt;= 10. RandomNumberGenerator.GetInt32(-5, 6); // Random integer &amp;gt;= -5 and &amp;lt;= 5. </description>
+      
+    </item>
+    
+    <item>
+      <title>system.random</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/system.random/</link>
+      <pubDate>Wed, 10 Nov 2021 18:43:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/random-numbers/system.random/</guid>
+      
+      <description>Overview Pseudo-random number generator.
+Documentation: https://learn.microsoft.com/en-us/dotnet/api/system.random?view=net-7.0 Thread Safety Warning: System.Random is not thread safe.
+For concurrent operations across multiple threads, use Random&amp;rsquo;s Shared property which returns a thread-safe Random instance.
+Seeds In .NET Core, System.Random&amp;rsquo;s default parameterless constructor uses a seed value produced by the thread-static random number generator itself. It also has a constructor overload that accepts an int as a seed.
+Use var bytes = new byte[5]; rand.NextBytes(bytes); // 5 random byte values.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

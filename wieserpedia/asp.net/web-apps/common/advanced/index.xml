@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>advanced on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/</link>
+    <description>Recent content in advanced on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 20 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>application model</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/application-model/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/application-model/</guid>
+      
+      <description>Overview [Documentation] ASP.NET Core MVC defines an application model that represents the components of an MVC app. It includes both abstract interfaces and concrete implementation classes that describe an MVC application. It results from MVC discovering the app&amp;rsquo;s controllers, actions, action parameters, routes, and filters. By modifying the model, an app can follow different conventions than the default MVC behavior.
+The application model has this structure:
+ApplicationModel └── Controllers (ControllerModel) └── Actions (ActionModel) └── Parameters (ParameterModel) See the documentation for more information.</description>
+      
+    </item>
+    
+    <item>
+      <title>application parts</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/application-parts/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/advanced/application-parts/</guid>
+      
+      <description>Overview [Documentation] An application part is an abstraction over the resources (controllers, view components, tag helpers, Razor Pages, etc) of an ASP.NET Core app. Application parts are used to discover (and avoid loading) ASP.NET Core features from an assembly.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

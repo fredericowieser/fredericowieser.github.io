@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fundamentals on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/</link>
+    <description>Recent content in fundamentals on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/overview/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/overview/</guid>
+      
+      <description>These notes include: Learn &amp;gt; .NET &amp;gt; ASP.NET Core &amp;gt; Fundamentals &amp;gt; Options | Environments
+Abstract ASP.NET Core web applications function as console applications. By default, they use Kestrel as the web server.
+Web App Frameworks Server-rendered Apps ASP.NET Core Razor Pages ASP.NET Core MVC Blazor Server Client-rendered Apps Blazor WASM ASP.NET Core SPA (w/Angular or React) Hybrid Web APIs Controller-based API Minimal API Real-time Apps RPC Apps gRPC Fundamentals (Common to all ASP.</description>
+      
+    </item>
+    
+    <item>
+      <title>data transfer objects</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/data-transfer-objects/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/data-transfer-objects/</guid>
+      
+      <description>Overview [Documentation] Data Transfer Objects (DTOs) are a subset of a data model. They are used to limit the data that is input or returned from a web app by using a subset of the model. They are also used to prevent over-posting (aka mass assignment) attacks.
+Note: not to be confused with a Microsoft.AspNetCore.Components.Web.DataTransfer object.
+Preventing Overposting with DTOs Example Overposting Vulnerability Reference: https://andrewlock.net/preventing-mass-assignment-or-over-posting-in-asp-net-core/
+Consider this model:
+public class UserModel { public string Name { get; set; } public bool IsAdmin { get; set; } } The user can edit the Name property.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/configuration/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/configuration/</guid>
+      
+      <description>Overview [Documentation] Configuration consists of host and app configuration providers. The WebApplicationBuilder contains the host:
+var builder = WebApplication.CreateBuilder(args); See also: Configuration in .NET
+Concepts Host Configuration Host configuration providers in order of priority for WebApplicationBuilder:
+Command line arguments DOTNET_-prefixed environment variables ASPNETCORE_-prefixed environment variables Host configuration providers in order of priority for the .NET Generic Host and Web Host (deprecated):
+ASPNETCORE_-prefixed environment variables Command-line arguments DOTNET_-prefixed environment variables Host variables [Documentation] App Configuration App configuration providers in order of priority:</description>
+      
+    </item>
+    
+    <item>
+      <title>security and identity</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/security-and-identity/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/security-and-identity/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+ASP.NET Core Identity A&amp;amp;A system that supports UI login functionality Not for APIs Supports external service providers Supports MVC &amp;amp; Razor Pages, scaffolding, SQL Server Includes a Razor Class Library for identity-enabled Views that typically need to be included in a web app Important Classes UserManager&amp;lt;IdentityUser&amp;gt; Manages all interaction (CRUD operations) with user objects in the datastore.
+SignInManager&amp;lt;IdentityUser&amp;gt; User authentication and related actions; defines methods such as PasswordSignInAsync, ConfirmEmailAsync, SignOutAsync, etc.</description>
+      
+    </item>
+    
+    <item>
+      <title>scaffolding</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/scaffolding/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/scaffolding/</guid>
+      
+      <description>From Pluralsight/ASP.NET 6 Core Fundamentals
+Overview ASP.NET Core can scaffold. This creates:
+a DbContext class—the main class that coordinates EF functionality for a given data model. Razor pages that handle CRUD operations for an entity. How to Scaffold from Visual Studio Create Pages/subfolder In Solution Explorer &amp;gt; right-click Pages/subfolder &amp;gt; Add &amp;gt; New Scaffolded Item a. Installed &amp;gt; Common &amp;gt; Razor Pages &amp;gt; Razor Pages using Entity Framework (CRUD) &amp;gt; ADD In Add Razor Pages using Entity Framework (CRUD) dialog &amp;gt; a.</description>
+      
+    </item>
+    
+    <item>
+      <title>reliable web app pattern</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/reliable-web-app-pattern/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/reliable-web-app-pattern/</guid>
+      
+      <description>Overview A set of guidelines to help migrate a web app to the cloud.
+https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/reliable-web-app/_net/pattern-overview</description>
+      
+    </item>
+    
+    <item>
+      <title>app startup</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/app-startup/</link>
+      <pubDate>Wed, 18 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/app-startup/</guid>
+      
+      <description>Overview [Documentation] This template supports Razor Pages, MVC controllers with views, Web API controllers, and Minimal APIs app models.
+Configures required services ILogger&amp;lt;T&amp;gt; is provided by the ASP.NET framework Creates the request handling pipeline via middleware Program.cs
+var builder = WebApplication.CreateBuilder(args); // Configures Kestrel // Add services to the container. builder.Services.AddRazorPages(); // For a Razor Pages client-side Web UI builder.Services.AddControllersWithViews(); // For an MVC client-side Web UI var app = builder.</description>
+      
+    </item>
+    
+    <item>
+      <title>environments</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/environments/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/environments/</guid>
+      
+      <description>Overview [Documentation] ASP.NET reads the following environment variables to determine the environment:
+DOTNET_ENVIRONMENT ASPNETCORE_ENVIRONMENT For WebApplicationBuilder (the default), DOTNET_ENVIRONMENT has precedence.
+For WebHost (ConfigureWebHostDefaults, CreateDefaultBuilder), ASPNETCORE_ENVIRONMENT has precedence.
+IHostEnvironment.EnvironmentName The launchSettings.json file sets ASPNETCORE_ENVIRONMENT to Development on the local machine. Set to Production if ASPNETCORE_ENVIRONMENT and DOTNET_ENVIRONMENT have not been set. Setting Environment From Command Line dotnet run --environment Production
+Development Environment launchSettings.json The environment for local machine development can be set in Properties/launchSettings.</description>
+      
+    </item>
+    
+    <item>
+      <title>error handling</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/error-handling/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/error-handling/</guid>
+      
+      <description>Overview [Documentation] ASP.NET Core has built-in error handling features: A developer exception page; custom error pages; static status code pages; startup exception handling.
+Developer exception page Displays detailed information about unhandled request exceptions. Requires development environment and app built with WebApplication.CreateBuilder (not WebHost.CreateDefaultBuilder).
+Note: The developer exception page is not guaranteed to provide any information; use logging. Custom exception handler page (for Production environment) Use UseExceptionHandler middleware.
+Catches and logs unhandled exceptions; re-executes request using the original HTTP method in an alternate pipeline with path indicated.</description>
+      
+    </item>
+    
+    <item>
+      <title>making http requests</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/making-http-requests/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/making-http-requests/</guid>
+      
+      <description>Overview [Documentation] See Problems with HttpClient
+Via IHttpClientFactory Register IHttpClientFactory in the DI container:
+var builder = WebApplication.CreateBuilder(args); builder.Services.AddHttpClient(); Inject an IHttpClientFactory:
+public class BasicModel : PageModel { private readonly IHttpClientFactory _httpClientFactory; public BasicModel(IHttpClientFactory httpClientFactory) =&amp;gt; _httpClientFactory = httpClientFactory; public IEnumerable&amp;lt;GitHubBranch&amp;gt;? GitHubBranches { get; set; } public async Task OnGet() { var httpRequestMessage = new HttpRequestMessage( HttpMethod.Get, &amp;#34;https://api.github.com/repos/_net/AspNetCore.Docs/branches&amp;#34;) { Headers = { { HeaderNames.Accept, &amp;#34;application/vnd.github.v3+json&amp;#34; }, { HeaderNames.UserAgent, &amp;#34;HttpRequestsSample&amp;#34; } } }; var httpClient = _httpClientFactory.</description>
+      
+    </item>
+    
+    <item>
+      <title>static files</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/static-files/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/static-files/</guid>
+      
+      <description>Overview [Documentation] Static files are stored in the web root directory CONTENT_ROOT/wwwroot. Change with UseWebRoot. Serve with UseStaticFiles.
+Serve Static Files in the Web Root Static files are accessible via a path relative to the web root. If you create wwwroot/images/ and add SomeImage.jpg,
+access via URL at https://hostname/images/SomeImage.jpg and via markup: &amp;lt;img src=&amp;quot;~/images/MyImage.jpg&amp;quot; class=&amp;quot;img&amp;quot; alt=&amp;quot;My image&amp;quot; /&amp;gt; Serve Static Files Outside of the Web Root Use UseStaticFiles and pass StaticFileOptions:</description>
+      
+    </item>
+    
+    <item>
+      <title>hosts</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/hosts/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/hosts/</guid>
+      
+      <description>Generic Host [Documentation] The host encapsulates DI, logging, configuration, and IHostedService implementations.
+ASP.NET Core creates a WebApplicationBuilder and a WebApplication (a form of the Generic Host) which eliminates the need for a Startup class.
+See also: Generic Host
+Create a Host with an IHostedService Implementation CreateDefaultBuilder await Host.CreateDefaultBuilder(args) .ConfigureServices(services =&amp;gt; { services.AddHostedService&amp;lt;SampleHostedService&amp;gt;(); }) .Build() .RunAsync(); CreateDefaultBuilder:
+Sets content root to GetCurrentDirectory Loads host configuration from env vars (prefixed with DOTNET_) then command line args Loads app configuration (appsettings.</description>
+      
+    </item>
+    
+    <item>
+      <title>httpcontext</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/httpcontext/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/httpcontext/</guid>
+      
+      <description>Overview [Documentation] HttpContext encapsulates all information about an HTTP request and response.
+Initialized when HTTP request is received Accessible by middleware and app frameworks HttpContext is not thread safe.
+HttpRequest Accessed via HttpContext.Request.
+Initialized when HTTP request is received Mutable Common members:
+Path, Method, Headers RouteValues — a collection of route values; set when request is matched to a route Query — a collection of query values parsed from QueryString ReadFormAsync() — reads request body as a form and returns a form values collection See also: Prefer ReadFormAsync over Request.</description>
+      
+    </item>
+    
+    <item>
+      <title>services and dependency injection</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/services-and-dependency-injection/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/services-and-dependency-injection/</guid>
+      
+      <description>Dependency Injection [Documentation] See notes on Dependency Injection in .NET.
+Makes configured services available throughout an app. ASP.NET Core templates automatically register over 250 services including:
+IApplicationBuilderFactory IServiceProvider as a built-in service container ILogger&amp;lt;T&amp;gt; (so a logger services does not need to be registered separately) ILoggerFactory IHostApplicationLifetime IHostLifetime IHostEnvironment or IWebHostEnvironment IServer IOptions&amp;lt;T&amp;gt; DiagnosticSource DiagnosticListener Services are added to the DI container with WebApplicationBuilder.Services in Program.cs. When WebApplicationBuilder is instantiated, many framework-provided services are added.</description>
+      
+    </item>
+    
+    <item>
+      <title>web servers</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/web-servers/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/web-servers/</guid>
+      
+      <description>Overview ASP.NET on Windows ships with:
+Kestrel IIS HTTP Server (an in-process server for IIS) HTTP.sys On IIS/Express:
+IIS HTTP Server—runs in same process as IIS worker process Kestrel—runs in separate process as IIS worker process Documentation: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/?view=aspnetcore-7.0&amp;amp;tabs=windows
+Kestrel vs HTTP.sys Server Performance Cross-platform Port and TLS configuration Alternate transports Port Sharing Authentication Fast proxying Direct file transmission Response caching Kestrel Better Yes Yes Yes No user-mode No No No HTTP.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

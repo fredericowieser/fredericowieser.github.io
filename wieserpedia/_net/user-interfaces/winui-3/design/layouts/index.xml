@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>layouts on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/</link>
+    <description>Recent content in layouts on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>z depth and shadow</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/z-depth-and-shadow/</link>
+      <pubDate>Thu, 05 Jan 2023 19:14:16 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/z-depth-and-shadow/</guid>
+      
+      <description>Overview Z-depth is the distance between two surfaces on the z-axis. It illustrates how close an object is to the viewer.
+Shadows also express depth and visual hierarchy.
+Shadow APIs ThemeShadow Can be applied to any XAML element. Applies shadows to elements based on a z-depth value. Built in to common controls at 32px depth. ThemeShadow in Popups To apply to an element in a Popup, apply a ThemeShadow to the element&amp;rsquo;s Shadow property then elevate the element from others behind it by using the Z component of the Translation property:</description>
+      
+    </item>
+    
+    <item>
+      <title>transforms</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/transforms/</link>
+      <pubDate>Thu, 05 Jan 2023 19:10:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/transforms/</guid>
+      
+      <description>Overview Transforms define how to map points from one coordinate space to another.
+Four types of transforms:
+TranslateTransform — move an element in x-y space by setting X and Y values. ScaleTransform — grow/shrink an element based on a center point by setting values for CenterX, CenterY, ScaleX, and ScaleY. RotateTransform — rotate an element in x-y space by setting Angle, CenterX, and CenterY. SkewTransform — skew or shear in x-y space by setting AngleX, AngleY, CenterX, and CenterY.</description>
+      
+    </item>
+    
+    <item>
+      <title>attached layouts</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/attached-layouts/</link>
+      <pubDate>Thu, 05 Jan 2023 18:50:36 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/attached-layouts/</guid>
+      
+      <description>Overview Attached layout models allow for altering the layout of items at runtime.</description>
+      
+    </item>
+    
+    <item>
+      <title>alignment margin padding</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/alignment-margin-padding/</link>
+      <pubDate>Mon, 02 Jan 2023 21:02:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/alignment-margin-padding/</guid>
+      
+      <description>Dimensions Dimensions should be set in increments of 4 effective pixels.
+Height / Width specify element size. Default = NaN. Use Auto or star sizing for fluid behavior. ActualHeight / ActualWidth report element size at runtime and are changed in a SizeChanged event. MinWidth / MaxWidth and MinHeight / MaxHeight provide constraints while still supporting fluid sizing. Text element dimensions are controlled by FontSize. They do not have a Height / Width property but do have a calculated ActualHeight / ActualWidth.</description>
+      
+    </item>
+    
+    <item>
+      <title>multiple views</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/multiple-views/</link>
+      <pubDate>Mon, 02 Jan 2023 20:53:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/multiple-views/</guid>
+      
+      <description>Overview Multiple views allow independent parts of apps to be viewed in separate windows.
+When implemented, the taskbar shows each window separately.
+APIs Windows.UI.ViewManagement Namespace - Windows UWP applications | Microsoft Learn
+Windows.UI.WindowManagement namespace (microsoft.com)
+Windowing Hosts CoreWindow / ApplicationView A 1:1 pairing of a thread and a window the app uses to display content Main view is always hosted in ApplicationView; content in a secondary window can be hosted in an ApplicationView or AppWindow Not the preferred technique AppWindow Preferred technique (Windows 10 1903+) Operates on the same UI thread it is created from </description>
+      
+    </item>
+    
+    <item>
+      <title>layouts</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/layouts/</link>
+      <pubDate>Mon, 02 Jan 2023 20:33:28 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/design/layouts/layouts/</guid>
+      
+      <description>Overview XAML layout system supports automatic resizing of elements, layout panels, and visual states
+Implementing Responsive Layouts with XAML Achieved by using the appropriate layout properties and panels to reposition, resize, and reflow content fluidly.
+Layout Properties Height &amp;amp; Width Set to Auto or use star sizing (which is the default) To set constraints, set MinWidth/MaxWidth and MinHeight/MaxHeight. To read value at runtime, use ActualHeight/ActualWidth Alignment Use HorizontalAlignment/VerticalAlignment Visibility The Visibility enum can be Visible or Collapsed.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

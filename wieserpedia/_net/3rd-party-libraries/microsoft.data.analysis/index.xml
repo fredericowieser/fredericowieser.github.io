@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microsoft.data.analysis on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/</link>
+    <description>Recent content in microsoft.data.analysis on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/overview/</link>
+      <pubDate>Tue, 25 Jan 2022 13:17:40 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/overview/</guid>
+      
+      <description>An Introduction to DataFrame - .NET Blog (microsoft.com)</description>
+      
+    </item>
+    
+    <item>
+      <title>dataframerow</title>
+      <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframerow/</link>
+      <pubDate>Tue, 25 Jan 2022 13:50:25 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframerow/</guid>
+      
+      <description>DataFrameRow Object –&amp;gt; DataFrameRow
+A collection of values that represent a row in a DataFrame.
+Properties Item(index) - Returns the value at index. Methods GetEnumerator() - Returns an enumerator of the values in this row. </description>
+      
+    </item>
+    
+    <item>
+      <title>dataframecolumn</title>
+      <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframecolumn/</link>
+      <pubDate>Tue, 25 Jan 2022 13:39:48 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframecolumn/</guid>
+      
+      <description>DataFrameColumn Object –&amp;gt; DataFrameColumn
+A collection of values that represent a column in a DataFrame.
+Properties DataType - The type of data this column holds. Item(length, startIndex) - Returns length number of values starting from startIndex. Item(rowIndex) - Get/set values at rowIndex. Length - The length of this column. Name - The name of this column. NullCount - The number of null values in this column. Methods AddDataViewColumn AddValueUsingCursor All - Boolean if all the elements are True.</description>
+      
+    </item>
+    
+    <item>
+      <title>dataframe</title>
+      <link>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframe/</link>
+      <pubDate>Tue, 25 Jan 2022 13:17:51 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframe/</guid>
+      
+      <description>DataFrame Object –&amp;gt; DataFrame
+A data structure to support indexing, binary operations, sorting, selecting, and other APIs.
+dotnet add package Microsoft.Data.Analysis Accessing Elements // Access the element at row, col: df[row, col] // or df.Rows[row, col] Rows // Access the nth row: df.Rows[n] Columns // Access a column by name: df[&amp;#34;column_name&amp;#34;] // Access the nth column: df.Columns[n] DataFrame // Filter the DataFrame: df.Filter(df.Columns[&amp;#34;column&amp;#34;].ElementwiseGreaterThan(50)) // All rows in column with values &amp;gt; 50.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

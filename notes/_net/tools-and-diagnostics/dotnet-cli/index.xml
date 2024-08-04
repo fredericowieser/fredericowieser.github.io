@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotnet cli on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/</link>
+    <description>Recent content in dotnet cli on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dotnet</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/dotnet/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/dotnet/</guid>
+      
+      <description>Overview Documentation: https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet Compiling dotnet build Build (compile) the executable for the app.
+Configuring dotnet &amp;lt;command&amp;gt; --diagnostics # Enable diagnostic output. dotnet &amp;lt;command&amp;gt; --verbosity &amp;lt;level&amp;gt; # Levels are (q)uiet, (m)inimal, (n)ormal, (d)etailed, (diag)nostic. dotnet new globaljson --sdk-version &amp;lt;ver&amp;gt; # Create a global.json file to target the .NET SDK version ver. The dotnet command searches the current directory and subdirectories for a global.json file, so this can be created in a subdirectory of the project.</description>
+      
+    </item>
+    
+    <item>
+      <title>tab completion</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tab-completion/</link>
+      <pubDate>Mon, 17 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tab-completion/</guid>
+      
+      <description>Enabling Tab Completion for dotnet Command PowerShell Edit the profile at $PROFILE:
+# PowerShell parameter completion shim for the dotnet CLI Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock { param($commandName, $wordToComplete, $cursorPosition) dotnet complete --position $cursorPosition &amp;#34;$wordToComplete&amp;#34; | ForEach-Object { [System.Management.Automation.CompletionResult]::new($_, $_, &amp;#39;ParameterValue&amp;#39;, $_) } } Bash # bash parameter completion for the dotnet CLI function _dotnet_bash_complete() { local cur=&amp;#34;${COMP_WORDS[COMP_CWORD]}&amp;#34; IFS=$&amp;#39;\n&amp;#39; # On Windows you may need to use use IFS=$&amp;#39;\r\n&amp;#39; local candidates read -d &amp;#39;&amp;#39; -ra candidates &amp;lt; &amp;lt;(dotnet complete --position &amp;#34;${COMP_POINT}&amp;#34; &amp;#34;${COMP_LINE}&amp;#34; 2&amp;gt;/dev/null) read -d &amp;#39;&amp;#39; -ra COMPREPLY &amp;lt; &amp;lt;(compgen -W &amp;#34;${candidates[*]:-}&amp;#34; -- &amp;#34;$cur&amp;#34;) } complete -f -F _dotnet_bash_complete dotnet </description>
+      
+    </item>
+    
+  </channel>
+</rss>

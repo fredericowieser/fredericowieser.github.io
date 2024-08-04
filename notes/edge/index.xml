@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>edge on Fred Wieser</title>
+    <link>http://localhost:1313/notes/edge/</link>
+    <description>Recent content in edge on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/edge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>devtools</title>
+      <link>http://localhost:1313/notes/edge/devtools/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/edge/devtools/</guid>
+      
+      <description>Overview [Documentation] Inspect and debug web pages with DevTools.
+Keyboard Shortcuts [Documentation] Ctrl+Shift+I — Open DevTools to Welcome Ctrl+Shift+J — Open DevTools to Console Ctrl+Shift+C — Open DevTools to Elements Ctrl+Shift+H — Display DevTools tooltips Ctrl+Shift+P — Open Command menu Elements The Elements tab displays the DOM tree:
+Main Toolbar </description>
+      
+    </item>
+    
+  </channel>
+</rss>

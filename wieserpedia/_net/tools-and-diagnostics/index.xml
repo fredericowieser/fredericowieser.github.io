@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools and diagnostics on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/</link>
+    <description>Recent content in tools and diagnostics on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 05 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>logging and tracing</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/logging-and-tracing/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/logging-and-tracing/</guid>
+      
+      <description>Overview [Documentation] These notes discuss the differences between logging and tracing and the differences between the many logging APIs available in .NET.
+Logging vs. Tracing Both logging and tracing serve as a record of interesting events that occur while a program is running.
+Logging is expected to be collected all the time and should have low overhead. Unstructured logging yields log entries that have free-form text content. Structured logging yields log entries with well-defined schema and can be encoded in different machine-readable formats.</description>
+      
+    </item>
+    
+    <item>
+      <title>observability and telemetry</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/observability-and-telemetry/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/observability-and-telemetry/</guid>
+      
+      <description>Overview Observability is the ability to monitor and analyze telemetry about the state of each component in a distributed system, to observe changes in performance, and to diagnose why those changes occur.
+Intended to be transparent to the primary operation and have an insignificant performance impact so that it may be used continuously. A combination of logs, metrics, and distributed tracing. Observability approaches in .NET:
+Explicitly in code (via OpenTelemetry) Out of process via EventPipe Inside a process via a startup hook — a low-level hook that allows injecting managed code to run before the main application&amp;rsquo;s entry point These notes focus on approach #1 above.</description>
+      
+    </item>
+    
+    <item>
+      <title>containerization</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/containerization/</link>
+      <pubDate>Fri, 10 Mar 2023 13:32:54 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/containerization/</guid>
+      
+      <description>Configure Container Image Most configuration is handled through MSBuild properties. Exception: RUN commands require a Dockerfile.
+ContainerBaseImage The image used as the basis for the image being created.
+&amp;lt;PropertyGroup&amp;gt; &amp;lt;ContainerBaseImage&amp;gt;mcr.microsoft.com/_net/runtime:6.0&amp;lt;/ContainerBaseImage&amp;gt; &amp;lt;/PropertyGroup&amp;gt; Defaults:
+If project is self-contained, the mcr.microsoft.com/_net/runtime-deps image is used. If project is an ASP.NET Core project, the mcr.microsoft.com/_net/aspnet image is used. Otherwise the mcr.microsoft.com/_net/runtime image is used. ContainerRuntimeIdentifier The OS and architecture used by the container of the ContainerBaseImage supports more than one platform.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

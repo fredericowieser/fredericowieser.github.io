@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Fred Wieser</title>
+    <link>http://localhost:1313/notes/web-development/javascript/</link>
+    <description>Recent content in javascript on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/web-development/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/web-development/javascript/overview/</link>
+      <pubDate>Fri, 28 Apr 2023 16:26:09 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/javascript/overview/</guid>
+      
+      <description>Embedding in HTML JavaScript is embedded in HTML in &amp;lt;script&amp;gt; tags.
+Variables let someVariable = &amp;#34;someString&amp;#34; const someConstant = 3 Arrays JavaScript arrays are zero-indexed:
+let array1 = [1, 2, 3, 4]; let array2 = [100, true, &amp;#34;JavaScript&amp;#34;]; array1[0] // returns 1 array1.push(5); Strings Strings are C-style.
+Template strings day: ${day}, index: ${index}; Operators === Flow Control C-style:
+if while for ForEach forEach works by defining an anonymous function that takes action on each element in the array:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

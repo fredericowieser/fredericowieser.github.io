@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tools/</link>
+    <description>Recent content in tools on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tools/overview/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/dotnet-cli/tools/overview/</guid>
+      
+      <description>Abstract Tools are CLI apps installed from NuGet packages. Tools are managed and used with the dotnet tool command. Documentation: https://learn.microsoft.com/en-us/dotnet/core/tools/ Installing dotnet tool install &amp;lt;package_name&amp;gt; --global # install the tool globally --local # install the tool locally Diagnostic tools Tool Use dotnet-counters for first-level health monitoring and performance investigation dotnet-dump for collecting and analyzing Windows and Linux core dumps without a native debugger dotnet-gcdump for collecting garbage collector dumps of live .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

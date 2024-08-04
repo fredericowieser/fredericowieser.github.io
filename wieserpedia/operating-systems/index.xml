@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>operating systems on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/operating-systems/</link>
+    <description>Recent content in operating systems on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/operating-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zero copy operations</title>
+      <link>http://localhost:1313/wieserpedia/operating-systems/zero-copy-operations/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/operating-systems/zero-copy-operations/</guid>
+      
+      <description>Zero-copy Operations Zero-copy operations are data copy operations that do not need to copy between kernel and userspace This reduces kernel &amp;lt;&amp;ndash;&amp;gt; userspace context switches These operations are also used in device drivers, file systems, and network stacks </description>
+      
+    </item>
+    
+  </channel>
+</rss>

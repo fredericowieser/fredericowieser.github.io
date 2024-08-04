@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>variables on Fred Wieser</title>
+    <link>http://localhost:1313/notes/web-development/hugo/variables/</link>
+    <description>Recent content in variables on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/web-development/hugo/variables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>page variables</title>
+      <link>http://localhost:1313/notes/web-development/hugo/variables/page-variables/</link>
+      <pubDate>Sun, 18 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/variables/page-variables/</guid>
+      
+      <description>Overview Page-level variables are defined in the content&amp;rsquo;s frontmatter, derived from the content&amp;rsquo;s file location, or extract from the content body itself.
+Predefined Page Variables All of the fields listed in frontmatter are page variables in the format .FieldName. Only page variables that are not listed on the frontmatter notes page are listed here:
+.AlternativeOutputFormats — used for a page&amp;rsquo;s link rel list in the site&amp;rsquo;s &amp;lt;head&amp;gt; (see also: Output formats) .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

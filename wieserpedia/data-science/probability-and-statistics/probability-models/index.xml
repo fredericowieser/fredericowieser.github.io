@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>probability models on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/</link>
+    <description>Recent content in probability models on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/overview/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/overview/</guid>
+      
+      <description>Probability Models Analysis starts with exploration, visualization, summary…
+…and then often continues with building probability models (OSMEN framework).
+The Data Science Process Ask an interesting question What is the scientific goal? What would you do if you had all the data? What do you want to predict or estimate? Get the data How was the data sampled? Which data is relevant? Are there privacy issues? Explore the data Plot the data.</description>
+      
+    </item>
+    
+    <item>
+      <title>ppdac model</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/ppdac-model/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/ppdac-model/</guid>
+      
+      <description>Template for PPDAC Case Studies Problem: What question(s) were addressed? (Why? Why does it matter?) Does distribution of outcome Y depend significantly on variable(s) X? How? On what else does Y depend? Plan: How will we use data to address the question? Data: Describe the data obtained. What are its strengths and limitations? Variables, sample design and sample size, extent of missing data Limitations of data: missing variables, missing values, study design (e.</description>
+      
+    </item>
+    
+    <item>
+      <title>bayesian networks</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/bayesian-networks/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/bayesian-networks/</guid>
+      
+      <description>Bayesian Networks (BNs) Regression models have one dependent variable and multiple independent variables. Bayesian networks allow networks of dependencies, both direct and indirect. Many interdependent variables are allowed. Each variable has a conditional distribution that depends on its parents&amp;rsquo; values. Conditioning on values of observed variables gives confiditional CDFs for an unobserved variable. </description>
+      
+    </item>
+    
+    <item>
+      <title>maximum likelihood estimation and confidence intervals</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/maximum-likelihood-estimation-and-confidence-intervals/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/maximum-likelihood-estimation-and-confidence-intervals/</guid>
+      
+      <description>Maximum Likelihood Estimation Maximum likelihood estimation – a method of estimating the parameters of a probability distribution by maximizing a likelihood function. It finds the values of parameters (like mean and standard deviation for a normal distribution, or lambda for a Poisson distribution) that result in the curve that best fits the data. Likelihood function – measures the fit (support) of a statistical model to a sample of data for given values of the unknown parameters.</description>
+      
+    </item>
+    
+    <item>
+      <title>central limit theorem</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/central-limit-theorem/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/central-limit-theorem/</guid>
+      
+      <description>Central Limit Theorem(s) Definition:
+The sum of many independent RVs has an approximately normal distribution. Rule: 30 RVs is usually enough to justify a normal approximation for their sample mean (or for their sum). Checking CLT with repeated samples using sample() x = c(0, 0, 10, 50) set.seed(1) sample(x, 10, replace = TRUE) # randomly sample 10 times from x Practice Problem Q: Suppose that each of 1,000 members of an insurance pool independently has a 0.</description>
+      
+    </item>
+    
+    <item>
+      <title>markov models</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/markov-models/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/markov-models/</guid>
+      
+      <description>Overview Markov models are dynamic; they model probabilistic events over time.
+Dynamic transition models (like Markov) quantify probabilities of future states over time, for both individuals and populations.
+Definition Markov models have a set of states with one-step transition probabilities (if discrete time steps) or transition rates (if continuous time). The probabilities of the transition intensity to the next state depend only on the current state, not how that state was achieved.</description>
+      
+    </item>
+    
+    <item>
+      <title>poisson distribution and exponential distribution</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/poisson-distribution-and-exponential-distribution/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/poisson-distribution-and-exponential-distribution/</guid>
+      
+      <description>Poisson Distributions Poisson process A Poisson process models &amp;ldquo;purely random&amp;rdquo; counts with a known intensity or rate lambda.
+lambda = average arrivals per unit of time Poisson distribution A Poisson distribution is determined by one parameter: lambda = expected number of counts (arrivals, events, etc.) per unit of time.
+Used to make probabilistic predictions if correct probability models are known (or assumed).
+ppois(x, lambda) # returns a CDF Sample Problems</description>
+      
+    </item>
+    
+    <item>
+      <title>probability model statistics</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/probability-model-statistics/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/probability-model-statistics/</guid>
+      
+      <description>Means Definitions:
+The mean of a random variable (rv) is its average value. The mean of a discrete random variable (rv) is the sum of all its possible values weighted (multiplied by) their probabilities: sum over x values of x * p(x) Bernoulli rv – single binomial trial The mean of a Bernoulli random variable having value 1 with probability p and otherwise value 0 with probability 1 - p: p * 1 + (1 - p) * 0 = 0 p The mean of a continuous random variable is the sum of all its possible values weighted by their probability densities E(X) = &amp;ldquo;expectation&amp;rdquo; of X = mean(X) Variance (Population) Definitions:</description>
+      
+    </item>
+    
+    <item>
+      <title>empirical cumulative distribution function</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/empirical-cumulative-distribution-function/</link>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/empirical-cumulative-distribution-function/</guid>
+      
+      <description>ECDF If we do not have a probability model (like pnorm()), we can use the data itself as a model with ECDF.
+Prediction via simulation using rdist() and ecdf() ecdf(x)(y) returns a fraction of numbers in data vector x that are no greater than value y.
+x is a data vector y is where we evaluate ecdf(x) rnorm(n, mean, sd) samples n times from a normal distribution with parameters mean and sd.</description>
+      
+    </item>
+    
+    <item>
+      <title>binomial probability models</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/binomial-probability-models/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/binomial-probability-models/</guid>
+      
+      <description>Binomial Confidence Interval Definition:
+Computes the mean (x/n) and the lower and upper confidence limits (default=95%) from inputs x and n. library(binom) binom.confint(x,	# number of successes n,	# number of trials conf.level = 0.95,	# confidence interval method = &amp;#34;all&amp;#34;)	# method to construct the interval Solves: Find an exact 95% confidence interval for the success probability p.
+Interpretation:
+95% statistical confidence that true value of population parameter p is between lower and upper.</description>
+      
+    </item>
+    
+    <item>
+      <title>normal distribution probability models</title>
+      <link>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/normal-distribution-probability-models/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/data-science/probability-and-statistics/probability-models/normal-distribution-probability-models/</guid>
+      
+      <description>Normal Distribution Notes:
+Used for sums of random variables Characterized by 2 numbers: mean (mu) standard deviation (sigma-squared) They have continuous outcomes (weight, cost, time, etc) Example:
+95% prediction interval for normal distribution: Problem: Each customer spends a random amount of money, mean = $25, SD = $5. What is a 95% PI for the amount spent by a randomly selected customer? Solution: mean +/- 2 * sd = 25 +/- 2 * 5, so 95% PI is [$15, $35] 95% of normal probability density function is within 1.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

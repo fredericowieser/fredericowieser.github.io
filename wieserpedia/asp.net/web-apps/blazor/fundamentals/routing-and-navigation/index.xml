@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>routing and navigation on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/</link>
+    <description>Recent content in routing and navigation on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>routing</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/routing/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/routing/</guid>
+      
+      <description>Overview Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-7.0 Router Component (In this section, Navigation is an injected NavigationManager)
+The Router component enables routing:
+App.razor
+&amp;lt;Router AppAssembly=&amp;#34;@typeof(Program).Assembly&amp;#34;&amp;gt; &amp;lt;Found Context=&amp;#34;routeData&amp;#34;&amp;gt; &amp;lt;RouteView RouteData=&amp;#34;@routeData&amp;#34; DefaultLayout=&amp;#34;@typeof(MainLayout)&amp;#34; /&amp;gt; &amp;lt;/Found&amp;gt; &amp;lt;NotFound&amp;gt; &amp;lt;p&amp;gt;Sorry, there&amp;#39;s nothing at this address.&amp;lt;/p&amp;gt; &amp;lt;/NotFound&amp;gt; &amp;lt;/Router&amp;gt; Focus Set the UI focus to an element based on a CSS selector. When the Router navigates to a new page, this sets the focus to the page&amp;rsquo;s top-level header:
+&amp;lt;FocusOnNavigate RouteData=&amp;#34;@routeData&amp;#34; Selector=&amp;#34;h1&amp;#34; /&amp;gt; Provide Custom Content when Content Not Found Use the NotFound template:</description>
+      
+    </item>
+    
+    <item>
+      <title>route parameters and templates</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/route-parameters-and-templates/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/route-parameters-and-templates/</guid>
+      
+      <description>Route Templates — How it Works in Blazor When a Razor Component is compiled, the generated class receives a RouteAttribute that contains its route template. When the app starts, the Router&amp;rsquo;s AppAssembly is scanned for all Components that have a RouteAttribute. The RouteView Component receives the RouteData from the Router and renders the specified component with its layout. Components support multiple route templates using multiple @page directives:
+@page &amp;#34;/blazor-route&amp;#34; @page &amp;#34;/different-blazor-route&amp;#34; &amp;lt;h1&amp;gt;Blazor routing&amp;lt;/h1&amp;gt; Constant-based route templates can be specified with @attribute:</description>
+      
+    </item>
+    
+    <item>
+      <title>navigation</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/navigation/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/fundamentals/routing-and-navigation/navigation/</guid>
+      
+      <description>NavigationManager Use NavigationManager to manage URIs and navigation in C# code. NavigationManager is added to the DI container by the framework (no registration required).
+[Inject] // injects a NavigationManager instance public NavigationManager NavMan { get; set; } NavMan.NavigateTo($&amp;#34;/employeedetail/{selectedEmployee.EmployeeId}&amp;#34;); NavigationManager uses the browser&amp;rsquo;s history API to maintain navigation history.
+Navigation Options NavigateManager&amp;rsquo;s NavigateTo method accepts NavigationOptions:
+ForceLoad — bypass client-side routing and force the browser to load the new page from the server; default = false ReplaceHistoryEntry — replace teh current entry in the history stack; default = true; if false, append instead of replace HistoryEntryState — get or set the state to append to the history entry Location Changes NavigationManager&amp;rsquo;s LocationChanged event has LocationChangedEventArgs that provide information about navigation events including:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

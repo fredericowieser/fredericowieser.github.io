@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/api/</link>
+    <description>Recent content in api on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/api/overview/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/api/overview/</guid>
+      
+      <description>Abstract Documentation: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis?view=aspnetcore-7.0 Two Approaches In ASP.NET Core, APIs can be built with the controller-based approach or the minimal API approach:
+Controller-based Controllers are classes that derive from ControllerBase. Take dependencies via constructor injection or property injection. Minimal APIs Hide the host class and focus on building APIs via extension methods that take functions as lambda expressions. Take dependencies via accessing the service provider. Minimal APIs do not support:
+Model binding (via IModelBinder, IModelBinderProvider); a custom binding shim can be used Validation (via IModelValidator) Application parts or application model View rendering (recommendation: use Razor Pages) JsonPatch OData In the sample code below, both approaches use this class:</description>
+      
+    </item>
+    
+    <item>
+      <title>testing with httprepl</title>
+      <link>http://localhost:1313/notes/asp.net/api/testing-with-httprepl/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/api/testing-with-httprepl/</guid>
+      
+      <description>Overview HttpRepl (Read-Eval-Print-Loop) is a command line tool used to make HTTP requests to test web APIs and view their results. It can test web APIs hosted anywhere, including localhost and Azure App Service. Documentation: https://learn.microsoft.com/en-us/aspnet/core/web-api/http-repl/?view=aspnetcore-7.0&amp;amp;tabs=windows Installation dotnet tool install -g Microsoft.dotnet-httprepl Usage Connecting to a web API httprepl ROOT_URI [--verbose] Example:
+httprepl https://localhost:5001 Alternatively, after HttpRepl is running:
+&amp;gt; connect ROOT_URI The above commands attempt to find the OpenAPI description automatically.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

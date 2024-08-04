@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>common on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/</link>
+    <description>Recent content in common on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/common/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tag helpers custom</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/tag-helpers-custom/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/tag-helpers-custom/</guid>
+      
+      <description>Overview Tag helpers are plain C# classes that inherit from TagHelper.
+They can be placed anywhere and must be named NameOfElementTagHelper.
+They override Process or ProcessAsync. This method returns HTML which is inserted where the tag helper is invoked.
+Example:
+/TagHelpers/EmailTagHelper.cs
+public class EmailTagHelper : TagHelper { public void override Process(TagHelperContext context, TagHelperOutput output) { // mailto links use the anchor tag, so the tag name of this output will be &amp;#34;a&amp;#34; output.</description>
+      
+    </item>
+    
+    <item>
+      <title>forms</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/forms/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/forms/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+Creating a Form Using Tag Helpers ASP.NET Core has built-in Tag Helpers for creating forms:
+Form asp-controller to specify which controller to target on a form&amp;rsquo;s POST action asp-action to specify which action to target on a form&amp;rsquo;s POST action asp-route-* to create a route where * can be the name of a parameter we want to specify a value for asp-route to specify which named route to use asp-antiforgery to counter cross-site request forgery attacks Input Label Textarea Select Validation Get the name of the property we want to display via the asp-for attribute on the label tag helper:</description>
+      
+    </item>
+    
+    <item>
+      <title>tag helpers</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/tag-helpers/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/tag-helpers/</guid>
+      
+      <description>Overview Tag Helpers consists of markup code that executes server-side and triggers the execution of code. They can be tags, attributes, or elements.
+They enable server-side code to create and render HTML elements in Razor files.
+They look like standard HTML. They replace HTML Helpers. They have rich IntelliSense support.
+Registering Tag Helpers for Use Tag Helpers can be added in every file that needs to use them or in _ViewImports.</description>
+      
+    </item>
+    
+    <item>
+      <title>layout</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/layout/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/layout/</guid>
+      
+      <description>Overview The default layout file is Pages/Shared/_Layout.cshtml (Razor Pages) and Views/Shared/_Layout.cshtml (MVC).
+Referencing a Layout Razor views have a Layout property that can be used by individual views to reference a layout it wants to use:
+SomeView.cshtml
+@{ // this could be a full path but ASP.NET Core MVC knows to check /Views/Shared for a .cshtml file: Layout = &amp;#34;_Layout&amp;#34;; } Alternatively, use a ViewStart file placed at /Views/_ViewStart.cshtml with this same code which will then be used automatically by every View.</description>
+      
+    </item>
+    
+    <item>
+      <title>razor class libraries</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/razor-class-libraries/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/razor-class-libraries/</guid>
+      
+      <description>Overview Razor Class Libraries can contain Razor views, pages, controllers, page models, Razor Components, View components, and data models along with their associated static files. They can be packaged and reused.
+Creating Visual Studio project type = Razor Class Library dotnet new razorclasslib
+ASP.NET Core templates assume RCL content is in Areas folder.
+Precedence When a view, partial view, or Razor Page exists in both the web app and the RCL, the web app takes precedence over (overrides) the one in the RCL.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

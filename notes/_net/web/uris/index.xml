@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uris on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/web/uris/</link>
+    <description>Recent content in uris on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/web/uris/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>uri helpers</title>
+      <link>http://localhost:1313/notes/_net/web/uris/uri-helpers/</link>
+      <pubDate>Tue, 22 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/web/uris/uri-helpers/</guid>
+      
+      <description>Overview Various classes for working with URIs.
+Microsoft.AspNetCore.Http.QueryString [Documentation] &amp;ldquo;Provides correct handling for QueryString value when needed to reconstruct a request or redirect URI string.&amp;rdquo;
+Microsoft.AspNetCore.Http.Extensions.QueryBuilder [Documentation] &amp;ldquo;For constructing a query string.&amp;rdquo;
+Adding onto an existing query string Constructing a QueryString from a QueryBuilder Microsoft.AspNetCore.Http.Extensions.UriHelper [Documentation] &amp;ldquo;For constructing encoded URIs for use in headers and other URIs.&amp;rdquo;
+Combining URI components into an absolute or relative URI Encoding URIs Microsoft.AspNetCore.Mvc.Routing.UrlHelper [Documentation] &amp;ldquo;An implementation of IUrlHelper that contains methods to build URLs for ASP.</description>
+      
+    </item>
+    
+    <item>
+      <title>uribuilder</title>
+      <link>http://localhost:1313/notes/_net/web/uris/uribuilder/</link>
+      <pubDate>Sun, 28 Nov 2021 09:03:08 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/web/uris/uribuilder/</guid>
+      
+      <description>System.UriBuilder Object –&amp;gt; UriBuilder
+Construct and modify URIs for the Uri class.
+Construction UriBuilder() — Returns a new UriBuilder instance. UriBuilder(string) — Returns a new UriBuilder instance from string. UriBuilder(Uri) — Returns a new UriBuilder instance from Uri. Properties Assuming a URI https://user:password@www.contoso.com:80/Home/Index.htm?q1=v1&amp;amp;q2=v2#FragmentName:
+Fragment — #FragmentName Host — www.contoso.com Password — password Path — /Home/Index.htm Port — 80 Query — ?q1=v1&amp;amp;q2=v2 Scheme — https Uri — https://user:password@www.contoso.com:80/Home/Index.htm?q1=v1&amp;amp;q2=v2#FragmentName UserName — user </description>
+      
+    </item>
+    
+    <item>
+      <title>uri</title>
+      <link>http://localhost:1313/notes/_net/web/uris/uri/</link>
+      <pubDate>Sun, 28 Nov 2021 08:30:06 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/web/uris/uri/</guid>
+      
+      <description>System.Uri Object –&amp;gt; Uri
+An object representation of a URI.
+Construction From String Uri uri = new Uri(&amp;#34;https://user:password@www.contoso.com:80/Home/Index.htm?q1=1&amp;amp;q2=v2#FragmentName&amp;#34;); Specify Base URI or Relative URI Uri uri = new Uri(string &amp;#34;s&amp;#34;, UriKind.Absolute); // or UriKind.Relative. // or Uri uri = new Uri(Uri baseUri, string &amp;#34;relativeUriString&amp;#34;); // or Uri uri = new Uri(Uri baseUri, Uri relativeUri); Fields Various fields are available for different URI schemes such as File, FTP, SSH, Telnet, etc.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

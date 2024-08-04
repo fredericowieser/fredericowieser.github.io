@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>classes on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/types/classes/</link>
+    <description>Recent content in classes on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/types/classes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/overview/</link>
+      <pubDate>Wed, 16 Feb 2022 16:22:37 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/overview/</guid>
+      
+      <description>Classes A reference type that encapsulates behavior.
+Characteristics Allocation: Heap Equality: Reference Semantics: Reference (a variable of a class contains a reference to that class) Inheritance: Single Mutability: Mutable Use When You need to describe behavior and not just data Creating Classes Note: When creating custom classes, always override ToString() to provide information about the type (not shown here).
+public class Point { private int _X { get; } // Auto-implemented readonly property.</description>
+      
+    </item>
+    
+    <item>
+      <title>partial classes</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/partial-classes/</link>
+      <pubDate>Sun, 06 Mar 2022 18:16:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/partial-classes/</guid>
+      
+      <description>Partial Classes The partial keyword indicates that other parts of the class, struct, or interface can be defined in the namespace.
+Rules All the parts must use the partial keyword. If any part is declared abstract, then the whole type is considered abstract. If any part is declared sealed, then the whole type is considered sealed. If any part declares a base type, then the whole type inherits that class. </description>
+      
+    </item>
+    
+    <item>
+      <title>static classes</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/static-classes/</link>
+      <pubDate>Thu, 17 Feb 2022 20:46:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/static-classes/</guid>
+      
+      <description>Static Classes Static classes:
+Contain only static members. Cannot be instantiated. Are implicitly sealed (cannot be derived from). Cannot contain instance constructors (only static constructors). It is more common to declare a non-static class with some static members than to declare an entire class static.
+If a class contains static fields, provide a static constructor to initialize them.
+Static Members A non-static class may contain static methods, fields, properties, or events.</description>
+      
+    </item>
+    
+    <item>
+      <title>abstract classes</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/abstract-classes/</link>
+      <pubDate>Thu, 17 Feb 2022 20:25:50 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/abstract-classes/</guid>
+      
+      <description>Abstract Classes Abstract classes and members are incomplete and must be implemented in a derived class.
+They cannot be directly instantiated. They cannot be static. They may contain constructors. Abstract, Concrete, Virtual, and Static Members Abstract classes may contain abstract, concrete, virtual, and static members:
+abstract members have no implementation. They must be implemented in the derived class. Use the override keyword. A field cannot be abstract. They cannot be static.</description>
+      
+    </item>
+    
+    <item>
+      <title>expression bodied members</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/expression-bodied-members/</link>
+      <pubDate>Wed, 16 Feb 2022 16:38:07 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/expression-bodied-members/</guid>
+      
+      <description>Expression-Bodied Members Expression body definitions are a concise form of implementing a member.
+Usage member =&amp;gt; expression; Use in Methods Commonly used in types that override the ToString method:
+public override string ToString() =&amp;gt; $&amp;#34;{fname} {lname}&amp;#34;.Trim(); Use in Read Only Properties public class Location { private string locationName; public Location(string name) { locationName = name; } public string Name =&amp;gt; locationName; } Use in Constructors and Properties public class Location { private string locationName; public Location(string name) =&amp;gt; Name = name; // Assigns argument name to property Name.</description>
+      
+    </item>
+    
+    <item>
+      <title>fields</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/fields/</link>
+      <pubDate>Thu, 30 Dec 2021 16:57:31 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/fields/</guid>
+      
+      <description>Fields Field – a variable of any type declared in a class or struct.
+If a field is static, every instance points to the same copy of the field in the type. If a field is readonly, its value can only be assigned during initialization or in a constructor. A static readonly field is like a const, except that the compiler can only access its value at run time. Usually private or protected with public properties, methods, or indexers that get or set their values.</description>
+      
+    </item>
+    
+    <item>
+      <title>properties</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/classes/properties/</link>
+      <pubDate>Sat, 06 Nov 2021 11:25:46 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/classes/properties/</guid>
+      
+      <description>Properties Properties are methods that act like Fields that allow for getting and setting its value.
+They are used in place of fields when the value they contain must be calculated or guarded. To the user of a property, they appear as a field. Unlike fields, they are implemented with get/set accessors that define the statements executed when the property is accessed or assigned. Properties cannot be passed as ref or out parameters.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

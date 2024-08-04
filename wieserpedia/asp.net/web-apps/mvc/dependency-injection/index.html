@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">dependency injection | Fred Wieser</title>
+<meta property="og:title" content="dependency injection | Fred Wieser" />
+<meta name="twitter:title" content="dependency injection | Fred Wieser" />
+<meta itemprop="name" content="dependency injection | Fred Wieser" />
+<meta name="application-name" content="dependency injection | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/dependency-injection/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/dependency-injection/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">dependency injection</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-03-22T00:00:00-06:00" itemprop="datePublished"> 22 Mar 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="dependency-injection-into-controllers">Dependency Injection into Controllers</h1>
+<p>Code sample: <a href="https://github.com/dotnet/AspNetCore.Docs/tree/main/aspnetcore/mvc/controllers/dependency-injection/sample">View or download sample code (github.com)</a></p>
+<p>MVC controllers request dependencies <em>explicitly</em> via constructors.
+Assuming an <code>IDateTime</code> service:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">HomeController</span> : Controller
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> IDateTime _dateTime;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> HomeController(IDateTime dateTime) =&gt; _dateTime = dateTime;
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="dependency-injection-into-actions">Dependency Injection into Actions</h1>
+<p>Use the <code>[FromServices]</code> attribute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult About([FromServices] IDateTime dateTime) =&gt;
+</span></span><span style="display:flex;"><span>    Content( <span style="color:#a5d6ff">$&#34;Current server time: {dateTime.Now}&#34;</span>);
+</span></span></code></pre></div><h1 id="options-pattern-to-access-settings">Options Pattern to Access Settings</h1>
+<p>Generally, do not inject <code>IConfiguration</code> into a controller. Instead, use the <a href="../../../../_net/configuration/options-pattern">Options Pattern</a>.</p>
+<h1 id="dependency-injection-into-views">Dependency Injection into Views</h1>
+<p>Displaying a configuration value in a Razor Pages view:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@page
+</span></span><span style="display:flex;"><span>@model PrivacyModel &lt;<span style="color:#7ee787">--</span> 
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@</span>using Microsoft<span style="color:#f85149">.</span>Extensions<span style="color:#f85149">.</span>Configuration <span style="color:#f85149">&lt;</span>--
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@</span>inject IConfiguration Configuration
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@{</span>
+</span></span><span style="display:flex;"><span>    ViewData<span style="color:#f85149">[&#34;</span>Title<span style="color:#f85149">&#34;]</span> <span style="color:#f85149">=</span> <span style="color:#f85149">&#34;</span>Privacy RP<span style="color:#f85149">&#34;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">&lt;</span>h1&gt;@ViewData[&#34;Title&#34;]&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;PR Privacy&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">h2</span>&gt;
+</span></span><span style="display:flex;"><span>   MyRoot:MyParent:MyChildName: @Configuration[&#34;MyRoot:MyParent:MyChildName&#34;] &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">&lt;/</span>h2&gt;
+</span></span></code></pre></div><p>Displaying a configuration item in a MVC view:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@using Microsoft.Extensions.Configuration &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@</span>inject IConfiguration Configuration <span style="color:#f85149">&lt;</span>--
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@{</span>
+</span></span><span style="display:flex;"><span>    ViewData<span style="color:#f85149">[&#34;</span>Title<span style="color:#f85149">&#34;]</span> <span style="color:#f85149">=</span> <span style="color:#f85149">&#34;</span>Privacy MVC<span style="color:#f85149">&#34;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">&lt;</span>h1&gt;@ViewData[&#34;Title&#34;]&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;MVC Use this page to detail your site&#39;s privacy policy.&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">h2</span>&gt;
+</span></span><span style="display:flex;"><span>   MyRoot:MyParent:MyChildName: @Configuration[&#34;MyRoot:MyParent:MyChildName&#34;] &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">&lt;/</span>h2&gt;
+</span></span></code></pre></div><p>Injecting a service in an MVC view:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@using System.Threading.Tasks
+</span></span><span style="display:flex;"><span>@using ViewInjectSample.Model
+</span></span><span style="display:flex;"><span>@using ViewInjectSample.Model.Services
+</span></span><span style="display:flex;"><span>@model IEnumerable&lt;<span style="color:#7ee787">ToDoItem</span>&gt; &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span><span style="color:#f85149">@</span>inject StatisticsService StatsService <span style="color:#f85149">&lt;</span>--
+</span></span><span style="display:flex;"><span><span style="color:#f85149">&lt;!</span>DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">title</span>&gt;To Do Items&lt;/<span style="color:#7ee787">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#7ee787">h1</span>&gt;To Do Items&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#7ee787">ul</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#7ee787">li</span>&gt;Total Items: @StatsService.GetCount()&lt;/<span style="color:#7ee787">li</span>&gt; &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f85149">&lt;</span>li&gt;Completed: @StatsService.GetCompletedCount()&lt;/<span style="color:#7ee787">li</span>&gt; &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f85149">&lt;</span>li&gt;Avg. Priority: @StatsService.GetAveragePriority()&lt;/<span style="color:#7ee787">li</span>&gt; &lt;<span style="color:#7ee787">--</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f85149">&lt;/</span>ul&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#7ee787">table</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#7ee787">tr</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#7ee787">th</span>&gt;Name&lt;/<span style="color:#7ee787">th</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#7ee787">th</span>&gt;Priority&lt;/<span style="color:#7ee787">th</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#7ee787">th</span>&gt;Is Done?&lt;/<span style="color:#7ee787">th</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#7ee787">tr</span>&gt;
+</span></span><span style="display:flex;"><span>            @foreach (var item in Model)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#7ee787">tr</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#7ee787">td</span>&gt;@item.Name&lt;/<span style="color:#7ee787">td</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#7ee787">td</span>&gt;@item.Priority&lt;/<span style="color:#7ee787">td</span>&gt;
+</span></span><span style="display:flex;"><span>                    &lt;<span style="color:#7ee787">td</span>&gt;@item.IsDone&lt;/<span style="color:#7ee787">td</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;/<span style="color:#7ee787">tr</span>&gt;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#7ee787">table</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">html</span>&gt;
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>Consider a user profile form that includes options for specifying gender, state, and other preferences.  Inject services directly into the view to obtain the options.</p>
+<p>The service provides just the data need for the form:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ViewInjectSample.Model.Services</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ProfileOptionsService</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> List&lt;<span style="color:#ff7b72">string</span>&gt; ListGenders() =&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">new</span> List&lt;<span style="color:#ff7b72">string</span>&gt;() {<span style="color:#a5d6ff">&#34;Female&#34;</span>, <span style="color:#a5d6ff">&#34;Male&#34;</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> List&lt;State&gt; ListStates()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Add a few states</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">new</span> List&lt;State&gt;()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">new</span> State(<span style="color:#a5d6ff">&#34;Alabama&#34;</span>, <span style="color:#a5d6ff">&#34;AL&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">new</span> State(<span style="color:#a5d6ff">&#34;Alaska&#34;</span>, <span style="color:#a5d6ff">&#34;AK&#34;</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">new</span> State(<span style="color:#a5d6ff">&#34;Ohio&#34;</span>, <span style="color:#a5d6ff">&#34;OH&#34;</span>)
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> List&lt;<span style="color:#ff7b72">string</span>&gt; ListColors() =&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">new</span> List&lt;<span style="color:#ff7b72">string</span>&gt;() { <span style="color:#a5d6ff">&#34;Blue&#34;</span>,<span style="color:#a5d6ff">&#34;Green&#34;</span>,<span style="color:#a5d6ff">&#34;Red&#34;</span>,<span style="color:#a5d6ff">&#34;Yellow&#34;</span> };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The controller action to display a profile editing form only needs to pass the form the profile instance:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.AspNetCore.Mvc</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">ViewInjectSample.Model</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ViewInjectSample.Controllers</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ProfileController</span> : Controller
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IActionResult Index()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// A real app would up profile based on the user.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> profile = <span style="color:#ff7b72">new</span> Profile()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Name = <span style="color:#a5d6ff">&#34;Rick&#34;</span>,
+</span></span><span style="display:flex;"><span>            FavColor = <span style="color:#a5d6ff">&#34;Blue&#34;</span>,
+</span></span><span style="display:flex;"><span>            Gender = <span style="color:#a5d6ff">&#34;Male&#34;</span>,
+</span></span><span style="display:flex;"><span>            State = <span style="color:#ff7b72">new</span> State(<span style="color:#a5d6ff">&#34;Ohio&#34;</span>,<span style="color:#a5d6ff">&#34;OH&#34;</span>)
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> View(profile);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The list is populated by the service injected into the view:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@using System.Threading.Tasks
+</span></span><span style="display:flex;"><span>@using ViewInjectSample.Model.Services
+</span></span><span style="display:flex;"><span>@model ViewInjectSample.Model.Profile
+</span></span><span style="display:flex;"><span>@inject ProfileOptionsService Options
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">title</span>&gt;Update Profile&lt;/<span style="color:#7ee787">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">h1</span>&gt;Update Profile&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    Name: @Html.TextBoxFor(m =&gt; m.Name)
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">br</span>/&gt;
+</span></span><span style="display:flex;"><span>    Gender: @Html.DropDownList(&#34;Gender&#34;,
+</span></span><span style="display:flex;"><span>           Options.ListGenders().Select(g =&gt; 
+</span></span><span style="display:flex;"><span>                new SelectListItem() { Text = g, Value = g }))
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">br</span>/&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    State: @Html.DropDownListFor(m =&gt; m.State!.Code,
+</span></span><span style="display:flex;"><span>           Options.ListStates().Select(s =&gt; 
+</span></span><span style="display:flex;"><span>                new SelectListItem() { Text = s.Name, Value = s.Code}))
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">br</span> /&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Fav. Color: @Html.DropDownList(&#34;FavColor&#34;,
+</span></span><span style="display:flex;"><span>           Options.ListColors().Select(c =&gt; 
+</span></span><span style="display:flex;"><span>                new SelectListItem() { Text = c, Value = c }))
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">html</span>&gt;
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

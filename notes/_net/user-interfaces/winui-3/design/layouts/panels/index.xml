@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>panels on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/</link>
+    <description>Recent content in panels on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>custom panels (panel base class)</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/custom-panels-panel-base-class/</link>
+      <pubDate>Mon, 02 Jan 2023 22:05:34 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/custom-panels-panel-base-class/</guid>
+      
+      <description>Overview </description>
+      
+    </item>
+    
+    <item>
+      <title>splitview</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/splitview/</link>
+      <pubDate>Mon, 02 Jan 2023 22:00:22 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/splitview/</guid>
+      
+      <description>Overview SplitView class (microsoft.com)
+SplitView controls have an expandable / collapsible pane and a content area:
+SplitView&amp;rsquo;s content area is always visible. The pane has four modes:
+Overlay — hidden until opened; when opened, overlays content area Inline — always visible, does not overlay content area CompactOverlay — narrow portion (just wide enough to show icons) is always visible; when opened, overlays content area CompactInline — same as CompactOverlay but, when opened, pushes content out of its way &amp;lt;SplitView IsPaneOpen=&amp;#34;True&amp;#34; DisplayMode=&amp;#34;Inline&amp;#34; OpenPaneLength=&amp;#34;296&amp;#34;&amp;gt; &amp;lt;SplitView.</description>
+      
+    </item>
+    
+    <item>
+      <title>panels</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/panels/</link>
+      <pubDate>Mon, 02 Jan 2023 21:31:13 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/design/layouts/panels/panels/</guid>
+      
+      <description>Overview Layout panels are containers to arrange and group UI elements.
+Common Panel Properties Panel attached properties Used to let child elements inform parent element how they should be positioned in UI. Syntax: AttachedPropertyProvider.PropertyName
+This Button control informs the parent Canvas that the Button should be positioned 50 eps from the left edge of the Canvas:
+&amp;lt;Canvas&amp;gt; &amp;lt;Button Canvas.Left=&amp;#34;50&amp;#34;&amp;gt;Hello&amp;lt;/Button&amp;gt; &amp;lt;/Canvas&amp;gt; Panel borders RelativePanel, StackPanel, and Grid panels have border properties to draw a border around them without requiring a Border element: BorderBrush, BorderThickness, CornerRadius, and Padding.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

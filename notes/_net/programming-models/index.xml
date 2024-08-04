@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming models on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/programming-models/</link>
+    <description>Recent content in programming models on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/programming-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>producer-consumer model</title>
+      <link>http://localhost:1313/notes/_net/programming-models/producer-consumer-model/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/programming-models/producer-consumer-model/</guid>
+      
+      <description>Overview Channels, from the System.Threading.Channels namespace, are an implementation of the producer/consumer model in .NET. This namespace provides synchronization data structures for passing data between producers and consumers asynchronously. Documentation: https://learn.microsoft.com/en-us/dotnet/core/extensions/channels Channels Channels can be thought of as any other common generic collection type such as List&amp;lt;T&amp;gt;. This collection manages synchronization and provides various consumption models through factory creation options.
+Depending on how a Channel&amp;lt;T&amp;gt; is created, its reader and writer behave differently.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debian on Fred Wieser</title>
+    <link>http://localhost:1313/notes/operating-systems/linux/debian/</link>
+    <description>Recent content in debian on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/operating-systems/linux/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>plex media server</title>
+      <link>http://localhost:1313/notes/operating-systems/linux/debian/plex-media-server/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/operating-systems/linux/debian/plex-media-server/</guid>
+      
+      <description>Overview Plex is a local-first media server. See https://www.plex.tv for more information.
+Installation Create Plex&amp;rsquo;s apt source: echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list Update apt and install: sudo apt update sudo apt install plexmediaserver Migrate Metadata Library By default, Plex&amp;rsquo;s metadata library is located at /var/lib/plexmediaserver/Library/Application Support/Plex Media Server/. On systems with a small /var partition, this can be problematic. To relocate the metadata library:
+Stop Plex:</description>
+      
+    </item>
+    
+    <item>
+      <title>upgrade instructions</title>
+      <link>http://localhost:1313/notes/operating-systems/linux/debian/release-upgrade-procedure/</link>
+      <pubDate>Mon, 19 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/operating-systems/linux/debian/release-upgrade-procedure/</guid>
+      
+      <description>Performing Debian Major Version Upgrade 1. Upgrade the current system sudo apt update sudo apt full-upgrade -y sudo apt autoremove sudo systemctl reboot 2. Update configuration to the new codename In /etc/apt/sources.list, change the Debian codename from the old codename to the new codename In /etc/apt/sources.list, comment out &amp;lt;old-codename&amp;gt;-backports 3. Upgrade to the new system sudo apt update sudo apt full-upgrade -y sudo apt autoremove sudo systemctl reboot 4. Confirm the new system is functional sudo systemctl status 5.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

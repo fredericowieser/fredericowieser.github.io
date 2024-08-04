@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">consuming tap | Fred Wieser</title>
+<meta property="og:title" content="consuming tap | Fred Wieser" />
+<meta name="twitter:title" content="consuming tap | Fred Wieser" />
+<meta itemprop="name" content="consuming tap | Fred Wieser" />
+<meta name="application-name" content="consuming tap | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/consuming-tap/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/consuming-tap/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">consuming tap</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-11-21T22:06:24-07:00" itemprop="datePublished"> 21 Nov 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usdotnetstandardasynchronous-programming-patternsconsuming-the-task-based-asynchronous-pattern">Overview [<a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern">Documentation</a>]</h1>
+<p>In this pattern, callbacks achieve waiting without blocking. Language-based async support hides the callbacks.</p>
+<h1 id="await-keyword">Await keyword</h1>
+<p>The <code>await</code> keyword suspends execution. It installs a callback by using continuation. The callback resumes the async method at the point of suspension.</p>
+<p>When the async method is resumed:</p>
+<ul>
+<li>If operation completed successfully and was a <code>Task&lt;TResult&gt;</code>, then <code>TResult</code> is returned.</li>
+<li>If awaited task ended in <code>Canceled</code> state, an <code>OperationCanceledException</code> is thrown.</li>
+<li>If awaited task ended in <code>Faulted</code> state, the exception that caused the fault is thrown.
+<ul>
+<li>If multiple exceptions caused the fault, the <code>Task.Exception</code> property holds an <code>AggregateException</code> of all errors.</li>
+</ul>
+</li>
+<li>When awaiting a <code>Task</code>, the await expression is of type <code>void</code>.</li>
+<li>When awaiting a <code>Task&lt;TResult&gt;</code>, the await expression is of type <code>TResult</code>.</li>
+</ul>
+<p>If a <code>SynchronizationContext</code> is associated with the thread that was executing the async method when it was suspended, the async method
+resumes on that same synchronization context using that context&rsquo;s <code>Post</code> method. Otherwise, it relies on the task scheduler that was current
+at the time of suspension. The task scheduler decides whether the awaited async operation should resume where it completed or whether the
+resumption should be scheduled.</p>
+<p>Suspension and resumption can be configured:</p>
+<ul>
+<li>With <code>Task.Yield</code> to introduce a yield point in the async method
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Task</span> : <span style="color:#f85149">…</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> YieldAwaitable Yield();
+</span></span><span style="display:flex;"><span>        <span style="color:#f85149">…</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div></li>
+<li>With <code>Task.ConfigureAwait</code> to inform the await operation not to capture and resume on the context, but to continue execution wherever the async operation that was being awaited completed:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">await</span> someTask.ConfigureAwait(continueOnCapturedContext:<span style="color:#79c0ff">false</span>);
+</span></span></code></pre></div></li>
+</ul>
+<h1 id="cancellation">Cancellation</h1>
+<p>Cancellation tokens are created with <code>CancellationTokenSource</code> objects. The CTS&rsquo;s <code>Token</code> property returns the cancellation token that is signaled when the CTS&rsquo;s <code>Cancel</code> method is called:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> cts = <span style="color:#ff7b72">new</span> CancellationTokenSource();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">string</span> result = <span style="color:#ff7b72">await</span> DownloadStringTaskAsync(url, cts.Token);
+</span></span><span style="display:flex;"><span><span style="color:#f85149">…</span> <span style="color:#8b949e;font-style:italic">// at some point later, potentially on another thread</span>
+</span></span><span style="display:flex;"><span>cts.Cancel();
+</span></span></code></pre></div><p>A single token can cancel multiple asynchronous invocations.</p>
+<p>Pass <code>CancellationToken.None</code> to a method to indicate that cancellation will never be requested. The method will then optimize.</p>
+<h1 id="monitoring-progress">Monitoring Progress</h1>
+<p>Some async methods expose progress through a progress interface passed into the method.</p>
+<h1 id="built-in-task-based-combinators">Built-in Task-based Combinators</h1>
+<p>Use these methods for composing and working with tasks.</p>
+<h2 id="taskrun"><code>Task.Run</code></h2>
+<p>The <code>Task.Run(Func&lt;Task&gt;)</code> overload allows you to use await within the offloaded work. This is equivalent to using <code>TaskFactory.StartNew</code> and <code>Unwrap</code> in the Task Parallel Library:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">void</span> button1_Click(<span style="color:#ff7b72">object</span> sender, EventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    pictureBox1.Image = <span style="color:#ff7b72">await</span> Task.Run(<span style="color:#ff7b72">async</span>() =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        using(Bitmap bmp1 = <span style="color:#f85149">`</span><span style="color:#ff7b72">await</span> DownloadFirstImageAsync()<span style="color:#f85149">`</span>)
+</span></span><span style="display:flex;"><span>        using(Bitmap bmp2 = <span style="color:#f85149">`</span><span style="color:#ff7b72">await</span> DownloadSecondImageAsync()<span style="color:#f85149">`</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> Mashup(bmp1, bmp2);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="taskfromresult"><code>Task.FromResult</code></h2>
+<p>Use when data may already be available and just needs to be returned from a task-returning method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> Task&lt;<span style="color:#ff7b72">int</span>&gt; GetValueAsync(<span style="color:#ff7b72">string</span> key)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">int</span> cachedValue;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> TryGetCachedValue(<span style="color:#ff7b72">out</span> cachedValue) ? Task.FromResult(cachedValue) : GetValueAsyncInternal();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">private</span> <span style="color:#ff7b72">async</span> Task&lt;<span style="color:#ff7b72">int</span>&gt; GetValueAsyncInternal(<span style="color:#ff7b72">string</span> key) { <span style="color:#f85149">…</span> }
+</span></span></code></pre></div><h2 id="taskwhenall"><code>Task.WhenAll</code></h2>
+<p>Use to asynchronously wait on multiple tasks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Task [] asyncOps = (<span style="color:#ff7b72">from</span> addr <span style="color:#ff7b72">in</span> addrs <span style="color:#ff7b72">select</span> SendMailAsync(addr)).ToArray();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">await</span> Task.WhenAll(asyncOps);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">catch</span>(Exception exc)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">foreach</span>(Task faulted <span style="color:#ff7b72">in</span> asyncOps.Where(t =&gt; t.IsFaulted))
+</span></span><span style="display:flex;"><span>    {  
+</span></span><span style="display:flex;"><span>        <span style="color:#f85149">…</span> <span style="color:#8b949e;font-style:italic">// work with faulted and faulted.Exception</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="taskwhenany"><code>Task.WhenAny</code></h2>
+<p>Use when you need just one of multiple async operations to complete.</p>
+<h3 id="taskwhenany-use-case--redundancy"><code>Task.WhenAny</code> Use Case — Redundancy</h3>
+<p>Perform an operation multiple times and select the one that completes first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> recommendations = <span style="color:#ff7b72">new</span> List&lt;Task&lt;<span style="color:#ff7b72">bool</span>&gt;&gt;()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    GetBuyRecommendation1Async(symbol),
+</span></span><span style="display:flex;"><span>    GetBuyRecommendation2Async(symbol),
+</span></span><span style="display:flex;"><span>    GetBuyRecommendation3Async(symbol)
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">while</span> (recommendations.Count &gt; <span style="color:#a5d6ff">0</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Task&lt;<span style="color:#ff7b72">bool</span>&gt; recommendation = <span style="color:#ff7b72">await</span> Task.WhenAny(recommendations);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72">await</span> recommendation) BuyStock(symbol);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">catch</span>(WebException exc)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        recommendations.Remove(recommendation);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="taskwhenany-use-case--interleaving"><code>Task.WhenAny</code> Use Case — Interleaving</h3>
+<p>Launching multiple operations and waiting for them all to complete, but processing them as they finish:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>List&lt;Task&lt;Bitmap&gt;&gt; imageTasks = (<span style="color:#ff7b72">from</span> imageUrl <span style="color:#ff7b72">in</span> urls <span style="color:#ff7b72">select</span> GetBitmapAsync(imageUrl)).ToList();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">while</span> (imageTasks.Count &gt; <span style="color:#a5d6ff">0</span>) <span style="color:#8b949e;font-style:italic">// Loop until no imageTasks remain</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Task&lt;Bitmap&gt; imageTask = <span style="color:#ff7b72">await</span> Task.WhenAny(imageTasks); <span style="color:#8b949e;font-style:italic">// When one finishes…</span>
+</span></span><span style="display:flex;"><span>        imageTasks.Remove(imageTask); <span style="color:#8b949e;font-style:italic">// …remove it from the list.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Bitmap image = <span style="color:#ff7b72">await</span> imageTask;
+</span></span><span style="display:flex;"><span>        panel.AddImage(image);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">catch</span> 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="taskwhenany-use-case---throttling-documentationhttpslearnmicrosoftcomen-usdotnetstandardasynchronous-programming-patternsconsuming-the-task-based-asynchronous-patternthrottling"><code>Task.WhenAny</code> Use Case - Throttling [<a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#throttling">Documentation</a>]</h3>
+<h3 id="taskwhenany-use-case---early-bailout-documentationhttpslearnmicrosoftcomen-usdotnetstandardasynchronous-programming-patternsconsuming-the-task-based-asynchronous-patternearly-bailout"><code>Task.WhenAny</code> Use Case - Early Bailout [<a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#early-bailout">Documentation</a>]</h3>
+<h2 id="taskdelay"><code>Task.Delay</code></h2>
+<p>Use to introduce pauses into an async method&rsquo;s execution.<br>
+Use in combination with <code>Task.WhenAny</code> to implement a time-out:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">void</span> btnDownload_Click(<span style="color:#ff7b72">object</span> sender, EventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    btnDownload.Enabled = <span style="color:#79c0ff">false</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Task&lt;Bitmap&gt; download = GetBitmapAsync(url);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>        <span style="color:#ff7b72">if</span> (download == <span style="color:#ff7b72">await</span> Task.WhenAny(download, Task.Delay(<span style="color:#a5d6ff">3000</span>))) 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Bitmap bmp = <span style="color:#ff7b72">await</span> download;
+</span></span><span style="display:flex;"><span>            pictureBox.Image = bmp;
+</span></span><span style="display:flex;"><span>            status.Text = <span style="color:#a5d6ff">&#34;Downloaded&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            pictureBox.Image = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span>            status.Text = <span style="color:#a5d6ff">&#34;Timed out&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">var</span> ignored = download.ContinueWith(t =&gt; Trace(<span style="color:#a5d6ff">&#34;Task finally completed&#34;</span>));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">finally</span> { btnDownload.Enabled = <span style="color:#79c0ff">true</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="custom-task-based-combinators">Custom Task-based Combinators</h1>
+<h2 id="retryonfault-helper-method"><code>RetryOnFault</code> Helper Method</h2>
+<p>Retry an operation if the previous attempt fails:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">async</span> Task&lt;T&gt; RetryOnFault&lt;T&gt;(Func&lt;Task&lt;T&gt;&gt; function, <span style="color:#ff7b72">int</span> maxTries)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> (<span style="color:#ff7b72">int</span> i=<span style="color:#a5d6ff">0</span>; i&lt;maxTries; i++)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">await</span> function().ConfigureAwait(<span style="color:#79c0ff">false</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">catch</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (i == maxTries - <span style="color:#a5d6ff">1</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">throw</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> <span style="color:#ff7b72">default</span>(T);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="needonlyone-helper-method"><code>NeedOnlyOne</code> Helper Method</h2>
+<p>Launch multiple operations, wait for any of them, then cancel the rest:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">async</span> Task&lt;T&gt; NeedOnlyOne(<span style="color:#ff7b72">params</span> Func&lt;CancellationToken,Task&lt;T&gt;&gt; [] functions)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> cts = <span style="color:#ff7b72">new</span> CancellationTokenSource();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> tasks = (<span style="color:#ff7b72">from</span> function <span style="color:#ff7b72">in</span> functions
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">select</span> function(cts.Token)).ToArray();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> completed = <span style="color:#ff7b72">await</span> Task.WhenAny(tasks).ConfigureAwait(<span style="color:#79c0ff">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cts.Cancel();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">foreach</span> (<span style="color:#ff7b72">var</span> task <span style="color:#ff7b72">in</span> tasks)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> ignored = task.ContinueWith(t =&gt; Log(t), TaskContinuationOptions.OnlyOnFaulted);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> completed;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Use the method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">double</span> currentPrice = <span style="color:#ff7b72">await</span> NeedOnlyOne(
+</span></span><span style="display:flex;"><span>ct =&gt; GetCurrentPriceFromServer1Async(<span style="color:#a5d6ff">&#34;msft&#34;</span>, ct),
+</span></span><span style="display:flex;"><span>ct =&gt; GetCurrentPriceFromServer2Async(<span style="color:#a5d6ff">&#34;msft&#34;</span>, ct),
+</span></span><span style="display:flex;"><span>ct =&gt; GetCurrentPriceFromServer3Async(<span style="color:#a5d6ff">&#34;msft&#34;</span>, ct));
+</span></span></code></pre></div><h2 id="whenallorfirstexception-helper-method"><code>WhenAllOrFirstException</code> Helper Method</h2>
+<p>Wait for all tasks to complete, unless one faults, then stop waiting immediately:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> Task&lt;T[]&gt; WhenAllOrFirstException&lt;T&gt;(IEnumerable&lt;Task&lt;T&gt;&gt; tasks)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> inputs = tasks.ToList();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> ce = <span style="color:#ff7b72">new</span> CountdownEvent(inputs.Count);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> tcs = <span style="color:#ff7b72">new</span> TaskCompletionSource&lt;T[]&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Action&lt;Task&gt; onCompleted = (Task completed) =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (completed.IsFaulted)
+</span></span><span style="display:flex;"><span>            tcs.TrySetException(completed.Exception.InnerExceptions);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (ce.Signal() &amp;&amp; !tcs.Task.IsCompleted)
+</span></span><span style="display:flex;"><span>            tcs.TrySetResult(inputs.Select(t =&gt; t.Result).ToArray());
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">foreach</span> (<span style="color:#ff7b72">var</span> t <span style="color:#ff7b72">in</span> inputs) t.ContinueWith(onCompleted);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> tcs.Task;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="building-task-based-data-structures">Building Task-Based Data Structures</h1>
+<p>Example custom task-based data structures include <code>AsyncCache</code> and <code>AsyncProducerConsumerCollection</code>.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#building-task-based-data-structures">https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#building-task-based-data-structures</a></p>
+</blockquote>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>editorconfig templates on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/</link>
+    <description>Recent content in editorconfig templates on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 12 Sep 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>quality 7 all</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-all/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-all/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Rules from &amp;#39;7.0&amp;#39; release with &amp;#39;All&amp;#39; analysis mode # Description: Rules with enabled-by-default state from &amp;#39;7.0&amp;#39; release with &amp;#39;All&amp;#39; analysis mode. Rules that are first released in a version later than &amp;#39;7.0&amp;#39; are disabled. is_global = true global_level = -100 # CA1000: Do not declare static members on generic types dotnet_diagnostic.CA1000.severity = warning # CA1001: Types that own disposable fields should be disposable dotnet_diagnostic.</description>
+      
+    </item>
+    
+    <item>
+      <title>quality 7 minimum</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-minimum/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-minimum/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Rules from &amp;#39;7.0&amp;#39; release with &amp;#39;Minimum&amp;#39; analysis mode # Description: Rules with enabled-by-default state from &amp;#39;7.0&amp;#39; release with &amp;#39;Minimum&amp;#39; analysis mode. Rules that are first released in a version later than &amp;#39;7.0&amp;#39; are disabled. is_global = true global_level = -100 # CA1016: Mark assemblies with assembly version dotnet_diagnostic.CA1016.severity = warning # CA1018: Mark attributes with AttributeUsageAttribute dotnet_diagnostic.CA1018.severity = warning # CA1041: Provide ObsoleteAttribute message dotnet_diagnostic.</description>
+      
+    </item>
+    
+    <item>
+      <title>quality 7 recommended</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-recommended/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/quality-7-recommended/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Rules from &amp;#39;7.0&amp;#39; release with &amp;#39;Recommended&amp;#39; analysis mode # Description: Rules with enabled-by-default state from &amp;#39;7.0&amp;#39; release with &amp;#39;Recommended&amp;#39; analysis mode. Rules that are first released in a version later than &amp;#39;7.0&amp;#39; are disabled. is_global = true global_level = -100 # CA1000: Do not declare static members on generic types dotnet_diagnostic.CA1000.severity = warning # CA1001: Types that own disposable fields should be disposable dotnet_diagnostic.</description>
+      
+    </item>
+    
+    <item>
+      <title>style 7 all</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-all/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-all/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Style rules with &amp;#39;All&amp;#39; analysis mode is_global = true global_level = -99 # IDE0004: Remove Unnecessary Cast dotnet_diagnostic.IDE0004.severity = warning # IDE0005: Using directive is unnecessary. dotnet_diagnostic.IDE0005.severity = warning # IDE0007: Use implicit type dotnet_diagnostic.IDE0007.severity = warning # IDE0008: Use explicit type dotnet_diagnostic.IDE0008.severity = warning # IDE0010: Add missing cases dotnet_diagnostic.IDE0010.severity = warning # IDE0011: Add braces dotnet_diagnostic.IDE0011.severity = warning # IDE0016: Use &amp;#39;throw&amp;#39; expression dotnet_diagnostic.</description>
+      
+    </item>
+    
+    <item>
+      <title>style 7 minimum</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-minimum/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-minimum/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Style rules with &amp;#39;Minimum&amp;#39; analysis mode is_global = true global_level = -99 # IDE0005: Using directive is unnecessary. dotnet_diagnostic.IDE0005.severity = warning # IDE0007: Use implicit type dotnet_diagnostic.IDE0007.severity = warning # IDE0008: Use explicit type dotnet_diagnostic.IDE0008.severity = warning # IDE0011: Add braces dotnet_diagnostic.IDE0011.severity = warning # IDE0036: Order modifiers dotnet_diagnostic.IDE0036.severity = warning # IDE0040: Add accessibility modifiers dotnet_diagnostic.IDE0040.severity = warning # IDE0043: Invalid format string dotnet_diagnostic.</description>
+      
+    </item>
+    
+    <item>
+      <title>style 7 recommended</title>
+      <link>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-recommended/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig-templates/style-7-recommended/</guid>
+      
+      <description># NOTE: Requires **VS2019 16.7** or later # Style rules with &amp;#39;Recommended&amp;#39; analysis mode is_global = true global_level = -99 # IDE0005: Using directive is unnecessary. dotnet_diagnostic.IDE0005.severity = warning # IDE0007: Use implicit type dotnet_diagnostic.IDE0007.severity = warning # IDE0008: Use explicit type dotnet_diagnostic.IDE0008.severity = warning # IDE0011: Add braces dotnet_diagnostic.IDE0011.severity = warning # IDE0016: Use &amp;#39;throw&amp;#39; expression dotnet_diagnostic.IDE0016.severity = warning # IDE0017: Simplify object initialization dotnet_diagnostic.IDE0017.severity = warning # IDE0018: Inline variable declaration dotnet_diagnostic.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

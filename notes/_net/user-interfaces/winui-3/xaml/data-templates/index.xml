@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data templates on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/</link>
+    <description>Recent content in data templates on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>applying</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/applying/</link>
+      <pubDate>Wed, 28 Dec 2022 20:58:21 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/applying/</guid>
+      
+      <description>Data Templates Use a Data Template for the ListView in the Navigation so that you can see the first AND last name of the customers.
+Defining a Data Template MainWindow.xaml
+&amp;lt;!-- ... --&amp;gt; &amp;lt;ListView Grid.Row=&amp;#34;1&amp;#34; ItemsSource=&amp;#34;{x:Bind ViewModel.Customers, Mode=OneWay}&amp;#34; SelectedItem=&amp;#34;{x:Bind ViewModel.SelectedCustomer, Mode=TwoWay}&amp;#34; DisplayMemberPath=&amp;#34;FirstName&amp;#34; ScrollViewer.HorizontalScollMode=&amp;#34;Enabled&amp;#34; ScrollVIewer.HorizontalScrollBarVisibility=&amp;#34;Auto&amp;#34;/&amp;gt; &amp;lt;!-- Set the ListView&amp;#39;s ItemTemplate property: --&amp;gt; &amp;lt;ListView.ItemTemplate&amp;gt; &amp;lt;!-- Use any UI element inside this DataTemplate: --&amp;gt; &amp;lt;DataTemplate&amp;gt; &amp;lt;StackPanel Orientation=&amp;#34;Horizontal&amp;#34;&amp;gt; &amp;lt;!-- Bind to the DataContext: --&amp;gt; &amp;lt;TextBlock Text=&amp;#34;{Binding FirstName, Mode=OneWay}&amp;#34; FontWeight=&amp;#34;Bold&amp;#34;/&amp;gt; &amp;lt;TextBlock Text=&amp;#34;{Binding LastName, Mode=OneWay}&amp;#34; Margin=&amp;#34;5 0 0 0&amp;#34;/&amp;gt; &amp;lt;/StackPanel&amp;gt; &amp;lt;/DataTemplate&amp;gt; &amp;lt;/ListView.</description>
+      
+    </item>
+    
+    <item>
+      <title>concepts</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/concepts/</link>
+      <pubDate>Wed, 28 Dec 2022 20:32:09 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/data-templates/concepts/</guid>
+      
+      <description>WinUI&amp;rsquo;s Flexible Content Model Data Templates define a user interface for data. It is often defined as a Resource.
+ContentControl Consider ContentControl (the base class of Button, CheckBox, ListViewItem, others).
+ContentControl defines the Content property which is of type object. This is what allows you to assign an arbitrary object (and not just a string) to the Content property. ContentControl&amp;rsquo;s Content Property If a UIElement (base class of Panels and Controls) is assigned to ContentControl&amp;rsquo;s Content property, it is rendered.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

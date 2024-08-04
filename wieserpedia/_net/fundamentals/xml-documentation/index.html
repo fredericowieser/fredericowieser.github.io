@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">xml documentation | Fred Wieser</title>
+<meta property="og:title" content="xml documentation | Fred Wieser" />
+<meta name="twitter:title" content="xml documentation | Fred Wieser" />
+<meta itemprop="name" content="xml documentation | Fred Wieser" />
+<meta name="application-name" content="xml documentation | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/fundamentals/xml-documentation/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/fundamentals/xml-documentation/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">xml documentation</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-11-07T00:00:00-06:00" itemprop="datePublished"> 7 Nov 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usdotnetcsharplanguage-referencexmldoc">Overview [<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/">Documentation</a>]</h1>
+<p>C# source files can contain structured comments (<em>XML doc)</em> that produce API documentation for the types contained therein.
+The compiler creates an XML files that contains structured data representing the comments and the API signatures.
+Other tools can process these XML files to produce human-readable documentation.</p>
+<h1 id="generating-xml-documentation">Generating XML Documentation</h1>
+<p>To enable XML documentation:<br>
+<code>.csproj</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;PropertyGroup&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&lt;GenerateDocumentationFile&gt;</span>true<span style="color:#7ee787">&lt;/GenerateDocumentationFile&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/PropertyGroup&gt;</span>
+</span></span></code></pre></div><p>With this switch enabled, the compiler generates warning CS1591 for any publicly visible member without XML doc.</p>
+<h1 id="xml-comment-style-guide">XML Comment Style Guide</h1>
+<ul>
+<li>All public types and their public members should be documented.</li>
+<li>At minimum, types and their members should have a <code>&lt;summary&gt;</code> tag.</li>
+<li>Private members can be documented, but consider that this exposes the inner workings of a type.</li>
+<li>Documentation text should be written using complete sentences with full stops.</li>
+<li>Partial classes are fully supported and the documentation is concatenated into a single entry for each type.</li>
+</ul>
+<h1 id="general-constructs">General Constructs</h1>
+<ul>
+<li><code>///</code> — Single-line delimiter. Any following whitespace is ignored.</li>
+<li><code>/** */</code> — Multi-line delimiter. Used for comments. Comments are not included in the compiled assembly.</li>
+<li><code>cref</code> — A tag meaning &ldquo;code reference.&rdquo; Specifies that the text is a code element (a type, method, property, etc).</li>
+<li><code>href</code> — A reference to a web page. Used to link directly to a web page.</li>
+</ul>
+<h1 id="general-tags">General Tags</h1>
+<h2 id="summary"><code>&lt;summary&gt;</code></h2>
+<ul>
+<li>Describes a type or a type member.</li>
+<li>The text in this tag is the only source of information for IntelliSense.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;summary&gt;</span>description<span style="color:#7ee787">&lt;/summary&gt;</span>
+</span></span></code></pre></div><h2 id="remarks"><code>&lt;remarks&gt;</code></h2>
+<ul>
+<li>Adds additional information about a type or a type member.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;remarks&gt;</span>
+</span></span><span style="display:flex;"><span>    additional information
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/remarks&gt;</span>
+</span></span></code></pre></div><h1 id="member-tags">Member Tags</h1>
+<h2 id="returns"><code>&lt;returns&gt;</code></h2>
+<ul>
+<li>Used in the comment for a method declaration to describe the return value.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;returns&gt;</span>description<span style="color:#7ee787">&lt;/returns&gt;</span>
+</span></span></code></pre></div><h2 id="param"><code>&lt;param&gt;</code></h2>
+<ul>
+<li>Used in the comment for a method declaration to describe one of the parameters of that method.</li>
+<li>Use multiple tags to document multiple parameters.</li>
+<li>The <code>name</code> parameter must match the API signature.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;param</span> name=<span style="color:#a5d6ff">&#34;name&#34;</span><span style="color:#7ee787">&gt;</span>description<span style="color:#7ee787">&lt;/param&gt;</span>
+</span></span></code></pre></div><h2 id="paramref"><code>&lt;paramref&gt;</code></h2>
+<ul>
+<li>Used to indicate that a word in the comments (like in a <code>&lt;summary&gt;</code> tag) refers to a parameter.</li>
+<li><code>&quot;name&quot;</code> is the name of the actual method parameter.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;paramref</span> name=<span style="color:#a5d6ff">&#34;name&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h2 id="exception"><code>&lt;exception&gt;</code></h2>
+<ul>
+<li>Used to specify which exceptions can be thrown.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;exception</span> cref=<span style="color:#a5d6ff">&#34;member&#34;</span><span style="color:#7ee787">&gt;</span>description<span style="color:#7ee787">&lt;/exception&gt;</span>
+</span></span></code></pre></div><h2 id="value"><code>&lt;value&gt;</code></h2>
+<ul>
+<li>Used to describe the value that a <em>property</em> represents.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;value&gt;</span>property-description<span style="color:#7ee787">&lt;/value&gt;</span>
+</span></span></code></pre></div><h1 id="formatting-tags">Formatting Tags</h1>
+<h2 id="para"><code>&lt;para&gt;</code></h2>
+<ul>
+<li>Used inside other tags to create a double-spaced paragraph.</li>
+<li>Use <code>&lt;br /&gt;</code> for a single-spaced paragraph.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;remarks&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;para&gt;</span>
+</span></span><span style="display:flex;"><span>        This is an introductory paragraph.
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/para&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;para&gt;</span>
+</span></span><span style="display:flex;"><span>        This paragraph contains more details.
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/para&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/remarks&gt;</span>
+</span></span></code></pre></div><h2 id="list"><code>&lt;list&gt;</code></h2>
+<ul>
+<li>Used to define a bulleted list, numbered list, definition list, or table.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>List type</th>
+<th>Requires <code>&lt;listheader&gt;</code>?</th>
+<th>Required &lt;<code>listheader</code>&gt; members</th>
+<th>Required <code>&lt;item&gt;</code> members</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table</td>
+<td>Yes</td>
+<td><code>&lt;term&gt;</code></td>
+<td><code>&lt;description&gt;</code></td>
+</tr>
+<tr>
+<td>Definition List</td>
+<td>Yes</td>
+<td>N/A</td>
+<td><code>&lt;term&gt;</code> <br /> <code>&lt;description&gt;</code></td>
+</tr>
+<tr>
+<td>Other lists</td>
+<td>No</td>
+<td>N/A</td>
+<td><code>&lt;description&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;list</span> type=<span style="color:#a5d6ff">&#34;bullet|number|table&#34;</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;listheader&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;term&gt;</span>term<span style="color:#7ee787">&lt;/term&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;description&gt;</span>description<span style="color:#7ee787">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/listheader&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;term&gt;</span>Assembly<span style="color:#7ee787">&lt;/term&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;description&gt;</span>The library or executable built from a compilation.<span style="color:#7ee787">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/list&gt;</span>
+</span></span></code></pre></div><h2 id="c-and-code"><code>&lt;c&gt;</code> and <code>&lt;code&gt;</code></h2>
+<ul>
+<li>Used to indicate that text within a description should be marked as code.</li>
+<li>Use <code>&lt;c&gt;</code> for single lines and <code>&lt;code&gt;</code> for multiple lines.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;c&gt;</span>text<span style="color:#7ee787">&lt;/c&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;code&gt;</span>
+</span></span><span style="display:flex;"><span>    var index = 5;
+</span></span><span style="display:flex;"><span>    index++;
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/code&gt;</span>
+</span></span></code></pre></div><h2 id="example"><code>&lt;example&gt;</code></h2>
+<ul>
+<li>Used to show how to use a method or other member.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;example&gt;</span>
+</span></span><span style="display:flex;"><span>This shows how to increment an integer.
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;code&gt;</span>
+</span></span><span style="display:flex;"><span>    var index = 5;
+</span></span><span style="display:flex;"><span>    index++;
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/code&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/example&gt;</span>
+</span></span></code></pre></div><h1 id="tags-for-generic-types-and-methods">Tags for Generic Types and Methods</h1>
+<h2 id="typeparam"><code>&lt;typeparam&gt;</code></h2>
+<ul>
+<li>Used in the comment for a generic type or method to describe a type parameter.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;typeparam</span> name=<span style="color:#a5d6ff">&#34;TResult&#34;</span><span style="color:#7ee787">&gt;</span>The type returned from this method<span style="color:#7ee787">&lt;/typeparam&gt;</span>
+</span></span></code></pre></div><h2 id="typeparamref"><code>&lt;typeparamref&gt;</code></h2>
+<ul>
+<li>Used to enable consumers of the resulting documentation file to format the word in a distinct way (perhaps italicized, for example).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;typeparamref</span> name=<span style="color:#a5d6ff">&#34;TKey&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h1 id="reusing-documentation-text">Reusing Documentation Text</h1>
+<h2 id="inheritdoc"><code>&lt;inheritdoc&gt;</code></h2>
+<ul>
+<li>Inherits XML comments from base classes, interfaces, and similar methods (such as <code>MethodName</code> and <code>MethodNameAsync</code>).</li>
+<li>With no arguments, this inheritance is automatic.</li>
+<li><code>cref</code> — the member to inherit documentation from.</li>
+<li><code>path</code> — the XPath used to filter the tags to include or exclude from the inherited documentation.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;inheritdoc</span> <span style="color:#f85149">[</span>cref=<span style="color:#a5d6ff">&#34;&#34;</span><span style="color:#f85149">]</span> <span style="color:#f85149">[</span>path=<span style="color:#a5d6ff">&#34;&#34;</span><span style="color:#f85149">]</span><span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h2 id="include"><code>&lt;include&gt;</code></h2>
+<ul>
+<li>References comments in another file.</li>
+<li><code>file</code> — the name of the XML file containing the documentation with a path relative to the source code file.
+<ul>
+<li>Note that the file name is in single quotes.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;include</span> file=<span style="color:#a5d6ff">&#39;filename&#39;</span> path=<span style="color:#a5d6ff">&#39;tagpath[@name=&#34;id&#34;]&#39;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h2 id="see"><code>&lt;see&gt;</code></h2>
+<ul>
+<li>Used to specify a link from within the text.</li>
+<li><code>cref</code> — a reference to a member to create hyperlinks to documentation pages for code elements. For example:
+<ul>
+<li><code>cref=&quot;IDictionary{T, U}&quot;</code></li>
+</ul>
+</li>
+<li><code>href</code> — a clickable link to a URL.</li>
+<li><code>langword</code> — a language keyword such as <code>true</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;see</span> cref=<span style="color:#a5d6ff">&#34;member&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- or --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;see</span> cref=<span style="color:#a5d6ff">&#34;member&#34;</span><span style="color:#7ee787">&gt;</span>Link text<span style="color:#7ee787">&lt;/see&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- or --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;see</span> href=<span style="color:#a5d6ff">&#34;link&#34;</span><span style="color:#7ee787">&gt;</span>Link Text<span style="color:#7ee787">&lt;/see&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- or --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;see</span> langword=<span style="color:#a5d6ff">&#34;keyword&#34;</span><span style="color:#7ee787">/&gt;</span>
+</span></span></code></pre></div><h2 id="seealso"><code>&lt;seealso&gt;</code></h2>
+<ul>
+<li>Like <code>&lt;see&gt;</code> but specifies the text should appear in the See Also section.</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

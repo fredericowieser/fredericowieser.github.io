@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>resources on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/resources/</link>
+    <description>Recent content in resources on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 28 Dec 2022 19:51:32 -0700</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>resources</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/resources/resources/</link>
+      <pubDate>Wed, 28 Dec 2022 19:11:14 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/winui-3/xaml/resources/resources/</guid>
+      
+      <description>Overview In XAML, every element has a Resources property of type ResourceDictionary.
+HeaderControl.xaml
+&amp;lt;!-- ... --&amp;gt; &amp;lt;!-- Instead of hard-coding this value, it can be stored in a resource: --&amp;gt; &amp;lt;Grid Background =&amp;#34;F05A28&amp;#34;&amp;gt; &amp;lt;!-- ... --&amp;gt; Defining Resources Application-wide resources are stored in App.xaml: App.xaml
+&amp;lt;!-- ... --&amp;gt; &amp;lt;Application.Resources&amp;gt; &amp;lt;ResourceDictionary&amp;gt; &amp;lt;ResourceDictionary.MergedDictionaries&amp;gt; &amp;lt;XamlControlResources xmlns=&amp;#34;using:Microsoft.UI.Xaml.Controls&amp;#34; /&amp;gt; &amp;lt;!-- Other merged dictionaries here --&amp;gt; &amp;lt;/ResourceDictionary.MergedDictionaries&amp;gt; &amp;lt;!-- Other app resources here --&amp;gt; &amp;lt;!-- Since the Resources property is a ResourceDictionary, it needs a Key and a Value.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

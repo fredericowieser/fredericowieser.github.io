@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>forms and input components on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/</link>
+    <description>Recent content in forms and input components on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>input components</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/input-components/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/input-components/</guid>
+      
+      <description>Input Components Wrappers around existing HTML inputs. Inherit from InputBase. Include basic validation:
+InputCheckbox InputDate (date picker) Registers unparseable values as validation errors InputFile (file picker) (see ASP.NET Core Blazor file uploads) InputNumber Registers unparseable values as validation errors InputSelect (dropdown) InputRadio InputRadioGroup (group of number of InputRadio Components; allow only one in the group to be selected) InputText InputTextArea (multi-line) Error message template support InputDate and InputNumber both support error message templates to provide a custom error message:</description>
+      
+    </item>
+    
+    <item>
+      <title>validation</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/validation/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/validation/</guid>
+      
+      <description>Basic validation To add basic validation to a form, add the DataAnnotationsValidator Component. This enables validation using data annotations applied to the model class. Blazor performs two types of validation:
+Field validation—performed when the user tabs out of a field. Model validation—performed when the user submits the form. To display validation errors at the top of the page, add the ValidationSummary Component. Pages/FormExample2.razor
+@page &amp;#34;/form-example-1&amp;#34; @using Microsoft.Extensions.Logging @inject ILogger&amp;lt;FormExample1&amp;gt; Logger &amp;lt;!</description>
+      
+    </item>
+    
+    <item>
+      <title>forms</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/forms/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/forms-and-input-components/forms/</guid>
+      
+      <description>Overview Blazor contains built-in Components for forms. Microsoft.AspNetCore.Components.Forms contains classes for managing forms and access to built-in Input* components. This namespace is included in _Imports.razor by default.
+EditForm The Blazor version of HTML&amp;rsquo;s form.
+ExampleModel.cs
+public class ExampleModel { public string? Name { get; set; } } Pages/FormExample1.razor
+@page &amp;#34;/form-example-1&amp;#34; @using Microsoft.Extensions.Logging @inject ILogger&amp;lt;FormExample1&amp;gt; Logger &amp;lt;!-- The Component is rendered here. OnSubmit is a callback and registers HandleSubmit as the handler: --&amp;gt; &amp;lt;EditForm Model=&amp;#34;@exampleModel&amp;#34; OnSubmit=&amp;#34;@HandleSubmit&amp;#34;&amp;gt; &amp;lt;!</description>
+      
+    </item>
+    
+  </channel>
+</rss>

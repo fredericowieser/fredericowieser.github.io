@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modeling on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/ef-core/modeling/</link>
+    <description>Recent content in modeling on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 23 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/ef-core/modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>inheritance</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/ef-core/modeling/inheritance/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/ef-core/modeling/inheritance/</guid>
+      
+      <description>Overview EF Core supports three strategies of mapping .NET types:
+Table-per-Hierarchy (TPH) — the default strategy; maps .NET types to a single database table Documentation: https://learn.microsoft.com/en-us/ef/core/modeling/inheritance#table-per-hierarchy-and-discriminator-configuration Table-per-Type (TPT) — maps each .NET type to a different database table Documentation: https://learn.microsoft.com/en-us/ef/core/modeling/inheritance#table-per-type-configuration Table-per-Concrete-Type (TPC) Availability: EF Core 7 Like TPT, but in a way that addresses problems with that strategy. Documentation: https://learn.microsoft.com/en-us/ef/core/what-is-new/ef-core-7.0/whatsnew#table-per-concrete-type-tpc-inheritance-mapping By default, EF Core maps an inheritance hierarchy of .NET types to a single hierarchy.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

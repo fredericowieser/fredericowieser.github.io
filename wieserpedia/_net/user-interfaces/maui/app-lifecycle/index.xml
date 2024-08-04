@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>app lifecycle on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/</link>
+    <description>Recent content in app lifecycle on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Sep 2022 13:28:13 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/overview/</link>
+      <pubDate>Tue, 06 Sep 2022 13:28:13 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/overview/</guid>
+      
+      <description>Overview .NET MAUI raises cross-platform lifecycle events on the Window class when the app transitions states.
+State Transitions Begin State Event End State Running Deactivated Deactivated Deactivated Stopped Stopped Stopped Resumed Running Stopped Destorying Not running Not running Created, Activated Running Events Note: These events have different names on Android, iOS.
+Event Raised when Action Created Native window created (but perhaps not yet visible) N/A Activated Window activated N/A Deactivated Window no longer focused N/A Stopped Window no longer visible Disconnect; cancel pending requests Resumed App resumes from being Stopped (never raised first time app launches) Subscribe to events; refresh content that&amp;rsquo;s visible on the page Destroying Native window is being destroyed Remove event subscriptions attached to the native window.</description>
+      
+    </item>
+    
+    <item>
+      <title>platform lifecycle</title>
+      <link>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/platform-lifecycle/</link>
+      <pubDate>Sun, 09 Oct 2022 19:43:58 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/user-interfaces/maui/app-lifecycle/platform-lifecycle/</guid>
+      
+      <description>Platform Lifecycle Events Namespace: Microsoft.Maui.LifecycleEvents
+.NET MAUI uses delegates that are invoked in response to a platform lifecycle event being raised. You can create handlers for these delegates. Android Each delegate has an identically named extension method used to register a handler for that delegate.
+Responding to Android Lifecycle Delegates Call ConfigureLifecycleEvents method on MauiAppBuilder object in CreateMauiApp method of MauiProgram class:
+using Microsoft.Maui.LifecycleEvents; namespace PlatformLifecycleDemo { public static class MauiProgram { public static MauiApp CreateMauiApp() { var builder = MauiApp.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

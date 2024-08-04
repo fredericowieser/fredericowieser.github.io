@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">2. action return types | Fred Wieser</title>
+<meta property="og:title" content="2. action return types | Fred Wieser" />
+<meta name="twitter:title" content="2. action return types | Fred Wieser" />
+<meta itemprop="name" content="2. action return types | Fred Wieser" />
+<meta name="application-name" content="2. action return types | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/action-return-types/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/action-return-types/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">2. action return types</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-08-15T00:00:00-06:00" itemprop="datePublished"> 15 Aug 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usaspnetcoreweb-apiaction-return-typesviewaspnetcore-70">Overview [<a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p>There are four options for return types for web API controller action methods:</p>
+<ol>
+<li>Specific type</li>
+<li><code>IActionResult</code></li>
+<li><code>ActionResult&lt;T&gt;</code></li>
+<li><code>HttpResults</code></li>
+</ol>
+<h1 id="specific-type">Specific Type</h1>
+<p>Use when there are no known conditions against which to safeguard.</p>
+<h2 id="considerations-for-specific-types-ienumerablet-or-iasyncenumerablet">Considerations for Specific Types <code>IEnumerable&lt;T&gt;</code> or <code>IAsyncEnumerable&lt;T&gt;</code></h2>
+<p>ASP.NET Core buffers the result of actions that return <code>IEnumerable&lt;T&gt;</code> before writing them to the response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpGet(&#34;syncsale&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IEnumerable&lt;Product&gt; GetOnSaleProducts()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> products = _productContext.Products.OrderBy(p =&gt; p.Name).ToList();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">foreach</span> (<span style="color:#ff7b72">var</span> product <span style="color:#ff7b72">in</span> products)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (product.IsOnSale)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">yield</span> <span style="color:#ff7b72">return</span> product;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Consider using <code>IAsyncEnumerable&lt;T&gt;</code> when asynchronous iteration is needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpGet(&#34;asyncsale&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> IAsyncEnumerable&lt;Product&gt; GetOnSaleProductsAsync()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> products = _productContext.Products.OrderBy(p =&gt; p.Name).AsAsyncEnumerable();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">await</span> <span style="color:#ff7b72">foreach</span> (<span style="color:#ff7b72">var</span> product <span style="color:#ff7b72">in</span> products)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (product.IsOnSale)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">yield</span> <span style="color:#ff7b72">return</span> product;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="iactionresult"><code>IActionResult</code></h1>
+<p>Use when multiple <code>ActionResult</code> return types are possible. For example, consider that when model validation fails, an HTTP 400 response is returned.</p>
+<p><code>ActionResult</code> types represent various HTTP status codes. Any class deriving from <code>ActionResult</code> (like <code>BadRequestResult</code>, <code>NotFoundResult</code>, <code>OkObjectResult</code>, etc) is a valid return type.</p>
+<p>In this action, <code>[ProducesResponseType]</code> is used to indicate that it can return two ActionResult derivatives: <code>NotFoundResult</code> or <code>OkObjectResult</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpGet(&#34;{id}&#34;)]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Product))]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status404NotFound)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult GetById_IActionResult(<span style="color:#ff7b72">int</span> id)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> product = _productContext.Products.Find(id);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> product == <span style="color:#79c0ff">null</span> 
+</span></span><span style="display:flex;"><span>    ? NotFound() <span style="color:#8b949e;font-style:italic">// same as NotFoundResult(); HTTP 404</span>
+</span></span><span style="display:flex;"><span>    : Ok(product); <span style="color:#8b949e;font-style:italic">// same as OkObjectResult(product); HTTP 200</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="actionresultt"><code>ActionResult&lt;T&gt;</code></h2>
+<p>Like <code>IActionResult</code>, <code>ActionResult&lt;T&gt;</code> enables returning a type deriving from <code>ActionResult</code> or returning a specific type. It offers these benefits vs <code>IActionResult</code>:</p>
+<ul>
+<li>Omitting the <code>Type</code> property of <code>[ProducesResponseType]</code> attribute (ie: <code>[ProducesResponseType(200)]</code> instead of <code>[ProducesResponseType(200, Type = typeof(Product))]</code>)</li>
+<li>Convert both <code>T</code> and <code>ActionResult</code> to <code>ActionResult&lt;T&gt;</code> via implicit cast operators.</li>
+</ul>
+<h1 id="httpresults-iresult"><code>HttpResults</code> (<code>IResult</code>)</h1>
+<p><code>HttpResults</code> can be used in both minimal APIs and controller-based APIs and are useful when sharing code between the two.</p>
+<p>The <code>Microsoft.AspNetCore.Http.HttpResults</code> namespace contains types that implement the <code>IResult</code> interface. <code>HttpResults</code> can be returned by calling <code>IResult.ExecuteAsync</code> or helper methods on the static <code>Results</code> class. It <o>does not</o> support content negotiation.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost]
+</span></span><span style="display:flex;"><span>[Consumes(MediaTypeNames.Application.Json)]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(typeof(Product), StatusCodes.Status201Created)]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status400BadRequest)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task&lt;IResult&gt; CreateAsync(Product product)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (product.Description.Contains(<span style="color:#a5d6ff">&#34;XYZ Widget&#34;</span>))
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> Results.BadRequest();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    _productContext.Products.Add(product);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">await</span> _productContext.SaveChangesAsync();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> location = Url.Action(nameof(GetById), <span style="color:#ff7b72">new</span> { id = product.Id }) ?? <span style="color:#a5d6ff">$&#34;/{product.Id}&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> Results.Created(location, product);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="resultt"><code>Result&lt;T&gt;</code></h2>
+<p>Like <code>HttpResults</code>, <code>Result&lt;T&gt;</code> can be used when sharing code between minimal and controller-based APIs. Compared to <code>HttpResults</code>, all <code>[ProducesResponseType]</code> attributes can be excluded.</p>
+<p>Additionally, when multiple <code>IResult</code> return types are needed, prefer returning <code>Result&lt;TResult1, TResult2&gt;</code> over <code>IResult</code> because generic union types automatically retain endpoint metadata.</p>
+<p>The static <code>TypedResults</code> class returns concrete <code>IResult</code> implementations.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpGet(&#34;{id}&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> Results&lt;NotFound, Ok&lt;Product&gt;&gt; GetById(<span style="color:#ff7b72">int</span> id)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> product = _productContext.Products.Find(id);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> product == <span style="color:#79c0ff">null</span> ? TypedResults.NotFound() : TypedResults.Ok(product);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="web-api-conventions">Web API Conventions</h1>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/conventions?view=aspnetcore-7.0">https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/conventions?view=aspnetcore-7.0</a></p>
+</blockquote>
+<p>Web API conventions are a substitute for decorating actions with <code>[ProducesResponseType]</code>. They define the most common return types and status codes returned from a specific type of action and identify actions that deviate from that standard.</p>
+<p>Conventions work by applying attributes behind the scenes.</p>
+<p>Default conventions are in <code>Microsoft.AspNetCore.Mvc.DefaultApiConventions</code> namespace.</p>
+<h2 id="applying-web-api-conventions">Applying Web API Conventions</h2>
+<p>Each action must be associated with <em>exactly one</em> convention. Conventions can be applied to actions, controllers (to all actions in the controller), or assemblies (to all controllers in the assembly).</p>
+<p>Here, the <code>Put</code> convention is applied to the <code>Update</code> action:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// PUT api/contactsconvention/{guid}</span>
+</span></span><span style="display:flex;"><span>[HttpPut(&#34;{id}&#34;)]
+</span></span><span style="display:flex;"><span>[ApiConventionMethod(typeof(DefaultApiConventions), 
+</span></span><span style="display:flex;"><span>                     nameof(DefaultApiConventions.Put))]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult Update(<span style="color:#ff7b72">string</span> id, Contact contact)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> contactToUpdate = _contacts.Get(id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (contactToUpdate == <span style="color:#79c0ff">null</span>) 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> NotFound();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    _contacts.Update(contact);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> NoContent();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This convention applies these attributes to the action:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[ProducesDefaultResponseType]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status204NoContent)]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status404NotFound)]
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status400BadRequest)]
+</span></span></code></pre></div><h2 id="creating-custom-conventions">Creating Custom Conventions</h2>
+<p>Custom conventions can be created.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/conventions?view=aspnetcore-7.0#create-web-api-conventions">https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/conventions?view=aspnetcore-7.0#create-web-api-conventions</a></p>
+</blockquote>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

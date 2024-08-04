@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine learning on Fred Wieser</title>
+    <link>http://localhost:1313/notes/data-science/ai/machine-learning/</link>
+    <description>Recent content in machine learning on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/data-science/ai/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/overview/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/overview/</guid>
+      
+      <description>Abstract The goal of machine learning is to use data to create a predictive model. Machine learning models encapsulate a function to calculate an output based on one or more inputs. It creates a model from data.
+Consists of two phases:
+Training — the process of defining the function. Inferencing — using the model to predict new values. Training Machine Learning Models Consider an ML model that predicts ice cream sales based on the weather:</description>
+      
+    </item>
+    
+    <item>
+      <title>deep learning</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/deep-learning/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/deep-learning/</guid>
+      
+      <description>Abstract Deep learning is advanced form of machine learning that emulates the way the human brain learns. Creates an artificial neural network that simulates electrochemical activity in biological neurons by using mathematical functions.
+Artificial Neural Networks (ANN) Artificial neural networks consist of multiple layers of neurons. Each neuron is a function. This architecture of deeply-nested functions is where deep learning gets its name.
+The models ANN&amp;rsquo;s produce are known as deep neural networks.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>behavioral on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/</link>
+    <description>Recent content in behavioral on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>visitor</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/visitor/</link>
+      <pubDate>Sun, 05 Mar 2023 15:55:35 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/visitor/</guid>
+      
+      <description>Visitor Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:
+In .NET: The body of the foreach loop</description>
+      
+    </item>
+    
+    <item>
+      <title>strategy</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/strategy/</link>
+      <pubDate>Sun, 05 Mar 2023 15:55:22 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/strategy/</guid>
+      
+      <description>Strategy Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:</description>
+      
+    </item>
+    
+    <item>
+      <title>observer</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/observer/</link>
+      <pubDate>Sun, 05 Mar 2023 15:55:10 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/observer/</guid>
+      
+      <description>Observer Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:
+In .NET: INotifyPropertyChanged</description>
+      
+    </item>
+    
+    <item>
+      <title>mediator</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/mediator/</link>
+      <pubDate>Sun, 05 Mar 2023 15:55:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/mediator/</guid>
+      
+      <description>Mediator Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:</description>
+      
+    </item>
+    
+    <item>
+      <title>command</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/command/</link>
+      <pubDate>Sun, 05 Mar 2023 15:53:50 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/command/</guid>
+      
+      <description>Command Type: Behavioral
+Purpose: Turns a request into a stand-alone object that contains all information about the request.
+Use to:
+Enable passing requests as method arguments Delay or queue a request&amp;rsquo;s execution Implement reversible operations Principles: Single Responsibility Principle; Open/Closed Principle
+Complexity:
+Popularity:
+In .NET: EventArgs
+Implementing Declare the command interface with a single execution method.
+public interface ICommand { void Execute(); } Extract requests into concrete command classes that implement this interface.</description>
+      
+    </item>
+    
+    <item>
+      <title>template method</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/template-method/</link>
+      <pubDate>Sun, 05 Mar 2023 15:53:38 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/template-method/</guid>
+      
+      <description>Template Method Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:
+In .NET: IComparable</description>
+      
+    </item>
+    
+    <item>
+      <title>state</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/state/</link>
+      <pubDate>Sun, 05 Mar 2023 15:53:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/state/</guid>
+      
+      <description>State Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:</description>
+      
+    </item>
+    
+    <item>
+      <title>momento</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/momento/</link>
+      <pubDate>Sun, 05 Mar 2023 15:53:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/momento/</guid>
+      
+      <description>Memento Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:</description>
+      
+    </item>
+    
+    <item>
+      <title>iterator</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/iterator/</link>
+      <pubDate>Sun, 05 Mar 2023 15:53:16 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/iterator/</guid>
+      
+      <description>Iterator Type: Behavioral
+Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity:
+In .NET: IEnumerable&amp;lt;T&amp;gt;, IEnumerator&amp;lt;T&amp;gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>chain of responsibility</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/chain-of-responsibility/</link>
+      <pubDate>Sun, 05 Mar 2023 15:52:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/patterns/behavioral/chain-of-responsibility/</guid>
+      
+      <description>Chain of Responsibility Type: Behavioral Purpose:
+Use to:
+Principles:
+Complexity:
+Popularity: In .NET: ASP.NET Core middleware</description>
+      
+    </item>
+    
+  </channel>
+</rss>

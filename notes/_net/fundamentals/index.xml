@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fundamentals on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/</link>
+    <description>Recent content in fundamentals on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xml documentation</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/xml-documentation/</link>
+      <pubDate>Tue, 07 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/xml-documentation/</guid>
+      
+      <description>Overview [Documentation] C# source files can contain structured comments (XML doc) that produce API documentation for the types contained therein. The compiler creates an XML files that contains structured data representing the comments and the API signatures. Other tools can process these XML files to produce human-readable documentation.
+Generating XML Documentation To enable XML documentation:
+.csproj
+&amp;lt;PropertyGroup&amp;gt; &amp;lt;GenerateDocumentationFile&amp;gt;true&amp;lt;/GenerateDocumentationFile&amp;gt; &amp;lt;/PropertyGroup&amp;gt; With this switch enabled, the compiler generates warning CS1591 for any publicly visible member without XML doc.</description>
+      
+    </item>
+    
+    <item>
+      <title>required properties and fields</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/required-properties-and-fields/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/required-properties-and-fields/</guid>
+      
+      <description>Overview Availability: C# 11 / .NET 7 Properties can be marked required to indicate that they must be present in the JSON payload for deserialization to succeed. Otherwise, Deserialize methods throw a JsonException.
+Techniques for Marking Fields/Properties Add the required modifier to the field/property (C# 11) Annotate the property with JsonRequiredAttribute (.NET 7) a. Use this technique if the requirement should only apply to deserialization. Modify the JsonPropertyInfo.IsRequired property of the contract model (.</description>
+      
+    </item>
+    
+    <item>
+      <title>boxing and unboxing</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/boxing-and-unboxing/</link>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/boxing-and-unboxing/</guid>
+      
+      <description>Overview Boxing &amp;amp; Unboxing are performed by the CLR because it uses the Unified Type System in which a value of any type is treated an object.
+Boxing Converting a value type (struct, enum, numeric types, floats, bool, char) to object (or an interface type implemented by this value). The CLR &amp;ldquo;boxes&amp;rdquo; the value inside an object and stores it on the heap. A new object is allocated, constructed, and stored.</description>
+      
+    </item>
+    
+    <item>
+      <title>polymorphism</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/polymorphism/</link>
+      <pubDate>Thu, 17 Feb 2022 20:22:18 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/polymorphism/</guid>
+      
+      <description>Versioning C# is designed to allow versioning between base and derived classes in different libraries. This allows for introduction of a new member in a base class with the same name as a member in a derived class.
+override and virtual and new can be used on methods, properties, indexers, and events. virtual If a method is virtual, any class inheriting it can implement its own version with override:
+public class Graphics { public virtual void DrawLine() { } // These method can be implemented in a derived class.</description>
+      
+    </item>
+    
+    <item>
+      <title>imports</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/imports/</link>
+      <pubDate>Wed, 16 Feb 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/imports/</guid>
+      
+      <description>Imports using namespace; // Imports all classes from namespace. using static namespace; // Imports only the static methods from namespace. using static System.Console; // This allows you to use WriteLine() without having to call Console.WriteLine(). global using namespace;	// Allows importing namespace into one file but available to the whole project. Console applications have these implicit using directives (auto imports):
+using System; using System.IO; using System.Collections.Generic; using System.Linq; using System.Net.Http; using System.</description>
+      
+    </item>
+    
+    <item>
+      <title>assemblies</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/assemblies/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/assemblies/</guid>
+      
+      <description>Assemblies Assemblies are made up of 4 parts:
+Assembly metadata and manifest: Name, assembly, file version, referenced assemblies, … Type metadata: Information about the type, their members, … IL code: Implementation of methods, properties, constructors, … Embedded resources (optional): Images, strings, JavaScript, … </description>
+      
+    </item>
+    
+    <item>
+      <title>attributes</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/attributes/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/attributes/</guid>
+      
+      <description>Overview Object –&amp;gt; Attribute
+Attributes associate metadata with code. Once associated, attributes can be queried at runtime using reflection. Attributes from the .NET library trigger certain behaviors in the compiler. User-defined attributes only act as metadata. Targets Attributes are generally declared above the code they are associated to. Attributes can be called with a target using this form:
+[target : attribute1, attribute2, …]
+Attributes can target:
+assembly (place under the using directives) module (place under the using directives) field event method parameters property return type Associating to a parameter:</description>
+      
+    </item>
+    
+    <item>
+      <title>casting and converting</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/casting-and-converting/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/casting-and-converting/</guid>
+      
+      <description>Conversions &amp;amp; Casting C# is statically typed at compile time. Once a variable is typed, it cannot hold a different type.
+Implicit Conversions (Conversions) Implicit conversions happen automatically, always succeed, and no data is lost.
+Example: converting from a long to an int.
+Derived to Base Type A derived class always contains all members of a base class.
+Explicit Conversions (Casting) Casting is required when data may be lost in the conversion, or if the conversion may otherwise fail:</description>
+      
+    </item>
+    
+    <item>
+      <title>compilation statements</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/compilation-statements/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/compilation-statements/</guid>
+      
+      <description>Compilation Statements Compilation statements allow code to be written that only compiles if the conditional is true.
+Modern .NET Symbols: NET6_0 NET6_0_ANDROID NET6_0_IOS NET6_0_WINDOWS
+#if NET6_0_ANDROID // compile statements that only work on Android #elif NET6_0_IOS // compile statements that only work on iOS #else // compile statements that work everywhere else </description>
+      
+    </item>
+    
+    <item>
+      <title>control flow</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/control-flow/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/control-flow/</guid>
+      
+      <description>if - else if - else if (condition) &amp;amp;&amp;amp; (condition2) || (condition3) { … } else if (condition) { … } else { … } Ternary Operator condition ? true-return : false-return while while (condition) { … } do … while Executes the code in the body, then checks the condition:
+do { … } while (condition) for for (initializer; condition; iterator) { … } initializer: int x = 0</description>
+      
+    </item>
+    
+    <item>
+      <title>csharp and dotnet</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/csharp-and-dotnet/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/csharp-and-dotnet/</guid>
+      
+      <description>.NET is&amp;hellip; https://github.com/dotnet/standard/blob/release/3.0/docs/metaphor.md
+C# is&amp;hellip; Strongly-typed: Every variable and constant has a type. Every expression that evaluates to a value has a type. Every method declaration specifies a name, and a type and kind for each parameter and for the return value. Object-oriented (programmer defines types and their behavior) Encapsulation Inheritance Polymorphism Component-oriented Type-safe Garbage-collected (automatically reclaims memory from unreachable, unused objects) C# has support for&amp;hellip; Nullable types (guard against variables that don&amp;rsquo;t refer to allocated objects) Asynchronous operations Unified type system: All types inherit from a single root object type.</description>
+      
+    </item>
+    
+    <item>
+      <title>system.environment</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/system.environment/</link>
+      <pubDate>Sun, 28 Nov 2021 12:31:13 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/system.environment/</guid>
+      
+      <description>System.Environment Object –&amp;gt; Environment
+Information about and manipulation of the current environment and platform. Documentation: https://docs.microsoft.com/en-us/dotnet/api/system.environment?view=net-6.0 Properties CommandLine Returns the command line arguments as a string where the first term is the command itself Current DirectoryGets or sets the CWD ExitCode Is64BitOperatingSystem Boolean if OS is 64-bit Is64BitProcess Boolean if the current process if 64-bit MachineName Returns the system&amp;rsquo;s name NewLine Returns a platform-independent newline (\r\n for non-Unix platforms; \n for Unix platforms) OSVersion Returns an OperatingSystem OSVersion object.</description>
+      
+    </item>
+    
+    <item>
+      <title>nullables</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/nullables/</link>
+      <pubDate>Tue, 23 Nov 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/nullables/</guid>
+      
+      <description>Dereferencing Accessing a member of a variable through the dot operator.
+Dereferencing a null variable whose value is null is a NullReferenceException. Checking for Null void FindRoot(Node node, Action&amp;lt;Node&amp;gt; processNode) { // If this wasn&amp;#39;t checked first… for ( var current = node; current is not null; current = current.Parent) { // …then this could be a NullReference… processNode(current); // …and so could this. } } Also:
+if (message is not null) { … } Using Utility Methods to Check for Null If you have a private utility method like IsNotNull() to check for null, you must add an attribute to its signature to tell the compiler what it does:</description>
+      
+    </item>
+    
+    <item>
+      <title>exceptions</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/exceptions/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/exceptions/</guid>
+      
+      <description>Exceptions All exceptions derive from System.Exception.
+#Catch Exceptions
+try { … } catch (exception e) { // Catches a specific exception. Stores it in e. // e.StackTrace contains the current call stack, file name, and line number where the exception was thrown. // e.Message contains the string describing the exception. // e.GetType() contains the type of the exception. } catch { … }	// Catches any exception. catch { } // Use an empty catch block to catch errors, ignore them, and continue running.</description>
+      
+    </item>
+    
+    <item>
+      <title>variables</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/variables/</link>
+      <pubDate>Sat, 06 Nov 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/variables/</guid>
+      
+      <description>Variables Every variable has a type that determines what values can be stored in it:
+Non-nullable value type Nullable value type object Class type, Interface type, Array type, Delegate type Identifiers Identifiers are variable names.
+Identifiers start with a letter or _ and use PascalCase.
+@identifier allows for variables to be named with C# reserved words.
+Creating C# is strongly typed, so all variables need to be typed:
+type identifier; // Declare a variable.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

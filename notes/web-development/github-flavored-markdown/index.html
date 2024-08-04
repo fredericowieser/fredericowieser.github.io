@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">github flavored markdown | Fred Wieser</title>
+<meta property="og:title" content="github flavored markdown | Fred Wieser" />
+<meta name="twitter:title" content="github flavored markdown | Fred Wieser" />
+<meta itemprop="name" content="github flavored markdown | Fred Wieser" />
+<meta name="application-name" content="github flavored markdown | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/notes/web-development/github-flavored-markdown/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/notes/web-development/github-flavored-markdown/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/notes/">
+                        W
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">github flavored markdown</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-12-22T00:00:00-06:00" itemprop="datePublished"> 22 Dec 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p><a href="https://github.github.com/gfm/">GitHub-Flavored Markdown</a> is an extended markdown syntax by GitHub.</p>
+<h1 id="collapsible-sections">Collapsible Sections</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">details</span>&gt;&lt;<span style="color:#7ee787">summary</span>&gt;CLICK ME&lt;/<span style="color:#7ee787">summary</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">#### We can hide anything, even code!
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>
+</span></span><span style="display:flex;"><span>```ruby
+</span></span><span style="display:flex;"><span>   puts &#34;Hello World&#34;
+</span></span><span style="display:flex;"><span>\```
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">details</span>&gt;  
+</span></span></code></pre></div><details><summary>CLICK ME</summary>
+<p>
+<h4 id="we-can-hide-anything-even-code">We can hide anything, even code!</h4>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>   puts <span style="color:#a5d6ff">&#34;Hello World&#34;</span>
+</span></span></code></pre></div></p>
+</details>  
+<h1 id="code-blocks">Code Blocks</h1>
+<p>See also: <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">linguist/languages.yml at master · github/linguist</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>```
+</span></span><span style="display:flex;"><span>function test() {  
+</span></span><span style="display:flex;"><span>  console.log(&#34;notice the blank line before this function?&#34;);  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>```  
+</span></span></code></pre></div><h2 id="syntax-highlighting">Syntax Highlighting</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#a5d6ff">```ruby
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>require <span style="color:#a5d6ff">&#39;redcarpet&#39;</span>
+</span></span><span style="display:flex;"><span>markdown <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff;font-weight:bold">Redcarpet</span><span style="color:#ff7b72;font-weight:bold">.</span>new(<span style="color:#a5d6ff">&#34;Hello World!&#34;</span>)
+</span></span><span style="display:flex;"><span>puts markdown<span style="color:#ff7b72;font-weight:bold">.</span>to_html
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
+</span></span></code></pre></div><h1 id="color-models">Color Models</h1>
+<p><img src="./color-models.png" alt="A diagram showing the color models HEX, RGB, and HSL"></p>
+<h1 id="comments">Comments</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- This content will not appear in the rendered Markdown --&gt;</span>
+</span></span></code></pre></div><h1 id="diagrams">Diagrams</h1>
+<h2 id="mermaidhttpsmermaid-jsgithubiomermaid"><a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Here is a simple flow chart:
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```mermaid
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>graph TD;
+</span></span><span style="display:flex;"><span>    A--&gt;B;
+</span></span><span style="display:flex;"><span>    A--&gt;C;
+</span></span><span style="display:flex;"><span>    B--&gt;D;
+</span></span><span style="display:flex;"><span>    C--&gt;D;
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
+</span></span></code></pre></div><p><img src="./mermaid.png" alt="A mermaid diagram made of the code above"></p>
+<h2 id="mathhttpsenwikibooksorgwikilatexmathematics"><a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">Math</a></h2>
+<p>Delimit expressions with $:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This sentence uses <span style="color:#a5d6ff">`$`</span> delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
+</span></span></code></pre></div><p><img src="./math.png" alt="A mathematical expression of the code above"></p>
+<h3 id="math-expressions-as-blocks">Math Expressions as Blocks</h3>
+<p>Use a math code block:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**Here is some math!**
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```math
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>\sqrt{3}
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">```</span>
+</span></span></code></pre></div><p><img src="./math2.png" alt="A mathematical expression of the code above"></p>
+<h1 id="emojihttpsgithubcomikatyangemoji-cheat-sheetblobmasterreadmemd"><a href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md">Emoji</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ffa657">@octocat</span> :+1: This PR looks great - it&#39;s ready to merge! :shipit:
+</span></span></code></pre></div><p><img src="emoji.png" alt="emoji"></p>
+<h1 id="escaping">Escaping</h1>
+<p>Use <code>\</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Let&#39;s rename \*our-new-project\* to \*our-old-project\*.
+</span></span></code></pre></div><p>To escape a nested code block, the outer code block needs a different number of backticks than the inner.</p>
+<h1 id="footnotes">Footnotes</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>Here is a simple footnote[^1].
+</span></span><span style="display:flex;"><span>A footnote can also have multiple lines[^2].  
+</span></span><span style="display:flex;"><span>You can also use words, to fit your writing style more closely[^note].
+</span></span><span style="display:flex;"><span>[^1]: My reference.
+</span></span><span style="display:flex;"><span>[^2]: Every new line should be prefixed with 2 spaces.  
+</span></span><span style="display:flex;"><span>  This allows you to have a footnote with multiple lines.
+</span></span><span style="display:flex;"><span>[^note]:
+</span></span><span style="display:flex;"><span>    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
+</span></span><span style="display:flex;"><span>    This footnote also has been made with a different syntax using 4 spaces for new lines.
+</span></span></code></pre></div><p><img src="footnote.png" alt="footnotes"></p>
+<h1 id="headings">Headings</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold"># The largest heading
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold"></span><span style="color:#79c0ff">## The second largest heading
+</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff">###### The smallest heading
+</span></span></span></code></pre></div><h1 id="horizontal-line">Horizontal Line</h1>
+<p><code>___</code> (3 or more underscores)</p>
+<h1 id="images">Images</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#7ee787">This is an image</span>](https://myoctocat.com/assets/images/base-octocat.svg)
+</span></span></code></pre></div><p><img src="./images.png" alt="An example image of the GitHub Octocat"></p>
+<h1 id="keyboard-shortcuts">Keyboard Shortcuts</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">kbd</span>&gt;Ctrl&lt;/<span style="color:#7ee787">kbd</span>&gt; + &lt;<span style="color:#7ee787">kbd</span>&gt;Alt&lt;/<span style="color:#7ee787">kbd</span>&gt; + &lt;<span style="color:#7ee787">kbd</span>&gt;Space&lt;/<span style="color:#7ee787">kbd</span>&gt;
+</span></span></code></pre></div><p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></p>
+<h1 id="links">Links</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This site was built using [<span style="color:#7ee787">GitHub Pages</span>](https://pages.github.com/).
+</span></span></code></pre></div><p><img src="links.png" alt="links"></p>
+<p>Or, links at the end of the file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>This site was built using [GitHub Pages][github-pages].
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[github-pages]: https://pages.github.com/
+</span></span></code></pre></div><h2 id="relative-links">Relative Links</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#7ee787">Contribution guidelines for this project</span>](docs/CONTRIBUTING.md)
+</span></span></code></pre></div><h2 id="linking-issues--pull-requests">Linking Issues &amp; Pull Requests</h2>
+<table>
+<thead>
+<tr>
+<th>Reference type</th>
+<th>Raw reference</th>
+<th>Short link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issue or pull request URL</td>
+<td><a href="https://github.com/jlord/sheetsee.js/issues/26">https://github.com/jlord/sheetsee.js/issues/26</a></td>
+<td>#26</td>
+</tr>
+<tr>
+<td>and issue or pull request number</td>
+<td>#26</td>
+<td>#26</td>
+</tr>
+<tr>
+<td>GH- and issue or pull request number</td>
+<td>GH-26</td>
+<td>GH-26</td>
+</tr>
+<tr>
+<td>Username/Repository# and issue or pull request number</td>
+<td>jlord/sheetsee.js#26</td>
+<td>jlord/sheetsee.js#26</td>
+</tr>
+<tr>
+<td>Organization_name/Repository# and issue or pull request number</td>
+<td>github/linguist#4039</td>
+<td>github/linguist#4039</td>
+</tr>
+<tr>
+<td>Commit URL</td>
+<td><a href="https://github.com/jlord/sheetsee.js/commit/a5c3785ed8d6a35868bc169f07e40e889087fd2e">https://github.com/jlord/sheetsee.js/commit/a5c3785ed8d6a35868bc169f07e40e889087fd2e</a></td>
+<td>a5c3785</td>
+</tr>
+<tr>
+<td>SHA</td>
+<td>a5c3785ed8d6a35868bc169f07e40e889087fd2e</td>
+<td>a5c3785</td>
+</tr>
+<tr>
+<td>User@SHA</td>
+<td>jlord@a5c3785ed8d6a35868bc169f07e40e889087fd2e</td>
+<td>jlord@a5c3785</td>
+</tr>
+<tr>
+<td>Username/Repository@SHA</td>
+<td>jlord/sheetsee.js@a5c3785ed8d6a35868bc169f07e40e889087fd2e</td>
+<td>jlord/sheetsee.js@a5c3785</td>
+</tr>
+</tbody>
+</table>
+<h1 id="lists">Lists</h1>
+<h2 id="unordered">Unordered</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ff7b72">-</span> George Washington  
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">*</span> John Adams  
+</span></span><span style="display:flex;"><span>+ Thomas Jefferson  
+</span></span></code></pre></div><ul>
+<li>George Washington</li>
+</ul>
+<ul>
+<li>John Adams</li>
+</ul>
+<ul>
+<li>Thomas Jefferson</li>
+</ul>
+<h2 id="ordered">Ordered</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ff7b72">1.</span> James Madison
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">2.</span> James Monroe
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">3.</span> John Quincy Adams
+</span></span></code></pre></div><ol>
+<li>James Madison</li>
+<li>James Monroe</li>
+<li>John Quincy Adams</li>
+</ol>
+<h2 id="nested">Nested</h2>
+<p>The list marker character must lie directly below the first character of the text in the item above it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ff7b72">1.</span> First list item
+</span></span><span style="display:flex;"><span>   <span style="color:#ff7b72">-</span> First nested list item
+</span></span><span style="display:flex;"><span>     <span style="color:#ff7b72">-</span> Second nested list item
+</span></span></code></pre></div><ol>
+<li>First list item
+<ul>
+<li>First nested list item
+<ul>
+<li>Second nested list item</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="mentions">Mentions</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ffa657">@github/support</span> What do you think about these updates?
+</span></span></code></pre></div><p><img src="mention-rendered.png" alt="mentions"></p>
+<h1 id="quoting-text">Quoting Text</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ff7b72">&gt; </span><span style="font-style:italic">Quoted text
+</span></span></span></code></pre></div><blockquote>
+<p>Quoted text</p>
+</blockquote>
+<h1 id="table-of-contents">Table of Contents</h1>
+<p>GitHub generates a ToC when 2+ headings are added:<br>
+<img src="table-of-contents.png" alt="table of contents"></p>
+<h1 id="tables">Tables</h1>
+<p>Tables require a blank line before they start:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Command    | Description                                    |
+</span></span><span style="display:flex;"><span>| ---------- | ---------------------------------------------- |
+</span></span><span style="display:flex;"><span>| git status | List all new or modified files                 |
+</span></span><span style="display:flex;"><span>| git diff   | Show file differences that haven&#39;t been staged |
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git status</td>
+<td>List all new or modified files</td>
+</tr>
+<tr>
+<td>git diff</td>
+<td>Show file differences that haven&rsquo;t been staged</td>
+</tr>
+</tbody>
+</table>
+<h1 id="task-lists">Task Lists</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#ff7b72">- [x]</span> <span style="color:#ffa657">#739</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">- [ ]</span> https://github.com/octo-org/octo-repo/issues/740
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">- [ ]</span> Add delight to the experience when all tasks are complete :tada:
+</span></span></code></pre></div><p><img src="task-lists.png" alt="task lists"></p>
+<h1 id="text-styling">Text Styling</h1>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Syntax</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bold</td>
+<td>** ** or __ __</td>
+<td>This is bold text</td>
+</tr>
+<tr>
+<td>Italic</td>
+<td>* * or _ _</td>
+<td>This text is italicized</td>
+</tr>
+<tr>
+<td>Strikethrough</td>
+<td>~~ ~~</td>
+<td>This was mistaken text</td>
+</tr>
+<tr>
+<td>Bold and nested italic</td>
+<td>** ** and _ _</td>
+<td>This text is extremely important</td>
+</tr>
+<tr>
+<td>All bold and italic</td>
+<td><code>*** ***</code></td>
+<td>All this text is important</td>
+</tr>
+<tr>
+<td>Subscript</td>
+<td><code>&lt;sub&gt; &lt;/sub&gt;</code></td>
+<td>This is a subscript text</td>
+</tr>
+<tr>
+<td>Superscript</td>
+<td><code>&lt;sup&gt; &lt;/sup&gt;</code></td>
+<td>This is a superscript text</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

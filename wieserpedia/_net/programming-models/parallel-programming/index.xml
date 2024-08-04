@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>parallel programming on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/</link>
+    <description>Recent content in parallel programming on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/overview/</link>
+      <pubDate>Thu, 16 Feb 2023 14:28:40 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/overview/</guid>
+      
+      <description>Abstract Data parallelism — scenarios in which the same operation is performed concurrently on elements in a collection.
+Task Parallel Library Enables data parallelism through System.Threading.Tasks.Parallel. Provides method-based parallel implementations of for and foreach loops. Does not require engineer to create threads or queue work items.
+How it Works When a parallel loop runs, TPL partitions the collection so that the loop can operate on multiple parts concurrently. TPL partitions the collection based on system resources and workload.</description>
+      
+    </item>
+    
+    <item>
+      <title>parallel invoke</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/parallel-invoke/</link>
+      <pubDate>Fri, 17 Feb 2023 09:58:06 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/parallel-invoke/</guid>
+      
+      <description>Overview Use Parallel.Invoke to execute operations in parallel on a data source. The runtime handles scheduling and scales automatically to the number of cores on the host. Warning: None of the operations must modify the data source (risk of race condition).
+string words[] = // some array of words here Parallel.Invoke(() =&amp;gt; { GetLongestWord(words); }, () =&amp;gt; { GetMostCommonWords(words); }, { GetCountForWord(words, &amp;#34;booger&amp;#34;); }, … ); // close Parallel.Invoke </description>
+      
+    </item>
+    
+    <item>
+      <title>cancelling parallel loops</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/cancelling-parallel-loops/</link>
+      <pubDate>Thu, 16 Feb 2023 15:23:54 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/cancelling-parallel-loops/</guid>
+      
+      <description>Overview Cancellation is achieved by:
+Supplying a CancellationToken to the Parallel.For or Parallel.ForEach method&amp;rsquo;s ParallelOptions parameter Enclosing the parallel call in a try-catch block Example
+int[] nums = Enumerable.Range(0, 1_000_000).ToArray(); using CancellationTokenSource cts = new(); ParallelOptions po = new(); po.CancellationToken = cts.Token; try { Parallel.ForEach(nums, po, (num) =&amp;gt; { double d = Math.Sqrt(num); Console.WriteLine($&amp;#34;{d} on {Thread.CurrentThread.ManagedThreadId}&amp;#34;); }); } catch { … } </description>
+      
+    </item>
+    
+    <item>
+      <title>thread local and partition local variables</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/thread-local-and-partition-local-variables/</link>
+      <pubDate>Thu, 16 Feb 2023 15:07:11 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/thread-local-and-partition-local-variables/</guid>
+      
+      <description>Thread-Local Variables Stores and retrieves state in each separate task that is created by a Parallel.For loop. Instead of writing to a shared resource on each iteration, you compute and store the value until all iterations for the task are complete.
+Parallel.For w/Thread-Local Variables Example
+int[] nums = Enumerable.Range(0, 1_000_000).ToArray(); long total = 0; Parallel.For&amp;lt;long&amp;gt;( // By default, the type parameter would be int, so this makes it `long` 0, // Starting element index nums.</description>
+      
+    </item>
+    
+    <item>
+      <title>parallel loops</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/parallel-loops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/parallel-programming/parallel-loops/</guid>
+      
+      <description>Parallel.For Note: Use Interlocked to execute atomic operations which will avoid multiple threads modifying a variable simultaneously.
+Parallel.For
+Returns a System.Threading.Tasks.ParallelLoopResult object that includes information such as last iteration completed Throws System.AggregateException if one or more exceptions occur on the threads. long totalSize = 0; string[] files = Directory.GetFiles(path); var result = Parallel.For(0, // The starting element index files.Length, // The ending element index // An `Action&amp;lt;int&amp;gt;` delegate that takes the current iteration (supplied by the runtime) as its value index =&amp;gt; { FileInfo fi = new(files[index]); long size = fi.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

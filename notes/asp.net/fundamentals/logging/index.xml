@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logging on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/fundamentals/logging/</link>
+    <description>Recent content in logging on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/fundamentals/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/fundamentals/logging/overview/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/fundamentals/logging/overview/</guid>
+      
+      <description>Abstract [Documentation] ASP.NET Core supports logging with built-in and third-party logging providers: Console, Debug, Event Tracing, Windows Event Log, TraceSource, Azure App Service, Azure Application Insights.
+Notes on Logging in .NET apply to these notes as well. Documentation: HTTP Logging in .NET Core and ASP.NET Core | Microsoft Learn W3CLogger in .NET Core and ASP.NET Core | Microsoft Learn Default Logging Providers The default ASP.NET Core web app templates call WebApplication.</description>
+      
+    </item>
+    
+    <item>
+      <title>http logging</title>
+      <link>http://localhost:1313/notes/asp.net/fundamentals/logging/http-logging/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/fundamentals/logging/http-logging/</guid>
+      
+      <description>Overview HTTP logging middleware logs information about incoming HTTP requests and HTTP responses including common properties, headers, and the body.
+Caution: HTTP logging can reduce the performance of an app, especially when logging request/response bodies.
+Warning: HTTP logging can potentially log personally identifiable information.
+Enabling Call AddHttpLogging and UseHttpLogging:
+Program.cs var builder = WebApplication.CreateBuilder(args); // the empty lambda here uses default logging options: builder.Services.AddHttpLogging(o =&amp;gt; { }); var app = builder.</description>
+      
+    </item>
+    
+    <item>
+      <title>w3c logging</title>
+      <link>http://localhost:1313/notes/asp.net/fundamentals/logging/w3c-logging/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/fundamentals/logging/w3c-logging/</guid>
+      
+      <description>Overview Middleware that writes log files in the W3C standard format.
+Caution: W3C logging can reduce the performance of an app, especially when logging request/response bodies.
+Warning: W3C logging can potentially log personally identifiable information.
+Enabling Call UseW3Logging:
+Program.cs
+var app = builder.Build(); app.UseW3CLogging(); app.UseRouting(); Configuration Call AddW3CLogging:
+Program.cs
+var builder = WebApplication.CreateBuilder(args); builder.Services.AddW3CLogging(logging =&amp;gt; { // Log all W3C fields logging.LoggingFields = W3CLoggingFields.All; logging.AdditionalRequestHeaders.Add(&amp;#34;x-forwarded-for&amp;#34;); logging.AdditionalRequestHeaders.Add(&amp;#34;x-client-ssl-protocol&amp;#34;); logging.FileSizeLimit = 5 * 1024 * 1024; logging.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>standard query operators on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/</link>
+    <description>Recent content in standard query operators on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>aggregate</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/aggregate/</link>
+      <pubDate>Sun, 13 Nov 2022 19:07:11 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/aggregate/</guid>
+      
+      <description>An aggregate operation computes a single value from a collection.
+Methods Aggregate Aggregate&amp;lt;T1&amp;gt;(this IEnumerable&amp;lt;T&amp;gt; source, Func&amp;lt;T, T, T&amp;gt; function)
+Performs an operation on the first two elements in the collection. It takes that result and performs an operation on the next element… …and so on for all elements. var nums = new[]{1,2,3,4}; var sum = nums.Aggregate( (a,b) =&amp;gt; a + b); Console.WriteLine(sum); // output: 10 (1+2+3+4) Aggregate&amp;lt;T1&amp;gt;(this IEnumerable&amp;lt;T1&amp;gt; source, T2 seed, Func&amp;lt;T2, T1, T2&amp;gt; function)</description>
+      
+    </item>
+    
+    <item>
+      <title>concatenation</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/concatenation/</link>
+      <pubDate>Sun, 13 Nov 2022 19:06:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/concatenation/</guid>
+      
+      <description>A concatenation operation appends one sequence to another.
+Methods
+Method Description Query syntax Concat Concatenates one sequence to another N/A </description>
+      
+    </item>
+    
+    <item>
+      <title>convert</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/convert/</link>
+      <pubDate>Sun, 13 Nov 2022 18:58:51 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/convert/</guid>
+      
+      <description>Convert methods change the type of objects.
+Methods As* methods change the static type of the collection but do not enumerate it.
+To* methods enumerate the collection and put the items into a different collection type.
+Methods Description Query expression AsEnumerable Returns the input typed as IEnumerable N/A AsQueryable Converts an IEnumerable to IQueryable N/A Cast Casts the elements of a collection to a new type from var in words OfType Selects values depending on their ability to be cast to the specified type N/A ToArray Convert a collection to an array (forces query execution) N/A ToDictionary Puts elements into a Dictionary&amp;lt;TKey, TValue&amp;gt; based on a key-selector function (forces query execution) N/A ToList Convert a collection to a List&amp;lt;T&amp;gt; (forces query execution) N/A ToLookup Puts elements into a Lookup&amp;lt;TKey, TValue&amp;gt; based on a key-selector function (forces query execution) N/A </description>
+      
+    </item>
+    
+    <item>
+      <title>element operations</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/element-operations/</link>
+      <pubDate>Thu, 10 Nov 2022 20:58:21 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/element-operations/</guid>
+      
+      <description>Element operations return a single, specific element from a sequence.
+Methods Method Description Query expression ElementAt(OrDefault) Returns the element at the specified index N/A First(OrDefault) Returns the first element of a collection, or the first element that satisfies a condition N/A Last(OrDefault) Returns the last element of a collection, or the last element that satisfies a condition N/A Single(OrDefault) Returns the only element of a collection that satisfies a condition. Throws InvalidOperationException if no such element or more than one such element.</description>
+      
+    </item>
+    
+    <item>
+      <title>equality</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/equality/</link>
+      <pubDate>Thu, 10 Nov 2022 20:49:03 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/equality/</guid>
+      
+      <description>Two sequences, whose pair-wise elements are equal, and which have the same number of such elements, are equal.
+NOTE: This method uses equality (reference equality), not equivalence (value equality) unless an IEqualityComparer&amp;lt;T&amp;gt; is used.
+Methods Method Description Query expression SequenceEqual Determines whether two sequences are equal by comparing elements in a pair-wise manner N/A Examples Pet pet1 = new Pet { Name = &amp;#34;Turbo&amp;#34;, Age = 2 }; Pet pet2 = new Pet { Name = &amp;#34;Peanut&amp;#34;, Age = 8 }; List&amp;lt;Pet&amp;gt; pets1 = new List&amp;lt;Pet&amp;gt; { pet1, pet2 }; List&amp;lt;Pet&amp;gt; pets2 = new List&amp;lt;Pet&amp;gt; { pet1, pet2 }; bool equal = pets1.</description>
+      
+    </item>
+    
+    <item>
+      <title>generate</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/generate/</link>
+      <pubDate>Thu, 10 Nov 2022 20:42:58 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/generate/</guid>
+      
+      <description>A generate operation creates a new sequence of values.
+Methods Method Description Query expression DefaultIfEmpty Replace an empty collection with a default-valued singleton collection N/A Empty Return an empty collection N/A Range Generate a collection that contains a sequence of numbers N/A Repeat Generate a collection that contains one value repeated n times N/A Examples IEnumerable&amp;lt;int&amp;gt; squares = Enumerable.Range(1, 10).Select(x =&amp;gt; x * x); squares.ForEach(i =&amp;gt; Console.WriteLine(i)); // Output: 1 4 9 16 25 36 49 64 81 100 </description>
+      
+    </item>
+    
+    <item>
+      <title>group</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/group/</link>
+      <pubDate>Thu, 10 Nov 2022 20:15:40 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/group/</guid>
+      
+      <description>A group operation puts data into groups such that the elements in each group share a common attribute.
+Methods Method Description Query expression GroupBy Groups elements that share a common attribute. Groups are represented by an IGrouping&amp;lt;TKey,TElement&amp;gt;. group … by ToLookup Inserts elements into a Lookup&amp;lt;TKey, TElement&amp;gt; based on a key-selector function. A Lookup is a one-to-many dictionary. N/A Examples Query Expression List&amp;lt;int&amp;gt; numbers = new List&amp;lt;int&amp;gt;() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 }; IEnumerable&amp;lt;IGrouping&amp;lt;int, int&amp;gt;&amp;gt; query = from number in numbers group number by number % 2; foreach (var group in query) if (group.</description>
+      
+    </item>
+    
+    <item>
+      <title>join</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/join/</link>
+      <pubDate>Thu, 10 Nov 2022 20:06:48 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/join/</guid>
+      
+      <description>A jon operation is the association of objects in one data source with objects that share a common attribute in another data source.
+Join operations target data sources whose relationships to each other cannot be followed directly.
+Join Type In LINQ, Join implements an inner join.
+GroupJoin has no direct equivalent in relational database terms.
+It implements a superset of inner joins and outer joins.
+Methods Method Description Query expression Join Join two sequences based on key-selector functions and extract pairs of values.</description>
+      
+    </item>
+    
+    <item>
+      <title>partition</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/partition/</link>
+      <pubDate>Tue, 08 Nov 2022 21:36:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/partition/</guid>
+      
+      <description>A partitioning operation divides an input set into two sections, without rearranging the elements, and then returning one of the sections.
+Methods Method Description Query expression Skip Skips elements up to a specified position in the collection N/A SkipWhile Skips elements based on a predicate function until an element does not satisfy the condition N/A Take Takes elements up to a specified position in a collection N/A TakeWhile … N/A Chunk Splits elements of a collection into chunks of a specified maximum size N/A </description>
+      
+    </item>
+    
+    <item>
+      <title>project</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/project/</link>
+      <pubDate>Tue, 08 Nov 2022 21:06:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/project/</guid>
+      
+      <description>A projection operation transforms an object into a new form that often consists only of those properties that will be subsequently used.
+Methods Method Description Query expression Select Project values that are based on a transform function select SelectMany Project sequences of values that are based on a transform function and then flatten them into one sequence Multiple from clauses Zip Produce a sequence of tuples with elements from 2-3 sequences N/A Notes The output sequence of a zip operation is never longer in length than the shortest input sequence.</description>
+      
+    </item>
+    
+    <item>
+      <title>quantify</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/quantify/</link>
+      <pubDate>Tue, 08 Nov 2022 21:02:55 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/quantify/</guid>
+      
+      <description>A quantifying operation return Boolean for whether some or all of the elements in a set satisfy a condition.
+Methods Method Description Query expression All Bool whether all elements in a collection satisfy a condition N/A Any Bool whether any elements in a collection satisfy a condition N/A Contains Bool whether a collection contains a specified element N/A </description>
+      
+    </item>
+    
+    <item>
+      <title>filter</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/filter/</link>
+      <pubDate>Tue, 08 Nov 2022 20:55:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/filter/</guid>
+      
+      <description>A filtering operation restricts the result set to contain only those elements that satisfy a specified condition.
+Methods
+Method Description Query expression OfType Selects values depending on their ability to be cast to the specified type N/A Where Selects values based on a predicate function N/A Example
+string[] words = { &amp;#34;the&amp;#34;, &amp;#34;quick&amp;#34;, &amp;#34;brown&amp;#34;, &amp;#34;fox&amp;#34;, &amp;#34;jumps&amp;#34; }; words.Where(w =&amp;gt; w.Length == 3); </description>
+      
+    </item>
+    
+    <item>
+      <title>set operations</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/set-operations/</link>
+      <pubDate>Tue, 08 Nov 2022 20:37:38 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/set-operations/</guid>
+      
+      <description>Set operations are query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate sets.
+Methods Method Description Query expression Distinct(By) Removes duplicate values from a collection N/A Except(By) Returns the elements of one collection that do not appear in the other N/A Intersect(By) Elements that appear in each of two collections N/A Union(By) Unique elements that appear in either of two collections N/A The *By methods take a keySelector which is used as the comparative discriminator of the source type.</description>
+      
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/sort/</link>
+      <pubDate>Mon, 07 Nov 2022 21:31:15 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/sort/</guid>
+      
+      <description>A sorting operation orders the elements of a sequence based on one or more attributes.
+Methods Method Description Query expression OrderBy Sort values in ascending order orderby ThenBy Perform a secondary sort in ascending order orderby …, … Reverse Reverse the order of the elements N/A Query Expression Sort Ascending string[] words = { &amp;#34;the&amp;#34;, &amp;#34;quick&amp;#34;, &amp;#34;brown&amp;#34;, &amp;#34;fox&amp;#34;, &amp;#34;jumped&amp;#34;, &amp;#34;over&amp;#34;, &amp;#34;the&amp;#34;, &amp;#34;lazy&amp;#34;, &amp;#34;dog&amp;#34; }; var query = from word in words orderby word.</description>
+      
+    </item>
+    
+    <item>
+      <title>standard query operators</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/standard-query-operators/</link>
+      <pubDate>Sun, 06 Nov 2022 09:37:07 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/standard-query-operators/standard-query-operators/</guid>
+      
+      <description>Overview The standard query operators are extension methods of IEnumerable&amp;lt;T&amp;gt; or IQueryable&amp;lt;T&amp;gt;. They are the static methods of the Enumerable and Queryable classes.
+Manner of Execution Standard Query Operator methods can execute in immediate or deferred manner.
+If deferred, in streaming or non-streaming forms.
+Deferred Queries A deferred query fetches the updated data from the data source each time query results are iterated. A deferred query can be forced to execute immediately with Enumerable.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

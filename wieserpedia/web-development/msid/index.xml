@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>msid on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/msid/</link>
+    <description>Recent content in msid on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/msid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>msgraph</title>
+      <link>http://localhost:1313/wieserpedia/web-development/msid/msgraph/</link>
+      <pubDate>Wed, 11 May 2022 13:35:11 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/msid/msgraph/</guid>
+      
+      <description>Microsoft Graph Unified API model to access data in M365.
+3 components Graph API (https://graph.microsoft.com/) Graph connectors (deliver data outside of Microsoft cloud into Graph) Graph Data Connect (deliver Graph data to Azure data stores) Primary namespace: microsoft.graph
+Call a REST API Method Syntax: {HTTP method} https://graph.microsoft.com/{version}/{resource}?{query-parameters}
+Example: GET https://graph.microsoft.com/%7bversion%7d/%7bresource%7d?%7bquery-parameters%7d
+HTTP Methods GET, POST, PATCH, PUT, DELETE. GET and DELETE do not require a request body. POST, PATCH, PUT usually require a request body in JSON.</description>
+      
+    </item>
+    
+    <item>
+      <title>shared access signatures</title>
+      <link>http://localhost:1313/wieserpedia/web-development/msid/shared-access-signatures/</link>
+      <pubDate>Wed, 11 May 2022 13:23:24 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/msid/shared-access-signatures/</guid>
+      
+      <description>Share Access Signatures A signed URI that points to one or more storage resources. Includes a token that contains a special set of query parameters.
+Types of Shared Access Signatures User delegation SAS Secured with AAD credentials and also by permissions specified for the SAS. Applies to Blob storage only. Service SAS Secured with the storage account key. Applies to Blob, Queue, and Table Storage, and Azure Files. Account SAS Secured with the storage account key Applies to Blob, Queue, and Table Storage.</description>
+      
+    </item>
+    
+    <item>
+      <title>msal</title>
+      <link>http://localhost:1313/wieserpedia/web-development/msid/msal/</link>
+      <pubDate>Tue, 10 May 2022 17:32:57 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/msid/msal/</guid>
+      
+      <description>MSAL – Microsoft Authentication Library Provides secure access to Graph, other Microsoft APIs, 3rd-party web APIs, or your own web API.
+Authentication flows Authorization code – apps securely obtain tokens in the name of the user. Client credentials – service applications run without user interaction. On-behalf-of – App calls a service/web API which in turn calls Graph. Implicit – used in browser-based apps. Device code – sign in to a device from another device with a browser.</description>
+      
+    </item>
+    
+    <item>
+      <title>microsoft identity platform</title>
+      <link>http://localhost:1313/wieserpedia/web-development/msid/microsoft-identity-platform/</link>
+      <pubDate>Tue, 10 May 2022 16:54:55 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/msid/microsoft-identity-platform/</guid>
+      
+      <description>Components OAuth 2.0 and OpenID Connect Microsoft work/school accounts via Azure AD Personal Microsoft accounts Social or local accounts via Azure AD B2C MSAL App management portal App configuration API and PowerShell Service Principals Applications must be reigstered with an Azure AD tenant. Apps can be registered in Azure portal as: Single-tenant (only your tenant) Multi-tenant (other tenants) Apps registered in Azure portal receive: App object (globally unique instance of the app) One and only one per app.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

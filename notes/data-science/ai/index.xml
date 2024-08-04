@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ai on Fred Wieser</title>
+    <link>http://localhost:1313/notes/data-science/ai/</link>
+    <description>Recent content in ai on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/data-science/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/data-science/ai/overview/</link>
+      <pubDate>Mon, 04 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/overview/</guid>
+      
+      <description>Abstract TODO: Define AI
+Branches of AI:
+Computer Vision Image classification — classifying images based on their contents Object detection — classify individual objects with an image and identify their location in the image Semantic segmentation — individual pixels are classified according to the object to which they belong; used to create overlays and highlights in an image Image analysis — extracting information (&amp;ldquo;tags&amp;rdquo;) from images to catalog the image or create descriptive captions Face detection, analysis, and recognition — a specialized form of object detection that locates human faces Optical character recognition — detects and reads text in images Document Intelligence — managing, processing, and using high volumes of a variety of unstructured data in forms and documents.</description>
+      
+    </item>
+    
+    <item>
+      <title>responsible ai</title>
+      <link>http://localhost:1313/notes/data-science/ai/responsible-ai/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/responsible-ai/</guid>
+      
+      <description>Abstract [Documentation] Microsoft&amp;rsquo;s Responsible AI standard defines a responsible AI system as ethical (inclusive and accountable) and explainable (fair, transparent, reliable, safe, private and secure).
+The Six Responsible AI Principles:
+Fairness How might an AI system allocate opportunities, resources, or information in ways that are fair to the humans who use it?
+An AI system&amp;rsquo;s decisions must not discriminate against, or express a bias toward, a group or individual based on gender, race, sexual orientation, or religion.</description>
+      
+    </item>
+    
+    <item>
+      <title>prompt engineering</title>
+      <link>http://localhost:1313/notes/data-science/ai/prompt-engineering/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/prompt-engineering/</guid>
+      
+      <description>Overview Prompt engineering is a field of study of the design and optimization of prompts to deliver consistent and quality completions for a given model.
+Motivation LLMs have a variety of shortcomings to produce reliable and consistent completions:
+The model responses are stochastic (the same prompt may produce different responses). The model can fabricate (previously: hallucinate) responses. The model capabilities vary. Prompt Construction Basic prompt Prompt
+Oh say can you see</description>
+      
+    </item>
+    
+    <item>
+      <title>glossary</title>
+      <link>http://localhost:1313/notes/data-science/ai/glossary/</link>
+      <pubDate>Mon, 27 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/glossary/</guid>
+      
+      <description>artificial intelligence A field of computer science that seeks to create intelligent machines that can replicate or exceed human intelligence.
+deep learning A machine learning technique in which layers of neural networks are used to process data and make decisions.
+Related: neural networks
+generative AI [Documentation] Artificial intelligence that is capable of generating text, images, and other content.
+Related: large language model
+generative pre-trained transformer (GPT) A generative AI model that uses a transformer architecture.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

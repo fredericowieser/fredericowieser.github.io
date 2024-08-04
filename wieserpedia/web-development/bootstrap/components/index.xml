@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>components on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/bootstrap/components/</link>
+    <description>Recent content in components on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 17 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/bootstrap/components/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>alerts</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/components/alerts/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/components/alerts/</guid>
+      
+      <description>Overview Contextual feedback messages for typical user actions. Documentation: https://getbootstrap.com/docs/5.3/components/alerts/ Simple Alerts &amp;lt;div class=&amp;#34;alert alert-primary&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple primary alert—check it out! &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;alert alert-secondary&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple secondary alert—check it out! &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;alert alert-success&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple success alert—check it out! &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;alert alert-danger&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple danger alert—check it out! &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;alert alert-warning&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple warning alert—check it out! &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;alert alert-info&amp;#34; role=&amp;#34;alert&amp;#34;&amp;gt; A simple info alert—check it out!</description>
+      
+    </item>
+    
+    <item>
+      <title>toasts</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/components/toasts/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/components/toasts/</guid>
+      
+      <description>Overview Lightweight notifications that mimic push notifications Documentation: https://getbootstrap.com/docs/5.3/components/toasts/ Details Built with flexbox Opt-in for performance reasons; must be manually initialized Toasts autohide unless autohide: false is specified Toasts are automatically slightly translucent to blend in with their background Creating A Simple Toast &amp;lt;div class=&amp;#34;toast&amp;#34; role=&amp;#34;alert&amp;#34; aria-live=&amp;#34;assertive&amp;#34; aria-atomic=&amp;#34;true&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;toast-header&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;...&amp;#34; class=&amp;#34;rounded me-2&amp;#34; alt=&amp;#34;...&amp;#34;&amp;gt; &amp;lt;strong class=&amp;#34;me-auto&amp;#34;&amp;gt;Bootstrap&amp;lt;/strong&amp;gt; &amp;lt;small&amp;gt;11 mins ago&amp;lt;/small&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn-close&amp;#34; data-bs-dismiss=&amp;#34;toast&amp;#34; aria-label=&amp;#34;Close&amp;#34;&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;toast-body&amp;#34;&amp;gt; Hello, world! This is a toast message.</description>
+      
+    </item>
+    
+    <item>
+      <title>modal</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/components/modal/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/components/modal/</guid>
+      
+      <description>Overview A JavaScript modal plugin to add dialogs for lightboxes, notifications, or custom content Built with HTML, CSS and JavaScript Documentation: https://getbootstrap.com/docs/5.3/components/modal/ Details Positioned over everything else in the document and remove scroll from the &amp;lt;body&amp;gt; (the modal scrolls instead) Clicking on the modal&amp;rsquo;s backdrop closes it Only one modal window at a time is supported Uses position: fixed; whenever possible, place the modal HTML in a top-level position Nesting a .</description>
+      
+    </item>
+    
+    <item>
+      <title>accordion</title>
+      <link>http://localhost:1313/wieserpedia/web-development/bootstrap/components/accordion/</link>
+      <pubDate>Sat, 17 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/bootstrap/components/accordion/</guid>
+      
+      <description>Overview Vertically-collapsing accordions. Requires Collapse JavaScript plugin.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">integration testing | Fred Wieser</title>
+<meta property="og:title" content="integration testing | Fred Wieser" />
+<meta name="twitter:title" content="integration testing | Fred Wieser" />
+<meta itemprop="name" content="integration testing | Fred Wieser" />
+<meta name="application-name" content="integration testing | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/testing/integration-testing/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/testing/integration-testing/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">integration testing</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-11-05T00:00:00-06:00" itemprop="datePublished"> 5 Nov 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70">Overview [<a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p>Integration tests confirm that two or more app components work together to produce an expected result, possibly including every component required to fully process a request.
+They test the app&rsquo;s infrastructure including database, file system, network appliances, and the request-response pipeline. They use the app&rsquo;s actual components instead of mocks
+or fakes.</p>
+<p><g>Tip</g>: Separate unit tests from integration tests in separate projects.</p>
+<p>In ASP.NET integration tests:</p>
+<ul>
+<li>The test project has a reference to the system under test.</li>
+<li>The test project creates a test web host for the SUT and uses a test server client to handle requests and responses with the SUT.</li>
+<li>Reference <code>Microsoft.AspNetCore.Mvc.Testing</code> to provide:
+<ul>
+<li>Copies the dependencies file (<code>.deps</code>) from the SUT into the test project&rsquo;s <code>/bin</code> directory.</li>
+<li>Set the content root to the SUT&rsquo;s project root.</li>
+<li>Provide a <code>WebApplicationFactory</code> to bootstrap the SUT with a <code>TestServer</code>.</li>
+</ul>
+</li>
+<li>Reference <code>Microsoft.NET.Sdk.Web</code></li>
+<li>Follow this pattern:
+<ul>
+<li><em>Initialize</em>
+<ul>
+<li>The SUT&rsquo;s web host is configured.
+<ul>
+<li>In this step, a different database or perhaps different app settings may be used.</li>
+</ul>
+</li>
+<li>A test server client is created that submits requests to the app.</li>
+</ul>
+</li>
+<li><em>Arrange</em> — The test app prepares a request.</li>
+<li><em>Act</em> — The client submits the request and receives a response.</li>
+<li><em>Assert</em> — The actual response is compared to the expected response.</li>
+</ul>
+</li>
+</ul>
+<h2 id="razor-pages-app-tests-vs-mvc-app-tests">Razor Pages App Tests vs MVC App Tests</h2>
+<p>Tests of these two apps are the same — the only thing that differs is how the tests are named.</p>
+<h1 id="example">Example</h1>
+<blockquote>
+<p>Sample code: <a href="https://github.com/dotnet/AspNetCore.Docs.Samples/tree/main/test/integration-tests/IntegrationTestsSample">https://github.com/dotnet/AspNetCore.Docs.Samples/tree/main/test/integration-tests/IntegrationTestsSample</a></p>
+</blockquote>
+<p>This example uses xUnit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Inheriting from IClassFixture defines the class as containing tests in xUnit:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">BasicTests</span> : IClassFixture&lt;WebApplicationFactory&lt;Program&gt;&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// WebApplicationFactory&lt;TEntryPoint&gt; creates a TestServer; TEntryPoint is the entry point for the SUT.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// The WebApplicationFactory will also provide an HttpClient to the test method:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> WebApplicationFactory&lt;Program&gt; _factory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> BasicTests(WebApplicationFactory&lt;Program&gt; factory) =&gt; _factory = factory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [Theory]
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Each of these pages will be tested in this test:</span>
+</span></span><span style="display:flex;"><span>    [InlineData(&#34;/&#34;)]
+</span></span><span style="display:flex;"><span>    [InlineData(&#34;/Index&#34;)]
+</span></span><span style="display:flex;"><span>    [InlineData(&#34;/About&#34;)]
+</span></span><span style="display:flex;"><span>    [InlineData(&#34;/Privacy&#34;)]
+</span></span><span style="display:flex;"><span>    [InlineData(&#34;/Contact&#34;)]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task Get_EndpointsReturnSuccessAndCorrectContentType(<span style="color:#ff7b72">string</span> url)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> client = _factory.CreateClient();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> response = <span style="color:#ff7b72">await</span> client.GetAsync(url);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex;"><span>        response.EnsureSuccessStatusCode(); <span style="color:#8b949e;font-style:italic">// Status Code 200-299</span>
+</span></span><span style="display:flex;"><span>        Assert.Equal(<span style="color:#a5d6ff">&#34;text/html; charset=utf-8&#34;</span>, response.Content.Headers.ContentType.ToString());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="antiforgery-checks">Antiforgery Checks</h1>
+<p>There are two approaches for antiforgery checks:</p>
+<ol>
+<li>Lower level approach: use Application Parts to inject a controller or Razor Page into the app to make JSON requests for the required values. See <a href="https://blog.martincostello.com/integration-testing-antiforgery-with-application-parts/">this blog post</a> for details.</li>
+<li>High level approach: use the <a href="https://anglesharp.github.io/">AngleSharp</a> parser to conduct antiforgery checks and parsing the HTML.</li>
+</ol>
+<h1 id="webapplicationfactory">WebApplicationFactory</h1>
+<p>For tests with the default <code>WebApplicationFactory</code>, expose the implicit <code>Program</code> class by updating the SUT&rsquo;s project file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;ItemGroup&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;InternalsVisibleTo</span> Include=<span style="color:#a5d6ff">&#34;MyTestProject&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/ItemGroup&gt;</span>
+</span></span></code></pre></div><h2 id="customizing-webapplicationfactory">Customizing WebApplicationFactory</h2>
+<p>Web host configuration can also be created independently of the test classes by</p>
+<ol>
+<li>
+<p>Inheriting <code>WebApplicationFactory</code> and overriding <code>ConfigureWebHost</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">CustomWebApplicationFactory</span>&lt;TProgram&gt; : WebApplicationFactory&lt;TProgram&gt; <span style="color:#ff7b72">where</span> TProgram : <span style="color:#ff7b72">class</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">protected</span> <span style="color:#ff7b72">override</span> <span style="color:#ff7b72">void</span> ConfigureWebHost(IWebHostBuilder builder)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// This callback is executed after the SUT&#39;s Program.cs code is executed:</span>
+</span></span><span style="display:flex;"><span>        builder.ConfigureServices(services =&gt;
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// Find the service descriptor for the database context and database connection and remove them:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">var</span> dbContextDescriptor = services.SingleOrDefault(d =&gt; d.ServiceType == <span style="color:#ff7b72">typeof</span>(DbContextOptions&lt;ApplicationDbContext&gt;));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            services.Remove(dbContextDescriptor);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">var</span> dbConnectionDescriptor = services.SingleOrDefault(d =&gt; d.ServiceType == <span style="color:#ff7b72">typeof</span>(DbConnection));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            services.Remove(dbConnectionDescriptor);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// Create open SqliteConnection so EF won&#39;t automatically close it:</span>
+</span></span><span style="display:flex;"><span>            services.AddSingleton&lt;DbConnection&gt;(container =&gt;
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">var</span> connection = <span style="color:#ff7b72">new</span> SqliteConnection(<span style="color:#a5d6ff">&#34;DataSource=:memory:&#34;</span>);
+</span></span><span style="display:flex;"><span>                connection.Open();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">return</span> connection;
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            services.AddDbContext&lt;ApplicationDbContext&gt;((container, options) =&gt;
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">var</span> connection = container.GetRequiredService&lt;DbConnection&gt;();
+</span></span><span style="display:flex;"><span>                options.UseSqlite(connection);
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        builder.UseEnvironment(<span style="color:#a5d6ff">&#34;Development&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Use the <code>CustomWebApplicationFactory</code> in test classes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">IndexPageTests</span> : IClassFixture&lt;CustomWebApplicationFactory&lt;Program&gt;&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> HttpClient _client;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> CustomWebApplicationFactory&lt;Program&gt; _factory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IndexPageTests(CustomWebApplicationFactory&lt;Program&gt; factory)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _factory = factory;
+</span></span><span style="display:flex;"><span>        _client = factory.CreateClient(<span style="color:#ff7b72">new</span> WebApplicationFactoryClientOptions
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// The HttpClient is prevented from following redirects. This allows tests to check the result of the</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// app&#39;s first response:</span>
+</span></span><span style="display:flex;"><span>            AllowAutoRedirect = <span style="color:#79c0ff">false</span>
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div></li>
+<li>
+<p>Here&rsquo;s a typical test:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task Post_DeleteAllMessagesHandler_ReturnsRedirectToRoot()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> defaultPage = <span style="color:#ff7b72">await</span> _client.GetAsync(<span style="color:#a5d6ff">&#34;/&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> content = <span style="color:#ff7b72">await</span> HtmlHelpers.GetDocumentAsync(defaultPage);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">//Act</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> response = <span style="color:#ff7b72">await</span> _client.SendAsync(
+</span></span><span style="display:flex;"><span>        (IHtmlFormElement)content.QuerySelector(<span style="color:#a5d6ff">&#34;form[id=&#39;messages&#39;]&#34;</span>),
+</span></span><span style="display:flex;"><span>        (IHtmlButtonElement)content.QuerySelector(<span style="color:#a5d6ff">&#34;button[id=&#39;deleteAllBtn&#39;]&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex;"><span>    Assert.Equal(HttpStatusCode.OK, defaultPage.StatusCode);
+</span></span><span style="display:flex;"><span>    Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
+</span></span><span style="display:flex;"><span>    Assert.Equal(<span style="color:#a5d6ff">&#34;/&#34;</span>, response.Headers.Location.OriginalString);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<h1 id="other-topics">Other Topics</h1>
+<h2 id="customizing-the-client-with-withwebhostbuilderhttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70customize-the-client-with-withwebhostbuilder"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#customize-the-client-with-withwebhostbuilder">Customizing the Client with WithWebHostBuilder</a></h2>
+<h2 id="using-webapplicationfactoryclientoptionshttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70client-options"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#client-options">Using WebApplicationFactoryClientOptions</a></h2>
+<h2 id="injecting-mock-serviceshttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70inject-mock-services"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#inject-mock-services">Injecting Mock Services</a></h2>
+<h2 id="mock-authenticationhttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70mock-authentication"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#mock-authentication">Mock Authentication</a></h2>
+<h2 id="setting-the-environmenthttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70set-the-environment"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#set-the-environment">Setting the Environment</a></h2>
+<h2 id="integration-tests-samplehttpslearnmicrosoftcomen-usaspnetcoretestintegration-testsviewaspnetcore-70integration-tests-sample"><a href="https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-7.0#integration-tests-sample">Integration Tests Sample</a></h2>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

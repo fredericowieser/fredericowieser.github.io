@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>advanced on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/advanced/</link>
+    <description>Recent content in advanced on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/advanced/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>model validation</title>
+      <link>http://localhost:1313/notes/asp.net/advanced/model-validation/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/advanced/model-validation/</guid>
+      
+      <description>Overview [Documentation] Model state represents errors that come from either the model binding or model validation subsystems. Model validation occurs after model binding and reports errors where the data does not conform to business rules (like a 0 in a field that expects a value from 1 to 5). Both model binding and model validation occur before a controller action method, or a Razor Pages handler method, executes. When a validation error occurs, model validation generates a ModelStateDictionary with the property name as the error key.</description>
+      
+    </item>
+    
+    <item>
+      <title>model binding</title>
+      <link>http://localhost:1313/notes/asp.net/advanced/model-binding/</link>
+      <pubDate>Wed, 03 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/advanced/model-binding/</guid>
+      
+      <description>Overview [Documentation] Model binding is the automated process of retrieving data values from an HTTP request and converting the resulting string to a .NET type.
+The model binding system:
+Retrieves data from route data, form data, and query strings Passes that data to controllers and Razor Pages in method parameters and public properties Converts string data to .NET types Updates properties of complex types Example Consider this action method&amp;hellip;
+[HttpGet(&amp;#34;{id}&amp;#34;)] public ActionResult&amp;lt;Pet&amp;gt; GetById(int id, bool dogsOnly) &amp;hellip;and this HTTP request: https://contoso.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

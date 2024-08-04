@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>code analysis on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/</link>
+    <description>Recent content in code analysis on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/overview/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/overview/</guid>
+      
+      <description>Abstract [Documentation] Roslyn Analyzers inspect C#/VB code for style, quality, maintainability, design, and other issues. They are made up of code analysis rules. These rules work together with Visual Studio.
+Code analysis rules consist of:
+Code style analysis rules Diagnostic ID prefix `IDExxxx Built into Visual Studio and (since .NET 5) the .NET SDK Configured in text editor options or EditorConfig file Code quality analysis rules Diagnostic ID prefix CAxxxx Included (since .</description>
+      
+    </item>
+    
+    <item>
+      <title>system.diagnostics.codeanalysis</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/system.diagnostics.codeanalysis/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/system.diagnostics.codeanalysis/</guid>
+      
+      <description>Overview Classes in the System.Diagnostics.CodeAnalysis namespace are used to analyze code for conformance to coding conventions.
+Class Description AllowNullAttribute Specifies that null is allowed as an input even if the corresponding type disallows it. ConstantExpectedAttribute Indicates that the specified method parameter expects a constant. DisallowNullAttribute Specifies that null is disallowed as an input even if the corresponding type allows it. DoesNotReturnAttribute Specifies that a method that will never return under any circumstance.</description>
+      
+    </item>
+    
+    <item>
+      <title>null state static analysis</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/null-state-static-analysis/</link>
+      <pubDate>Sat, 19 Nov 2022 08:48:52 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/null-state-static-analysis/</guid>
+      
+      <description>Overview The System.Diagnostics.CodeAnalysis contains attributes interpreted by the C# compiler for null-state static analysis.
+These attributes help to fully describe the null-state of arguments and return values in your APIs. Adding these attributes gives the compiler more information about the rules for an API. These attributes do not enable more checks. Documentation: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/nullable-analysis Preconditions The AllowNull and DisallowNull are used to specify that preconditions on variables may not match the nullable annotations on those variables.</description>
+      
+    </item>
+    
+    <item>
+      <title>editorconfig</title>
+      <link>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/editorconfig/</link>
+      <pubDate>Thu, 17 Nov 2022 15:45:22 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/tools-and-diagnostics/code-analysis/editorconfig/</guid>
+      
+      <description>Overview EditorConfig is a cross-platform file format for defining code styles.
+File Format EditorConfig files consist of preambles (the lines that precede the first section), section names (between brackets), and sections (which run from the beginning of the section header to the beginning of the next section header). Comments start with ; or # No inline comments Section Headers are enclosed in [ ] No non-whitespace characters outside brackets May contain characters and whitespace between brackets Path separators are always / Sections Key-Value Pairs are of format key=value</description>
+      
+    </item>
+    
+  </channel>
+</rss>

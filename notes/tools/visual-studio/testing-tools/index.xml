@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing tools on Fred Wieser</title>
+    <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/</link>
+    <description>Recent content in testing tools on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Sep 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/tools/visual-studio/testing-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/overview/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/overview/</guid>
+      
+      <description>Abstract [Documentation] An overview of the testing tools available in Visual Studio:
+Tool Description Availability Test Explorer Create, manage, and run unit tests All editions All code Live Unit Testing Executes unit tests automatically and in real time as code changes are made Enterprise edition .NET code IntelliTest Automatically generates unit tests and test data Enterprise edition .NET Framework Code Coverage Determines what portion of a project&amp;rsquo;s code is actually being tested Enterprise edition All code Microsoft Fakes Isolate code under test from other parts of the application Enterprise edition .</description>
+      
+    </item>
+    
+    <item>
+      <title>code coverage</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/code-coverage/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/code-coverage/</guid>
+      
+      <description>Code Coverage Code coverage refers to the amount of code that is covered by unit tests.
+Visual Studio&amp;rsquo;s code coverage tools requires Enterprise edition.
+As an alternative, see dotnet-coverage.</description>
+      
+    </item>
+    
+    <item>
+      <title>test explorer</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/test-explorer/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/test-explorer/</guid>
+      
+      <description>Running Tests with Test Explorer Open Test Explorer: Ctrl + E,T Run all tests: Ctrl + R,V Run a subset of tests: Ctrl + R,T Run tests after every build: Text Explorer toolbar &amp;gt; Gear icon &amp;gt; Run Tests After Build </description>
+      
+    </item>
+    
+    <item>
+      <title>dev tunnels</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/dev-tunnels/</link>
+      <pubDate>Tue, 03 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/dev-tunnels/</guid>
+      
+      <description>Overview [Documentation] Availability: Visual Studio 2022 17.6+ w/ASP.NET and web development workload installed
+Dev Tunnels are a Visual Studio 2022 feature that create ad-hoc connections between machines that cannot directly connect to one another. A URL is created that enables any device with an internet connection to connect to the ASP.NET Core project while it runs on localhost.
+Uses:
+Testing a web app on other devices Testing an app with external services Making an app temporarily available for presentation Tunnel Options Tunnel types:</description>
+      
+    </item>
+    
+    <item>
+      <title>hot reload</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/hot-reload/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/hot-reload/</guid>
+      
+      <description>Overview [Documentation] Availability: ASP.NET Core 6+
+.NET Hot Reload applies code changes (including changes to style sheets) to running apps without restarting and losing state. It is designed for use with ASP.NET Core apps.
+Enabling via CLI: dotnet watch
+Ctrl+R to force reload
+When an unsupported edit (a rude edit) is made, dotnet watch asks if you want to restart the app.
+Disabling via CLI: dotnet watch --no-hot-reload
+via Properties/launchSettings.json:</description>
+      
+    </item>
+    
+    <item>
+      <title>unit testing</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/unit-testing/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/unit-testing/</guid>
+      
+      <description>Overview [Documentation] See also: Notes on Unit Testing with MSTest
+Key points:
+Use unit tests as both design documentation and functional specifications. Visual Studio installs the Microsoft unit testing frameworks for managed and native code (MSTest). Note: MSTest is both a framework and an adapter to that framework. Visual Studio Test Explorer also supports 3rd-party adapters to the MSTest framework: xUnit, NUnit, others(?). Generating Unit Tests and Generating Code Generating Unit Tests from Existing Code Availability: C#, Visual Studio 2019+</description>
+      
+    </item>
+    
+    <item>
+      <title>IntelliTest</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/intellitest/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/intellitest/</guid>
+      
+      <description>Overview [Documentation] Availability: Visual Studio 2022 Enterprise Edition, .NET Framework only
+Note: Support for .NET 6 is available in Visual Studio 2022 Preview as of 2023-09-23. IntelliTest generates a candidate suite of tests for .NET code. This is configurable via correctness properties. The test suite will evolve automatically as the code under test evolves.</description>
+      
+    </item>
+    
+    <item>
+      <title>live unit testing</title>
+      <link>http://localhost:1313/notes/tools/visual-studio/testing-tools/live-unit-testing/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/visual-studio/testing-tools/live-unit-testing/</guid>
+      
+      <description>Overview [Documentation] Availability: Visual Studio 2022 Enterprise Edition
+Live Unit Testing executes unit tests automatically and in real time as code changes are made. It works with unit tests created in test projects (see Notes on Unit Testing)
+Enabling Pre-requisites:
+A .NET Core or .NET Framework project A Unit Test project To enable live unit testing: Test &amp;gt; Live Unit Testing &amp;gt; Start
+Visual studio will then rebuild the project and start Live Unit Test, which automatically runs all tests.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

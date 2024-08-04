@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>patterns on Fred Wieser</title>
+    <link>http://localhost:1313/notes/software-engineering/patterns/</link>
+    <description>Recent content in patterns on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/software-engineering/patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hateoas</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/hateoas/</link>
+      <pubDate>Wed, 22 Feb 2023 12:03:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/hateoas/</guid>
+      
+      <description>HATEOAS Hypermedia As The Engine Of Application State Contrast this with interface description languages where clients are given descriptions on how to consume a web service. Example A GET request results in information and 3 methods being presented in the response:
+GET /accounts/12345
+Response
+{ accountId=12345, balance=100.00, links: deposit=../deposit withdraw=../withdraw transfer= ../transfer } Some time later, client calls /accounts again. This time, the account is overdrawn so a different set of methods are presented:</description>
+      
+    </item>
+    
+    <item>
+      <title>design patterns</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/design-patterns/</link>
+      <pubDate>Mon, 14 Nov 2022 09:55:57 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/design-patterns/</guid>
+      
+      <description>The 23 Design Patterns from the Gang of Four Creational Structural Behavioral Class Factory Method Adapter (class) Interpreter
+Template Method
+Object Abstract Factory
+Builder
+Prototype
+Singleton
+Adapter (object)
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+Chain of Responsibility
+Command
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Visitor
+Concepts Factory—a method or class that produces something:
+A method that creates a GUI A class that creates users A static method that calls a class constructor in a certain way Creation Method—a method that creates objects.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

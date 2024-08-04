@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>concepts on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/software-engineering/concepts/</link>
+    <description>Recent content in concepts on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/software-engineering/concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>interfaces</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/concepts/interfaces/</link>
+      <pubDate>Thu, 16 Mar 2023 17:35:39 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/concepts/interfaces/</guid>
+      
+      <description>Interfaces are a description of the services that a class provides. They define what is available, not how it is available.</description>
+      
+    </item>
+    
+    <item>
+      <title>delegates</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/concepts/delegates/</link>
+      <pubDate>Wed, 22 Feb 2023 11:10:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/concepts/delegates/</guid>
+      
+      <description>Delegates A type-safe function pointer. A reference to a method. Delegate objects are passed to code that can then call the referenced method. Used to implement callbacks and event listeners. They create the ability to notify several methods that an event has occurred. Can also be used to call multiple methods at once (that match their signature). </description>
+      
+    </item>
+    
+    <item>
+      <title>sets and bags</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/concepts/sets-and-bags/</link>
+      <pubDate>Sun, 08 May 2022 17:04:09 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/concepts/sets-and-bags/</guid>
+      
+      <description>A set is a collection of one or more unique objects (no duplicates).
+A bag is a collection of one or more objects that may have duplicates.
+The union of two sets is the set which contains all the elements of both sets.
+The intersection of two sets is the set which contains the common elements of both sets.
+The except of two sets is the set of all elements in the first set except those also present in the second set.</description>
+      
+    </item>
+    
+    <item>
+      <title>stack and heap</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/concepts/stack-and-heap/</link>
+      <pubDate>Sun, 02 Jan 2022 21:54:37 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/concepts/stack-and-heap/</guid>
+      
+      <description>Heap and Stack The stack and heap can be anywhere in physical or virtual memory.
+The heap is memory set aside for dynamic allocation:
+Allocated when the application starts by the runtime. Managed by the Garbage Collector. Data stored on the heap is valid as long as it can be tracked back to a reference type variable on a stack. When no more pointers point to the data, it becomes garbage.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>routing on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/</link>
+    <description>Recent content in routing on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/overview/</link>
+      <pubDate>Mon, 09 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/overview/</guid>
+      
+      <description>Abstract [Documentation] Routing is matching incoming HTTP requests and dispatching them to the app&amp;rsquo;s executable endpoints.
+Endpoints are the app&amp;rsquo;s units of executable request-handling code.
+Routing can be configured via controllers, Razor Pages, SignalR, gRPC services, middleware, and delegates &amp;amp; lambdas registered with routing.
+Endpoints Endpoints handle requests and execute code to generate a response. They are defined in Program.cs.
+Basic Routing Example var builder = WebApplication.CreateBuilder(args); var app = builder.</description>
+      
+    </item>
+    
+    <item>
+      <title>routing middleware</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/routing-middleware/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/routing-middleware/</guid>
+      
+      <description>Overview UseRouting — adds route matching to the pipeline; looks at endpoints defined in the app and selects the best match.
+UseRouting works by calling the SetEndpoint method to attach the endpoint to the current context. UseEndpoints — adds endpoint execution to the pipeline; runs the delegate associated with each the selected endpoint.
+UseEndpoints is terminal when a match is found. UseEndpoints uses GetEndpoint to retrieve the endpoint and then invokes its RequestDelegate property.</description>
+      
+    </item>
+    
+    <item>
+      <title>url matching</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/url-matching/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/fundamentals/routing/url-matching/</guid>
+      
+      <description>Overview An incoming request comes in. Routing matches the incoming request to an endpoint:
+It sets an Endpoint and routes values to a request feature on the HttpContext from the current request: HttpContext.GetEndpoint returns the endpoint HttpRequest.RouteValues returns the collection of route values URL matching is part of routing and operates in a configurable set of phases:
+Process the URL path against a set of endpoints and their route templates; return a list of ALL matches</description>
+      
+    </item>
+    
+  </channel>
+</rss>

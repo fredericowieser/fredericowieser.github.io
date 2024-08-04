@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">properties | Fred Wieser</title>
+<meta property="og:title" content="properties | Fred Wieser" />
+<meta name="twitter:title" content="properties | Fred Wieser" />
+<meta itemprop="name" content="properties | Fred Wieser" />
+<meta name="application-name" content="properties | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/types/classes/properties/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/types/classes/properties/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">properties</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2021-11-06T11:25:46-06:00" itemprop="datePublished"> 6 Nov 2021 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="properties">Properties</h1>
+<p>Properties are methods that act like Fields that allow for getting and setting its value.</p>
+<ul>
+<li>They are used in place of fields when the value they contain must be calculated or guarded.</li>
+<li>To the user of a property, they appear as a field.</li>
+<li>Unlike fields, they are implemented with get/set accessors that define the statements executed when the property is accessed or assigned.</li>
+<li>Properties cannot be passed as <code>ref</code> or <code>out</code> parameters.</li>
+</ul>
+<h1 id="creating">Creating</h1>
+<p>Properties with <code>get</code> accessors only are read-only. Properties with both <code>get</code> and <code>set</code> are read-write.
+Write-only properties are rare and generally used to restrict access to sensitive data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This class has a hidden, parameterless constructor.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This is a backing field:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _firstName;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _location;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This is a manual read-only property:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> { <span style="color:#ff7b72">return</span> _firstName; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// The *value* parameter holds the value passed to the constructor during instantiation.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// It&#39;s type is the type of the property:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> { _firstName = <span style="color:#ff7b72">value</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Auto-implemented Properties  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// If one accessor is auto, both must be. The compiler adds a hidden backing field:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> LastName { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; } <span style="color:#8b949e;font-style:italic">// The compiler adds *readonly* to the get accessor.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This is an auto read-only property. It will be set to the default value for its type.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Age { <span style="color:#ff7b72">get</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Auto-implemented properties can be initialized to a default value:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FavoriteColor { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; } = <span style="color:#a5d6ff">&#34;Red&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This property uses expression body syntax definitions:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Location 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; _location;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> =&gt; _location = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="validation">Validation</h1>
+<p>Validation is one of the key uses of properties:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _firstName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; _firstName;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Set accessors must return void, so errors must be reported by throwing an exception:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> =&gt; _firstName = (!<span style="color:#ff7b72">string</span>.IsNullOrWhiteSpace(<span style="color:#ff7b72">value</span>)) ? <span style="color:#ff7b72">value</span> : <span style="color:#ff7b72">throw</span> <span style="color:#ff7b72">new</span> ArgumentException(<span style="color:#a5d6ff">&#34;First name must not be blank&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="read-only-vs-init-only">Read-only vs. Init-only</h1>
+<p>Read-only properties can only be set in their constructor, but not via object-initializer syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName { <span style="color:#ff7b72">get</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Illegal: Person p = new Person() { FirstName = &#34;Jane&#34; };</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Legal: Person p = new Person(&#34;Jane&#34;);</span>
+</span></span></code></pre></div><p>Init-only properties are read-only properties that support object-initializer syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">init</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Legal: Person p = new Person() { FirstName = &#34;Jane&#34; };</span>
+</span></span></code></pre></div><h1 id="computed-properties">Computed Properties</h1>
+<p>Properties can return computed values. They must be constructed carefully:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _firstName;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _lastName;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _fullName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; _firstName;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Each time FirstName is set, also set _fullName to null, which forces it to be computed again:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            _firstName = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>            _fullName = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> LastName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; _lastName;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Same as with FirstName:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            _lastName = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>            _fullName = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FullName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (_fullName <span style="color:#ff7b72">is</span> <span style="color:#79c0ff">null</span>) <span style="color:#8b949e;font-style:italic">// If it&#39;s null, set it; if not, return it:</span>
+</span></span><span style="display:flex;"><span>                _fullName = <span style="color:#a5d6ff">$&#34;{FirstName} {LastName}&#34;</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> _fullName;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="using-properties">Using Properties</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>MyList&lt;<span style="color:#ff7b72">string</span>&gt; names = <span style="color:#ff7b72">new</span> MyList&lt;<span style="color:#ff7b72">string</span>&gt;();
+</span></span><span style="display:flex;"><span>names.Capacity = <span style="color:#a5d6ff">100</span>; <span style="color:#8b949e;font-style:italic">// Invokes set accessor</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">int</span> i = names.Count; <span style="color:#8b949e;font-style:italic">// Invokes get accessor</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">int</span> j = names.Capacity; <span style="color:#8b949e;font-style:italic">// Invokes get accessor</span>
+</span></span></code></pre></div><h1 id="property-modifiers">Property Modifiers</h1>
+<p>When a property is modified, so are its accessors.<br>
+Properties can be static or instance.<br>
+Properties can be modified with <code>public</code>, <code>private</code>, <code>protected</code>, <code>internal</code>, <code>protected internal</code>, or <code>private protected</code>.</p>
+<p>Other modifiers:</p>
+<ul>
+<li><code>virtual</code> — The property can be overridden in a derived class.</li>
+<li><code>override</code> — Overrides the implementation of a virtual property from the base class.</li>
+<li><code>sealed</code> — A property overriding a virtual property can be sealed so that it is no longer virtual in further
+derived classes.</li>
+<li><code>abstract</code> — See below.</li>
+</ul>
+<h2 id="required-modifier">Required modifier</h2>
+<p><g>Availability: C# 11</g><br>
+The <code>required</code> modifier indicates that a <em>field</em> or <em>property</em> it&rsquo;s applied to <u>must</u> be initialized by an object initializer, so any new instance of the type must initialize all required members.</p>
+<ul>
+<li>Documentation: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/required">https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/required</a></li>
+</ul>
+<p>Considerations:</p>
+<ul>
+<li>Available on <code>struct</code>, <code>record</code>, <code>record struct</code>, and <code>class</code> types.  Not available on <code>interface</code> types.
+<ul>
+<li>A <code>record</code>&rsquo;s position parameters cannot be modified with the <code>required</code> modifier.</li>
+</ul>
+</li>
+<li>The compiler issues an error if a required member is not initialized.</li>
+<li>Required members must be at least as accessible as their containing type.</li>
+<li>Required properties must have setters that are at least as accessible as their containing types.</li>
+<li>Derived classes cannot hide a required member of the base class.</li>
+<li>Derived types that override a required property must include the <code>required</code> modifier.</li>
+</ul>
+<h1 id="accessors-set-vs-init-vs-private-set">Accessors (set vs init vs private set)</h1>
+<ul>
+<li><code>set</code> — property can be set within this type and consumers of the type.</li>
+<li><code>private set</code> — property can only be set within this type, but immutable to consumers.
+<ul>
+<li>Cannot use an object initializer. Must use a constructor or factory method.</li>
+</ul>
+</li>
+<li><code>init</code> — property can only be set during instantiation; supports object-initializer syntax.</li>
+<li><code>required</code> — property must be set when an object of the type is created.</li>
+</ul>
+<h1 id="attributes">Attributes</h1>
+<h2 id="required-members">Required Members</h2>
+<p>This attribute notifies the compiler that this constructor sets all required members.<br>
+<r>Warning</r>: This disables the compiler&rsquo;s checks that all <code>required</code> members are initialized.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Person() { }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This attribute notifies the compiler that this constructor sets all required members.</span>
+</span></span><span style="display:flex;"><span>    [SetsRequiredMembers] 
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Person(<span style="color:#ff7b72">string</span> firstName) =&gt; FirstName = firstName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> required <span style="color:#ff7b72">string</span> FirstName { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">init</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="field-specifiers">Field Specifiers</h2>
+<p>A field specifier indicates that the attribute applies to the backing field of an auto-implemented property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[field:NonSerialized]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Id { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span></code></pre></div><h1 id="accessor-access-modifiers">Accessor Access Modifiers</h1>
+<p>Accessors can have access modifiers…</p>
+<ul>
+<li>…but only if the property has both <em>get</em> and <em>set</em> accessors…</li>
+<li>…and only one of the two can have an access modifier.</li>
+<li>If the property has an override modifier, the accessor modifier must match the accessor of the overridden accessor.</li>
+<li>The accessibility level on the accessor must be more restrictive than that of the property itself.</li>
+</ul>
+<p>Use the <code>private</code> modifier so that an accessor can only be used by methods in the class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Firstname { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">set</span>; } <span style="color:#8b949e;font-style:italic">// Firstname can only be changed by other methods in the class.</span>
+</span></span></code></pre></div><h1 id="abstract-properties">Abstract Properties</h1>
+<p>An abstract property does not provide an implementation of its accessors. This is done by the derived classes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">abstract</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Shape</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Shape(<span style="color:#ff7b72">string</span> s) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Id = s; <span style="color:#8b949e;font-style:italic">// Calls the set accessor of the Id property.</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Id 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; name;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> =&gt; name = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// This abstract property must be implemented (overridden) in a derived class.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">abstract</span> <span style="color:#ff7b72">double</span> Area { <span style="color:#ff7b72">get</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Square</span> : Shape 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Square(<span style="color:#ff7b72">int</span> side, <span style="color:#ff7b72">string</span> id) : <span style="color:#ff7b72">base</span>(id) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">this</span>.side = side;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Overrides abstract property Area from Shape to implement it.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">override</span> <span style="color:#ff7b72">double</span> Area
+</span></span><span style="display:flex;"><span>    { 
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> { <span style="color:#ff7b72">return</span> side * side; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="properties-in-interfaces">Properties in Interfaces</h1>
+<p>Interface properties do not have a body.</p>
+<ul>
+<li>Declaring the accessors without a body does not declare an auto property like it does in classes and structs.</li>
+<li>Interface properties cannot have accessor access modifiers.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">interface</span> <span style="color:#f0883e;font-weight:bold">ISampleInterface</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">string</span> Name { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; } <span style="color:#8b949e;font-style:italic">// The accessors must be implemented in the deriving type.</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="inotifypropertychanged"><code>INotifyPropertyChanged</code></h1>
+<p>When the value of a property changes, the object raises the <code>INotifyPropertyChanged.PropertyChanged</code> event. Here&rsquo;s how it&rsquo;s implemented:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Person</span> : INotifyPropertyChanged 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">string</span> _firstName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> FirstName 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">get</span> =&gt; _firstName;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">set</span> 
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72">string</span>.IsNullOrWhiteSpace(<span style="color:#ff7b72">value</span>))
+</span></span><span style="display:flex;"><span>                <span style="color:#ff7b72">throw</span> <span style="color:#ff7b72">new</span> ArgumentException(<span style="color:#a5d6ff">&#34;…&#34;</span>);
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (<span style="color:#ff7b72">value</span> != _firstName) 
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                _firstName = <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                PropertyChanged?.Invoke(<span style="color:#ff7b72">this</span>, <span style="color:#ff7b72">new</span> PropertyChangedEventArgs(nameof(FirstName)));
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">event</span> PropertyChangedEventHandler PropertyChanged;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

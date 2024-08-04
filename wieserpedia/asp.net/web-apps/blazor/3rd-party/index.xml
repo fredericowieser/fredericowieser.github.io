@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3rd party on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/</link>
+    <description>Recent content in 3rd party on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mudblazor</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/mudblazor/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/mudblazor/</guid>
+      
+      <description>Overview A Blazor Component library.
+See also: https://try.mudblazor.com
+Installation Direct dotnet add package MudBlazor via Template Blazor template preconfigured with MudBlazor:
+dotnet new --install MudBlazor.Templates dotnet new mudblazor --host wasm --name AppName Getting Started 1. Add imports _Imports.razor
+@using MudBlazor index.html (Blazor WASM) or _Host.cshtml (Blazor Server)
+&amp;lt;link href=&amp;#34;https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;amp;display=swap&amp;#34; rel=&amp;#34;stylesheet&amp;#34; /&amp;gt; &amp;lt;link href=&amp;#34;_content/MudBlazor/MudBlazor.min.css&amp;#34; rel=&amp;#34;stylesheet&amp;#34; /&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;script src=&amp;#34;_content/MudBlazor/MudBlazor.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 2. Remove Bootstrap The Bootstrap components that are loaded by Blazor&amp;rsquo;s default template are no longer needed:</description>
+      
+    </item>
+    
+    <item>
+      <title>radzen</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/radzen/</link>
+      <pubDate>Mon, 12 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/radzen/</guid>
+      
+      <description>Overview Radzen Blazor Components — a set of free Blazor UI components.
+https://blazor.radzen.com/get-started
+https://blazor.radzen.com/docs/guides/getting-started
+Installation dotnet add package Radzen.Blazor Getting Started 1. Add Imports _Imports.razor
+@using Radzen @using Radzen.Blazor 2. Add a Theme Pages/_Host.cshtml (Blazor Server) or wwwroot/index.html (Blazor WASM)
+&amp;lt;!-- Other themes are also available --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;_content/Radzen.Blazor/css/material-base.css&amp;#34;&amp;gt; 3. Add JS Interop Pages/_Host.cshtml (Blazor Server) or wwwroot/index.html (Blazor WASM)
+&amp;lt;script src=&amp;#34;_content/Radzen.Blazor/Radzen.Blazor.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 4. Add Components These Components require special configuration:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

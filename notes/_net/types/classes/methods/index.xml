@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>methods on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/classes/methods/</link>
+    <description>Recent content in methods on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/classes/methods/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>partial methods</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/partial-methods/</link>
+      <pubDate>Sun, 06 Mar 2022 18:24:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/partial-methods/</guid>
+      
+      <description>Partial Methods A partial class or struct may contain a partial method.
+One part of the class contains the signature of the method.
+An implementation is defined in the same part or another part of the class.
+If the implementation is not defined, the method, and all calls to it, are removed at compile time.
+A partial method is not required to have an implementation if all of these are true:</description>
+      
+    </item>
+    
+    <item>
+      <title>extension methods</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/extension-methods/</link>
+      <pubDate>Sat, 26 Feb 2022 21:38:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/extension-methods/</guid>
+      
+      <description>Extension Methods Extension methods extend existing types without creating a new derived type.
+They are static methods, but they are called as if they were instance methods on the extended type.
+Extension methods can also extend types that are sealed.
+Binding An extension method with the same name and signature as an interface or class method will never be called.
+The compiler will always bind to the interface or class method when there is a conflict.</description>
+      
+    </item>
+    
+    <item>
+      <title>finalizers</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/finalizers/</link>
+      <pubDate>Mon, 03 Jan 2022 21:10:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/finalizers/</guid>
+      
+      <description>Finalizers Each type can have a single finalizer that is called by the runtime when resources need to be released.
+They release unmanaged resources like windows, files, network connections, or mutexes controlled by the OS.
+They are also known as destructors (not deconstructors) because they destroy objects in memory.
+Finalizers do not take modifiers and they do not have parameters.
+They cannot be defined in structs. They cannot be inherited or overloaded.</description>
+      
+    </item>
+    
+    <item>
+      <title>local functions</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/local-functions/</link>
+      <pubDate>Sun, 02 Jan 2022 20:27:50 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/local-functions/</guid>
+      
+      <description>Local Functions Methods that are only accessible from within the containing method in which they are defined.
+They can be declared and called from methods (especially iterator and async methods), constructors, property accessors, event accessors, anonymous methods, lambda expressions, finalizers, and other local functions.
+Modifiers Local functions support the following modifiers:
+async unsafe static A static local function cannot capture local variables or instance state. extern An external local function must be static.</description>
+      
+    </item>
+    
+    <item>
+      <title>deconstructors</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/deconstructors/</link>
+      <pubDate>Fri, 31 Dec 2021 10:31:57 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/deconstructors/</guid>
+      
+      <description>Deconstructors The special method Deconstruct() is used to deconstruct a type:
+public class Person { private string last; private string first; public Person(string lastName, string firstName) { last = lastName; first = firstName; } public void Deconstruct(out string lname, out string fname) { lname = lastName; fname = firstName; } } Person bob = new() { &amp;#34;eli&amp;#34;, &amp;#34;smith&amp;#34; }; var (name1, name2) = eli; name1 // returns &amp;#34;eli&amp;#34; name2 // returns &amp;#34;smith&amp;#34; Overloaded Deconstructors Overload deconstructors to allow callers to discard certain fields of the type.</description>
+      
+    </item>
+    
+    <item>
+      <title>indexers</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/indexers/</link>
+      <pubDate>Sat, 06 Nov 2021 11:26:41 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/indexers/</guid>
+      
+      <description>Indexers Indexers (indexed properties) are Properties that can be indexed into some collection of values.
+They enable objects to be indexed like arrays.
+The compiler generates an Item property and the appropriate accessor methods.
+Creating The name of the member is this:
+public class Person { // … public Person `this`[int index] { // The indexer. // Avoid auto-implemented properties with indexers: get { return Children[index]; } // The get and set accessors make this indexer read-write.</description>
+      
+    </item>
+    
+    <item>
+      <title>constructors</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/constructors/</link>
+      <pubDate>Sat, 06 Nov 2021 11:25:27 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/constructors/</guid>
+      
+      <description>Constructors Whenever a Class or Struct is created, its constructor is called.
+Instance Constructors public class Person { private string Last; private string First; // Instance constructors initialize an instance of a class and are not inherited in derived classes. // Constructors have the same name as the class and are usually at the bottom of the class: public Person(string lastName, string firstName) { Last = lastName; First = firstName; } } Constructors do not use return statements.</description>
+      
+    </item>
+    
+    <item>
+      <title>methods</title>
+      <link>http://localhost:1313/notes/_net/types/classes/methods/methods/</link>
+      <pubDate>Sat, 06 Nov 2021 10:44:24 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/classes/methods/methods/</guid>
+      
+      <description>Methods Methods are functions that belong to a type that execute statements.
+They are actions that an object can perform, either on itself or on related objects.
+They can be declared in a class, record, or struct.
+There are 4 specialized categories of methods:
+Constructor Statements herein execute when new() is used to instantiate a class. Property Statements herein execute when data is set or get. Properties encapsulate (and protect) fields.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

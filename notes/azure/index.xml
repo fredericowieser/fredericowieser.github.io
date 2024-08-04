@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>azure on Fred Wieser</title>
+    <link>http://localhost:1313/notes/azure/</link>
+    <description>Recent content in azure on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openai service</title>
+      <link>http://localhost:1313/notes/azure/openai-service/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/azure/openai-service/</guid>
+      
+      <description>Overview OpenAI is a research and development organization that developed ChatGPT, among other models. Azure OpenAI Service is Microsoft&amp;rsquo;s Azure service that provides access to these models. Documentation: https://devblogs.microsoft.com/_net/getting-started-azure-openai-dotnet/ OpenAI Models Generative Pre-trained Transformers (GPT) — a model that can understand and generate writing and code. DALL-E — a model that can generate and edit images given a text description. Whisper — a model that can convert audio into text. Resources OpenAI Azure OpenAI Service Azure OpenAI .</description>
+      
+    </item>
+    
+    <item>
+      <title>app service</title>
+      <link>http://localhost:1313/notes/azure/app-service/</link>
+      <pubDate>Fri, 13 Jan 2023 20:57:52 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/azure/app-service/</guid>
+      
+      <description>Overview An HTTP-based services for hosting web apps, REST APIs, and mobile back-ends.
+Features:
+Automatic scaling (horizontally and vertically) CI/CD (Azure DevOps, GitHub, Bitbucket, FTP, local Git repo) App Service Plans A set of compute resources for a web app to run.
+One or more apps can be configured on an app service plan Azure Functions can also run in an app service plan Deployments Deploy to Azure App Service:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

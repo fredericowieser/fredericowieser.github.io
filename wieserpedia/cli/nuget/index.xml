@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nuget on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/cli/nuget/</link>
+    <description>Recent content in nuget on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 23 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/cli/nuget/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>central-package-management</title>
+      <link>http://localhost:1313/wieserpedia/cli/nuget/central-package-management/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/cli/nuget/central-package-management/</guid>
+      
+      <description>Overview Availability: NuGet v6.2
+Use to manage common dependencies across many different projects.
+Enabling Create a Directory.Package.props file at the root of the repository. Enable central package management: Directory.Package.props &amp;lt;Project&amp;gt; &amp;lt;PropertyGroup&amp;gt; &amp;lt;ManagePackageVersionsCentrally&amp;gt; true &amp;lt;ManagePackageVersionsCentrally&amp;gt; &amp;lt;/PropertyGroup&amp;gt; &amp;lt;/Project&amp;gt; For each package, define the package version required for your projects: &amp;lt;ItemGroup&amp;gt; &amp;lt;PackageVersion Include=&amp;#34;PACKAGE.NAME&amp;#34; Version=&amp;#34;X.Y.Z&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; For each project, define a package reference: &amp;lt;ItemGroup&amp;gt; &amp;lt;PackageReference Include=&amp;#34;PACKAGE.NAME&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; Overriding Package Versions PackageReference elements can override the version specified in PackageVersion elements with the VersionOverride property.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

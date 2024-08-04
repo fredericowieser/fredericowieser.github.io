@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">blazor hosting models | Fred Wieser</title>
+<meta property="og:title" content="blazor hosting models | Fred Wieser" />
+<meta name="twitter:title" content="blazor hosting models | Fred Wieser" />
+<meta itemprop="name" content="blazor hosting models | Fred Wieser" />
+<meta name="application-name" content="blazor hosting models | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-hosting-models/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-hosting-models/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">blazor hosting models</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-04-17T00:00:00-06:00" itemprop="datePublished"> 17 Apr 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p>Regardless of the hosting model chosen, the way Razor components are built is the same.  The same Razor components can be used with any of the hosting models, unchanged.</p>
+<h1 id="blazor-server">Blazor Server</h1>
+<p>Hosts Razor components on the server in an ASP.NET Core app.</p>
+<ul>
+<li>UI updates are handled via a SignalR connection using WebSockets protocol</li>
+<li>The state on the server with each associated client is called a circuit
+<ul>
+<li>Circuits can tolerate temporary network interruptions</li>
+<li>If the app is opened in multiple tabs, each tab is a separate circuit</li>
+<li>Circuits are terminated gracefully by closing a browser tab or navigating to an external URL</li>
+<li>Interrupted circuits are maintained for a configurable amount of time</li>
+</ul>
+</li>
+<li>The runtime stays on the server:
+<ul>
+<li>The runtime executes the C# code; sends UI requests from the browser to the server; applies UI updates to a rendered component that are sent back to the browser</li>
+</ul>
+</li>
+<li>The client runs the Blazor script (blazor.server.js) and establishes the SignalR connection with the server</li>
+</ul>
+<h2 id="content-rendering-in-blazor-server-vs-other-aspnet-core-apps-with-razor-views-or-razor-pages">Content Rendering in Blazor Server vs. Other ASP.NET Core Apps (with Razor views or Razor Pages)</h2>
+<ul>
+<li>When a Razor Page or view is rendered, each line of Razor code is parsed to HTML and the new HTML page is sent to the client (the server disposes of the Page or view instance).</li>
+<li>Blazor Server produces a graph of components similar to an HTML or XML DOM.  This includes state.  Blazor evaluates the component graph, produces a binary representation of it, and sends it to the client for rendering.
+<ul>
+<li>After a client-server connection is established, the component&rsquo;s static, pre-rendered elements are replaced with dynamic elements.</li>
+<li>Once the elements are dynamic, UI updates are triggered by user interaction and app events.</li>
+<li>When an update is triggered, Blazor re-renders the component graph and sends a diff to the client in binary format.</li>
+</ul>
+</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Full .NET API available</li>
+<li>Significantly smaller download size than Blazor WASM</li>
+<li>Faster startup vs. Blazor WASM</li>
+<li>.NET debugging works as normal</li>
+<li>Works on resource-constrained devices and devices that don&rsquo;t support WASM</li>
+<li>App&rsquo;s code base is not shared with clients</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Higher latency (every interaction requires a network hop)</li>
+<li>No offline support; if client connection fails, app stops working</li>
+<li>Scaling apps requires more instances</li>
+<li>ASP.NET Core web server is required to serve the app; no CDN support</li>
+</ul>
+<p><img src="./blazor-server-model.png" alt=""></p>
+<h1 id="blazor-wasm">Blazor WASM</h1>
+<p>A SPA framework for interactive, client-side web apps.</p>
+<ul>
+<li>Blazor WASM works by:
+<ul>
+<li>Compiling C# code files and Razor files into assemblies</li>
+<li>Sending the assemblies and the .NET runtime to the browser</li>
+<li>Bootstrapping the .NET runtime to load the assemblies for the app</li>
+<li>Using JavaScript interop to handle DOM manipulation and browser API calls</li>
+</ul>
+</li>
+<li>App is executed directly in browser UI thread</li>
+<li>UI updates and event handling occur in the same process</li>
+<li>The client runs blazor.webassembly.js script to download the runtime, the app, and its dependencies, and to initialize the runtime</li>
+</ul>
+<h2 id="standalone-blazor-wasm-app">Standalone Blazor WASM app</h2>
+<p>A Blazor WASM app is an app that is embedded in a website. It can be deployed without a backend ASP.NET Core App to serve its files. In this scenario, it might be deployed via CDN instead of on a website (HTML, Drupal, etc).</p>
+<h2 id="hosted-blazor-wasm-app">Hosted Blazor WASM app</h2>
+<p>Includes an ASP.NET Core backend.</p>
+<p>Blazor WASM supports AOT (.NET code compiled directly into WASM).  This results in faster runtime performance but larger app size.</p>
+<p>Pros:</p>
+<ul>
+<li>App remains functional if client drops connection</li>
+<li>Work is offloaded from server to client</li>
+<li>Supports CDN (does not require ASP.NET Core web server)</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Only a subset of .NET APIs available</li>
+<li>Client must support WASM</li>
+<li>Cannot access server-side resources (like a database) directly; requires an API on the server that the WASM client accesses</li>
+<li>Signficantly larger download size than Blazor Server</li>
+<li>Slower startup vs. Blazor Server</li>
+</ul>
+<p><img src="./blazor-wasm-model.png" alt=""></p>
+<h1 id="blazor-hybrid">Blazor Hybrid</h1>
+<ul>
+<li>Runs as a native app on the client</li>
+<li>Razor components run in the native app (not WASM) and render web UI based on HTML/CSS to an embedded Web View control through a local interop channel</li>
+<li>No WASM</li>
+<li>Must be built with .NET MAUI, WPF, and WinForms (by using BlazorWebView controls)</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Full .NET API available</li>
+<li>Reuse of existing components that can be shared across mobile, desktop and web</li>
+<li>Apps have full access to native capabilities of device</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Separate native clients must be built, deployed, and maintained fore ach target platform</li>
+<li>Native client apps usually take longer to find, download, and install vs. access an app in the browser</li>
+</ul>
+<h1 id="comparison-table">Comparison Table</h1>
+<table>
+<thead>
+<tr>
+<th>Consideration</th>
+<th>Server</th>
+<th>WASM</th>
+<th>Hybrid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full .NET API compatibility</td>
+<td>Yes</td>
+<td>No (subset)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Access to server resources like a database</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Native execution speed</td>
+<td>Slowest</td>
+<td>Balanced</td>
+<td>Fastest</td>
+</tr>
+<tr>
+<td>App code stays on server</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Run apps offline once downloaded</td>
+<td>No</td>
+<td>Yes (if PWA)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Supports static site hosting &amp; CDN</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Scales to many concurrent users</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Full access to native client capabilities</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Requires an installer</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

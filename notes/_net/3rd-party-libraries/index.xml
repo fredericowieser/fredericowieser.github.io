@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3rd party libraries on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/3rd-party-libraries/</link>
+    <description>Recent content in 3rd party libraries on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/3rd-party-libraries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>plotly.net</title>
+      <link>http://localhost:1313/notes/_net/3rd-party-libraries/plotly.net/</link>
+      <pubDate>Wed, 20 Apr 2022 10:07:37 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/3rd-party-libraries/plotly.net/</guid>
+      
+      <description>Plotly.NET https://plotly.com/csharp/creating-and-updating-figures/
+Pros:
+Uses Plotly.JS Cons:
+Documentation is mostly in F#. Poor IntelliSense. Getting Started dotnet add package plotly.net using Plotly.NET; using Microsoft.FSharp.Core; // less verbose and more helpful intellisense(?) Basics General design philosophy:
+Initialize a generic chart Style the chart Display or save the chart Initialize a Chart A chart consists of:
+data: a collection of traces, which represent the data and chart type. layout: controls the axis positions and styles.</description>
+      
+    </item>
+    
+    <item>
+      <title>mailkit</title>
+      <link>http://localhost:1313/notes/_net/3rd-party-libraries/mailkit/</link>
+      <pubDate>Fri, 21 Jan 2022 14:22:06 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/3rd-party-libraries/mailkit/</guid>
+      
+      <description>MailKit A cross-platform mail client library built on top of MimeKit.
+Package dotnet add package mailkit Creating Messages var message = new MimeMessage(); message.From.Add(new MailboxAddress(&amp;#34;Joey&amp;#34;, &amp;#34;joey@friends.com&amp;#34;)); message.To.Add(new MailboxAddress(&amp;#34;Alice&amp;#34;, &amp;#34;alice@wonderland.com&amp;#34;)); message.Subject = &amp;#34;How you doing?&amp;#34;; message.Body = new TextPart(&amp;#34;plain&amp;#34;) { Text = @&amp;#34;Hey Alice, What are you up to this weekend? Monica is throwing one of her parties on Saturday and I was hoping you could make it. }; Creating a text/html and text/plain Message var attachment = CreateImageAttachment (); var plain = CreateTextPlainPart (); var html = CreateTextHtmlPart (); // Note: it is important that the text/html part is added second, because it is the most expressive version and (probably) the most faithful to the sender&amp;#39;s WYSIWYG editor.</description>
+      
+    </item>
+    
+    <item>
+      <title>serilog</title>
+      <link>http://localhost:1313/notes/_net/3rd-party-libraries/serilog/</link>
+      <pubDate>Sat, 11 Dec 2021 13:17:43 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/3rd-party-libraries/serilog/</guid>
+      
+      <description>Serilog Structured event logging. Github: Getting Started · serilog/serilog Wiki (github.com)
+dotnet add package serilog dotnet add package serilog.sinks.consolePretty print to console.
+dotnet add package serilog.sinks.fileLog to file.
+Other Sinks Available: https://github.com/serilog/serilog/wiki/Provided-Sinks
+Creating Loggers Serilog.Core.Logger Serilog.Ilogger Serilog.Log Create Root Logger Create this on application startup and then use it across classes:
+using var log = new LoggerConfiguration() .MinimumLevel.Debug() // The minimum log level. If not specified, Information is used. .WriteTo.Console( // The WriteTo object configures sinks.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

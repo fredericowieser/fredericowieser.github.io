@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blazored on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/blazored/</link>
+    <description>Recent content in blazored on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/blazored/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>local storage</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/blazored/local-storage/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/3rd-party/blazored/local-storage/</guid>
+      
+      <description>Overview APIs API Description SetItem, SetItemAsync Store a value in LocalStorage GetItem, GetItemAsync Retrieve a value based on a key ContainKey, ContainKeyAsync Check if a key exists RemoveItem, RemoveItemAsync Remove a value from LocalStorage ILocalStorage @inject Blazored.LocalStorage.ILocalStorageService localStorage var firstName = await localStorage.GetItemAsync&amp;lt;string&amp;gt;(&amp;#34;EmployeeFirstName&amp;#34;); </description>
+      
+    </item>
+    
+  </channel>
+</rss>

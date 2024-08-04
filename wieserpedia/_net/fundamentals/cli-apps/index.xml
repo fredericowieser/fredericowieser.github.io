@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli apps on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/</link>
+    <description>Recent content in cli apps on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 31 Jan 2022 20:07:53 -0700</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>system.commandline</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/system.commandline/</link>
+      <pubDate>Mon, 31 Jan 2022 20:07:53 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/system.commandline/</guid>
+      
+      <description>Overview System.CommandLine is pre-release. Documentation: https://learn.microsoft.com/en-us/dotnet/standard/commandline/ Installation:
+dotnet add package system.commandline --pre-release Model Binding The process of parsing arguments and providing them to command handler code.
+Of note, any type with a constructor that accepts a single string parameter can be bound (like FileInfo).
+Root Command A root command, represented by RootCommand, represents the app executable itself:
+RootCommand rootCommand = new(&amp;#34;app description&amp;#34;); Adding Commands to RootCommand rootCommand.Add(someCommand); Commands Commands are actions performed by the program.</description>
+      
+    </item>
+    
+    <item>
+      <title>console</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/console/</link>
+      <pubDate>Fri, 19 Nov 2021 15:50:28 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/cli-apps/console/</guid>
+      
+      <description>[System.Console] STDIN, STDOUT, STDERR streams.
+Object –&amp;gt; Console
+Documentation: https://docs.microsoft.com/en-us/dotnet/api/system.console?view=net-6.0 Properties BufferHeight - Get or set the buffer height BufferWidth CursorSize - Get or set the size of the console cursor. WindowHeight - Get or set the console window height WindowWidth WindowTop - Get or set the top position of the console window. WindowsLeft - Get or set the left position of the console window. Colors BackgroundColor = ConsoleColor.color ForegroundColor = ConsoleColor.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

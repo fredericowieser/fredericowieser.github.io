@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blazor wasm on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/</link>
+    <description>Recent content in blazor wasm on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/overview/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/overview/</guid>
+      
+      <description>Project Structure Program.cs — entrypoint; host; startup
+Adds the root component (App.razor) ├──App.razor — the root component; sets up client-side routing using the Router component; Router intercepts browser navigation and renders the page that matches the requested address
+├──_Imports.razor — common namespaces made available to all Components ├──wwwroot/ — the web root
+├──appsettings.json — environment app settings
+└──index.html — when any page of the app is initially requested, this page is rendered and returned in the response</description>
+      
+    </item>
+    
+    <item>
+      <title>visual studio template</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/visual-studio-template/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/visual-studio-template/</guid>
+      
+      <description>Overview This brace map describes the file structure of the Visual Studio Blazor WASM template.</description>
+      
+    </item>
+    
+    <item>
+      <title>progressive web app (pwa)</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/progressive-web-app-pwa/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/progressive-web-app-pwa/</guid>
+      
+      <description>Overview A Blazor WASM PWA is a SPA that uses modern browser APIs and capabilities to behave like a desktop app. Progressive means that:
+A user may discover the app within their browser (like any other SPA) Later, the user progresses to installing it on their OS. Blazor PWAs can be created from project templates or existing Blazor WASM apps can be converted to PWAs.
+Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app?view=aspnetcore-7.0 Creating from CLI dotnet new blazorwasm -o APPNAME --pwa Converting Existing Blazor WASM app to PWA Update the project file:</description>
+      
+    </item>
+    
+    <item>
+      <title>call a web api</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/call-a-web-api/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/call-a-web-api/</guid>
+      
+      <description>Overview Blazor WASM apps call web APIs using a preconfigured HttpClient service which is focused on making requests back to the server of origin (not a 3rd party API). Create HttpClient service configurations manually for requests to other web APIs.
+Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-7.0&amp;amp;pivots=webassembly Sending PATCH Requests If sending HTTP PATCH requests, there are additional considerations beyond those listed in these notes.
+See: https://learn.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-7.0&amp;amp;pivots=webassembly#patch-as-json-patchasjsonasync
+Using the Preconfigured HttpClient Add the HttpClient service to the DI container:</description>
+      
+    </item>
+    
+    <item>
+      <title>lazy loading</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/lazy-loading/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/lazy-loading/</guid>
+      
+      <description>Overview By default, when the app launches, all assemblies are automatically downlaoded from the web server. Blazor can be instructed to postpone downloading an assembly.
+Implementation Steps 1. Register the Lazily-Loaded Assemblies in Project File csproj
+&amp;lt;ItemGroup&amp;gt; &amp;lt;BlazorWebAssemblyLazyLoad Include=&amp;#34;ExampleProject.dll&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; 2. Make Changes to Router in App.razor App.razor
+&amp;lt;!-- Inject LazyAssemblyLoader which is automatically registered with DI by the framework --&amp;gt; @using Microsoft.AspNetCore.WebAssembly.Services @inject LazyAssemblyLoader &amp;lt;Router AppAssembly=&amp;#34;@typeof(App).Assembly&amp;#34; AdditionalAssemblies=&amp;#34;@lazyLoadedAssemblies&amp;#34; OnNavigateAsync=&amp;#34;@OnNavigateAsync&amp;#34;&amp;gt; .</description>
+      
+    </item>
+    
+    <item>
+      <title>app startup</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/app-startup/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/app-startup/</guid>
+      
+      <description>Loading Boot Resources Controlling Headers Use middleware to control the headers collection:
+Program.cs
+app.Use(async (context, next) =&amp;gt; { context.Response.Headers.Add(&amp;#34;Content-Security-Policy&amp;#34;, &amp;#34;{POLICY STRING}&amp;#34;); await next(); }); In hosted Blazor WASM apps, pass StaticFileOptions to MapFallbackToFile that specifies response headers:
+Server project&amp;rsquo;s Program.cs:
+var staticFileOptions = new StaticFileOptions { OnPrepareResponse = context =&amp;gt; { context.Context.Response.Headers.Add(&amp;#34;Content-Security-Policy&amp;#34;, &amp;#34;{POLICY STRING}&amp;#34;); } }; ... app.MapFallbackToFile(&amp;#34;index.html&amp;#34;, staticFileOptions); Loading Progress Indicators The Blazor WASM project template contains SVG and text indicators to show loading progress.</description>
+      
+    </item>
+    
+    <item>
+      <title>dependency injection</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/dependency-injection/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/dependency-injection/</guid>
+      
+      <description>Default Services Among others:
+Service Lifetime Description HttpClient Scoped IJSRuntime Singleton An instance of a JavaScript runtime where JS calls are dispatched NavigationManager Singleton Helpers for working with URI and navigation state Adding &amp;amp; Using Services Note: Blazor WASM apps do not have Scoped DI services. If registered as Scoped, they will behave like Singleton. This results in services having a longer lifetime than typical ASP.NET Core apps.
+Program.cs
+var builder = WebAssemblyHostBuilder.</description>
+      
+    </item>
+    
+    <item>
+      <title>environments</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/environments/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/environments/</guid>
+      
+      <description>Overview These notes are specific to Blazor WASM because Blazor Server uses environment configuration of ASP.NET Core.
+When run locally, app defaults to Development.
+When app is published, app defaults to Production.
+In a hosted Blazor WASM solution, the Server app sets the Blazor-Environment variable to its value. The Client app reads it and sets the environment when WebAssemblyHost is created in Program.cs.
+Set Environment via Blazor Start Configuration In wwwroot/index.</description>
+      
+    </item>
+    
+    <item>
+      <title>error handling</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/error-handling/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/error-handling/</guid>
+      
+      <description>Overview During development, when Blazor apps encounter an error, it displays a light yellow bar the bottom of the screen. Customize it in wwwroot/index.html:
+&amp;lt;div id=&amp;#34;blazor-error-ui&amp;#34;&amp;gt; An unhandled error has occurred. &amp;lt;a href=&amp;#34;&amp;#34; class=&amp;#34;reload&amp;#34;&amp;gt;Reload&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;#34;dismiss&amp;#34;&amp;gt;🗙&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; </description>
+      
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/logging/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/logging/</guid>
+      
+      <description>Overview Without additional configuration, Blazor WASM apps log to client-side browser developer tools at LogLevel.Information or higher.
+Logging in Program.cs
+After WebAssemblyHostBuilder is built:
+var host = builder.Build(); var logger = host.Services.GetRequiredService&amp;lt;ILoggerFactory&amp;gt;() .CreateLogger&amp;lt;Program&amp;gt;(); logger.LogInformation(&amp;#34;Logged after the app is built in Program.cs.&amp;#34;); await host.RunAsync(); Configure Logging Use the WebAssemblyHostBuilder.Logging property.
+Log Categories, log event IDs, log message templates, log exception parameters, filter functions, and custom logger providers are supported in Blazor WASM.</description>
+      
+    </item>
+    
+    <item>
+      <title>static files</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/static-files/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/static-files/</guid>
+      
+      <description>Overview For the Server app of a hosted Blazor WASM solution, configure static file middleware by calling UseStaticFiles in the request processing pipeline.
+Static Web Asset Base Path By default, publishing a Blazor WASM app publishes the app&amp;rsquo;s static assets at the root path of the published output. This is configurable with &amp;lt;StaticWebAssetBasePath&amp;gt;:
+project.csproj
+&amp;lt;PropertyGroup&amp;gt; &amp;lt;StaticWebAssetBasePath&amp;gt;{PATH}&amp;lt;/StaticWebAssetBasePath&amp;gt; &amp;lt;/PropertyGroup&amp;gt; Scenarios Client project of hosted Blazor WASM app &amp;lt;StaticWebAssetBasePath&amp;gt; not set Client app is published at /BlazorHostedSample/Server/bin/Release/{TFM}/publish/wwwroot/ &amp;lt;StaticWebAssetBasePath&amp;gt; set to app1 Client app is published at /BlazorHostedSample/Server/bin/Release/{TFM}/publish/wwwroot/app1/ Standalone Blazor WASM app &amp;lt;StaticWebAssetBasePath&amp;gt; not set App is published at /BlazorStandaloneSample/bin/Release/{TFM}/publish/wwwroot/ &amp;lt;StaticWebAssetBasePath&amp;gt; set to app1 App is published at /BlazorStandaloneSample/bin/Release/{TFM}/publish/wwwroot/app1/ </description>
+      
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/configuration/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/blazor-wasm/configuration/</guid>
+      
+      <description>Overview Blazor WASM loads configuration from these files by default:
+wwwroot/appsettings.json wwwroot/appsettings.{ENVIRONMENT}.json To read configuration files other than these, use an HttpClient.
+Important Notes Configuration and settings files in Blazor WASM apps are visible to end users. Do not use these configuration providers in Blazor WASM: Azure Key Vault (the client secret cannot be secured client-side) Azure App (Blazor WASM apps don&amp;rsquo;t run on the server) Logging configuration, even if in one of these files, is not loaded by default.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

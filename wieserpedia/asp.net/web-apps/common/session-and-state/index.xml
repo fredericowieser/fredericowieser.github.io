@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>session and state on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/</link>
+    <description>Recent content in session and state on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/overview/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/overview/</guid>
+      
+      <description>Cookies Cookies store data across requests.
+Key points:
+The most durable form of persistence on the client Usually less than 4096 bytes Must be validated by the app General Data Protection Regulation (GDPR) support in ASP.NET Core (microsoft.com) Session State Storage of user data while the user browses a web app.
+Backed by a cache (ephemeral) Critical user data should be stored in database and cached only as a performance optimization Works by:</description>
+      
+    </item>
+    
+    <item>
+      <title>example</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/example/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/session-and-state/example/</guid>
+      
+      <description>A session and state implementation example.
+Demonstration — Adding a Shopping Cart Create the shopping cart item model:
+/Models/ShoppingCartItem.cs
+public class ShoppingCartItem { public int ShoppingCartItemId { get; set; } public Pie Pie { get; set; } = default!; // the Pie added to the cart public int Amount { get; set; } // the cost of the Pie public string? ShoppingCartId { get; set; } // a GUID } Create a DbSet for the ShoppingCartItems:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

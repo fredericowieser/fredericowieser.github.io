@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/html/</link>
+    <description>Recent content in html on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/overview/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/overview/</guid>
+      
+      <description>Introduction &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!--defines this HTML 5 document--&amp;gt; &amp;lt;html lang=&amp;#34;en-US&amp;#34;&amp;gt; &amp;lt;!--the root element--&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- metadata about the page --&amp;gt; &amp;lt;title&amp;gt;Page Title&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- a container for all visible contents --&amp;gt; &amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Elements HTML elements have opening tags, content, and closing tags:
+&amp;lt;title&amp;gt;Page title&amp;lt;/title&amp;gt; Empty elements Empty elements like &amp;lt;br&amp;gt; (line break) have no content nor closing tag.
+Attributes Attribute names should be lowercase.</description>
+      
+    </item>
+    
+    <item>
+      <title>responsive design</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/responsive-design/</link>
+      <pubDate>Wed, 26 Apr 2023 20:48:26 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/responsive-design/</guid>
+      
+      <description>Overview Responsive designs automatically adjust for different screen sizes and viewports:
+To achieve responsive design:
+Always set the viewport in the meta tag Images Set the CSS width property to 100% to allow the image to scale up and down Set the CSS max-width property to 100% to allow the image to scale down, but never scale up Use the &amp;lt;picture&amp;gt; element to use different images for different browser window sizes.</description>
+      
+    </item>
+    
+    <item>
+      <title>lists</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/lists/</link>
+      <pubDate>Wed, 26 Apr 2023 17:34:30 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/lists/</guid>
+      
+      <description>Lists Unordered:
+&amp;lt;ul style=&amp;#34;list-style-type:disc;&amp;#34;&amp;gt; &amp;lt;!-- style for list item markers; also circle, square, none --&amp;gt; &amp;lt;li&amp;gt;Coffee&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Tea&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Milk&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; Ordered:
+&amp;lt;!-- style for list item markers; also A, a, I, i --&amp;gt; &amp;lt;!-- start: where to start the count --&amp;gt; &amp;lt;ol type=&amp;#34;1&amp;#34; start=&amp;#34;50&amp;#34;&amp;gt; &amp;lt;li&amp;gt;Coffee&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Tea&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;Milk&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; Horizontal Lists Use CSS to make a horizontal list, like a navigation menu:
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333333; } li { float: left; } li a { display: block; color: white; text-align: center; padding: 16px; text-decoration: none; } li a:hover { background-color: #111111; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;#home&amp;#34;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;#news&amp;#34;&amp;gt;News&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;#contact&amp;#34;&amp;gt;Contact&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;#about&amp;#34;&amp;gt;About&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Description Lists A list of terms with descriptions of each:</description>
+      
+    </item>
+    
+    <item>
+      <title>tables</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/tables/</link>
+      <pubDate>Wed, 26 Apr 2023 17:23:20 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/tables/</guid>
+      
+      <description>Overview Like so:
+&amp;lt;table&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;!-- add a table row --&amp;gt; &amp;lt;!-- add a header cell to this row --&amp;gt; &amp;lt;th style=&amp;#34;width:70%&amp;#34;&amp;gt; &amp;lt;!-- set the column width of this cell--&amp;gt; Company &amp;lt;/th&amp;gt; &amp;lt;th colspan=&amp;#34;2&amp;#34;&amp;gt;Contact&amp;lt;/th&amp;gt; &amp;lt;!-- span this column 2 cells --&amp;gt; &amp;lt;th&amp;gt;Country&amp;lt;/th&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr style=&amp;#34;height:200px&amp;#34;&amp;gt; &amp;lt;!-- set the height of this row --&amp;gt; &amp;lt;td&amp;gt;Alfreds Futterkiste&amp;lt;/td&amp;gt; &amp;lt;!-- add data to this row --&amp;gt; &amp;lt;td&amp;gt;Maria Anders&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;Germany&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt;Centro comercial Moctezuma&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;Francisco Chang&amp;lt;/td&amp;gt; &amp;lt;td&amp;gt;Mexico&amp;lt;/td&amp;gt; &amp;lt;/tr&amp;gt; &amp;lt;/table&amp;gt; Or, like so:</description>
+      
+    </item>
+    
+    <item>
+      <title>images</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/images/</link>
+      <pubDate>Wed, 26 Apr 2023 17:22:39 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/images/</guid>
+      
+      <description>Overview Syntax:
+&amp;lt;img src=&amp;#34;url&amp;#34; alt=&amp;#34;alternatetext&amp;#34;&amp;gt; The alt attribute&amp;rsquo;s value is also displayed if the image is not found.
+Always specify alt, width and height for images.
+Sizing Images can be sized. Failing to size them will result in page flicker while the page loads.
+Use the width and height attributes:
+&amp;lt;img src=&amp;#34;img_girl.jpg&amp;#34; alt=&amp;#34;Girl in a jacket&amp;#34; width=&amp;#34;500&amp;#34; height=&amp;#34;600&amp;#34;&amp;gt; Or, use the style attribute with width and height properties with the pixels suffix:</description>
+      
+    </item>
+    
+    <item>
+      <title>hyperlinks</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/hyperlinks/</link>
+      <pubDate>Wed, 26 Apr 2023 17:22:15 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/hyperlinks/</guid>
+      
+      <description>Overview Links are defined with an &amp;lt;a&amp;gt; tag and the link&amp;rsquo;s destination is assigned to the href attribute:
+&amp;lt;a href=&amp;#34;https://www.w3schools.com&amp;#34;&amp;gt;This is a link&amp;lt;/a&amp;gt; By default, an unvisited link is underlined/blue, visited is underlined/purple, active is underlined/red.
+To use an image as a link, put the image inside the anchor tag:
+&amp;lt;a href=&amp;#34;default.asp&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;smiley.gif&amp;#34; alt=&amp;#34;HTML tutorial&amp;#34; style=&amp;#34;width:42px;height:42px;&amp;#34;&amp;gt; &amp;lt;/a&amp;gt; target attribute Specifies where to open the linked document. Values:
+_self — default _blank — new window/tab _parent — in parent frame _top — full body of current window Bookmarks Bookmarks allow page visitors to jump to certain parts of the page.</description>
+      
+    </item>
+    
+    <item>
+      <title>http status codes</title>
+      <link>http://localhost:1313/wieserpedia/web-development/html/http-status-codes/</link>
+      <pubDate>Tue, 28 Mar 2023 08:57:35 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/html/http-status-codes/</guid>
+      
+      <description>Informational (100-199)
+Success (200-299)
+Redirection (300-399)
+Client Error (400-499)
+Server Error (500-599)</description>
+      
+    </item>
+    
+  </channel>
+</rss>

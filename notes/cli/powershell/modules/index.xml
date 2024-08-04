@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modules on Fred Wieser</title>
+    <link>http://localhost:1313/notes/cli/powershell/modules/</link>
+    <description>Recent content in modules on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/cli/powershell/modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/cli/powershell/modules/overview/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/modules/overview/</guid>
+      
+      <description>Managing Modules Install-Module name -Force Import-Module name Remove-Module name </description>
+      
+    </item>
+    
+    <item>
+      <title>psreadline</title>
+      <link>http://localhost:1313/notes/cli/powershell/modules/psreadline/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/modules/psreadline/</guid>
+      
+      <description>Sample profile file: sample profile file (github.com)
+Return current key bindings Get-PSReadLineKeyHandler
+Set custom key bindings Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Enable Bash-style completion without Emacs mode Set-PSReadLineKeyHandler -Key Tab -Function Complete
+Insert matched quotes Set-PSReadLineKeyHandler -Chord &amp;#39;&amp;#34;&amp;#39;,&amp;#34;&amp;#39;&amp;#34; ` -BriefDescription SmartInsertQuote ` -LongDescription &amp;#34;Insert paired quotes if not already on a quote&amp;#34; ` -ScriptBlock { param($key, $arg) $line = $null $cursor = $null [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor) if ($line.</description>
+      
+    </item>
+    
+    <item>
+      <title>ad</title>
+      <link>http://localhost:1313/notes/cli/powershell/modules/ad/</link>
+      <pubDate>Thu, 23 Jun 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/modules/ad/</guid>
+      
+      <description>Overview [Documentation] Module: ActiveDirectory
+The Active Directory module requires RSAT tools for Windows.
+Manage User Accounts Locked Accounts Find locked user accounts:
+Search-AdAccount -LockedOut Unlock user accounts:
+Unlock-ADAccount -Identity &amp;#39;lockeduser&amp;#39; Or, both in one command:
+Search-ADAccount -LockedOut | Unlock-ADAccount Find the Source of Locked Accounts Find the Domain Controller with the PDCe role:
+$pdce = Get-ADDomain.PDCEmulator Check the Event Log for lockouts (ID 4740):
+$filter = @{&amp;#39;LogName&amp;#39; = &amp;#39;Security&amp;#39;;&amp;#39;Id&amp;#39; = 4740} $events = Get-WinEvent -ComputerName $pdce -FilterHashTable $filter $events | Select-Object @{&amp;#39;Name&amp;#39; =&amp;#39;UserName&amp;#39;; Expression={$_.</description>
+      
+    </item>
+    
+    <item>
+      <title>azure ad</title>
+      <link>http://localhost:1313/notes/cli/powershell/modules/azure-ad/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/modules/azure-ad/</guid>
+      
+      <description>Importing Must use Windows PowerShell (not PowerShell 7)
+Import-Module AzureAd -UseWindowsPowerShell Connecting Connect-AzureAD Get a List of Groups of Which User is a Member Get-AzureADUser -SearchString hanawayc@gejohnson.com | Get-AzureADUserMembership | % {Get-AzureADObjectByObjectId -ObjectId $_.ObjectId | select DisplayName,ObjectType,MailEnabled,SecurityEnabled,ObjectId} | Format-Table Get a List of groups of Which User is an Owner Get-AzureADUser -SearchString user@example.com | Get-AzureADUserOwnedObject AzureAD POSH module is deprecated in favor of MS Graph.</description>
+      
+    </item>
+    
+    <item>
+      <title>exchange online management</title>
+      <link>http://localhost:1313/notes/cli/powershell/modules/exchange-online-management/</link>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/powershell/modules/exchange-online-management/</guid>
+      
+      <description>Install-Module -Name ExchangeOnlineManagement -Force Update-Module -Name ExchangeOnlineManagement Import-Module ExchangeOnlineManagement Connect-ExchangeOnline -UserPrincipalName user@example.com Disconnect-ExchangeOnline -Confirm:$false </description>
+      
+    </item>
+    
+  </channel>
+</rss>

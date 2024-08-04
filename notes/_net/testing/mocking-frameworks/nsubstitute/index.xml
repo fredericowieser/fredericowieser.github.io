@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nsubstitute on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/</link>
+    <description>Recent content in nsubstitute on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/overview/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/overview/</guid>
+      
+      <description>Abstract [Documentation] NSubstitute is a mocking framework for .NET. It abstracts the difference between a mock, stub, fake, spy, or test double.
+NSubstitute requires interfaces. On a limited basis, it can work with virtual members of a concrete class, but any non-virtual code will actually execute.
+Installation dotnet add package NSubstitute dotnet add package NSubstitute.Analyzers.CSharp # optional In test project:
+using NSubstitute; Usage Assuming this interface:
+public interface ICalculator { int Add(int a, int b); string Mode { get; set; } event EventHandler PoweringUp; } Arrange var calculator = Substitute.</description>
+      
+    </item>
+    
+    <item>
+      <title>argument matching</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/argument-matching/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/argument-matching/</guid>
+      
+      <description>Overview [Documentation] Argument matchers provide a way to:
+specify a call or group of calls so that a return value can be set for all matching calls check a matching call has been received Argument matchers can be used:
+when setting return values (with a call to Returns()) when validating calls (with a call to Received()) Uses Ignoring Arguments Use Arg.Any&amp;lt;T&amp;gt;() to ignore an argument of type T:
+calculator.Add(Arg.Any&amp;lt;int&amp;gt;(), 5).Returns(7); Assert.</description>
+      
+    </item>
+    
+    <item>
+      <title>creating substitutes</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/creating-substitutes/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/creating-substitutes/</guid>
+      
+      <description>Overview [Documentation] Substitutes var substitute = Substitute.For&amp;lt;ISomeInterface&amp;gt;(); // or var someClass = Substitute.For&amp;lt;SomeClassWithCtorArgs&amp;gt;(5, &amp;#34;hello world&amp;#34;); Substituting for Multiple Types Substituting for multiple interfaces:
+var command = Substitute.For&amp;lt;ICommand, IDisposable&amp;gt;(); var runner = new CommandRunner(command); runner.RunCommand(); command.Received().Execute(); ((IDisposable)command).Received().Dispose(); Substituting for multiple interfaces and a class:
+var substitute = Substitute.For( new[] { typeof(ICommand), typeof(ISomeInterface), typeof(SomeClassWithCtorArgs) }, new object[] { 5, &amp;#34;hello world&amp;#34; } ); Assert.IsInstanceOf&amp;lt;ICommand&amp;gt;(substitute); Assert.IsInstanceOf&amp;lt;ISomeInterface&amp;gt;(substitute); Assert.IsInstanceOf&amp;lt;SomeClassWithCtorArgs&amp;gt;(substitute); Substituting for Delegates var func = Substitute.</description>
+      
+    </item>
+    
+    <item>
+      <title>setting return values</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/setting-return-values/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/setting-return-values/</guid>
+      
+      <description>Overview [Documentation] Return Values Assuming this interface:
+public interface ICalculator { int Add(int a, int b); string Mode { get; set; } } And this substitute:
+var calculator = Substitute.For&amp;lt;ICalculator&amp;gt;(); Use the following API to set return values:
+For Methods calculator.Add(1, 2).Returns(3); Using Argument Matching // Return when first arg is anything and second arg is 5: calculator.Add(Arg.Any&amp;lt;int&amp;gt;(), 5).Returns(10); Assert.AreEqual(10, calculator.Add(123, 5)); Assert.AreEqual(10, calculator.Add(-9, 5)); Assert.AreNotEqual(10, calculator.Add(-9, -9)); // Return when first arg is 1 and second arg less than 0: calculator.</description>
+      
+    </item>
+    
+    <item>
+      <title>validating calls</title>
+      <link>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/validating-calls/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/testing/mocking-frameworks/nsubstitute/validating-calls/</guid>
+      
+      <description>Overview [Documentation] Validating Calls Assuming this code:
+public interface ICommand { void Execute(); event EventHandler Executed; } public class SomethingThatNeedsACommand { ICommand command; public SomethingThatNeedsACommand(ICommand command) =&amp;gt; this.command = command; public void DoSomething() { command.Execute(); } public void DoNothing { } } To Methods Validate a Method was Called [Test] public void Should_execute_command() { var command = Substitute.For&amp;lt;ICommand&amp;gt;(); var something = new SomethingThatNeedsACommand(command); something.DoSomething(); // Assert command.Received().Execute(); // Successful because command received a call to its Execute method.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

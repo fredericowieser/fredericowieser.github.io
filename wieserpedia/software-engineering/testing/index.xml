@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>testing on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/software-engineering/testing/</link>
+    <description>Recent content in testing on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/software-engineering/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/testing/overview/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/testing/overview/</guid>
+      
+      <description>Types of Tests From most number of tests to least for a given project (italicized are not in the Testing Pyramid):
+Type Description Unit Tests the smallest unit of code possible, usually a method or function. Integration Tests if smaller units and larger components work together as a single piece of software. System Tests the whole system environment in which the software runs. Performance Tests the performance (time required) to run (ie: return a web page to a visitor in &amp;lt; 20 ms).</description>
+      
+    </item>
+    
+  </channel>
+</rss>

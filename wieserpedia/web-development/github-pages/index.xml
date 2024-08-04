@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github pages on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/web-development/github-pages/</link>
+    <description>Recent content in github pages on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/web-development/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/web-development/github-pages/overview/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/github-pages/overview/</guid>
+      
+      <description>Abstract Use GitHub Pages to host a website about yourself, an organization, or a project directly from GitHub.com.
+How it Works GitHub Pages takes HTML, CSS, and JS files from a repo, optionally runs them through a build process, and publishes a website.
+Sites can be hosted on github.io or a custom domain.
+Types
+User: username.github.io Org: organization.github.io Project: username.github.io/repository Publishing Sources A GHP site can publish when changes are pushed to a specific branch by configuring a publishing source.</description>
+      
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>http://localhost:1313/wieserpedia/web-development/github-pages/jekyll/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/web-development/github-pages/jekyll/</guid>
+      
+      <description>Overview GitHub pages uses Jekyll as its static site generator.
+Some configuration settings cannot be changed for GitHub Pages:
+lsi: false safe: true source: [your repo&amp;#39;s top level directory] incremental: false highlighter: rouge gist: noscript: false kramdown: math_engine: mathjax syntax_highlighter: rouge Custom Variables Set custom variables that can be accessed in Liquid:
+--- food: Pizza --- &amp;lt;h1&amp;gt;{{ page.Food }}&amp;lt;/ht1&amp;gt; Themes GitHub Pages support Jekyll themes.
+Built-in themes Jekyll theme documentation In _config.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

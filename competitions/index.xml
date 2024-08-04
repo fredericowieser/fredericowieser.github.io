@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Competitions on Fred Wieser</title>
+    <link>http://localhost:1313/competitions/</link>
+    <description>Recent content in Competitions on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/competitions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SECCON CTF 2023 Quals</title>
+      <link>http://localhost:1313/competitions/seccon2023/</link>
+      <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/competitions/seccon2023/</guid>
+      
+      <description>Did not have time to go in hard with this CTF, but I did try to touch on the pwnable challenges as much as possible.
+Click the heading of each challenges to get source files.
+Pwnable This is how pwnable challenges should be made, just give the source code instead of making everyone turn on Ghidra.
+ROP-2.35 For beginner this challenge has some annoying steps that will make you mentally ill.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

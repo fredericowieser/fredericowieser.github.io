@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/testing/</link>
+    <description>Recent content in test on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>integration testing</title>
+      <link>http://localhost:1313/notes/asp.net/testing/integration-testing/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/testing/integration-testing/</guid>
+      
+      <description>Overview [Documentation] Integration tests confirm that two or more app components work together to produce an expected result, possibly including every component required to fully process a request. They test the app&amp;rsquo;s infrastructure including database, file system, network appliances, and the request-response pipeline. They use the app&amp;rsquo;s actual components instead of mocks or fakes.
+Tip: Separate unit tests from integration tests in separate projects.
+In ASP.NET integration tests:
+The test project has a reference to the system under test.</description>
+      
+    </item>
+    
+    <item>
+      <title>load and stress testing</title>
+      <link>http://localhost:1313/notes/asp.net/testing/load-and-stress-testing/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/testing/load-and-stress-testing/</guid>
+      
+      <description>Overview [Documentation] Load test and stress tests are types of performance tests:
+Load tests test whether an app can handle a specified load of users for a certain scenario while satisfying a response goal. The app&amp;rsquo;s conditions are normal. Stress tests test app stability under extreme conditions for extended periods of time. This is done via high user load or limiting the app&amp;rsquo;s compute resources. In stress tests, the app is expected to recover from failure and gracefully return to expected behavior.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

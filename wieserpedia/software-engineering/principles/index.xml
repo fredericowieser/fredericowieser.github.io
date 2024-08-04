@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>principles on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/software-engineering/principles/</link>
+    <description>Recent content in principles on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/software-engineering/principles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/principles/overview/</link>
+      <pubDate>Thu, 16 Mar 2023 17:24:53 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/principles/overview/</guid>
+      
+      <description>DRY – Don&amp;rsquo;t repeat yourself Inversion of Control A mechanism that allows high-level components to depend on abstraction rather than the concrete implementation of low-level components.
+Object-Oriented Programming Abstraction Allows creating classes that do not have full implementations in order for those classes to be inherited (and the implementation completed) by others. One class can provide an abstraction for another (or many). Base classes are often abstract. Stream is abstract; FileStream and MemoryStream are concrete.</description>
+      
+    </item>
+    
+    <item>
+      <title>prefer composition over inheritance</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/principles/prefer-composition-over-inheritance/</link>
+      <pubDate>Thu, 16 Mar 2023 17:38:39 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/principles/prefer-composition-over-inheritance/</guid>
+      
+      <description>Prefer Composition over Inheritance Inheritance is the specialization of a general concept Creates Is-A relationships. The derived class is tightly coupled to the base class. There is no additional performance cost of invoking the base class members. The Liskov Substitution Principle states that &amp;ldquo;objects of a base class shall be replaceable with objects of its derived classes without breaking the application.&amp;rdquo; public class House { public string Color { get; set; } public string GetAddress() =&amp;gt; &amp;#34;Address&amp;#34;; } public class GlassHouse : House { public string WarningSign() =&amp;gt; &amp;#34;No rocks please!</description>
+      
+    </item>
+    
+    <item>
+      <title>coupling vs cohesion</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/principles/coupling-vs-cohesion/</link>
+      <pubDate>Sat, 17 Dec 2022 09:47:30 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/principles/coupling-vs-cohesion/</guid>
+      
+      <description>Loose coupling between modules
+High cohesion within modules
+Coupling The degree of interdependence between software modules.
+Advantages A change in one module does not have a ripple effects requiring a change in another. Promotes code re-use and ease of testing by reducing dependencies. Cohesion The degree to which elements inside a module belong together.
+If methods of a class are similar in many aspects, the class has high cohesion. Advantages Improved code readability Improved code reusability Complexity is manageable Examples Bad: The only relationship between the parts is that they have been grouped together.</description>
+      
+    </item>
+    
+    <item>
+      <title>idempotent functions</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/principles/idempotent-functions/</link>
+      <pubDate>Tue, 23 Aug 2022 08:58:15 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/principles/idempotent-functions/</guid>
+      
+      <description>Pure functions are idempotent.
+Idempotent — Always producing identical output for identical input, even when called repeatedly.
+Examples:
+Changing a person&amp;rsquo;s address in a database. HTTP GET, PUT, DELETE. </description>
+      
+    </item>
+    
+    <item>
+      <title>inversion of control</title>
+      <link>http://localhost:1313/wieserpedia/software-engineering/principles/inversion-of-control/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/software-engineering/principles/inversion-of-control/</guid>
+      
+      <description>Inversion of Control (Dependency Inversion) If class A calls a method of class B, and class B calls a method of class C, then, at compile time, class A will depend on class B, and class B will depend on class C:
+Instead, class A can call methods on an abstraction that B implements. B depends on an interface controlled by A at compile time: This inverts the dependency.
+Dependency inversion is what enables dependency injection.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

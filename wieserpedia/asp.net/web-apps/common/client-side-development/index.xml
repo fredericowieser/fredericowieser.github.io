@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>client side development on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/</link>
+    <description>Recent content in client side development on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>browser link</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/browser-link/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/browser-link/</guid>
+      
+      <description>Overview [Documentation] Browser Link is a Visual Studio feature that creates a communication channel (SignalR) between Visual Studio and one or more browsers.
+Uses:
+Refreshing web app in several browsers at once Testing across multiple browsers Selecting UI elements and seeing what markup/source code they correlate to in Visual Studio Configuring Add the package: dotnet add package Microsoft.VisualStudio.Web.BrowserLink Configure the app: using Microsoft.VisualStudio.Web.BrowserLink; // ... if (env.IsDevelopment()) { app.UseDeveloperExceptionPage(); app.UseBrowserLink(); } Using With an ASP.</description>
+      
+    </item>
+    
+    <item>
+      <title>libman</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/libman/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/common/client-side-development/libman/</guid>
+      
+      <description>Overview Library Manager (LibMan) is included in Visual Studio. LibMan allows you to add external libraries such as Bootstrap.
+How Via Visual Studio Right-click project &amp;gt; Add &amp;gt; Client-Side Library…
+Via LibMan CLI Install the LibMan CLI as a dotnet tool: dotnet tool install -g Microsoft.Web.LibraryManager.Cli Initialize LibMan in the project: libman init This creates a libman.json file if one does not already exist. Add libraries: libman install &amp;lt;library&amp;gt; --destination &amp;lt;path&amp;gt; --files &amp;lt;file-to-install&amp;gt; # if not specified, install all files in package --provider &amp;lt;cdnjs|filesystem|jsdeliver|unkpg&amp;gt; Bootstrap Add to /wwwroot/lib/bootstrap</description>
+      
+    </item>
+    
+  </channel>
+</rss>

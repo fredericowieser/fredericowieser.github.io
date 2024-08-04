@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">editorconfig | Fred Wieser</title>
+<meta property="og:title" content="editorconfig | Fred Wieser" />
+<meta name="twitter:title" content="editorconfig | Fred Wieser" />
+<meta itemprop="name" content="editorconfig | Fred Wieser" />
+<meta name="application-name" content="editorconfig | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/tools-and-diagnostics/code-analysis/editorconfig/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">editorconfig</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-11-17T15:45:22-07:00" itemprop="datePublished"> 17 Nov 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p>EditorConfig is a cross-platform file format for defining code styles.</p>
+<h1 id="file-format">File Format</h1>
+<ul>
+<li>EditorConfig files consist of <em>preambles</em> (the lines that precede the first section), <em>section names</em> (between brackets), and <em>sections</em> (which run from the beginning of the section header to the beginning of the next section header).</li>
+<li>Comments start with <code>;</code> or <code>#</code>
+<ul>
+<li>No inline comments</li>
+</ul>
+</li>
+</ul>
+<h2 id="section-headers-are-enclosed-in--">Section Headers are enclosed in <code>[ ]</code></h2>
+<ul>
+<li>No non-whitespace characters outside brackets</li>
+<li>May contain characters and whitespace between brackets</li>
+<li>Path separators are always <code>/</code></li>
+</ul>
+<h2 id="sections">Sections</h2>
+<p>Key-Value Pairs are of format <code>key=value</code></p>
+<h2 id="globs">Globs</h2>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>any string except <code>/</code></td>
+</tr>
+<tr>
+<td>``</td>
+<td>any string</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>any single character except <code>/</code></td>
+</tr>
+<tr>
+<td><code>[seq]</code></td>
+<td>any single character in <em>seq</em></td>
+</tr>
+<tr>
+<td><code>[!seq]</code></td>
+<td>any single character not in <em>seq</em></td>
+</tr>
+<tr>
+<td><code>{s1, s2, s3}</code></td>
+<td>any of these strings</td>
+</tr>
+<tr>
+<td><code>{1..5}</code></td>
+<td>any digit 1 through 5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties</h2>
+<h3 id="widely-supported-properties">Widely-supported Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+<th>Possible values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>indent_style</code></td>
+<td>The indentation style</td>
+<td><code>tab</code>, <code>space</code></td>
+</tr>
+<tr>
+<td><code>indent_size</code></td>
+<td>The size of indentation</td>
+<td><em>integer</em>, <code>tab</code></td>
+</tr>
+<tr>
+<td><code>tab_width</code></td>
+<td>Width of a single tabstop</td>
+<td><em>integer</em></td>
+</tr>
+<tr>
+<td><code>end_of_line</code></td>
+<td>Line ending file format</td>
+<td><code>lf</code>, <code>crlf</code>, <code>cr</code></td>
+</tr>
+<tr>
+<td><code>charset</code></td>
+<td>File character encoding</td>
+<td><code>latin1</code>, <code>utf-8</code>, <code>utf-16be</code>, <code>utf16-le</code>, <code>utf-8-bom</code></td>
+</tr>
+<tr>
+<td><code>trim_trailing_whitespace</code></td>
+<td>Whether whitespace is removed from EOL</td>
+<td><code>true</code>, <code>false</code></td>
+</tr>
+<tr>
+<td><code>insert_final_newline</code></td>
+<td>Whether a file should end in a newline</td>
+<td><code>true</code>, <code>false</code></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>Identify the root editorconfig (must be set in preamble)</td>
+<td><code>true</code>, <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="limited-properties">Limited Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+<th>Possible values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_line_length</code></td>
+<td>Force hard line wrapping after n characters</td>
+<td><em>integer</em>, <code>off</code></td>
+</tr>
+</tbody>
+</table>
+<p>For any property, a value of <code>unset</code> removes the effect of that property, even if it was set before.</p>
+<h1 id="editorconfig-in-visual-studio">EditorConfig in Visual Studio</h1>
+<ul>
+<li>EditorConfig settings take precedence over global Visual Studio text editor settings.</li>
+<li>The formatting of existing code is not changed unless Code Cleanup is run (for all settings) or Format Document is run (for whitespace settings only).</li>
+</ul>
+<h2 id="creating">Creating</h2>
+<p>Project &gt; <strong>Add New Item</strong> &gt; <strong>editorconfig</strong></p>
+<ul>
+<li>editorconfig File (default) comes pre-populated with two items.</li>
+<li>editorconfig File (.NET) comes pre-populated with .NET code style rules.</li>
+</ul>
+<h2 id="applying">Applying</h2>
+<p>EditorConfig files are searched for in the current directory and all parent directories until the root file is found or the root of the filesystem is reached.</p>
+<p>To quickly find editorconfig files, use <code>dir .editorconfig /s</code></p>
+<h2 id="disable-editorconfig">Disable EditorConfig</h2>
+<p><strong>Tools</strong> &gt; <em>Options</em> &gt; <strong>Text Editor</strong> &gt; uncheck <strong>Follow project coding conventions</strong></p>
+<h1 id="code-style--code-quality-rules">Code Style &amp; Code Quality Rules</h1>
+<p>EditorConfig can also express code style and quality rules.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/language-rules">Code style language rules - .NET | Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/">Code quality rules overview - .NET | Microsoft Learn</a></li>
+</ul>
+<p>This format is only understood by Visual Studio while coding, not the compiler:<br>
+<code>dotnet_style_readonly_field = true:suggestion</code></p>
+<p>This format is understood by the compiler at build time:<br>
+<code>dotnet_diagnostic.ruleID.severity = severity-level</code></p>
+<h2 id="severity-levelshttpslearnmicrosoftcomen-usvisualstudiocode-qualityuse-roslyn-analyzersviewvs-2022configure-severity-levels"><a href="https://learn.microsoft.com/en-us/visualstudio/code-quality/use-roslyn-analyzers?view=vs-2022#configure-severity-levels">Severity Levels</a></h2>
+<table>
+<thead>
+<tr>
+<th>Severity (Solution Explorer)</th>
+<th>Severity (EditorConfig file)</th>
+<th>Build-time behavior                                                                Editor behavior</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Error</td>
+<td>error</td>
+<td>Violations appear as<em>Errors</em>in the Error List and in command-line build output, and cause builds to fail.</td>
+<td>Offending code is underlined with a red squiggle and marked by a small red box in the scroll bar.</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>warning</td>
+<td>Violations appear as<em>Warnings</em>in the Error List and in command-line build output, but don&rsquo;t cause builds to fail.</td>
+<td>Offending code is underlined with a green squiggle and marked by a small green box in the scroll bar.</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>suggestion</td>
+<td>Violations appear as<em>Messages</em>in the Error List, and not at all in command-line build output.</td>
+<td>Offending code is underlined with a gray squiggle and marked by a small gray box in the scroll bar.</td>
+</tr>
+<tr>
+<td>Hidden</td>
+<td>silent</td>
+<td>Non-visible to user.                                                               Non-visible to user. The diagnostic is reported to the IDE diagnostic engine, however.</td>
+<td></td>
+</tr>
+<tr>
+<td>None</td>
+<td>none</td>
+<td>Suppressed completely.                                                             Suppressed completely.</td>
+<td></td>
+</tr>
+<tr>
+<td>Default</td>
+<td>default</td>
+<td>Corresponds to the default severity of the rule. To determine what the default value for a rule is, look in the Properties window.</td>
+<td>Corresponds to the default severity of the rule.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sample-editorconfig-files">Sample editorconfig Files</h1>
+<ul>
+<li>Roslyn&rsquo;s editorconfig: <a href="https://github.com/dotnet/roslyn/blob/main/.editorconfig">roslyn/.editorconfig at main · dotnet/roslyn (github.com)</a></li>
+<li>.NET runtime&rsquo;s editorconfig: <a href="https://github.com/dotnet/runtime/blob/main/.editorconfig">runtime/.editorconfig at main · dotnet/runtime (github.com)</a></li>
+</ul>
+<h1 id="suppressing-editorconfig-violations">Suppressing EditorConfig Violations</h1>
+<p><code>#pragma warning disable CAXXXX</code></p>
+<h1 id="analyzerconfig">AnalyzerConfig</h1>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig">Configuration files for code analysis rules - .NET | Microsoft Learn</a><br>
+Like EditorConfig, but project-level configuration options.<br>
+Use when you have project files outside the project folder.</p>
+<h1 id="see-also">See Also</h1>
+<ul>
+<li><a href="https://editorconfig.org/">EditorConfig</a></li>
+<li><a href="https://editorconfig-specification.readthedocs.io/">EditorConfig Specification — EditorConfig Specification 0.15.0 documentation (editorconfig-specification.readthedocs.io)</a></li>
+<li><a href="https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties">EditorConfig Properties · editorconfig/editorconfig Wiki (github.com)</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

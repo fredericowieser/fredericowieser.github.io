@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>razor syntax on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/</link>
+    <description>Recent content in razor syntax on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/overview/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/overview/</guid>
+      
+      <description>Abstract Razor is a syntax for combining HTML markup with C# code.
+Razor pages are cshtml files.
+Razor components (used in Blazor apps) are .razor files.
+Rendering HTML HTML is the default Razor language.
+Razor Syntax Razor uses the @ symbol to transition from C# to HTML. It evaluates C# expressions and renders them in the HTML output.
+When @ precedes a Razor reserved keyword, it transitions into Razor-specific markup. Otherwise, it transitions to HTML.</description>
+      
+    </item>
+    
+    <item>
+      <title>control structures</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/control-structures/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/control-structures/</guid>
+      
+      <description>@if, else if, else @if controls when code runs; else and else if do not require the @ symbol:
+@if (value % 2 == 0) { &amp;lt;p&amp;gt;The value was even.&amp;lt;/p&amp;gt; } else if (value &amp;gt;= 1337) { &amp;lt;p&amp;gt;The value is large.&amp;lt;/p&amp;gt; } else { &amp;lt;p&amp;gt;The value is odd and small.&amp;lt;/p&amp;gt; } @switch Statements Like so:
+@switch (value) { case 1: &amp;lt;p&amp;gt;The value is 1!&amp;lt;/p&amp;gt; break; case 1337: &amp;lt;p&amp;gt;Your number is 1337!</description>
+      
+    </item>
+    
+    <item>
+      <title>directive attributes</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/directive-attributes/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/directive-attributes/</guid>
+      
+      <description>Overview Directive attributes change the way a component element is parsed or functions.
+These only apply to Razor components (.razor). See Components.
+@attributes @bind @bind:culture @on{EVENT} @on{EVENT}:preventDefault @on{EVENT}:stopPropagation @key @ref @typeparam </description>
+      
+    </item>
+    
+    <item>
+      <title>directives</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/directives/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/directives/</guid>
+      
+      <description>Overview Directives change the way component markup is parsed or functions.
+This CSHTML:
+@{ var quote = &amp;#34;Getting old ain&amp;#39;t for wimps! - Anonymous&amp;#34;; } &amp;lt;div&amp;gt;Quote of the Day: @quote&amp;lt;/div&amp;gt; &amp;hellip;generates this C# class:
+public class _Views_Something_cshtml : RazorPage&amp;lt;dynamic&amp;gt; { public override async Task ExecuteAsync() { var output = &amp;#34;Getting old ain&amp;#39;t for wimps! - Anonymous&amp;#34;; WriteLiteral(&amp;#34;/r/n&amp;lt;div&amp;gt;Quote of the Day: &amp;#34;); Write(output); WriteLiteral(&amp;#34;&amp;lt;/div&amp;gt;&amp;#34;); } } @attribute Adds the given attribute to the class of the generated page or view:</description>
+      
+    </item>
+    
+    <item>
+      <title>implicit and explicit expressions</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/implicit-and-explicit-expressions/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/implicit-and-explicit-expressions/</guid>
+      
+      <description>Implicit Razor Expressions Implicit Razor expressions start with @ and are followed by C# code. These must not contain spaces (except with the await keyword):
+&amp;lt;p&amp;gt;@DateTime.Now&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;@DateTime.IsLeapYear(2016)&amp;lt;/p&amp;gt; No Generics Implict expressions cannot contain C# generics: the characters inside &amp;lt; &amp;gt; are evaluated as an HTML tag.
+Invalid: &amp;lt;p&amp;gt;@GenericMethod&amp;lt;int&amp;gt;()&amp;lt;/p&amp;gt;
+To make genric method calls, use explicit Razor expressions.
+Explicit Razor Expressions Explicit Razor expressions use an @ symbol and paranthesis:
+&amp;lt;p&amp;gt;Last week this time: @(DateTime.</description>
+      
+    </item>
+    
+    <item>
+      <title>razor code blocks</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/razor-code-blocks/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/razor-code-blocks/</guid>
+      
+      <description>Overview Start with @ and are enclosed in { }. Unlike expressions, C# code inside code blocks is not rendered:
+@{ var quote = &amp;#34;The future depends on what you do today. - Mahatma Gandhi&amp;#34;; } &amp;lt;p&amp;gt;@quote&amp;lt;/p&amp;gt; @{ quote = &amp;#34;Hate cannot drive out hate, only love can do that. - Martin Luther King, Jr.&amp;#34;; } &amp;lt;p&amp;gt;@quote&amp;lt;/p&amp;gt; Declare local functions in code blocks to serve as templating methods:
+@{ void RenderName(string name) { &amp;lt;p&amp;gt;Name: &amp;lt;strong&amp;gt;@name&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt; } RenderName(&amp;#34;Mahatma Gandhi&amp;#34;); RenderName(&amp;#34;Martin Luther King, Jr.</description>
+      
+    </item>
+    
+    <item>
+      <title>razor templates</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/razor-templates/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/common/razor-syntax/razor-templates/</guid>
+      
+      <description>Overview Razor templates allow you to define a UI snippet:
+@&amp;lt;tag&amp;gt;...&amp;lt;/tag&amp;gt;
+Define a Template Templates are defined as delegates. Consider Pet.cs:
+public class Pet { public string Name { get; set; } } And RazorTemplate.cshtml:
+@{ Func&amp;lt;dynamic, object&amp;gt; petTemplate = @&amp;lt;p&amp;gt;You have a pet named &amp;lt;strong&amp;gt;@item.Name&amp;lt;/strong&amp;gt;.&amp;lt;/p&amp;gt;; var pets = new List&amp;lt;Pet&amp;gt; { new Pet { Name = &amp;#34;Rin Tin Tin&amp;#34; }, new Pet { Name = &amp;#34;Mr. Bigglesworth&amp;#34; }, new Pet { Name = &amp;#34;K-9&amp;#34; } }; } Render the template like this:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

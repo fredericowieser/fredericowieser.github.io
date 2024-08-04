@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">alerts | Fred Wieser</title>
+<meta property="og:title" content="alerts | Fred Wieser" />
+<meta name="twitter:title" content="alerts | Fred Wieser" />
+<meta itemprop="name" content="alerts | Fred Wieser" />
+<meta name="application-name" content="alerts | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/notes/web-development/bootstrap/components/alerts/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/notes/web-development/bootstrap/components/alerts/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/notes/">
+                        W
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">alerts</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-08-08T00:00:00-06:00" itemprop="datePublished"> 8 Aug 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<ul>
+<li>Contextual feedback messages for typical user actions.</li>
+<li>Documentation: <a href="https://getbootstrap.com/docs/5.3/components/alerts/">https://getbootstrap.com/docs/5.3/components/alerts/</a></li>
+</ul>
+<h1 id="simple-alerts">Simple Alerts</h1>
+<p><img src="image.png" alt="Simple alerts with all eight required contextual classes"></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-primary&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple primary alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-secondary&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple secondary alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-success&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple success alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-danger&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple danger alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-warning&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple warning alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-info&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple info alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-light&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple light alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-dark&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  A simple dark alert—check it out!
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span></code></pre></div><h1 id="alerts-with-icons">Alerts with Icons</h1>
+<p><img src="image-1.png" alt="Alerts with icons"></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">svg</span> xmlns<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;http://www.w3.org/2000/svg&#34;</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;d-none&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">symbol</span> id<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;check-circle-fill&#34;</span> viewBox<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;0 0 16 16&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">path</span> d<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">symbol</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">symbol</span> id<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;info-fill&#34;</span> viewBox<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;0 0 16 16&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">path</span> d<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">symbol</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">symbol</span> id<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;exclamation-triangle-fill&#34;</span> viewBox<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;0 0 16 16&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">path</span> d<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">symbol</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">svg</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-primary d-flex align-items-center&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">svg</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bi flex-shrink-0 me-2&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;img&#34;</span> aria-label<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;Info:&#34;</span>&gt;&lt;<span style="color:#7ee787">use</span> xlink:href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;#info-fill&#34;</span>/&gt;&lt;/<span style="color:#7ee787">svg</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>    An example alert with an icon
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-success d-flex align-items-center&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">svg</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bi flex-shrink-0 me-2&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;img&#34;</span> aria-label<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;Success:&#34;</span>&gt;&lt;<span style="color:#7ee787">use</span> xlink:href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;#check-circle-fill&#34;</span>/&gt;&lt;/<span style="color:#7ee787">svg</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>    An example success alert with an icon
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-warning d-flex align-items-center&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">svg</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bi flex-shrink-0 me-2&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;img&#34;</span> aria-label<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;Warning:&#34;</span>&gt;&lt;<span style="color:#7ee787">use</span> xlink:href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;#exclamation-triangle-fill&#34;</span>/&gt;&lt;/<span style="color:#7ee787">svg</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>    An example warning alert with an icon
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-danger d-flex align-items-center&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">svg</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;bi flex-shrink-0 me-2&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;img&#34;</span> aria-label<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;Danger:&#34;</span>&gt;&lt;<span style="color:#7ee787">use</span> xlink:href<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;#exclamation-triangle-fill&#34;</span>/&gt;&lt;/<span style="color:#7ee787">svg</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>    An example danger alert with an icon
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span></code></pre></div><h1 id="dismissing-alerts">Dismissing Alerts</h1>
+<p>Alerts require the JavaScript plug-in.  The <code>data-bs-dismiss</code> attribute automatically initializes the component.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">div</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert alert-warning alert-dismissible fade show&#34;</span> role<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">strong</span>&gt;Holy guacamole!&lt;/<span style="color:#7ee787">strong</span>&gt; You should check in on some of those fields below.
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#7ee787">button</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;button&#34;</span> class<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;btn-close&#34;</span> data-bs-dismiss<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;alert&#34;</span> aria-label<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;Close&#34;</span>&gt;&lt;/<span style="color:#7ee787">button</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">div</span>&gt;
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

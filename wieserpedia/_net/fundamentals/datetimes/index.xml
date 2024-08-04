@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>datetimes on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/</link>
+    <description>Recent content in datetimes on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>timezoneinfo</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/timezoneinfo/</link>
+      <pubDate>Thu, 11 Nov 2021 20:44:35 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/timezoneinfo/</guid>
+      
+      <description>TimeZoneInfo Object –&amp;gt; TimeZoneInfo
+Represents any time zone in the world.
+Uses Converting between time zones. Serialize and deserialize time zone information. Creating a new time zone. Construction Cannot be instantiated with new().</description>
+      
+    </item>
+    
+    <item>
+      <title>timespan</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/timespan/</link>
+      <pubDate>Thu, 11 Nov 2021 20:40:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/timespan/</guid>
+      
+      <description>TimeSpan Object –&amp;gt; ValueType –&amp;gt; TimeSpan
+Represents a time interval.
+Subtracting one DateTime from another results in a TimeSpan.
+Uses Reflecting interval between two dates or times. Measuring elapsed time Construction TimeSpan interval = new TimeSpan(); // interval is TimeSpan.Zero. TimeSpan interval = TimeSpan.Zero; TimeSpan(hh, mm, ss); TimeSpan(dd, hh, mm, ss, ms); // ms is optional. TimeSpan(ticks); TimeSpan interval = datetime1, datetime2; </description>
+      
+    </item>
+    
+    <item>
+      <title>datetime</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/datetime/</link>
+      <pubDate>Thu, 11 Nov 2021 20:08:41 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/datetime/</guid>
+      
+      <description>DateTime Object –&amp;gt; ValueType –&amp;gt; DateTime
+Represents an instant in time.
+Note: Time values are measured in 100-nanosecond units called ticks.
+Note: System.DateOnly is useful if working with dates only. This type maps to date columns in SQL server.
+Note: System.TimeOnly is useful if working with times only. This type maps to time columns in SQL server.
+Also: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+Uses Work with dates only or times only Work with dates and times for which timezone information is missing Work with UTC dates and times only Retrieve date/time information from sources outside of .</description>
+      
+    </item>
+    
+    <item>
+      <title>datetimeoffset</title>
+      <link>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/datetimeoffset/</link>
+      <pubDate>Thu, 11 Nov 2021 20:08:41 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/fundamentals/datetimes/datetimeoffset/</guid>
+      
+      <description>DateTimeOffset Object –&amp;gt; ValueType –&amp;gt; DateTimeOffset
+Represents a date and time with an offset against UTC.
+Includes all functionality from DateTime as well as (some) time zone awareness.
+Consider this the default date and time type.
+See also: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+Notes The time component is measured in ticks DateTimeOffset values can be created by assigning it a DateTime value (implicit conversion) Uses &amp;ldquo;Now&amp;rdquo; Date and time arithmetic, conversion, and comparisons Conversion: DateTimeOffset &amp;lt;–&amp;gt; DateTime Time manipulation and extraction Construction DateTimeOffset(DateTime, TimeSpan) // TimeSpan is optional.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

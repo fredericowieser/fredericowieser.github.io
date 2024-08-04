@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>protocols on Fred Wieser</title>
+    <link>http://localhost:1313/notes/software-engineering/protocols/</link>
+    <description>Recent content in protocols on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/software-engineering/protocols/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wadl</title>
+      <link>http://localhost:1313/notes/software-engineering/protocols/wadl/</link>
+      <pubDate>Wed, 22 Feb 2023 12:01:39 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/protocols/wadl/</guid>
+      
+      <description>Web Application Description Language (WADL) XML-based interface description language The REST equivalent of SOAP&amp;rsquo;s WSDL. Not a W3C standard. Elements Param — describes inputs Method — describes request and response of resource Request — describes input; types are required; HTTP headers are required Response — describes output, error information </description>
+      
+    </item>
+    
+    <item>
+      <title>wsdl</title>
+      <link>http://localhost:1313/notes/software-engineering/protocols/wsdl/</link>
+      <pubDate>Tue, 21 Jun 2022 14:10:55 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/protocols/wsdl/</guid>
+      
+      <description>WSDL – Web Service Description Language Describes the functionality of a SOAP-based web service.
+WSDL elements &amp;lt;types&amp;gt; - The XML schema data types used by the web service. &amp;lt;message&amp;gt; - The data elements for each operation. &amp;lt;portType&amp;gt; - Defines a web service, its operations, and messages involved. &amp;lt;binding&amp;gt; - The protocol and data format for each port type. WSDL skeleton example &amp;lt;definitions&amp;gt; &amp;lt;types&amp;gt; data type definitions........ &amp;lt;/types&amp;gt; &amp;lt;message&amp;gt; definition of the data being communicated.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

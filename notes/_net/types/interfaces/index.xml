@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interfaces on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/types/interfaces/</link>
+    <description>Recent content in interfaces on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/types/interfaces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/types/interfaces/overview/</link>
+      <pubDate>Fri, 05 Nov 2021 21:26:07 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/interfaces/overview/</guid>
+      
+      <description>Interfaces Interfaces - define behavior for multiple types | Microsoft Docs
+Safely update interfaces using default interface methods in C# | Microsoft Docs
+Interfaces require classes or structs to implement certain members. They define a contract. They define &amp;ldquo;can-do&amp;rdquo; relationships. Interfaces can be declared in namespace or class scope. Interfaces cannot contain instance state.
+Kind May contain Cannot instance methods, properties, events, indexers fields, constructors, finalizers static methods, fields, properties, events, indexers static abstract static virtual methods, properties, events, indexers fields Creating interface IScored { float Score { get; set; } float MaximumScore { get; set; } } Implementing Classes and structs implement interfaces.</description>
+      
+    </item>
+    
+    <item>
+      <title>interfaces vs abstract classes</title>
+      <link>http://localhost:1313/notes/_net/types/interfaces/interfaces-vs-abstract-classes/</link>
+      <pubDate>Sat, 28 May 2022 21:30:35 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/interfaces/interfaces-vs-abstract-classes/</guid>
+      
+      <description>Topic Interface Abstract Class Instantiable No No May contain constructor No Yes May provide default implementation Yes Yes Implementations override-able Must May Children must implement all members Yes No Multiple inheritance Yes No May contains fields No Yes (but not abstract fields) May contain static members No Yes Interfaces describe what an object can do. Abstract classes describe what an object is.
+interface IPet { void Eat(); void Play(); void Sleep(); } public class Dog : IPet { public void Eat() { … } public virtual void Play() { … } public void Sleep() { … } } Virtual methods define implementations, but those implementations can be overridden in derived classes.</description>
+      
+    </item>
+    
+    <item>
+      <title>interfaces explicit implementation</title>
+      <link>http://localhost:1313/notes/_net/types/interfaces/interfaces-explicit-implementation/</link>
+      <pubDate>Sun, 06 Mar 2022 18:29:31 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/types/interfaces/interfaces-explicit-implementation/</guid>
+      
+      <description>Explicit Interface Implementation Internal Interface Classes in C# | Alex Franchuk Interfaces can be explicitly implemented. Assume a case where a class implements two interfaces that have a member with the same signature:
+public interface IControl { void Paint(); } public interface ISurface { void Paint(); } public class SampleClass : IControl, ISurface { public void Paint(); } SampleClass sample = new SampleClass(); IControl control = sample; ISurface surface = sample; These all call the same method:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

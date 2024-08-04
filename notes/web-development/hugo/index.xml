@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Fred Wieser</title>
+    <link>http://localhost:1313/notes/web-development/hugo/</link>
+    <description>Recent content in hugo on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/web-development/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/web-development/hugo/overview/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/overview/</guid>
+      
+      <description>Abstract Hugo is a static site generator.
+2 editions: Standard and Extended (includes encoding WebP images, transposing Sass to CSS)
+Installation winget install hugo.hugo.extended
+Test the installation: hugo version
+Getting Help hugo help hugo command --help
+Generate a Site hugo new site example
+This creates:
+example/ ├── archetypes/ │ └── default.md ├── assets/ # all the files which need to be processed by Hugo Pipes (Hugo&amp;#39;s asset processing engine) ├── content/ ├── data/ ├── layouts/ ├── public/ ├── static/ ├── themes/ └── config.</description>
+      
+    </item>
+    
+    <item>
+      <title>content management</title>
+      <link>http://localhost:1313/notes/web-development/hugo/content-management/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/content-management/</guid>
+      
+      <description>Overview Credit: Cloud Cannon
+Pretty URLs By default, Hugo uses pretty URLs: content/posts/blog/first-post.md renders to https://example.com/posts/blog/first-post/.
+An ugly URL would be https://example.com/posts/blog/first-post/index.html.
+Content If a directory has an _index.md, Hugo uses it to create a listing of files/directories underneath that directory.
+Without any further configuration, this works:
+. └── content └── about | └── index.md # &amp;lt;- https://example.com/about/ ├── posts | ├── firstpost.md # &amp;lt;- https://example.com/posts/firstpost/ | ├── happy | | └── ness.</description>
+      
+    </item>
+    
+    <item>
+      <title>frontmatter</title>
+      <link>http://localhost:1313/notes/web-development/hugo/frontmatter/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/frontmatter/</guid>
+      
+      <description>Overview Frontmatter (or front matter) is metadata for a page.
+Predefined Frontmatter These predefined variables can be called from Page Variables. This list is incomplete:
+aliases — an array of aliases that are published paths of renamed content that will be recreated in the output directory structure (see also: Aliases) date — the datetime assigned to this page description — a description of the page draft — if true, hugo will not publish unless --buildDrafts is passed expiryDate — if in the past, hugo will not publish unless --buildExpired is passed images — an array of paths to images related to this page keywords — the meta keywords for this content lastmod — the datetime at which content was last modified linkTitle — if set, Hugo defaults to using the linkTitle before the title (see also: Order lists of content by linktitle) outputs — specify the output formats (see also: Output formats) publishDate — if in the future, hugo will not publish unless --buildFuture is passed slug — overrides the last segment of the URL path (see also: URL management) type — the type of the content; derived from the directory (the section) if nto specified here (see also: Sections) url — overrides the URL path; works for both regular pages and sections (see also: URL management) weight — specify weight to order content in lists lower weight comes first must be non-zero see also: Ordering content in lists User-defined Frontmatter User-defined frontmatter fields can be added.</description>
+      
+    </item>
+    
+    <item>
+      <title>templating</title>
+      <link>http://localhost:1313/notes/web-development/hugo/templating/</link>
+      <pubDate>Mon, 20 Mar 2023 12:37:48 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/templating/</guid>
+      
+      <description>Templating Templating controls how a page is rendered. It uses variables, loops, conditions, and functions.
+Params Use to access a variable:
+&amp;lt;title&amp;gt;{{ .Params.title }}&amp;lt;/title&amp;gt; Site Use to access variables in config.toml:
+&amp;lt;title&amp;gt;{{ .Site.title }}&amp;lt;/title&amp;gt; Conditions {{ if isset .Params &amp;#34;title&amp;#34; }} &amp;lt;title&amp;gt;{{ .Params.title }}&amp;lt;/title&amp;gt; {{ else }} &amp;lt;title&amp;gt;{{ .Site.title }}&amp;lt;/title&amp;gt; {{ end }} Variables Set variables with $:
+{{ $favorite_food := &amp;#34;Gazelle&amp;#34; }} {{ $favorite_food }} Looping {{ $best_friends := slice &amp;#34;pumbaa&amp;#34; &amp;#34;timon&amp;#34; &amp;#34;nala&amp;#34; &amp;#34;rafiki&amp;#34; }} &amp;lt;ul&amp;gt; {{ range $best_friends }} &amp;lt;li&amp;gt;{{ .</description>
+      
+    </item>
+    
+    <item>
+      <title>layouts, styles, partials</title>
+      <link>http://localhost:1313/notes/web-development/hugo/layouts-styles-partials/</link>
+      <pubDate>Mon, 20 Mar 2023 12:37:30 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/layouts-styles-partials/</guid>
+      
+      <description>Layouts Content is purely the content of a page and expressed in Markdown.
+Layouts are the &amp;ldquo;framing&amp;rdquo; of a page (header, footer, etc) and the formatting of the content.
+Content pages use the single layout by default.
+A content page named _index.html uses the list layout.
+Hugo uses this lookup order to determine which layout to use. The last place it checks is /layouts/_default.
+Baseof Create /layouts/_default/baseof.html:
+&amp;lt;!doctypehtml&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;metacharset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;{{ .</description>
+      
+    </item>
+    
+    <item>
+      <title>hosting</title>
+      <link>http://localhost:1313/notes/web-development/hugo/hosting/</link>
+      <pubDate>Fri, 17 Mar 2023 13:34:53 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/hosting/</guid>
+      
+      <description>GitHub Create GitHub repo Push local repo to GitHub From GitHub repo &amp;gt; Settings &amp;gt; Pages &amp;gt; Build and deployment &amp;gt; Source = GitHub Actions Create .github/workflows/hugo.yaml file in local repo: Sample workflow for building and deploying a Hugo site to GitHub Pages name: Deploy Hugo site to Pages on: # Runs on pushes targeting the default branch push: branches: - main # Allows you to run this workflow manually from the Actions tab workflow_dispatch: # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages permissions: contents: read pages: write id-token: write # Allow one concurrent deployment concurrency: group: &amp;#34;pages&amp;#34; cancel-in-progress: true # Default to bash defaults: run: shell: bash jobs: # Build job build: runs-on: ubuntu-latest env: HUGO_VERSION: 0.</description>
+      
+    </item>
+    
+    <item>
+      <title>modules</title>
+      <link>http://localhost:1313/notes/web-development/hugo/modules/</link>
+      <pubDate>Fri, 17 Mar 2023 13:31:33 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/modules/</guid>
+      
+      <description>Overview Modules can be a whole project or just one of the 7 component types (static, content, layouts, etc).
+Hugo Modules are powered by Go Modules.
+Hugo modules are managed with hugo mod command.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuring markup</title>
+      <link>http://localhost:1313/notes/web-development/hugo/configuring-markup/</link>
+      <pubDate>Fri, 17 Mar 2023 13:21:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/configuring-markup/</guid>
+      
+      <description>Configuring Markup All markup related settings and their defaults:
+[markup] defaultMarkdownHandler = &amp;#39;goldmark&amp;#39; [markup.asciidocExt] backend = &amp;#39;html5&amp;#39; extensions = [] failureLevel = &amp;#39;fatal&amp;#39; noHeaderOrFooter = true preserveTOC = false safeMode = &amp;#39;unsafe&amp;#39; sectionNumbers = false trace = false verbose = false workingFolderCurrent = false [markup.asciidocExt.attributes] [markup.goldmark] [markup.goldmark.extensions] definitionList = true footnote = true linkify = true linkifyProtocol = &amp;#39;https&amp;#39; strikethrough = true table = true taskList = true typographer = true [markup.</description>
+      
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://localhost:1313/notes/web-development/hugo/configuration/</link>
+      <pubDate>Fri, 17 Mar 2023 13:20:55 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/configuration/</guid>
+      
+      <description>Configuration Default configuration file is hugo.toml, hugo.yaml, or hugo.json in root of site.
+hugo --config filename.toml, … # generate a new config file(s) Configuration Directories The configDir (ie: config/) can be used to store settings. Each file represents a configuration root object, so params.toml would contain:
+[Params] foo = &amp;#39;bar&amp;#39; Example structure:
+├── config │ ├── _default │ │ ├── config.toml │ │ ├── languages.toml │ │ ├── menus.en.toml │ │ ├── menus.</description>
+      
+    </item>
+    
+    <item>
+      <title>directory structure</title>
+      <link>http://localhost:1313/notes/web-development/hugo/directory-structure/</link>
+      <pubDate>Fri, 17 Mar 2023 13:20:38 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/web-development/hugo/directory-structure/</guid>
+      
+      <description>Directory Structure Scaffolds a project directory structure and takes a single directory and uses it as the input to create a website.
+hugo new site creates:
+example/ ├── archetypes/ │ └── default.md ├── assets/ ├── content/ ├── data/ ├── layouts/ ├── public/ ├── static/ ├── themes/ └── config.toml archetypes hugo creates new content files with date, title, and draft = true frontmatter.
+assets All the files which need to be processed by Hugo Pipes.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

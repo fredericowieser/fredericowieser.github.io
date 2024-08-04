@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">runaround | Fred Wieser</title>
+<meta property="og:title" content="runaround | Fred Wieser" />
+<meta name="twitter:title" content="runaround | Fred Wieser" />
+<meta itemprop="name" content="runaround | Fred Wieser" />
+<meta name="application-name" content="runaround | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/readings/runaround/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/readings/runaround/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">runaround</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-09-16T00:00:00-06:00" itemprop="datePublished"> 16 Sep 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="runaround">Runaround</h1>
+<blockquote>
+<p>Isaac Asimov</p>
+</blockquote>
+<p>It was one of Gregory Powell&rsquo;s favorite platitudes that nothing was to be gained from excitement, so when Mike Donovan came leaping down the stairs toward him, red hair matted with perspiration, Powell frowned.</p>
+<p>&ldquo;What&rsquo;s wrong?&rdquo; he said. &ldquo;Break a fingernail?&rdquo;</p>
+<p>&ldquo;Yaaaah,&rdquo; snarled Donovan, feverishly. &ldquo;What have you been doing in the sublevels all day?&rdquo; He took a deep breath and blurted out, &ldquo;Speedy never returned.&rdquo;</p>
+<p>Powell&rsquo;s eyes widened momentarily and he stopped on the stairs; then he recovered and resumed his upward steps. He didn&rsquo;t speak until he reached the head of the flight, and then:</p>
+<p>&ldquo;You sent him after the selenium?&rdquo;</p>
+<p>&ldquo;Yes.&rdquo;</p>
+<p>&ldquo;And how long has he been out?&rdquo;</p>
+<p>&ldquo;Five hours now.&rdquo;</p>
+<p>Silence! This was a devil of a situation. Here they were, on Mercury exactly twelve hours-and already up to the eyebrows in the worst sort of trouble. Mercury had long been the jinx world of the System, but this was drawing it rather strong-even for a jinx.</p>
+<p>Powell said, &ldquo;Start at the beginning, and let&rsquo;s get this straight.&rdquo;</p>
+<p>They were in the radio room now-with its already subtly antiquated equipment, untouched for the ten years previous to their arrival. Even ten years, technologically speaking, meant so much. Compare Speedy with the type of robot they must have had back in 2005. But then, advances in robotics these days were tremendous.</p>
+<p>Powell touched a still gleaming metal surface gingerly. The air of disuse that touched everything about the room-and the entire Station was infinitely depressing.</p>
+<p>Donovan must have felt it. He began: &ldquo;I tried to locate him by radio, but it was no go. Radio isn&rsquo;t any good on the Mercury Sunside not past two miles, anyway. That&rsquo;s one of the reasons the First Expedition failed. And we can&rsquo;t put up the ultrawave equipment for weeks yet-'</p>
+<p>&ldquo;Skip all that. What did you get?&rdquo;</p>
+<p>&ldquo;I located the unorganized body signal in the short wave. It was no good for anything except his position. I kept track of him that way for two hours and plotted the results on the map.&rdquo;</p>
+<p>There was a yellowed square of parchment in his hip pocket-a relic of the unsuccessful First Expedition-and he slapped it down on the desk with vicious force, spreading it flat with the palm of his hand. Powell, hands clasped across his chest, watched it at long range.</p>
+<p>Donovan&rsquo;s pencil pointed nervously. &ldquo;The red cross is the selenium pool, You marked it yourself.&rdquo;</p>
+<p>&ldquo;Which one is it?&rdquo; interrupted Powell. &ldquo;There were three that MacDougal located for us before he left.&rdquo;</p>
+<p>&ldquo;I sent Speedy to the nearest, naturally. Seventeen miles away. But what difference does that make?&rdquo; There was tension in his voice. &ldquo;There are the penciled dots that mark Speedv&rsquo;s position.&rdquo;</p>
+<p>And for the first time Powell&rsquo;s artificial aplomb was shaken and his bands shot forward for the map.</p>
+<p>&ldquo;Are you serious? This is impossible.'</p>
+<p>&ldquo;There it is,&rdquo; growled Donovan.</p>
+<p>The little dots that marked the position formed a rough circle about the red cross of the selenium pool, And Powell&rsquo;s fingers went to his brown mustache., the unfailing signal of anxiety.</p>
+<p>Donovan added: &ldquo;In the two hours I checked on him, he circled that damned pool four times. It seems likely to me that he&rsquo;ll keep that up forever. Do you realize the position we&rsquo;re in?&rdquo;</p>
+<p>Powell looked up shortly, and said nothing. Oh, yes, he realized the position they were in. It worked itself out as simply as a syllogism. The photo-cell banks that alone stood between the full power of Mercury&rsquo;s monstrous sun and themselves were shot to hell. The only thing that could save them was selenium. The only thing that could get the selenium was Speedy. If Speedy didn&rsquo;t come back, no selenium. No selenium, no photo-cell banks. No photo-banks - well, death by slow broiling is one of the more unpleasant ways of being done in.</p>
+<p>Donovan rubbed his red mop of hair savagely and expressed himself with bitterness. &ldquo;We&rsquo;ll be the laughingstock of the System, Greg. How can everything have gone so wrong so soon? The great team of Powell and Donovan is sent out to Mercury to report on the advisability of reopening the Sunside Mining Station with modern techniques and robots and we ruin everything the first day. A purely routine job, too. We&rsquo;ll never live it down.&rdquo;</p>
+<p>&ldquo;We won&rsquo;t have to, perhaps,&rdquo; replied Powell, quietly. &ldquo;If we don&rsquo;t do something quickly, living anything down-or even just plain living-will be out of the question.&rdquo;</p>
+<p>&ldquo;Don&rsquo;t be stupid! If you feel funny about it, Greg, I don&rsquo;t. It was criminal, sending us out here with only one robot. And it was your bright idea that we could handle the photo-cell banks ourselves.&rdquo;</p>
+<p>&ldquo;Now you&rsquo;re being unfair. It was a mutual decision and you know it. All we needed was a kilogram of selenium, a Stillhead Dielectrode Plate and about three hours&rsquo; time-and there are pools of pure selenium all over Sunside. MacDougal&rsquo;s spectroreflector spotted three for us in five minutes, didn&rsquo;t it? What the devil! We couldn&rsquo;t have waited for next conjunction.&rdquo;</p>
+<p>&ldquo;Well, what are we going to do? Powell, you&rsquo;ve got an idea. I know you have, or you wouldn&rsquo;t be so calm. You&rsquo;re no more a hero than I am. Go on, spill it.&rdquo;</p>
+<p>&ldquo;We can&rsquo;t go after Speedy ourselves, Mike - not on the Sunside. Even the new insosuits aren&rsquo;t good for more than twenty minutes in direct sunlight. But you know the old saying, &lsquo;Set a robot to catch a robot.&rsquo; Look, Mike, maybe things aren&rsquo;t so bad. We&rsquo;ve got six robots down in the sublevels, that we may be able to use, if they work. If they work.&rdquo;</p>
+<p>There was a glint of sudden hope in Donovan&rsquo;s eyes. &ldquo;You mean six robots from the First Expedition. Are you sure? They may be subrobotic machines. Ten years is a long time as far as robot-types are concerned, you know.&rdquo;</p>
+<p>&ldquo;No, they&rsquo;re robots. I&rsquo;ve spent all day with them and I know. They&rsquo;ve got positronic brains: primitive, of course.&rdquo; He placed the map in his pocket. &ldquo;Let&rsquo;s go down.&rdquo;</p>
+<p>The robots were on the lowest sublevel - all six of them surrounded by musty packing cases of uncertain content. They were large, extremely so, and even though they were in a sitting position on the floor, legs straddled out before them, their heads were:. a good seven feet in the air.</p>
+<p>Donovan whistled. &ldquo;Look at the size of them, will you? The chests must be ten feet around.&rdquo;</p>
+<p>&ldquo;That&rsquo;s because they&rsquo;re supplied with the old McGuffy gears. I&rsquo;ve been over the insides - crummiest set you&rsquo;ve ever seen.&rdquo;</p>
+<p>&ldquo;Have you powered them yet?&rdquo;</p>
+<p>&ldquo;No. There wasn&rsquo;t any reason to. I don&rsquo;t think there&rsquo;s anything wrong with them. Even the diaphragm is in reasonable order. They might talk.&rdquo;</p>
+<p>He had unscrewed the chest plate of the nearest as he spoke, inserted the two-inch sphere that contained the tiny spark of atomic energy that was a robot&rsquo;s life. There was difficulty in fitting it, but he managed, and then screwed the plate back on again in laborious fashion. The radio controls of more modern models had not been heard of ten years earlier. And then to the other five.</p>
+<p>Donovan said uneasily, &ldquo;They haven&rsquo;t moved.&rdquo;</p>
+<p>&ldquo;No orders to do so,&rdquo; replied Powell, succinctly. He went back to the first in the line and struck him on the chest. &ldquo;You! Do you hear me?&rdquo;</p>
+<p>The monster&rsquo;s head bent slowly and the eyes fixed themselves on Powell. Then, in a harsh, squawking voice-like that of a medieval phonograph, he grated, &ldquo;Yes, Master!&rdquo;</p>
+<p>Powell grinned humorlessly at Donovan. &ldquo;Did you get that? Those were tire days of the first talking robots when it looked as if the use of robots on Earth would be banned. The makers were fighting that and they built good, healthy slave complexes into the damned machines.&rdquo;</p>
+<p>&ldquo;It didn&rsquo;t help them,&rdquo; muttered Donovan.</p>
+<p>&ldquo;No, it didn&rsquo;t, but they sure tried.&rdquo; He turned once more to the robot. &ldquo;Get up!&rdquo;</p>
+<p>The robot towered upward slowly and Donovan&rsquo;s head craned and his puckered lips whistled.</p>
+<p>Powell said: &ldquo;Can you go out upon the surface? In the light?&rdquo;</p>
+<p>There was consideration while the robot&rsquo;s slow brain worked. Then, &ldquo;Yes, Master.&rdquo;</p>
+<p>&ldquo;Good. Do you know what a mile is?&rdquo;</p>
+<p>Another consideration, and another slow answer. &ldquo;Yes, Master.&rdquo;</p>
+<p>&ldquo;We will take you up to the surface then, and indicate a direction. You will go about seventeen miles, and somewhere in that general region you will meet another robot, smaller than yourself. You understand so far?&rdquo;</p>
+<p>&ldquo;Yes, Master.&rdquo;</p>
+<p>&ldquo;You will find this robot and order him to return. If he does not wish to, you are to bring him back by force.&rdquo;</p>
+<p>Donovan clutched at Powell&rsquo;s sleeve. &ldquo;Why not send him for the selenium direct?&rdquo;</p>
+<p>&ldquo;Because I want Speedy back, nitwit. I want to find out what&rsquo;s wrong with him.&rdquo; And to the robot, &ldquo;All right, you, follow me.&rdquo;</p>
+<p>The robot remained motionless and his voice rumbled: &ldquo;Pardon, Master, but I cannot. You must mount first.&rdquo; His clumsy arms had come together with a thwack, blunt fingers interlacing.</p>
+<p>Powell stared and then pinched at his mustache. &ldquo;Uh . . . oh!&rdquo;</p>
+<p>Donovan&rsquo;s eyes bulged. &ldquo;We&rsquo;ve got to ride him? Like a horse?&rdquo;</p>
+<p>&ldquo;I guess that&rsquo;s the idea. I don&rsquo;t know why, though. I can&rsquo;t see - Yes, I do. I told you they were playing up robot-safety in those days. Evidently, they were going to sell the notion of safety by not allowing them to move about, without a mahout on their shoulders all the time. What do we do now?&rdquo;</p>
+<p>&ldquo;That&rsquo;s what I&rsquo;ve been thinking,&rdquo; muttered Donovan. &ldquo;We can&rsquo;t go out on the surface, with a robot or without. Oh, for the love of Pete&rdquo; - and he snapped his fingers twice. He grew excited. &ldquo;Give me that map you&rsquo;ve got. I haven&rsquo;t studied it for two hours for nothing. This is a Mining Station. What&rsquo;s wrong with using the tunnels?&rdquo;</p>
+<p>The Mining Station was a black circle on the map, and the light dotted lines that were tunnels stretched out about it in spiderweb fashion.</p>
+<p>Donovan studied the list of symbols at the bottom of the map. &ldquo;Look,&rdquo; he said, &ldquo;the small black dots are opening to the surface, and here&rsquo;s one maybe three miles away from the selenium pool. There&rsquo;s a number here - you&rsquo;d think they&rsquo;d write larger - 13a. If the robots know their way around here.&rdquo;</p>
+<p>Powell shot the question and received the dull &ldquo;Yes, Master,&rdquo; in reply. &ldquo;Get your insosuit,&rdquo; he said with satisfaction.</p>
+<p>It was the first time either had worn the insosuits - which marked one time more than either had expected to upon their arrival the day before-and they tested their limb movements uncomfortably.</p>
+<p>The insosuit was far bulkier and far uglier than the regulation spacesuit; but withal considerably lighter, due to the fact that they were entirely nonmetallic in composition. Composed of heat-resistant plastic and chemically treated cork layers, and equipped with a desiccating unit to keep the air bone-dry, the insosuits could withstand the full glare of Mercury&rsquo;s sun for twenty minutes. Five to ten minutes more, as well, without actually killing the occupant.</p>
+<p>And still the robot&rsquo;s bands formed the stirrup, nor did he betray the slightest atom of surprise at the grotesque figure into which Powell had been converted.</p>
+<p>Powell&rsquo;s radio-harshened voice boomed out: &ldquo;&lsquo;Are you ready to take us to Exit 13a?&rdquo;</p>
+<p>&ldquo;Yes, Master.&rdquo;</p>
+<p>Good, thought Powell; they might lack radio control but-at least they were fitted for radio reception. &ldquo;Mount one or the other, Mike,&rdquo; he said to Donovan.</p>
+<p>He placed a foot in the improvised stirrup and swung upward. He found the seat comfortable; there was the humped back of the robot, evidently shaped for the purpose, a shallow groove along each shoulder for the thighs and two elongated &ldquo;cars&rdquo; whose purpose now seemed obvious.</p>
+<p>Powell seized the ears and twisted the head. His mount turned ponderously. &ldquo;Lead on, Macduff.&rdquo; But he did not feel at all lighthearted.</p>
+<p>The gigantic robots moved slowly, with mechanical precision, through the doorway that cleared their heads by a scant foot, so that the two men had to duck hurriedly, along a narrow corridor in which their unhurried footsteps boomed monotonously and into the air lock.</p>
+<p>The long, airless tunnel that stretched to a pinpoint before them brought home forcefully to Powell the exact magnitude of the task accomplished by the First Expedition, with their crude robots and their start-from-scratch necessities. They might have been a failure, but their failure was a good deal better than the usual run of the System&rsquo;s successes.</p>
+<p>The robots plodded onward with a pace that never varied and with footsteps that never lengthened.</p>
+<p>Powell said: &ldquo;Notice that these tunnels are blazing with lights and that the temperature is Earth-normal. It&rsquo;s probably been like this all the ten years that this place has remained empty.&rdquo;</p>
+<p>&ldquo;How&rsquo;s that?&rdquo;</p>
+<p>&ldquo;Cheap energy; cheapest in the System. Sunpower, you know, and on Mercury&rsquo;s Sunside, sunpower is something. That&rsquo;s why the Station was built in the sunlight rather than in the shadow of a mountain. It&rsquo;s really a huge energy converter. The heat is turned into electricity, light, mechanical work and what have you; so that energy is supplied and the Station is cooled in a simultaneous process.&rdquo;</p>
+<p>&ldquo;Look,&rdquo; said Donovan. &ldquo;This is all very educational, but would you mind changing the subject? It so happens that this conversion of energy that you talk about is carried on by the photocell banks mainly-and that is a tender subject with me at the moment.&rdquo;</p>
+<p>Powell grunted vaguely, and when Donovan broke the resulting silence, it was to change the subject completely. &ldquo;Listen, Greg. What the devil&rsquo;s wrong with Speedy, anyway? I can&rsquo;t understand it.&rdquo;</p>
+<p>It&rsquo;s not easy to shrug shoulders in an insosuit, but Powell tried it. &ldquo;I don&rsquo;t know, Mike. You know he&rsquo;s perfectly adapted to a Mercurian environment. Heat doesn&rsquo;t mean anything to him and he&rsquo;s built for the light gravity and the broken ground. He&rsquo;s foolproof - or, at least, he should be.&rdquo;</p>
+<p>Silence fell. This time, silence that lasted.</p>
+<p>&ldquo;Master,&rdquo; said the robot, &ldquo;we are here.&rdquo;</p>
+<p>&ldquo;Eh?&rdquo; Powell snapped out of a semidrowse. &ldquo;Well, get us out of here - out to the surface.&rdquo;</p>
+<p>They found themselves in a tiny substation, empty, airless, ruined. Donovan had inspected a jagged hole in the upper reaches of one of the walls by the light of his pocket flash.</p>
+<p>&ldquo;Meteorite, do you suppose?&rdquo; he had asked.</p>
+<p>Powell shrugged. &ldquo;To hell with that. It doesn&rsquo;t matter. Let&rsquo;s get out.&rdquo;</p>
+<p>A towering cliff of a black, basaltic rock cut off the sunlight, and the deep night shadow of an airless world surrounded them. Before them, the shadow reached out and ended in knife-edge abruptness into an all-but-unbearable blaze of white light, that glittered from myriad crystals along a rocky ground.</p>
+<p>&ldquo;Space!&rdquo; gasped Donovan. &ldquo;It looks like snow.&rdquo; And it did.</p>
+<p>Powell&rsquo;s eyes swept the jagged glitter of Mercury to the horizon and winced at the gorgeous brilliance.</p>
+<p>&ldquo;This must be an unusual area,&rdquo; he said. &ldquo;The general albedo of Mercury is low and most of the soil is gray pumice. Something like the Moon, you know. Beautiful, isn&rsquo;t it?&rdquo;</p>
+<p>He was thankful for the light filters in their visiplates. Beautiful or not, a look at the sunlight through straight glass would have blinded them inside of half a minute.</p>
+<p>Donovan was looking at the spring thermometer on his wrist. &ldquo;Holy smokes, the temperature is eighty centigrade&rdquo;</p>
+<p>Powell checked his own and said: &ldquo;Um-m-m. A little high. Atmosphere, you know.&rdquo;</p>
+<p>&ldquo;On Mercury? Are you nuts?&rdquo;</p>
+<p>&ldquo;Mercury isn&rsquo;t really airless,&rdquo; explained Powell, in absent-minded fashion. He was adjusting the binocular attachments to his visiplate, and the bloated fingers of the insosuit were clumsy at it. &ldquo;There is a thin exhalation that clings to its surface-vapors of the more volatile ,elements and compounds that are heavy enough for Mercurian gravity to retain, You know: selenium, iodine, mercury, gallium, potassium, bismuth, volatile oxides. The vapors sweep into the shadows and condense, giving up heat. It&rsquo;s a sort of gigantic still. In fact, if you use your flash, you&rsquo;ll probably find that the side of the cliff is covered with, say, hoar-sulphur, or maybe quicksilver dew.</p>
+<p>&ldquo;It doesn&rsquo;t matter, though. Our suits can stand a measly eighty indefinitely.&rdquo;</p>
+<p>Powell had adjusted the binocular attachments, so that he seemed as eye-stalked as a snail.</p>
+<p>Donovan watched tensely. &ldquo;See anything?&rdquo;</p>
+<p>The other did not answer immediately, and when he did, his voice was anxious and thoughtful. &ldquo;There&rsquo;s a dark spot on the horizon that might be the selenium pool. It&rsquo;s in the right place. But I don&rsquo;t see Speedy.&rdquo;</p>
+<p>Powell clambered upward in an instinctive striving for better view, till he was standing in unsteady fashion upon his robot&rsquo;s shoulders. Legs straddled wide, eyes straining, he said: &ldquo;I think I think. Yes, it&rsquo;s definitely he. He&rsquo;s coming this way.&rdquo;</p>
+<p>Donovan followed the pointing finger. He had no binoculars, but there was a tiny moving dot, black against the blazing brilliance of the crystalline ground.</p>
+<p>&ldquo;I see him,&rdquo; he yelled. &ldquo;Let&rsquo;s get going!&rdquo;</p>
+<p>Powell had hopped down into a sitting position on the robot again, and his suited hand slapped against the Gargantuan&rsquo;s barrel chest. &ldquo;Get going!&rdquo;</p>
+<p>&ldquo;Giddy-ap,&rdquo; yelled Donovan, and thumped his heels, spur fashion.</p>
+<p>The robots started off, the regular thudding of their footsteps silent in the aimlessness, for the nonmetallic fabric of the insosuits did not transmit sound. There was only a rhythmic vibration just below the border of actual hearing.</p>
+<p>&ldquo;Faster,&rdquo; yelled Donovan. The rhythm did not change.</p>
+<p>&ldquo;No use,&rdquo; cried Powell, in reply. &ldquo;These junk heaps are only geared to one speed. Do you think they&rsquo;re equipped with selective flexors?&rdquo;</p>
+<p>They had burst through the shadow, and the sunlight came down in a white-hot wash and poured liquidly about them.</p>
+<p>Donovan ducked involuntarily. &ldquo;Wow! Is it imagination or do I feel heat?&rdquo;</p>
+<p>&ldquo;You&rsquo;ll feel more presently,&rdquo; was the grim reply. &ldquo;Keep your eye on Speedy.&rdquo;</p>
+<p>Robot SPD 13 was near enough to be seen in detail now. His graceful, streamlined body threw out blazing highlights as he loped with easy speed across the broken ground. His name was derived from his serial initials, of course, but it was apt, nevertheless, for the SPD models were among the fastest robots turned out by the United States Robots and Mechanical Men Corporation.</p>
+<p>&ldquo;Hey, Speedy,&rdquo; howled Donovan, and waved a frantic band.</p>
+<p>&ldquo;Speedy!&rdquo; shouted Powell. &ldquo;Come here!&rdquo;</p>
+<p>The distance between the men and the errant robot was being cut down momentarily-more by the efforts of Speedy than the slow plodding of the ten-year-old antique mounts of Donovan and Powell.</p>
+<p>They were close enough now to notice that Speedy&rsquo;s gait included a peculiar rolling stagger, a noticeable side-to-side lurch-and then, as Powell waved his band again and sent maximum juice into his compact head-set radio sender, in preparation for another shout, Speedy looked up and saw them.</p>
+<p>Speedy hopped to a halt and remained standing for a moment with just a tiny, unsteady weave, as though he were swaying in a light wind.</p>
+<p>Powell yelled: &ldquo;All right, Speedy. Come here, boy.&rdquo;</p>
+<p>Whereupon Speedy&rsquo;s robot voice sounded in Powell&rsquo;s earphones for the first time.</p>
+<p>It said: &ldquo;Hot dog, let&rsquo;s play games. You catch me and I catch you; no love can cut our knife in two. For I&rsquo;m Little Buttercup, sweet Little Buttercup. Whoops!&rdquo; Turning on his heel, he sped off in the direction from which he had come, with a speed and fury that kicked up gouts of baked dust.</p>
+<p>And his last words as he receded into the distance were, &ldquo;There grew a little flower &rsquo;neath a great oak tree followed by a curious metallic clicking that might have been a robotic equivalent of a hiccup.</p>
+<p>Donovan said weakly: &ldquo;Where did he pick up the Gilbert and Sullivan? Say, Greg, he. . he&rsquo;s drunk or something.&rdquo;</p>
+<p>&ldquo;If you hadn&rsquo;t told me,&rdquo; was the bitter response, &ldquo;I&rsquo;d never realize it. Let&rsquo;s get back to the cliff. I&rsquo;m roasting.&rdquo;</p>
+<p>It was Powell who broke the desperate silence. &ldquo;In the first place , he said, &ldquo;Speedy isn&rsquo;t drunk -not in the human sense - because he&rsquo;s a robot, and robots don&rsquo;t get drunk. However, there&rsquo;s something wrong with him which is the robotic equivalent of drunkenness,&rdquo;</p>
+<p>&ldquo;To me, he&rsquo;s drunk,&rdquo; stated Donovan, emphatically, &ldquo;and all I know is that he thinks we&rsquo;re playing games. And we&rsquo;re not. It&rsquo;s a matter of life and very gruesome death.&rdquo;</p>
+<p>&ldquo;All right. Don&rsquo;t hurry me. A robot&rsquo;s only a robot. Once we find out what&rsquo;s wrong with him, we can fix it and go on.&rdquo;</p>
+<p>&ldquo;Once,&rdquo; said Donovan, sourly.</p>
+<p>Powell ignored him. &ldquo;Speedy is perfectly adapted to normal Mercurian environment. But this region&rdquo; - and his arm swept wide - &ldquo;is definitely abnormal. There&rsquo;s our clue. Now where do these crystals come from? They might have formed from a slowly cooling liquid; but where would you get liquid so hot that it would cool in Mercury I s sun?&rdquo;</p>
+<p>&ldquo;Volcanic action,&rdquo; suggested Donovan, instantly, and Powell&rsquo;s body tensed.</p>
+<p>&ldquo;Out of the mouths of sucklings,&rdquo; he said in a small, strange voice, and remained very still for five minutes.</p>
+<p>Then, he said, &ldquo;Listen, Mike, what did you say to Speedy when you sent him after the selenium?&rdquo;</p>
+<p>Donovan was taken aback. &ldquo;Well damn it - I don&rsquo;t know. I just told him to get it.&rdquo;</p>
+<p>&ldquo;Yes, I know. But how? Try to remember the exact words.&rdquo;</p>
+<p>&ldquo;I said . . . uh . . . I said: &lsquo;Speedy, we need some selenium. You can get it such-and-such a place. Go get it.&rsquo; That&rsquo;s all. What more did you want me to say?&rdquo;</p>
+<p>&ldquo;You didn&rsquo;t put any urgency into the order, did you?&rdquo;</p>
+<p>&ldquo;What for? It was pure routine.&rdquo;</p>
+<p>Powell sighed. &ldquo;Well, it can&rsquo;t be helped now - but we&rsquo;re in a fine fix.&rdquo; He had dismounted from his robot, and was sitting, back against the cliff. Donovan joined him and they linked arms. In the distance the burning sunlight seemed to wait cat-and-mouse for them, and just next to them, the two giant robots were invisible but for the dull red of their photoelectric eyes that stared down at them, unblinking, unwavering and unconcerned.</p>
+<p>Unconcerned! As was all this poisonous Mercury, as large in jinx as it was small in size.</p>
+<p>Powell&rsquo;s radio voice was tense in Donovan&rsquo;s car: &ldquo;Now, look, let&rsquo;s start with the three fundamental Rules of Robotics - the three rules that are built most deeply into a robot&rsquo;s positronic brain.&rdquo; In the darkness, his gloved fingers ticked off each point.</p>
+<p>&ldquo;We have: One, a robot may not injure a human being, or, through inaction, allow a human being to come to harm.&rdquo;</p>
+<p>&ldquo;Right!&rdquo;</p>
+<p>&ldquo;Two,&rdquo; continued Powell, &ldquo;a robot must obey the orders given it by human beings except where such orders would conflict with the First Law.&rdquo;</p>
+<p>&ldquo;Right!&rdquo;</p>
+<p>&ldquo;And three, a robot must protect its own existence as long as such protection does Dot conflict with the First or Second Laws.&rdquo;</p>
+<p>&ldquo;Right! Now where are we?&rdquo;</p>
+<p>&ldquo;Exactly at the explanation. The conflict between the various rules is ironed out by the different positronic potentials in the brain. We&rsquo;ll say that a robot is walking into danger and knows it. The automatic potential that Rule 3 sets up turns him back. But suppose you order him to walk into that danger. In that case, Rule 2 sets up a counterpotential higher than the previous one and the robot follows orders at the risk of existence.&rdquo;</p>
+<p>&ldquo;Well, I know that. What about it?&rdquo;</p>
+<p>&ldquo;Let&rsquo;s take Speedy&rsquo;s case. Speedy is one of the latest models, extremely specialized, and as expensive as a battleship. It&rsquo;s not a thing to be lightly destroyed.&rdquo;</p>
+<p>&ldquo;So?&rdquo;</p>
+<p>&ldquo;So Rule 3 has been strengthened-that was specifically mentioned, by the way, in the advance notices on the SPD models-so that his allergy to danger is unusually high. At the same time, when you sent him out after the selenium, you gave him his order casually and without special emphasis, so that the Rule 2 potential set-up was rather weak. Now, hold on; I&rsquo;m just stating facts.&rdquo;</p>
+<p>&ldquo;All right, go ahead. I think I get it.&rdquo;</p>
+<p>&ldquo;You see how it works, don&rsquo;t you? There&rsquo;s some sort of danger centering at the selenium pool. It increases as he approaches, and at a certain distance from it the Rule 3 potential, unusually high to start with, exactly balances the Rule 2 potential, unusually low to start with.&rdquo;</p>
+<p>Donovan rose to his feet in excitement. &ldquo;And it strikes an equilibrium. I see. Rule 3 drives him back and Rule 2 drives him forward - &quot;</p>
+<p>&ldquo;So he follows a circle around the selenium pool, staying on the locus of all points of potential equilibrium. And unless we do something about it, he&rsquo;ll stay on that circle forever, giving us the good old runaround.&rdquo; Then, more thoughtfully: &ldquo;And that, by the way, is what makes him drunk. At potential equilibrium, half the positronic paths of his brain are out of kilter. I&rsquo;m not a robot specialist, but that seems obvious. Probably he&rsquo;s lost control of just those parts of his voluntary mechanism that a human drunk has. Ve-e-ery pretty.&rdquo;</p>
+<p>&ldquo;But what&rsquo;s the danger? If we knew what he was running from-!&rsquo; &ldquo;You suggested it. Volcanic action. Somewhere right above the selenium pool is a seepage of gas from the bowels of Mercury. Sulphur dioxide, carbon dioxide-and carbon monoxide. Lots of it and at this temperature.&rdquo;</p>
+<p>Donovan gulped audibly. &ldquo;Carbon monoxide plus iron gives the volatile iron carbonyl.&rdquo;</p>
+<p>&ldquo;And a robot,&rdquo; added Powell, &ldquo;is essentially iron.&rdquo; Then, grimly: &ldquo;There&rsquo;s nothing like deduction. We&rsquo;ve determined everything about our problem but the solution. We can&rsquo;t get the selenium ourselves. It&rsquo;s still too far. We can&rsquo;t. send these robot horses, because they can&rsquo;t go themselves, and they can&rsquo;t carry us fast enough to keep us from crisping. And we can&rsquo;t catch Speedy, because the dope thinks we&rsquo;re playing games, and he can run sixty miles to our four.</p>
+<p>&ldquo;If one of us goes,&rdquo; began Donovan, tentatively, &ldquo;and comes back cooked, there&rsquo;ll still be the other.&rdquo;</p>
+<p>&ldquo;Yes,&rdquo; came the sarcastic reply, &ldquo;it would be a most tender sacrifice - except that a person would be in no condition to give orders before he ever reaches the pool, and I don&rsquo;t think the robots would ever turn back to the cliff without orders. Figure it out! We&rsquo;re two or three miles from the pool-call it two-the robot travels at four miles an hour; and we can last twenty minutes in our suits. It isn&rsquo;t only the beat, remember. Solar radiation out here in the ultraviolet and below is poison.&rdquo;</p>
+<p>&ldquo;Um-m-m,&rdquo; said Donovan, &ldquo;ten minutes short,&rdquo;</p>
+<p>&ldquo;As good as an eternity. And another thing. In Order for Rule 3 potential to have stopped Speedy where it did, there must be an appreciable amount of carbon monoxide in the metal-vapor atmosphere-and there must be an appreciable corrosive action therefore. He&rsquo;s been out hours now-and how do we know when a knee joint, for instance, won&rsquo;t be thrown out of kilter and keel him over. It&rsquo;s not only a question of thinking-we&rsquo;ve got to think fast!&rdquo;</p>
+<p>Deep, dark, dank dismal silence!</p>
+<p>Donovan broke it, voice trembling in an effort to keep itself emotionless. He said: &ldquo;As long as we can&rsquo;t increase Rule 2 potential by giving further orders, how about working the other way? If we increase the danger, we increase Rule 3 potential and drive him backward.&rdquo;</p>
+<p>Powell&rsquo;s visiplate had turned toward him in a silent question.</p>
+<p>&ldquo;You see,&rdquo; came the cautious explanation, &ldquo;all we need to do to drive him out of his rut is to increase the concentration of carbon monoxide in his vicinity. Well, back at the Station there&rsquo;s a complete analytical laboratory.&rdquo;</p>
+<p>&ldquo;Naturally,&rdquo; assented Powell. &ldquo;It&rsquo;s a Mining Station.&rdquo;</p>
+<p>&ldquo;All right. There must be pounds of oxalic acid for calcium precipitations.&rdquo;</p>
+<p>&ldquo;Holy space! Mike, you&rsquo;re a genius.&rdquo;</p>
+<p>&ldquo;So-so,&rdquo; admitted Donovan, modestly. &ldquo;It&rsquo;s just a case of remembering that oxalic acid on beating decomposes into carbon dioxide, water, and good old carbon monoxide. College chem, you know.&rdquo;</p>
+<p>Powell was on his feet and had attracted the attention of one of the monster robots by the simple expedient of pounding the machine&rsquo;s thigh.</p>
+<p>&ldquo;Hey,&rdquo; he shouted, &ldquo;can you throw?&rdquo;</p>
+<p>&ldquo;Master?&rdquo;</p>
+<p>&ldquo;Never mind.&rdquo; Powell damned the robot&rsquo;s molasses-slow brain. He scrabbled up a jagged brick-size rock. &ldquo;Take this;&rsquo; he said, &ldquo;and hit the patch of bluish crystals just across that crooked fissure. You see it?&rdquo;</p>
+<p>Donovan pulled at his shoulder. &ldquo;Too far, Greg. It&rsquo;s almost half a mile off.&rdquo;</p>
+<p>&ldquo;Quiet,&rdquo; replied Powell. &ldquo;It&rsquo;s a case of Mercurian gravity and a steel throwing arm. Watch, will you?&rdquo;</p>
+<p>The robot&rsquo;s eyes were measuring the distance with machinery accurate stereoscopy. His arm adjusted itself to the weight of the missile and drew back. In the darkness, the robot&rsquo;s motions went unseen, but there was a sudden thumping sound as he shifted his weight, and seconds later the rock flew blackly into the sunlight. There was no air resistance to slow it down, nor wind to turn&rdquo; it aside-and when it hit the ground it threw up crystals precisely in the center of the &ldquo;blue patch.&rdquo;</p>
+<p>Powell yelled happily and shouted, &ldquo;Let&rsquo;s go back after the oxalic acid, Mike.&rdquo;</p>
+<p>And as they plunged into the ruined substation on the way back to the tunnels, Donovan said grimly: &ldquo;Speedy&rsquo;s been hanging about on this side of the selenium pool, ever since we chased after him. Did you see him?&rdquo;</p>
+<p>&lsquo;Yes.</p>
+<p>&ldquo;I guess he wants to play games. Well, we&rsquo;ll play him games!&rdquo;</p>
+<p>They were back hours later, with three-liter jars of the white chemical and a pair of long faces, The photo-cell banks were deteriorating more rapidly than had seemed likely. The two steered their robots into the sunlight and toward the waiting Speedy in silence and with grim purpose.</p>
+<p>Speedy galloped slowly toward them. &ldquo;Here we are again. Whee! I&rsquo;ve made a little list, the piano organist; all people who eat peppermint and puff it in your face.&rdquo;</p>
+<p>&ldquo;We&rsquo;ll puff something in your face,&rdquo; muttered Donovan. &ldquo;He&rsquo;s limping, Greg.&rdquo;</p>
+<p>&ldquo;I noticed that,&rdquo; came the low, worried response. &ldquo;The monoxide&rsquo;ll get him yet, if we don&rsquo;t hurry.&rdquo;</p>
+<p>They were approaching cautiously now, almost sidling, to refrain from setting off the thoroughly irrational robot. Powell was too far off to tell, of course, but even already he could have sworn the crack-brained Speedy was setting himself for a spring.</p>
+<p>&ldquo;Let her go,&rdquo; he gasped. &ldquo;Count three! One-two-&rdquo;</p>
+<p>Two steel arms drew back and snapped forward simultaneously and two glass jars whirled forward in towering parallel arcs, gleaming like diamonds in the impossible sun. And in a pair of soundless puffs, they bit the ground behind Speedy in crashes that sent the oxalic acid flying like dust.</p>
+<p>In the full heat of Mercury&rsquo;s sun, Powell knew it was fizzing like soda water.</p>
+<p>Speedy turned to stare, then backed away from it slowly-and as slowly gathered speed. In fifteen seconds, he was leaping directly toward the two humans in an unsteady canter.</p>
+<p>Powell did not get Speedy&rsquo;s words just then, though he heard something that resembled, &ldquo;Lover&rsquo;s professions when uttered in Hessians.&rdquo;</p>
+<p>He turned away. &ldquo;Back to the cliff, Mike. He&rsquo;s out of the rut and he&rsquo;ll be taking orders now. I&rsquo;m getting hot.&rdquo;</p>
+<p>They jogged toward the shadow at the slow monotonous pace of their mounts, and it was not until they had entered it and felt the sudden coolness settle softly about them that Donovan looked back. &ldquo;Greg!&rdquo;</p>
+<p>Powell looked and almost shrieked. Speedy was moving slowly now - so slowly - and in the wrong direction. He was drifting; drifting back into his rut; and he was picking up speed. He looked dreadfully close, and dreadfully unreachable, in the binoculars.</p>
+<p>Donovan shouted wildly, &ldquo;After him!&rdquo; and thumped his robot into its pace, but Powell called him back.</p>
+<p>&ldquo;You won&rsquo;t catch him, Mike - it&rsquo;s no use.&rdquo; He fidgeted on his robot&rsquo;s shoulders and clenched his fist in tight impotence. &ldquo;Why the devil do I see these things five seconds after it&rsquo;s all over? Mike, we&rsquo;ve wasted hours.&rdquo;</p>
+<p>&ldquo;We need more oxalic acid,&rdquo; declared Donovan, stolidly. &ldquo;The concentration wasn&rsquo;t high enough.&rdquo;</p>
+<p>&ldquo;Seven tons of it wouldn&rsquo;t have been enough-and we haven&rsquo;t the hours to spare to get it, even if it were, with the monoxide chewing him away. Don&rsquo;t you see what it is, Mike?&rdquo;</p>
+<p>And Donovan said flatly, &ldquo;No.&rdquo;</p>
+<p>&ldquo;We were only establishing new equilibriums. When we create new monoxide and increase Rule 3 potential, he moves backward till he&rsquo;s in balance again-and when the monoxide drifted away, he moved forward, and again there was balance.&rdquo;</p>
+<p>Powell&rsquo;s voice sounded thoroughly wretched. &ldquo;It&rsquo;s the same old runaround. We can push at Rule 2 and pull at Rule 3 and we can&rsquo;t get anywhere-we can only change the position of balance. We&rsquo;ve got to get outside both rules.&rdquo; And then he pushed his robot closer to Donovan&rsquo;s so that they were sitting face to face, dim shadows in the darkness, and he whispered, &ldquo;Mike!&rdquo;</p>
+<p>&ldquo;Is it the finish?&rdquo; - dully. &ldquo;I suppose we go back to the Station, wait for the banks to fold, shake hands, take cyanide, and go out like gentlemen.&rdquo; He laughed shortly.</p>
+<p>&ldquo;Mike,&rdquo; repeated Powell earnestly, &ldquo;we&rsquo;ve got to get Speedy.&rdquo;</p>
+<p>&ldquo;I know.&rdquo;</p>
+<p>&ldquo;Mike,&rdquo; once more, and Powell hesitated before continuing. &ldquo;There&rsquo;s always Rule 1. I thought of it earlier-but it&rsquo;s desperate.&rdquo;</p>
+<p>Donovan looked up and his voice livened. &ldquo;We&rsquo;re desperate.&rdquo;</p>
+<p>&ldquo;All right. According to Rule 1, a robot can&rsquo;t see a human come to harm because of his own inaction. Two and 3 can&rsquo;t stand against it. They can&rsquo;t, Mike.&rdquo;</p>
+<p>&ldquo;Even when the robot is half cra- Well, he&rsquo;s drunk. You know he is.&rdquo;</p>
+<p>&ldquo;It&rsquo;s the chances you take.&rdquo;</p>
+<p>&ldquo;Cut it. What are you going to do?&rdquo;</p>
+<p>&ldquo;I&rsquo;m going out there now and see what Rule 1 will do. If it won&rsquo;t break the balance, then what the devil - it&rsquo;s either now or three-four days from now.&rdquo;</p>
+<p>&ldquo;Hold on, Greg. There are human rules of behavior, too. You don&rsquo;t go out there just like that. Figure out a lottery, and give me my chance.&rdquo;</p>
+<p>&ldquo;All right. First to get the cube of fourteen goes.&rdquo; And almost immediately, &ldquo;Twenty-seven forty-four!&rdquo;</p>
+<p>Donovan felt his robot stagger at a sudden push by Powell&rsquo;s mount and then Powell was off into the sunlight. Donovan opened his mouth to shout, and then clicked it shut. Of course, the damn fool had worked out the cube of fourteen in advance, and on purpose. Just like him.</p>
+<p>The sun was hotter than ever and Powell felt a maddening itch in the small of his back. Imagination, probably, or perhaps hard radiation beginning to tell even through the insosuit.</p>
+<p>Speedy was watching him, without a word of Gilbert and Sullivan gibberish as greeting. Thank God for that! But he daren&rsquo;t get too close.</p>
+<p>He was three hundred yards away when Speedy began backing, a step at a time, cautiously - and Powell stopped. He jumped from his robot&rsquo;s shoulders and landed on the crystalline ground with a light thump and a flying of jagged fragments.</p>
+<p>He proceeded on foot, the ground gritty and slippery to his steps, the low gravity causing him difficulty. The soles of his feet tickled with warmth. He cast one glance over his shoulder at the blackness of the cliffs shadow and realized that he had come too far to return -either by himself or by the help of his antique robot. It was Speedy or nothing now, and the knowledge of that constricted his chest. Far enough! He stopped.</p>
+<p>&ldquo;Speedy,&rdquo; he called. &ldquo;Speedy!&rdquo;</p>
+<p>The sleek, modem robot ahead of him hesitated and halted his backward steps, then resumed them.</p>
+<p>Powell tried to put a note of pleading into his voice, and found it didn&rsquo;t take much acting. &ldquo;Speedy, I&rsquo;ve got to get back to the shadow or the sun&rsquo;ll get me. It&rsquo;s life or death, Speedy. I need you.&rdquo;</p>
+<p>Speedy took one step forward and stopped. He spoke, but at the sound Powell groaned, for it was, &ldquo;When you&rsquo;re lying awake with a dismal headache and repose is tabooed - &quot; It trailed off there, and Powell took time out for some reason to murmur, &ldquo;Iolanthe.&rdquo;</p>
+<p>It was roasting hot! He caught a movement out of the corner of his eye, and whirled dizzily; then stared in utter astonishment, for the monstrous robot on which he had ridden was moving-moving toward him, and without a rider.</p>
+<p>He was talking: &ldquo;Pardon, Master. I must not move without a Master upon me, but you are in danger.&rdquo;</p>
+<p>Of course, Rule 1 potential above everything. But he didn&rsquo;t want that clumsy antique; he wanted Speedy. He walked away and motioned frantically: &ldquo;I order you to stay away. I order you to stop!&rdquo;</p>
+<p>It was quite useless. You could not beat Rule 1 potential. The robot said stupidly, &ldquo;You are in danger, Master.&rdquo;</p>
+<p>Powell looked about him desperately. He couldn&rsquo;t see clearly. His brain was in a heated whirl; his breath scorched when he breathed, and the ground all about him was a shimmering haze.</p>
+<p>He called a last time, desperately: &ldquo;Speedy! I&rsquo;m dying, damn you! Where are you? Speedy, I need you.&rdquo;</p>
+<p>He was still stumbling backward in a blind effort to get away from the giant robot he didn&rsquo;t want, when he felt steel fingers on his arms, and a worried, apologetic voice of metallic timbre in his cars.</p>
+<p>&ldquo;Holy smokes, boss, what are you doing here? And what am I doing - I&rsquo;m so confused - &quot;</p>
+<p>&ldquo;Never mind,&rdquo; murmured Powell, weakly. &ldquo;Get me to the shadow of the cliff - and hurry!&rdquo; There was one last feeling of being lifted into the air and a sensation of rapid motion and burning beat, and he passed out.</p>
+<p>He woke with Donovan bending over him and smiling anxiously. &ldquo;How are you, Greg?&rdquo;</p>
+<p>&ldquo;Fine!&rdquo; came the response. &ldquo;Where&rsquo;s Speedy?&rdquo; &ldquo;Right here. I sent him out to one of the other selenium pools with orders to get that selenium at all cost this time. He got it back in forty-two minutes and three seconds. I timed him. He still hasn&rsquo;t finished apologizing for the runaround he gave us. He&rsquo;s scared to come near you for fear of what you&rsquo;ll say.&rdquo;</p>
+<p>&ldquo;Drag him over,&rdquo; ordered Powell. &ldquo;It wasn&rsquo;t his fault.&rdquo; He held out a hand and gripped Speedy&rsquo;s metal paw. &ldquo;It&rsquo;s O.K., Speedy.&rdquo; Then, to Donovan, &ldquo;You know, Mike, I was just thinking - &quot;</p>
+<p>&ldquo;Yes!&rdquo;</p>
+<p>&ldquo;Well,&rdquo; he rubbed his face-the air was so delightfully cool, &ldquo;you know that when we get things set up here and Speedy put through his Field Tests, they&rsquo;re going to send us to the Space Station next.&rdquo;</p>
+<p>&ldquo;Yes! At least that&rsquo;s what old lady Calvin told me just before we left, and I didn&rsquo;t say anything about it, because I was going to fight the whole idea.&rdquo;</p>
+<p>&ldquo;Fight it?&rdquo; cried Donovan. &ldquo;But - &quot;</p>
+<p>&ldquo;I know. It&rsquo;s all right with me now. Two hundred seventy-three degrees Centigrade below zero. Won&rsquo;t it be a pleasure?&rdquo;</p>
+<p>&ldquo;Space Station,&rdquo; said Donovan, &ldquo;here I come.&rdquo;</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

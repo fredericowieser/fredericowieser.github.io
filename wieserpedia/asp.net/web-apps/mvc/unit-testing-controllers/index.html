@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">unit testing controllers | Fred Wieser</title>
+<meta property="og:title" content="unit testing controllers | Fred Wieser" />
+<meta name="twitter:title" content="unit testing controllers | Fred Wieser" />
+<meta itemprop="name" content="unit testing controllers | Fred Wieser" />
+<meta name="application-name" content="unit testing controllers | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/unit-testing-controllers/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/unit-testing-controllers/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">unit testing controllers</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-10-04T00:00:00-06:00" itemprop="datePublished"> 4 Oct 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usaspnetcoremvccontrollerstestingviewaspnetcore-70">Overview [<a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p>Unit testing controller logic involves testing a single action (not the dependencies of that action).  It does not test filters, routing, model binding, or model validation (these aspects are tested in <em>integration testing</em>).</p>
+<p>These notes also apply:</p>
+<ul>
+<li>
+<p><a href="/notes/_net/testing/unit-testing/overview">Notes on Unit Testing</a></p>
+</li>
+<li>
+<p>See also: <a href="https://github.com/devlooped/moq">Moq</a></p>
+</li>
+<li>
+<p>See also: <a href="https://github.com/telerik/JustMockLite">JustMockLite</a></p>
+</li>
+<li>
+<p>See also: <a href="https://github.com/ivaylokenov/MyTested.AspNetCore.Mvc">MyTested.AspNetCore.Mvc</a></p>
+</li>
+</ul>
+<h1 id="example">Example</h1>
+<p>Consider this controller with an <code>Index</code> action method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">HomeController</span> : Controller
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> IBrainstormSessionRepository _sessionRepository;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> HomeController(IBrainstormSessionRepository sessionRepository)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _sessionRepository = sessionRepository;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task&lt;IActionResult&gt; Index()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> sessionList = <span style="color:#ff7b72">await</span> _sessionRepository.ListAsync();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> model = sessionList.Select(session =&gt; <span style="color:#ff7b72">new</span> StormSessionViewModel()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Id = session.Id,
+</span></span><span style="display:flex;"><span>            DateCreated = session.DateCreated,
+</span></span><span style="display:flex;"><span>            Name = session.Name,
+</span></span><span style="display:flex;"><span>            IdeaCount = session.Ideas.Count
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> View(model);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">NewSessionModel</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        [Required]
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> SessionName { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [HttpPost]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task&lt;IActionResult&gt; Index(NewSessionModel model)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (!ModelState.IsValid) 
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> BadRequest(ModelState);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">await</span> _sessionRepository.AddAsync(<span style="color:#ff7b72">new</span> BrainstormSession()
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                DateCreated = DateTimeOffset.Now,
+</span></span><span style="display:flex;"><span>                Name = model.SessionName
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> RedirectToAction(actionName: nameof(Index));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Create test sessions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">private</span> List&lt;BrainstormSession&gt; GetTestSessions()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> sessions = <span style="color:#ff7b72">new</span> List&lt;BrainstormSession&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sessions.Add(<span style="color:#ff7b72">new</span> BrainstormSession()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        DateCreated = <span style="color:#ff7b72">new</span> DateTime(<span style="color:#a5d6ff">2016</span>, <span style="color:#a5d6ff">7</span>, <span style="color:#a5d6ff">2</span>),
+</span></span><span style="display:flex;"><span>        Id = <span style="color:#a5d6ff">1</span>,
+</span></span><span style="display:flex;"><span>        Name = <span style="color:#a5d6ff">&#34;Test One&#34;</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sessions.Add(<span style="color:#ff7b72">new</span> BrainstormSession()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        DateCreated = <span style="color:#ff7b72">new</span> DateTime(<span style="color:#a5d6ff">2016</span>, <span style="color:#a5d6ff">7</span>, <span style="color:#a5d6ff">1</span>),
+</span></span><span style="display:flex;"><span>        Id = <span style="color:#a5d6ff">2</span>,
+</span></span><span style="display:flex;"><span>        Name = <span style="color:#a5d6ff">&#34;Test Two&#34;</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> sessions;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The unit test for this action:</p>
+<ol>
+<li>Confirms a <code>ViewResult</code> is returned</li>
+<li>Confirms the <code>ViewDataDictionary.Model</code> is a <code>StormSessionViewModel</code></li>
+<li>Confirms there are two brainstorming sessions stored in <code>ViewDataDictionary.Model</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task Index_ReturnsAViewResult_WithAListOfBrainstormSessions()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> mockRepo = <span style="color:#ff7b72">new</span> Mock&lt;IBrainstormSessionRepository&gt;();
+</span></span><span style="display:flex;"><span>    mockRepo.Setup(repo =&gt; repo.ListAsync()).ReturnsAsync(GetTestSessions());
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> controller = <span style="color:#ff7b72">new</span> HomeController(mockRepo.Object);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> result = <span style="color:#ff7b72">await</span> controller.Index();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#ff7b72">var</span> viewResult = Assert.IsType&lt;ViewResult&gt;(result); <span style="color:#8b949e;font-style:italic">// #1</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#ff7b72">var</span> model = Assert.IsAssignableFrom&lt;IEnumerable&lt;StormSessionViewModel&gt;&gt;(viewResult.ViewData.Model); <span style="color:#8b949e;font-style:italic">// #2</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    Assert.Equal(<span style="color:#a5d6ff">2</span>, model.Count()); <span style="color:#8b949e;font-style:italic">// #3</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The unit test for the HTTP Post Index method:</p>
+<ol>
+<li>Confirms that when <code>ModelState.IsValid</code> is <code>false</code>, the action method returns an HTTP 400 <code>ViewResult</code></li>
+<li>Confirms that when <code>ModelState.IsValid</code> is <code>true</code>:
+<ol>
+<li>The <code>Add</code> method on the repository is called</li>
+<li>A <code>RedirectToActionResult</code> is returned</li>
+</ol>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task IndexPost_ReturnsBadRequestResult_WhenModelStateIsInvalid()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> mockRepo = <span style="color:#ff7b72">new</span> Mock&lt;IBrainstormSessionRepository&gt;();
+</span></span><span style="display:flex;"><span>    mockRepo.Setup(repo =&gt; repo.ListAsync())
+</span></span><span style="display:flex;"><span>            .ReturnsAsync(GetTestSessions());
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> controller = <span style="color:#ff7b72">new</span> HomeController(mockRepo.Object);
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// adds errors to test the invalid model state</span>
+</span></span><span style="display:flex;"><span>    controller.ModelState.AddModelError(<span style="color:#a5d6ff">&#34;SessionName&#34;</span>, <span style="color:#a5d6ff">&#34;Required&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> newSession = <span style="color:#ff7b72">new</span> HomeController.NewSessionModel();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> result = <span style="color:#ff7b72">await</span> controller.Index(newSession);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#ff7b72">var</span> badRequestResult = Assert.IsType&lt;BadRequestObjectResult&gt;(result); <span style="color:#8b949e;font-style:italic">// #1</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    Assert.IsType&lt;SerializableError&gt;(badRequestResult.Value); <span style="color:#8b949e;font-style:italic">// #1</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Fact]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> Task IndexPost_ReturnsARedirectAndAddsSession_WhenModelStateIsValid()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Arrange</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> mockRepo = <span style="color:#ff7b72">new</span> Mock&lt;IBrainstormSessionRepository&gt;();
+</span></span><span style="display:flex;"><span>    mockRepo.Setup(repo =&gt; repo.AddAsync(It.IsAny&lt;BrainstormSession&gt;()))
+</span></span><span style="display:flex;"><span>            .Returns(Task.CompletedTask)
+</span></span><span style="display:flex;"><span>            .Verifiable();
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> controller = <span style="color:#ff7b72">new</span> HomeController(mockRepo.Object);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> newSession = <span style="color:#ff7b72">new</span> HomeController.NewSessionModel() { SessionName = <span style="color:#a5d6ff">&#34;Test Name&#34;</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Act</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> result = <span style="color:#ff7b72">await</span> controller.Index(newSession);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Assert</span>
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#ff7b72">var</span> redirectToActionResult = Assert.IsType&lt;RedirectToActionResult&gt;(result); <span style="color:#8b949e;font-style:italic">// #2.2</span>
+</span></span><span style="display:flex;"><span>    Assert.Null(redirectToActionResult.ControllerName); <span style="color:#8b949e;font-style:italic">// #2.2</span>
+</span></span><span style="display:flex;"><span>    Assert.Equal(<span style="color:#a5d6ff">&#34;Index&#34;</span>, redirectToActionResult.ActionName); <span style="color:#8b949e;font-style:italic">// #2.2</span>
+</span></span><span style="display:flex;"><span>    mockRepo.Verify(); <span style="color:#8b949e;font-style:italic">// Fails the test if the expected method wasn&#39;t called (#2.1)</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

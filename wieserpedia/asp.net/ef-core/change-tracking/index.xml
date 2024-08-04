@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>change tracking on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/ef-core/change-tracking/</link>
+    <description>Recent content in change tracking on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/ef-core/change-tracking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/ef-core/change-tracking/overview/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/ef-core/change-tracking/overview/</guid>
+      
+      <description>Abstract DbContext instances track changes made to their entities. The tracked entities report the changes to the database when SaveChanges is called.
+Entity instances become tracked when they are: (1) returned from a query; (2) explicitly attached to a DbContext via Add, Attach, or Update; (3) detected as new entities connected to existing tracked entities.
+Entity instances are no longer tracked when: (1) the DbContext is disposed; (2) the change tracker is cleared; (3) the entities are explicitly detached.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

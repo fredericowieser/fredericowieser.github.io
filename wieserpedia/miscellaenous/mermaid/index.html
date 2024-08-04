@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">mermaid | Fred Wieser</title>
+<meta property="og:title" content="mermaid | Fred Wieser" />
+<meta name="twitter:title" content="mermaid | Fred Wieser" />
+<meta itemprop="name" content="mermaid | Fred Wieser" />
+<meta name="application-name" content="mermaid | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/miscellaenous/mermaid/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/miscellaenous/mermaid/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">mermaid</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-06-08T00:00:00-06:00" itemprop="datePublished"> 8 Jun 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="absract">Absract</h1>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/intro/">https://mermaid.js.org/intro/</a></p>
+</blockquote>
+<p>A JavaScript-based diagramming and charting tool that renders Markdown-inspired text into diagrams.</p>
+<h1 id="syntax">Syntax</h1>
+<h2 id="declaration">Declaration</h2>
+<p>All diagrams begin with a <em>diagram type declaration</em>: this is the first line of the code.</p>
+<h2 id="comments">Comments</h2>
+<p>Comments are prefixed with <code>%%</code> and must be on their own line:</p>
+<pre tabindex="0"><code>flowchart LR
+%% this is a sample comment
+    A --&gt; B --&gt; C
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+%% this is a sample comment
+    A --&gt; B --&gt; C
+</code></pre><h2 id="keywords">Keywords</h2>
+<p>The following are restricted keywords/phrases with workarounds:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword/Phrase</th>
+<th>Workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%%{``}%%</code></td>
+<td>Avoid using &ldquo;{}&rdquo; in comments that use <code>%%</code></td>
+</tr>
+<tr>
+<td>end</td>
+<td>Wrap the word <em>end</em> in quotes or capitalize any of its letters</td>
+</tr>
+</tbody>
+</table>
+<h1 id="configuration">Configuration</h1>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/config/configuration.html">https://mermaid.js.org/config/configuration.html</a></p>
+</blockquote>
+<p>Configuration is passed via the <code>config:</code> section of frontmatter:</p>
+<pre tabindex="0"><code>---
+title: Hello Title
+config:
+  theme: base
+  themeVariables:
+    primaryColor: &#34;#00ff00&#34;
+---
+flowchart
+	Hello --&gt; World
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">---
+title: Hello Title
+config:
+  theme: base
+  themeVariables:
+    primaryColor: &#34;#00ff00&#34;
+---
+flowchart
+	Hello --&gt; World
+</code></pre><p>See <a href="https://mermaid.js.org/config/schema-docs/config.html">here</a> for various config properties.</p>
+<h1 id="diagrams">Diagrams</h1>
+<h2 id="class-diagram">Class Diagram</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/timeline.html">https://mermaid.js.org/syntax/timeline.html</a></p>
+</blockquote>
+<p>UML diagrams that describe the structure of a system with classes, their attributes, operations (methods), and relationships among objects.</p>
+<pre tabindex="0"><code>classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &lt;--&gt; C2: Cool label
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &lt;--&gt; C2: Cool label
+</code></pre><h2 id="erd">ERD</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/entityRelationshipDiagram.html">https://mermaid.js.org/syntax/entityRelationshipDiagram.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</code></pre><h2 id="flowchart">Flowchart</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/flowchart.html">https://mermaid.js.org/syntax/flowchart.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre><h3 id="nodes">Nodes</h3>
+<p>Flowcharts consist of <strong>nodes</strong> (shapes) and <strong>edges</strong> (arrows or lines).</p>
+<p>Below:</p>
+<ul>
+<li><code>box</code> is what is displayed in the box and can be any name</li>
+<li><code>graph</code> can be used as an alias for <code>flowchart</code>.</li>
+<li><code>LR</code> defines the direction of the flowchart(left -&gt; right).
+<ul>
+<li><code>TB</code> = top -&gt; bottom (<code>TD</code> is an alias to <code>TB</code>)</li>
+<li><code>BT</code> = bottom -&gt; top</li>
+<li><code>LR</code> = left -&gt; right</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>---
+title: Node
+---
+flowchart LR 
+    box
+
+    box1[Text in the box]
+    box2[&#34;This text contains Unicode ❤ so its wrapped in double quotes&#34;]
+    box3[&#34;`This box contains **Markdown** and is wrapped in ticks and double quotes`&#34;]
+    box4[&#34;`Markdown text
+    also supports
+    newlines`&#34;]
+    box1 --&gt; box2
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">---
+title: Node 
+---
+flowchart LR 
+    box
+    
+    box1[Text in the box]
+    box2[&#34;This text contains Unicode ❤ so its wrapped in quotes&#34;]
+    box3[&#34;`This box contains **Markdown** and is wrapped in ticks and double quotes`&#34;]
+    box4[&#34;`Markdown text
+    also supports
+    newlines`&#34;]
+    box1 --&gt; box2
+</code></pre><h3 id="node-shapes">Node Shapes</h3>
+<pre tabindex="0"><code>flowchart TB
+    box3(Round edges)
+    box4([Stadium shaped])
+    box5[[Sub-routine shaped]]
+    box6[(Database shape)]
+    box7&gt;Flag shape]
+    box8((Circle))
+    box8v2(((Double circle)))
+    box9{Rhombus/Diamond}
+    box11{{Hexagon}}
+    box10[/Parallelogram/]
+    box12[\Parallelogram 2\]
+    box13[/Trapezoid\]
+    box14[\Trapezoid 2\]
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TB
+    box3(Round edges)
+    box4([Stadium shaped])
+    box5[[Sub-routine shaped]]
+    box6[(Database shape)]
+    box7&gt;Flag shape]
+    box8((Circle))
+    box8v2(((Double circle)))
+    box9{Rhombus/Diamond}
+    box11{{Hexagon}}
+    box10[/Parallelogram/]
+    box12[\Parallelogram 2\]
+    box13[/Trapezoid\]
+    box14[\Trapezoid 2\]
+</code></pre><h3 id="links-edges">Links (edges)</h3>
+<pre tabindex="0"><code>flowchart LR
+    A1 --- B1
+    A2-- with text ---B2
+    A3---|with text|B3
+    C1 -.- D1
+    C2-. with text .-D2
+    E1 --&gt; F1
+    E2 &lt;--&gt; F2
+    E3 -- with text --&gt; F3
+    E4 -.-&gt; F4
+    E5-. with text .-&gt; F5
+    E6 ==&gt; F6
+    E7 == with text ==&gt; F7
+    G1 -- chained --&gt; G2 -- links --&gt; G3
+    H1 --o I1
+    H2 o--o I2
+    J1 --x K1
+    J2 x--x K2
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A1 --- B1
+    A2-- with text ---B2
+    A3---|with text|B3
+    C1 -.- D1
+    C2-. with text .-D2
+    E1 --&gt; F1
+    E2 &lt;--&gt; F2
+    E3 -- with text --&gt; F3
+    E4 -.-&gt; F4
+    E5-. with text .-&gt; F5
+    E6 ==&gt; F6
+    E7 == with text ==&gt; F7
+    G1 -- chained --&gt; G2 -- links --&gt; G3
+    H1 --o I1
+    H2 o--o I2
+    J1 --x K1
+    J2 x--x K2
+</code></pre><h3 id="mulitple-links-tofrom-a-node">Mulitple Links to/from a Node</h3>
+<pre tabindex="0"><code>flowchart LR
+    A --&gt; B
+    A --&gt; C
+    B --&gt; D
+    C --&gt; D
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A --&gt; B
+    A --&gt; C
+    B --&gt; D
+    C --&gt; D
+</code></pre><p>This syntax is more succinct than the above:</p>
+<pre tabindex="0"><code>flowchart LR
+    A --&gt; B &amp; C --&gt; D
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A --&gt; B &amp; C --&gt; D
+</code></pre><p>And also:</p>
+<pre tabindex="0"><code>flowchart LR
+    A &amp; B --&gt; C &amp; D
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart LR
+    A &amp; B --&gt; C &amp; D
+</code></pre><h3 id="flowchart-with-subgraphs">Flowchart with subgraphs</h3>
+<pre tabindex="0"><code>flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</code></pre><h2 id="gantt-chart">Gantt Chart</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/gantt.html">https://mermaid.js.org/syntax/gantt.html</a></p>
+</blockquote>
+<p>Use Gantt charts to illustrate project schedules. Each scheduled task is one continuous bar that extends from left to right. The <em>x</em> axis is time; the <em>y</em> axis is records tasks in the order in which they are to be completed.</p>
+<pre tabindex="0"><code>gantt
+    dateFormat  YYYY-MM-DD
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week (&#34;sunday&#34;) or &#34;weekends&#34;, but not the word &#34;weekdays&#34;.)
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :until isadded
+    Functionality added                 :milestone, isadded, 2014-01-25, 0d
+
+    section Documentation
+    Describe gantt syntax               :active, a1, after des1, 3d
+    Add gantt diagram to demo page      :after a1  , 20h
+    Add another diagram to demo page    :doc1, after a1  , 48h
+
+    section Last section
+    Describe gantt syntax               :after doc1, 3d
+    Add gantt diagram to demo page      :20h
+    Add another diagram to demo page    :48h
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gantt
+    dateFormat  YYYY-MM-DD
+    title       Adding GANTT diagram functionality to mermaid
+    excludes    weekends
+    %% (`excludes` accepts specific dates in YYYY-MM-DD format, days of the week (&#34;sunday&#34;) or &#34;weekends&#34;, but not the word &#34;weekdays&#34;.)
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :until isadded
+    Functionality added                 :milestone, isadded, 2014-01-25, 0d
+
+    section Documentation
+    Describe gantt syntax               :active, a1, after des1, 3d
+    Add gantt diagram to demo page      :after a1  , 20h
+    Add another diagram to demo page    :doc1, after a1  , 48h
+
+    section Last section
+    Describe gantt syntax               :after doc1, 3d
+    Add gantt diagram to demo page      :20h
+    Add another diagram to demo page    :48h
+</code></pre><h3 id="syntax-1">Syntax</h3>
+<h4 id="title">Title</h4>
+<p>The <code>title</code> is optional and displayed at the top of the Gantt chart if specified.</p>
+<h4 id="tasks">Tasks</h4>
+<p>Tasks are added to Gantt charts in <code>task name : metadata</code> format.</p>
+<p>Metadata can include tags:</p>
+<ul>
+<li>Tags are optional. If used, they must be specified first.</li>
+<li>Valid tags: <code>active</code>,<code>done</code>,<code>crit</code>, and <code>milestone</code>.</li>
+</ul>
+<p>After the tags, remaining metadata items are interpreted as follows:</p>
+<ul>
+<li>If one item (Scenario A):
+<ul>
+<li>Determines when the task ends. May be a date/time or a duration. Examples of durations are <code>1d</code>, <code>5h</code>, <code>2w</code>, etc.
+<ul>
+<li>Durations are addeed to the start date of the task to determine its end date and takes into account any exclusions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If two items (#1 and #2) (Scenario B)
+<ul>
+<li>#1 can be:
+<ul>
+<li>A start date/time in the format specified in the <code>dateFormat</code> directive, or</li>
+<li>A reference another task using <code>after &lt;otherTaskId&gt; [[otherTaskId2 [otherTaskId3]]...]</code>. In this case, the start date of the task is set according to the latest end date of any referenced task.</li>
+</ul>
+</li>
+<li>#2 is interpreted as one item in Scenario A above.</li>
+</ul>
+</li>
+<li>If three items (#1, #2 and #3)
+<ul>
+<li>#1 denotes the ID of the task. This can be referenced using <code>later &lt;taskId&gt;</code>.</li>
+<li>#2 and #3 are interpreted as Scenario B above.</li>
+</ul>
+</li>
+</ul>
+<h4 id="sections">Sections</h4>
+<p>Gantt charts can have their own sections. The syntax is <code>section &lt;section name&gt;</code> where <code>&lt;section name&gt;</code> is required.</p>
+<h4 id="milestones">Milestones</h4>
+<p>Milestones represent a single instance in time:</p>
+<pre tabindex="0"><code>gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+</code></pre><p>The location of the milestone on the chart is determined using this formula: <em>initial date + duration / 2</em>.</p>
+<h3 id="configuration-1">Configuration</h3>
+<h4 id="dates">Dates</h4>
+<p>Input date format is defined in <code>dateFormat</code>. The default is <code>YYYY-MM-DD</code>. Custom formats can be provided using <a href="https://day.js.org/docs/en/parse/string-format/">these tokens</a>.</p>
+<p>Output date format is defined in <code>axisFormat</code>. The default is <code>YYYY-MM-DD</code>. Custom formats can be prfovided using <a href="https://github.com/d3/d3-time-format/tree/v4.0.0#locale_format">these tokens</a>.</p>
+<h4 id="axis-ticks">Axis Ticks</h4>
+<p>The format of ticks is defined in <code>tickInterval</code>. The default is <code>auto</code>. Other options are like <code>1day</code> or <code>2week</code> where the timespan can be <code>millisecond</code>, <code>second</code>, <code>minute</code>, <code>hour</code>, <code>day</code>, <code>week</code>, or <code>month</code>.</p>
+<p>If you specify a <code>week</code> tick interval, you can also specify the weekday the week starts on. The default is <code>sunday</code>:</p>
+<pre tabindex="0"><code>gantt
+  tickInterval 1week
+  weekday monday
+</code></pre><h4 id="display-mode">Display Mode</h4>
+<p>The <code>displayMode</code> is set in frontmatter. <code>compact</code> mode displays multiple tasks in the same row:</p>
+<pre tabindex="0"><code>---
+displayMode: compact
+---
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :a2, 2014-01-20, 25d
+    Another one      :a3, 2014-02-10, 20d
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">---
+displayMode: compact
+---
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :a2, 2014-01-20, 25d
+    Another one      :a3, 2014-02-10, 20d
+</code></pre><h4 id="today-marker">Today Marker</h4>
+<p>The <code>todayMarker</code> is included by default. It can be hidden with <code>todayMarker off</code>.</p>
+<h2 id="git-graph">Git Graph</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/gitgraph.html">https://mermaid.js.org/syntax/gitgraph.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+</code></pre><h2 id="mindmaps">Mindmaps</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/mindmap.html">https://mermaid.js.org/syntax/mindmap.html</a></p>
+</blockquote>
+<p>Use mindmaps to visually organize information and show relationships among the main idea and subtopics.</p>
+<pre tabindex="0"><code>mindmap
+  root((mindmap))
+    Origins
+      Long history
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness&lt;br/&gt;and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+  root((mindmap))
+    Origins
+      Long history
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness&lt;br/&gt;and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+</code></pre><h3 id="shapes">Shapes</h3>
+<pre tabindex="0"><code>mindmap
+    id[square]
+        a(rounded square)
+        b((circle))
+        c)cloud(
+        d))bang((
+        e{{hexagon}}
+        d
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+    id[square]
+        a(rounded square)
+        b((circle))
+        c)cloud(
+        d))bang((
+        e{{hexagon}}
+        d
+</code></pre><h3 id="classes">Classes</h3>
+<p>Classes are added with the syntax <code>:::</code> like so:</p>
+<pre tabindex="0"><code>mindmap
+    Root
+        A[A]
+        :::urgent large
+        B(B)
+        C
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+    Root
+        A[A]
+        :::urgent large
+        B(B)
+        C
+</code></pre><h3 id="markdown-strings">Markdown Strings</h3>
+<p>Mindmaps support Markdown strings:</p>
+<pre tabindex="0"><code>mindmap
+    id1[&#34;`**Root** with
+a second line
+Unicode works too: 🤓`&#34;]
+      id2[&#34;`The dog in **the** hog... a *very long text* that wraps to a new line`&#34;]
+      id3[Regular labels still works]
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">mindmap
+    id1[&#34;`**Root** with
+a second line
+Unicode works too: 🤓`&#34;]
+      id2[&#34;`The dog in **the** hog... a *very long text* that wraps to a new line`&#34;]
+      id3[Regular labels still works]
+</code></pre><h2 id="pie-chart">Pie Chart</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/pie.html">https://mermaid.js.org/syntax/pie.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>pie 
+    title Pets adopted by volunteers
+    &#34;Dogs&#34; : 386
+    &#34;Cats&#34; : 85
+    &#34;Rats&#34; : 15
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">pie 
+    title Pets adopted by volunteers
+    &#34;Dogs&#34; : 386
+    &#34;Cats&#34; : 85
+    &#34;Rats&#34; : 15
+</code></pre><p>Use the <code>showData</code> directive immediately after the diagram type declaration to annotate the legend with data values:</p>
+<pre tabindex="0"><code>pie showData
+    title Pets adopted by volunteers
+    &#34;Dogs&#34; : 386
+    &#34;Cats&#34; : 85
+    &#34;Rats&#34; : 15
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">pie showData
+    title Pets adopted by volunteers
+    &#34;Dogs&#34; : 386
+    &#34;Cats&#34; : 85
+    &#34;Rats&#34; : 15
+</code></pre><h2 id="quad-chart">Quad Chart</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/quadrantChart.html">https://mermaid.js.org/syntax/quadrantChart.html</a></p>
+</blockquote>
+<p>Use quad charts to visually represent data divided into 4 quadrants.</p>
+<pre tabindex="0"><code>quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --&gt; High Reach
+    y-axis Low Engagement --&gt; High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --&gt; High Reach
+    y-axis Low Engagement --&gt; High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+</code></pre><h2 id="sequence-diagram">Sequence Diagram</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/sequenceDiagram.html">https://mermaid.js.org/syntax/sequenceDiagram.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop HealthCheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop HealthCheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre><h2 id="timeline">Timeline</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/timeline.html">https://mermaid.js.org/syntax/timeline.html</a></p>
+</blockquote>
+<p>Use timelines to illustrate a chronology of events.</p>
+<pre tabindex="0"><code>timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">timeline
+    title History of Social Media Platform
+    2002 : LinkedIn
+    2004 : Facebook
+         : Google
+    2005 : Youtube
+    2006 : Twitter
+</code></pre><p>Timelines consist of <code>time period : event</code> pairs:</p>
+<pre tabindex="0"><code>    2002 : LinkedIn
+    2004 : Facebook
+</code></pre><p>Multiple events can be added to the same time period:</p>
+<pre tabindex="0"><code>    2004 : Facebook
+         : Google
+</code></pre><p>This syntax is more succinct than the above:</p>
+<pre tabindex="0"><code>    2004 : Facebook : Google
+</code></pre><h3 id="sections-1">Sections</h3>
+<p>Time periods can be grouped into sections:</p>
+<pre tabindex="0"><code>timeline
+    title Timeline of Industrial Revolution
+    section 17th-20th century
+        Industry 1.0 : Machinery, Water power, Steam &lt;br&gt;power
+        Industry 2.0 : Electricity, Internal combustion engine, Mass production
+        Industry 3.0 : Electronics, Computers, Automation
+    section 21st century
+        Industry 4.0 : Internet, Robotics, Internet of Things
+        Industry 5.0 : Artificial intelligence, Big data, 3D printing
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">timeline
+    title Timeline of Industrial Revolution
+    section 17th-20th century
+        Industry 1.0 : Machinery, Water power, Steam &lt;br&gt;power
+        Industry 2.0 : Electricity, Internal combustion engine, Mass production
+        Industry 3.0 : Electronics, Computers, Automation
+    section 21st century
+        Industry 4.0 : Internet, Robotics, Internet of Things
+        Industry 5.0 : Artificial intelligence, Big data, 3D printing
+</code></pre><h2 id="user-journey">User Journey</h2>
+<blockquote>
+<p>Documentation: <a href="https://mermaid.js.org/syntax/userJourney.html">https://mermaid.js.org/syntax/userJourney.html</a></p>
+</blockquote>
+<pre tabindex="0"><code>journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+</code></pre><pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+</code></pre>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

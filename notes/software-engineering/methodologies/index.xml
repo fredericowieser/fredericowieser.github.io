@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>methodologies on Fred Wieser</title>
+    <link>http://localhost:1313/notes/software-engineering/methodologies/</link>
+    <description>Recent content in methodologies on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/software-engineering/methodologies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>service oriented architecture</title>
+      <link>http://localhost:1313/notes/software-engineering/methodologies/service-oriented-architecture/</link>
+      <pubDate>Wed, 22 Feb 2023 11:30:23 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/methodologies/service-oriented-architecture/</guid>
+      
+      <description>Service-Oriented Architecture (SOA) An architectural style with a focus on discrete services vs. a monolithic design.
+Service — a function made available over a network to consumers.
+Represents a repeatable business activity with a specific outcome. Self-contained Black box to consumers Composable Service Mesh — a conjunction of services that provide functionality akin to an application.
+Services must be stateless — they must return the requested value or an exception.</description>
+      
+    </item>
+    
+    <item>
+      <title>rational unified process</title>
+      <link>http://localhost:1313/notes/software-engineering/methodologies/rational-unified-process/</link>
+      <pubDate>Wed, 22 Feb 2023 11:13:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/methodologies/rational-unified-process/</guid>
+      
+      <description>Rational Unified Process Created by Rational Software, which was later acquired by IBM (2013). An adaptable process framework. An implementation of unified process. RUP Building Blocks Roles (who) — a set of related skills, competencies and responsibilities. Work products (what) — something resulting from a Task. Task (how) — a unit of work assigned to a role that provides a meaningful result. 6 Engineering Disciplines Business modeling Requirements Analysis &amp;amp; Design Implementation Testing Deployment 6 Best Practices Develop iteratively Manage requirements Use components (RUP supports OOP) Model visually (prefer XML) Verify quality Control changes (continuous integration) Tools IBM Rational Method Composer—use to author, configure, view and publish processes Eclipse Process Framework (open source) </description>
+      
+    </item>
+    
+  </channel>
+</rss>

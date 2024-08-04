@@ -1,0 +1,528 @@
+<!DOCTYPE html><html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">About | Fred Wieser</title>
+<meta property="og:title" content="About | Fred Wieser" />
+<meta name="twitter:title" content="About | Fred Wieser" />
+<meta itemprop="name" content="About | Fred Wieser" />
+<meta name="application-name" content="About | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/">
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Fred Wieser">
+    <link href="/index.xml" rel="feed" type="application/rss+xml" title="Fred Wieser">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<style>
+:root {
+    --body-bg-light: #fff;
+    --body-bg-dark: #121212;
+    --body-color-light: #000;
+    --body-color-dark: #fff;
+    --box-bg-light: #EEE;
+    --box-bg-dark: #333;
+    --text-color-light: hsl(215, 75%, 10%);
+    --text-color-dark: #fff;
+}
+
+body {
+    font-family: system-ui;
+    background-color: var(--body-bg-light);
+    color: var(--body-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard {
+    display: grid;
+    gap: 1ch;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.dashboard > * {
+    border-radius: 1ch;
+    container-type: inline-size;
+    grid-column: var(--gc, auto);
+    grid-row: var(--gr, auto);
+    padding: 2ch;
+    transition: background-color 0.3s;
+    border: 1px solid var(--box-bg-dark);
+}
+
+.dashboard > * h2 {
+    margin-block: 0 1ch;
+}
+
+.dashboard ul {
+    all: unset;
+    display: grid;
+    gap: 1.5ch;
+}
+
+.dashboard ul li {
+    list-style-position: inside;
+}
+
+.profile {
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 1ch;
+    transition: background-color 0.3s;
+}
+
+.profile .bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text, .recent-posts, .notable-projects {
+    border-radius: 1ch;
+    transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+    .dashboard {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .profile { --gc: span 3; }
+    .intro-text { --gc: span 4; }
+    .recent-posts { --gc: span 3; }
+    .notable-projects { --gc: span 4; }
+}
+</style>
+<script>
+(() => {
+    "use strict";
+    const LS_THEME_KEY = "theme";
+    const THEMES = {
+        LIGHT: "light",
+        DARK: "dark",
+        AUTO: "auto",
+    };
+
+    const body = document.body;
+    const config = body.getAttribute("data-theme");
+
+    const getThemeState = () => {
+        const lsState = localStorage.getItem(LS_THEME_KEY);
+        if (lsState) return lsState;
+
+        let state;
+        switch (config) {
+            case THEMES.DARK:
+                state = THEMES.DARK;
+                break;
+            case THEMES.LIGHT:
+                state = THEMES.LIGHT;
+                break;
+            case THEMES.AUTO:
+            default:
+                state = window.matchMedia("(prefers-color-scheme: dark)").matches
+                    ? THEMES.DARK
+                    : THEMES.LIGHT;
+                break;
+        }
+        return state;
+    };
+
+    const initTheme = (state) => {
+        if (state === THEMES.DARK) {
+            document.documentElement.classList.add(THEMES.DARK);
+            document.documentElement.classList.remove(THEMES.LIGHT);
+        } else if (state === THEMES.LIGHT) {
+            document.documentElement.classList.remove(THEMES.DARK);
+            document.documentElement.classList.add(THEMES.LIGHT);
+        }
+    };
+
+    
+    initTheme(getThemeState());
+    requestAnimationFrame(() => body.classList.remove("notransition"));
+
+    const toggleTheme = () => {
+        const state = getThemeState();
+        const htmlElement = document.documentElement;
+
+        if (state === THEMES.DARK) {
+            localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
+            htmlElement.classList.remove(THEMES.DARK);
+            htmlElement.classList.add(THEMES.LIGHT);
+
+            document.querySelectorAll('.dashboard > *, .profile, .intro-text, .recent-posts, .notable-projects').forEach(element => {
+                element.style.backgroundColor = 'var(--box-bg-light)';
+                element.style.borderColor = 'var(--box-bg-dark)';
+            });
+
+        } else if (state === THEMES.LIGHT) {
+            localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
+            htmlElement.classList.remove(THEMES.LIGHT);
+            htmlElement.classList.add(THEMES.DARK);
+
+            document.querySelectorAll('.dashboard > *, .profile, .intro-text, .recent-posts, .notable-projects').forEach(element => {
+                element.style.backgroundColor = 'var(--box-bg-dark)';
+                element.style.borderColor = 'var(--box-bg-light)';
+            });
+        }
+    };
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const lamp = document.getElementById("mode");
+        lamp.addEventListener("click", (event) => {
+            event.preventDefault();
+            toggleTheme();
+        });
+
+        const cbox = document.getElementById("menu-trigger");
+        cbox.addEventListener("change", function () {
+            const area = document.querySelector(".wrapper");
+            if (this.checked) return area.classList.add("blurry");
+            area.classList.remove("blurry");
+        });
+    });
+})();
+</script>
+
+<body data-theme="auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+        <nav class="menu" aria-label="Main Navigation">
+            <a href="http://localhost:1313/" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+            </a>
+            <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+            <label for="menu-trigger">
+                <span class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+                </span>
+            </label>
+    
+            <div class="trigger">
+                <ul class="trigger-container">
+                    
+                    
+                    <li>
+                        <a class="menu-link active" href="/">
+                            Home
+                        </a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a class="menu-link " href="/projects/">
+                            Projects
+                        </a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a class="menu-link " href="/blog/">
+                            Blog
+                        </a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a class="menu-link " href="/wieserpedia/">
+                            Wieserpedia
+                        </a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a class="menu-link " href="/about/">
+                            About
+                        </a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a class="menu-link " href="/cv/">
+                            CV
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="menu-separator">
+                        <span>|</span>
+                    </li>
+                    
+                    
+                </ul>
+                <a id="mode" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="dashboard">
+        <div class="profile">
+            <div class="bio">
+                
+
+
+<div class="author">
+    
+    
+    <img class="author-avatar" src="/profile_hu1e40b877e809587767301b1372a125c8_41193_1024x1024_fill_q75_h2_box_smart1.webp"/>
+    
+    <h1 class="author-name">Fred Wieser</h1>
+    
+</div>
+
+            </div>
+            <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+        </div>
+
+        <div class="intro-text">
+            <p>
+                With a background in Theoretical Physics from UCL and nearly three years of professional software development experience, I enjoy addressing complex problems and engaging in exciting projects, which you can explore here.
+            </p>
+        </div>
+
+        <div class="recent-posts">
+            <h3>Recent Blog Posts</h3>
+            <h3 class="posts-item-note"></h3>
+            
+            
+            
+            
+            <article class="post-item">
+    <h4 class="post-item-title">
+        <a href="/blog/makig-a-hugo-blog-copy/">#2 Multi-Player ELO Systems</a>
+    </h4>
+    
+    
+    
+    <time class="post-item-meta" datetime="2024-08-01T00:00:00Z">
+        Aug 2024
+        
+    </time>
+</article>
+
+            
+            <article class="post-item">
+    <h4 class="post-item-title">
+        <a href="/blog/makig-a-hugo-blog/">#1 Making A Hugo Blog</a>
+    </h4>
+    
+    
+    
+    <time class="post-item-meta" datetime="2024-07-25T00:00:00Z">
+        Jul 2024
+        
+    </time>
+</article>
+
+            
+            
+        </div>
+
+        <div class="notable-projects">
+            <h3>GitHub Projects</h3>
+            <div id="github_projects">
+                
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <span class="footer_item"> </span>
+        &nbsp;
+        <small class="footer_copyright">
+            © 2024 Fred Wieser.
+            Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+        </small>
+    </footer><a href="#" title="Go to top" id="totop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+    </a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+<script>
+        window.onload = function () {
+            let script = document.createElement("script");
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js";
+            document.body.appendChild(script);
+
+            
+            const sortOnKey = (key, desc) => {
+                return (a, b) => {
+                    a = a[key];
+                    b = b[key];
+                    return desc ? b - a : a - b;
+                }
+            };
+
+            String.prototype.replaceAt = function (index, replacement) {
+                return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+            }
+            fetch("https://api.github.com/users/fredericowieser/repos?per_page=100")
+                .then(response => response.json())
+                .then(projects => {
+                    
+                    projects = projects.sort(sortOnKey("stargazers_count", true));
+                    
+                    let projectsDiv = document.getElementById("github_projects");
+                    
+                    projectsDiv.innerHTML = "";
+                    projectsDiv.classList = "";
+                    for (let i = 0; i < 6; i++) {
+                        let projectDiv = document.createElement("div");
+                        projectDiv.classList = "card hoverable";
+                        let project = projects[i];
+                        if (project != undefined) {
+                            if (project.description == null)
+                                project.description = "No description.";
+                            project.name = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
+                            projectDiv.innerHTML = `
+                                <div class="media">
+                                    <div class="media-body">
+                                        <a href="${project.html_url}" onclick="plausible('${project.name}')" target="_blank">
+                                            <strong class="d-block text-gray-dark">${project.name}</strong>
+                                        </a>
+                                        <div class="stars" style="float:right;">
+                                            ${project.language === "Jupyter Notebook" ? "Python" : project.language} | ${project.stargazers_count} ⭐
+                                        </div>
+                                    </div>
+                                    <p>${project.description}</p>
+                                </div>
+                            `;
+                            projectsDiv.appendChild(projectDiv);
+                        }
+                    }
+                });
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5 develop asp net core mvc apps on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/</link>
+    <description>Recent content in 5 develop asp net core mvc apps on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1 overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/1-overview/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/1-overview/</guid>
+      
+      <description>MVC and Razor Pages Razor Pages are built into ASP.NET Core MVC and use the same features for routing, model binding, filters, authorization, etc.
+Comparison:
+Technology Organization Routing Request Handling MVC Separate folders for Controllers, Models, Views, etc. Attribute-based routing Controller Actions Razor Pages A single folder (/Pages) Route based relative to location in folder Handlers In Visual Studio:
+Project template Uses Missing Use for Web API MVC controllers /Views, /Pages — can be added Web APIs Web App Razor Pages /Views, /Pages — can be added Web apps Razor Pages The default approach for new web apps in Visual Studio.</description>
+      
+    </item>
+    
+    <item>
+      <title>2 working with dependencies</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/2-working-with-dependencies/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/2-working-with-dependencies/</guid>
+      
+      <description>When evaluating how your app works with its dependencies, remember::
+The static cling code smell (Static Cling | DevIQ) When classes make calls to static methods or access static properties which have side effects or dependencies on infrastructure, static cling occurs.
+Example: A method that calls a static method that writes to a database. The caller is now tightly coupled to the database because anything that breaks the database call will break that method.</description>
+      
+    </item>
+    
+    <item>
+      <title>3 structuring the app</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/3-structuring-the-app/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/3-structuring-the-app/</guid>
+      
+      <description>Monolithic web apps have a single entry point in the Web project.
+Projects
+ApplicationCore
+a. Contains object model, interfaces
+b. References as few dependencies as possible
+c. Referenced by other projects in this solution Infrastructure
+a. Contains implementation details (how persistence is performed; how notifications are sent)
+b. Implements interfaces defined in ApplicationCore
+c. References implementation-specific packages (like EF Core) but does not expose details of those implementations outside of the project UI</description>
+      
+    </item>
+    
+    <item>
+      <title>4 security</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/4-security/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/4-security/</guid>
+      
+      <description>Ensure SSL is used by the application: https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl
+Identity ASP.NET Core Identity (built in) has support for local user accounts and external identity providers. (An external option is [Identity Server (github.com)(https://github.com/IdentityServer/IdentityServer4)])
+ASP.NET Core Identity is included in projects if Individual Accounts is selected.
+Configuring Identity In Program.cs var builder = WebApplication.CreateBuilder(args); // Add services to the container. var connectionString = builder.Configuration.GetConnectionString(&amp;#34;DefaultConnection&amp;#34;); builder.Services.AddDbContext&amp;lt;ApplicationDbContext&amp;gt;(options =&amp;gt; options.UseSqlServer(connectionString)); builder.Services.AddDatabaseDeveloperPageExceptionFilter(); builder.Services.AddDefaultIdentity&amp;lt;IdentityUser&amp;gt;(options =&amp;gt; options.SignIn.RequireConfirmedAccount = true) .</description>
+      
+    </item>
+    
+    <item>
+      <title>5 client communication</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/5-client-communication/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/5-client-communication/</guid>
+      
+      <description>ASP.NET Core apps, aside from serving pages and responding to requests via web APIs, can also communicate directly with connected clients. This is usally done via WebSockets. SignalR is a library that implements WebSockets and other transport technologies.
+Use cases:
+Live chat apps Monitoring apps job progress updates Notifications Interactive forms apps </description>
+      
+    </item>
+    
+    <item>
+      <title>6 domain driven design</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/6-domain-driven-design/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/reading/architecting-modern-web-apps/5-develop-asp-net-core-mvc-apps/6-domain-driven-design/</guid>
+      
+      <description>Domain-Driven Design is an agile approach to building software that emphasizes a focus on the business domain. The same terminology is used for the real-world concept being modeled, the software equivalent, and any structures to persist the concept (like database tables).
+The domain model is made up of objects that interact with one another to represent the behavior of the system and includes:
+Entities — represent objects with a thread of identity; usually stored in persistence with a key Aggregates — groups of objects that should be persisted as a unit Value objects — concepts that can be compared on the basis of the sum of their property values (like DateRange consisting of a start and end date) Domain events — things happenging within the system that are of interest to other parts of the system Use DDD for large applications with significant business complexity.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

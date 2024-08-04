@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>services on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/services/</link>
+    <description>Recent content in services on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows services</title>
+      <link>http://localhost:1313/notes/_net/services/windows-services/</link>
+      <pubDate>Mon, 27 Jun 2022 10:01:47 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/services/windows-services/</guid>
+      
+      <description>https://docs.microsoft.com/en-us/dotnet/core/extensions/windows-service</description>
+      
+    </item>
+    
+    <item>
+      <title>worker services</title>
+      <link>http://localhost:1313/notes/_net/services/worker-services/</link>
+      <pubDate>Mon, 27 Jun 2022 08:19:08 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/services/worker-services/</guid>
+      
+      <description>Terminology Background Service – the BackgroundService type. Hosted Service – an implementation of IHostedService, or IHostedService itself. Worker Service – the Worker Service template from dotnet new. BackgroundService An implementation of IHostedService. Used for long-running, background processes. Cross-platform. Can be used in place of a Windows Service. Worker Service dotnet new worker produces:
+Program.cs:
+using SomeNamespace; // Create the default IHostBuilder: IHost host = Host.CreateDefaultBuilder(args).ConfigureServices(services =&amp;gt; { // Add the Worker class as a hosted service: services.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

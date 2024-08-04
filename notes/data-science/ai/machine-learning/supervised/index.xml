@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>supervised on Fred Wieser</title>
+    <link>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/</link>
+    <description>Recent content in supervised on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/data-science/ai/machine-learning/supervised/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/overview/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/overview/</guid>
+      
+      <description>Abstract In supervised machine learning, training data includes both feature values and label values. Models are trained by finding a relationship between the features and labels in past observations so that unknown labels can be predicted in future cases.
+Supervised machine learning approaches are categorized as follows:
+Regression Binary classification Multi-class classification </description>
+      
+    </item>
+    
+    <item>
+      <title>binary classification</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/binary-classification/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/binary-classification/</guid>
+      
+      <description>Abstract [Reference] In binary classification supervised machine learning, the label represents a class that describes whether the observed item is or is not an instance of a specific class.
+Predict one of two mutually exclusive outcomes. Example: whether a patient is at risk for diabetes based on weight, age, blood glucose level, etc. Training Binary Classification Models Use an algorithm to fit the training data to a function that calculates the probability of the class label being $true$.</description>
+      
+    </item>
+    
+    <item>
+      <title>multi class classification</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/multi-class-classification/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/multi-class-classification/</guid>
+      
+      <description>Abstract [Reference] In multi-class classification supervised machine learning, the label represents one of multiple possible classes.
+Usually, the labels are mutually exclusive. In multi-label classification models, there may be more than one valid label for an observation. Follows the same train &amp;gt; iterate &amp;gt; evaluate process as regression and binary classification. Examples: The specifies of penguin based on its physical measurements. The genre of a movie based on its cast, director and budget.</description>
+      
+    </item>
+    
+    <item>
+      <title>regression</title>
+      <link>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/regression/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/data-science/ai/machine-learning/supervised/regression/</guid>
+      
+      <description>Abstract [Reference] In regression-based supervised machine learning, the label predicted by the model is a numeric value.
+Training Regression Models Split the data (randomly) to create a training dataset and a validation dataset. Use a regression algorithm (perhaps linear regression) to fit the training data to a model. Use the validation dataset to test the model by predicting labels for the features. Evaluate the model&amp;rsquo;s performance by comparing the known actual labels in the validation dataset to the labels that the model predicted.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

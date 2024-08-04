@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autohotkey on Fred Wieser</title>
+    <link>http://localhost:1313/notes/tools/autohotkey/</link>
+    <description>Recent content in autohotkey on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/tools/autohotkey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sending keystrokes</title>
+      <link>http://localhost:1313/notes/tools/autohotkey/sending-keystrokes/</link>
+      <pubDate>Wed, 26 Apr 2023 14:21:17 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/autohotkey/sending-keystrokes/</guid>
+      
+      <description>Sending Keystrokes SendText To send a string:
+^1::SendText &amp;#34;To whom it may concern&amp;#34; ^2::SendText &amp;#34;Send a &amp;#34;quoted string&amp;#34;&amp;#34; Sending Long Text SendText &amp;#34; ( Leading indentation is stripped out, based on the first line. Line breaks are kept unless you use the &amp;#34;Join&amp;#34; option. )&amp;#34; Send To send keystrokes:
+^+{Left} produces Ctrl + Shift + Left arrow
+^{+}{Left} produces Ctrl + + followed by Left arrow
+^+Left produces Ctrl + Shift + L followed by eft</description>
+      
+    </item>
+    
+    <item>
+      <title>hotstrings</title>
+      <link>http://localhost:1313/notes/tools/autohotkey/hotstrings/</link>
+      <pubDate>Wed, 26 Apr 2023 14:05:45 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/autohotkey/hotstrings/</guid>
+      
+      <description>Definition :options:abbreviation::replacement text Creating ::btw::by the way Typing &amp;ldquo;btw&amp;rdquo; followed by an ending character triggers this hotstring.
+::]d:: ; This hotstring replaces &amp;#34;]d&amp;#34; with the current date and time via the functions below. { SendInput FormatTime(, &amp;#34;M/d/yyyy h:mm tt&amp;#34;) ; It will look like 9/1/2005 3:53 PM } Ending Characters - ( ) [ ] { } : ; / \ , . ? ! &amp;lt;enter&amp;gt; &amp;lt;tab&amp;gt;
+Long Replacements Use paranthesis:</description>
+      
+    </item>
+    
+    <item>
+      <title>hotkeys</title>
+      <link>http://localhost:1313/notes/tools/autohotkey/hotkeys/</link>
+      <pubDate>Wed, 26 Apr 2023 13:57:43 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/autohotkey/hotkeys/</guid>
+      
+      <description>Hotkeys hotkey-name::action hotkey-name:: { if condition action ; comment else action } Examples #n:: Run &amp;#34;notepad&amp;#34; ; Win + N to run notepad.exe #n::MsgBox ThisHotkey ; returns &amp;#34;#n&amp;#34; LButton — left mouse button RButton — right mouse button
+Modifiers LWin — Left Winkey ^ — Ctrl &amp;lt;^ — Left Ctrl ! — Alt ! Up — only fire when Alt is released (vs pressed) + — Shift - — hotkey will fire even if extra modifier keys are held ~ — prevents hotkey from blocking the key&amp;rsquo;s native function $ — if the script uses the Send function to send the keys that comprise of the hotkey itself, use this.</description>
+      
+    </item>
+    
+    <item>
+      <title>scripting</title>
+      <link>http://localhost:1313/notes/tools/autohotkey/scripting/</link>
+      <pubDate>Wed, 26 Apr 2023 13:15:39 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/autohotkey/scripting/</guid>
+      
+      <description>Comments ; This is a comment
+/* This is also a comment */ …but the comment does not end here.
+Escapes ``&amp;quot;` escapes a quote ``t` tab ``n` linefeed ``r` carriage return Variables Assignment MyVar := &amp;#34;Some text&amp;#34; &amp;#34;The value is &amp;#34; MyVar ; this will be implicitly concatenated Format function To format strings:
+MsgBox Format(&amp;#34;You are using AutoHotkey v{1} {2}-bit.&amp;#34;, A_AhkVersion, A_PtrSize*8) Operators Ternary condition ? valueIfTrue : valueIfFalse Functions Parentheses can be omitted if a function call is a single line:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">overview | Fred Wieser</title>
+<meta property="og:title" content="overview | Fred Wieser" />
+<meta name="twitter:title" content="overview | Fred Wieser" />
+<meta itemprop="name" content="overview | Fred Wieser" />
+<meta name="application-name" content="overview | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/lifecycle/overview/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/web-apps/blazor/components/lifecycle/overview/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">overview</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-05-26T00:00:00-06:00" itemprop="datePublished"> 26 May 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview">Overview</h1>
+<p>Component lifecycle events are processed in a set of lifecycle methods.  These methods can be overridden to perform additional operations in Components during Component initialization and rendering.</p>
+<ul>
+<li>The Component lifecycle events in these notes operate separately from <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/signalr?view=aspnetcore-7.0#reflect-the-connection-state-in-the-ui-blazor-server">Blazor Server&rsquo;s reconnection event handlers</a>.</li>
+<li>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0">https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0</a></li>
+</ul>
+<h2 id="general-lifecycle">General lifecycle</h2>
+<ul>
+<li>Only the first render:
+<ul>
+<li>Create component&rsquo;s instance</li>
+<li>Run <code>SetParametersAsync</code></li>
+<li>Call <code>OnInitialized{Async}</code></li>
+</ul>
+</li>
+<li>Every time:
+<ul>
+<li>Call <code>OnParametersSet{Async}</code></li>
+<li>Render</li>
+</ul>
+</li>
+</ul>
+<p><img src="./lifecycle1.png" alt="A diagram that depicts the above lifecycle"></p>
+<h1 id="setparametersasynchttpslearnmicrosoftcomen-usaspnetcoreblazorcomponentslifecycleviewaspnetcore-70when-parameters-are-set-setparametersasync"><a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#when-parameters-are-set-setparametersasync">SetParametersAsync()</a></h1>
+<p>Sets the value of each property with the <code>[Parameter]</code> or <code>[CascadingParameter]</code> attribute that has a corresponding value in the <code>ParameterView</code>.  <code>ParameterView</code> contains the component parameter values for the Component</p>
+<p>This method can be overridden to interact directly with <code>ParameterView</code>&rsquo;s parameters.  In such an override, if <code>base.SetParametersAsync</code> is not invoked, properties with a <code>[Parameter]</code> or <code>[CascadingParameter]</code> attribute will not be populated unless done manually.</p>
+<h1 id="oninitializedasync">OnInitialized{Async}()</h1>
+<p>Invoked when the Component is initialized after having received its initial parameters in <code>SetParametersAsync</code>.</p>
+<p>If <code>OnInitialized()</code> is overridden, component initialization will be synchronous, and parent initialization is guaranteed to complete before child component initialization.</p>
+<h2 id="prerendering-consideration">Prerendering consideration</h2>
+<p>Blazor apps that prerender their content on the server call <code>OnInitializedAsync</code> <em>twice</em>:</p>
+<ul>
+<li>Once when Component is initially rendered statically</li>
+<li>A second time when the browser renders the Component</li>
+</ul>
+<p>This can be prevented with <a href="#stateful-reconnection-after-prerendering">stateful reconnection after prerendering</a>.</p>
+<h1 id="onparameterssetasync">OnParametersSet{Async}()</h1>
+<p>Invoked:</p>
+<ul>
+<li>After the Component is initialized in <code>OnInitialized{Async}</code></li>
+<li>When the parent Component renders and supplies:
+<ul>
+<li>Immutable types and at least one parameter has changed</li>
+<li>Complex-typed parameters</li>
+</ul>
+</li>
+</ul>
+<h1 id="onafterrenderasync">OnAfterRender{Async}()</h1>
+<p>Invoked after a Component has finished rendering.  JS interop calls should happen at this stage.</p>
+<p><code>OnAfterRender{Async}()</code> contains a <code>firstRender</code> parameter that is set to <code>true</code> the first time the Component instance is rendered:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">protected</span> <span style="color:#ff7b72">override</span> <span style="color:#ff7b72">void</span> OnAfterRender(<span style="color:#ff7b72">bool</span> firstRender)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (firstRender) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">//...</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="prerendering-consideration-1">Prerendering consideration</h2>
+<p><code>OnAfterRender{Async}()</code> is <em>not</em> called during the prerendering process on the server.</p>
+<h1 id="statehaschanged">StateHasChanged()</h1>
+<p><code>StateHasChanged()</code> is called to notify the Component that its state has changed.  When applicable, calling this method can cause the Component to be rerendered.
+This is necessary when the Component updates due to an external change (like an event from a service). In these cases, the Component does not update automatically.</p>
+<p><code>StateHasChanged()</code> is called automatically for <code>EventCallback</code> methods.</p>
+<p><o>StateHasChanged has some important considerations</o>. See <a href="../statehaschanged-considerations/">here</a>.</p>
+<h1 id="handle-incomplete-async-actions-at-render">Handle Incomplete Async Actions at Render</h1>
+<p>Async actions performed in lifecycle events may not have completed before the Component is rendered.  Provide rendering logic to confirm that objects are initialized.  Render placeholder UI elements (like a &ldquo;loading&rdquo; message) while the objects are <code>null</code>.</p>
+<p>See the <code>FetchData</code> component in the Blazor default template for an example.</p>
+<h1 id="stateful-reconnection-after-prerendering">Stateful Reconnection After Prerendering</h1>
+<p>See: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#stateful-reconnection-after-prerendering">https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#stateful-reconnection-after-prerendering</a></p>
+<h1 id="prerendering-with-javascript-interop">Prerendering with JavaScript Interop</h1>
+<p>See: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#prerendering-with-javascript-interop">https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#prerendering-with-javascript-interop</a></p>
+<h1 id="component-disposalhttpslearnmicrosoftcomen-usaspnetcoreblazorcomponentslifecycleviewaspnetcore-70component-disposal-with-idisposable-and-iasyncdisposable"><a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#component-disposal-with-idisposable-and-iasyncdisposable">Component Disposal</a></h1>
+<p>If a Component implements <code>IDisposable</code>, <code>IAsyncDisposable</code>, or both, the framework calls for unmanaged resource disposal when the Component is removed from the UI.</p>
+<p><o>Note</o>: <code>StateHasChanged</code> cannot be called in <code>Dispose</code> methods.  This is not supported.</p>
+<p><o>Note</o>: Alaways unsubscribe event handlers from .NET events during disposal.</p>
+<h2 id="synchronous-disposal">Synchronous Disposal</h2>
+<p>Use <code>IDisposable.Dispose</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@implements IDisposable
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- ... --&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>@code {
+</span></span><span style="display:flex;"><span> <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">protected</span> <span style="color:#ff7b72">override</span> <span style="color:#ff7b72">void</span> OnInitialized()
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    editContext = <span style="color:#ff7b72">new</span>(model);
+</span></span><span style="display:flex;"><span>    editContext.OnFieldChanged += HandleFieldChanged;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">void</span> HandleFieldChanged(<span style="color:#ff7b72">object</span> sender, FieldChangedEventArgs e)
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> Dispose()
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    editContext.OnFieldChanged -= HandleFieldChanged;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><o>Note</o>: If the object is created in a lifecycle method (ie: <code>OnInitialized{Async}</code>), check for <code>null</code> before calling <code>Dispose</code>.</p>
+<h2 id="asynchronous-disposal">Asynchronous Disposal</h2>
+<p>Use <code>IAsyncDiposable.DisposeAsync</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>@implements IAsyncDisposable
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!--  --&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>@code {
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">async</span> ValueTask DisposeAsync()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">if</span> (obj <span style="color:#ff7b72">is</span> not <span style="color:#79c0ff">null</span>)
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">await</span> obj.DisposeAsync();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="cancelable-background-work">Cancelable Background Work</h1>
+<p>Background asynchronous operations do not automatically stop when a user navigates away from a Component.</p>
+<p>To implement canceleable background work in a Component:</p>
+<ol>
+<li>Use a <code>CancellationTokenSource</code> and <code>CancellationToken</code>.</li>
+<li>On disposal, and at any point when the token is manually canceled, call <code>CancellationTokenSource.Cancel</code> to signal that the background work should be canceled.</li>
+<li>After the call to Cancel returns, call <code>ThrowIfCancellationRequested</code> on the token.</li>
+</ol>
+<p>See: <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#cancelable-background-work">https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-7.0#cancelable-background-work</a></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

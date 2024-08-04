@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">1. overview (controllers) | Fred Wieser</title>
+<meta property="og:title" content="1. overview (controllers) | Fred Wieser" />
+<meta name="twitter:title" content="1. overview (controllers) | Fred Wieser" />
+<meta itemprop="name" content="1. overview (controllers) | Fred Wieser" />
+<meta name="application-name" content="1. overview (controllers) | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/overview/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/asp.net/api/controller-based-apis/overview/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">1. overview (controllers)</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-08-15T00:00:00-06:00" itemprop="datePublished"> 15 Aug 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usaspnetcoreweb-apiviewaspnetcore-70">Overview [<a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-7.0">Documentation</a>]</h1>
+<ul>
+<li>Controllers are classes that derive from <code>ControllerBase</code>.
+<ul>
+<li>If derived from <code>Controller</code>, this would add support for views (for handling web pages rather than API requests).</li>
+</ul>
+</li>
+<li>Controllers are activated and disposed on a per-request basis.</li>
+</ul>
+<p>Knowledge of MVC controllers is needed to use them in controller-based APIs. See <a href="../../../web-apps/mvc/controllers">Notes on MVC Controllers</a>.</p>
+<h1 id="high-level-process">High-Level Process</h1>
+<p><img src="image.png" alt="A diagram depicting the design of the app. On the left, a box named &ldquo;Client.&rdquo; On the right, a box labeled &ldquo;MVC app&rdquo; with a controller, model, and data access layer. From the client, an arrow to the controller labeled &ldquo;HTTP request&rdquo;. From the controller, a to/from arrow to the data access layer labeled &ldquo;read/write&rdquo;. From the controller, an arrow to the client labeled &ldquo;HTTP response&rdquo; and a resposne object {Name:&ldquo;todo1&rdquo;}. From the model, an arrow to the response object labeled &ldquo;serialize&rdquo;."></p>
+<p>The high-level process for implementing controller-based APIs:</p>
+<ol>
+<li>VS &gt; File &gt; New &gt; Project &gt; <strong>ASP.NET Core Web API</strong>
+<ol>
+<li><strong>Framework</strong> = <strong>.NET 7.0</strong></li>
+<li>Check <strong>Use controllers</strong></li>
+</ol>
+</li>
+<li>Add a model class</li>
+<li>Add a database context</li>
+<li>Register the database context</li>
+<li>Scaffold a controller</li>
+<li>Add routing to the controller action methods</li>
+</ol>
+<h1 id="controllerbase-methods">ControllerBase Methods</h1>
+<p><code>CreatedAtAction</code> is an <em>action method</em> in <code>ControllerBase</code> that returns a 201 status code.  Other methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BadRequest</code></td>
+<td>Returns HTTP 400</td>
+</tr>
+<tr>
+<td><code>ValidationProblem</code></td>
+<td><a href="#automatic-http-400-responses">See notes below</a></td>
+</tr>
+<tr>
+<td><code>NotFound</code></td>
+<td>Returns HTTP 404</td>
+</tr>
+<tr>
+<td><code>PhysicalFile</code></td>
+<td>Returns a file</td>
+</tr>
+<tr>
+<td><code>TryUpdateModelAsync</code></td>
+<td>Invokes model binding</td>
+</tr>
+<tr>
+<td><code>TryValidateModel</code></td>
+<td>Invokes model validation</td>
+</tr>
+</tbody>
+</table>
+<h1 id="attributes">Attributes</h1>
+<p>Attributes from the <code>Microsoft.AspNetCore.Mvc</code> namespace are used by APIs to configure behavior for controllers and action methods:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost] <span style="color:#8b949e;font-style:italic">// Supported HTTP action verb</span>
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status201Created)] <span style="color:#8b949e;font-style:italic">// HTTP status code that the action method could return</span>
+</span></span><span style="display:flex;"><span>[ProducesResponseType(StatusCodes.Status400BadRequest)] <span style="color:#8b949e;font-style:italic">// HTTP status code that the action method could return</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ActionResult&lt;Pet&gt; Create(Pet pet)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    pet.Id = _petsInMemoryStore.Any() ? 
+</span></span><span style="display:flex;"><span>                _petsInMemoryStore.Max(p =&gt; p.Id) + <span style="color:#a5d6ff">1</span> : <span style="color:#a5d6ff">1</span>;
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>    _petsInMemoryStore.Add(pet);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> CreatedAtAction(nameof(GetById), <span style="color:#ff7b72">new</span> { id = pet.Id }, pet);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Common attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[ApiController]</code></td>
+<td>See notes below</td>
+</tr>
+<tr>
+<td><code>[Route]</code></td>
+<td>Specifies the URL pattern for a controller or action</td>
+</tr>
+<tr>
+<td><code>[Bind]</code></td>
+<td>Specifies the prefix and properties to include for model binding</td>
+</tr>
+<tr>
+<td><code>[HttpGet]</code></td>
+<td>Designates an action that supports HTTP GET requests</td>
+</tr>
+<tr>
+<td><code>[Consumes]</code></td>
+<td>Specifies the data types that an action accepts</td>
+</tr>
+<tr>
+<td><code>[Produces]</code></td>
+<td>Specifies data types that an action returns</td>
+</tr>
+</tbody>
+</table>
+<h1 id="apicontroller-attribute"><code>ApiController</code> attribute</h1>
+<p><code>[ApiController]</code> is applied to a class to specify that it is a <em>controller</em> and enables:</p>
+<ul>
+<li>the attribute routing requirement</li>
+<li>automatic HTTP 400 responses</li>
+<li>binding source parameter inference</li>
+<li>multipart/form-data request inference</li>
+<li>problem details for error status codes</li>
+</ul>
+<p>This attribute can also be applied to an assembly to define all its controllers as such:<br>
+<code>Program.cs</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.AspNetCore.Mvc</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[assembly: ApiController]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder(args);
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span></code></pre></div><h2 id="attribute-routing-requirement">Attribute Routing Requirement</h2>
+<p>A class that inherits from ControllerBase (a <em>controller</em>) and that is decorated with the <code>[ApiController]</code> attribute <strong>must</strong> define a route with the <code>[Route]</code> attribute:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[ApiController]
+</span></span><span style="display:flex;"><span>[Route(&#34;[controller]<span style="color:#a5d6ff">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">WeatherForecastController</span> : ControllerBase
+</span></span></code></pre></div><h2 id="automatic-http-400-responses">Automatic HTTP 400 Responses</h2>
+<p>The <code>[ApiController]</code> attribute makes model validation errors automatically trigger an HTTP 400 response.  So, in such a controller&rsquo;s action method, the following code is not needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">if</span> (!ModelState.IsValid)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> BadRequest(ModelState);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The default response type for an HTTP 400 response is <code>ValidationProblemDetails</code>. Instead of calling <code>BadRequest</code>, call <code>ValidationProblem</code>, which returns a <code>ValidationProblemDetails</code> object as well as the automatic response.</p>
+<h3 id="logging-automatic-http-400-responses">Logging Automatic HTTP 400 Responses</h3>
+<p>Set <code>InvalidModelStateResponseFactory</code> when calling <code>ConfigureApiBehaviorOptions</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>    .ConfigureApiBehaviorOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#8b949e;font-style:italic">// To preserve the default behavior, capture the original delegate to call later.</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">var</span> builtInFactory = options.InvalidModelStateResponseFactory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        options.InvalidModelStateResponseFactory = context =&gt;
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">var</span> logger = context.HttpContext.RequestServices
+</span></span><span style="display:flex;"><span>                                .GetRequiredService&lt;ILogger&lt;Program&gt;&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// Perform logging here.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// Invoke the default behavior, which produces a ValidationProblemDetails response.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// To produce a custom response, return a different implementation of IActionResult instead.</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> builtInFactory(context);
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> app = builder.Build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.UseHttpsRedirection();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.UseAuthorization();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.MapControllers();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.Run();
+</span></span></code></pre></div><h3 id="disabling-automatic-http-400-responses">Disabling Automatic HTTP 400 Responses</h3>
+<p>Set <code>SuppressModelStateInvalidFilter</code> to <code>true</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.AspNetCore.Mvc</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> builder = WebApplication.CreateBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>    .ConfigureApiBehaviorOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        options.SuppressConsumesConstraintForFormFileParameters = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        options.SuppressInferBindingSourcesForParameters = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex; background-color:#6e7681"><span>        options.SuppressModelStateInvalidFilter = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        options.SuppressMapClientErrors = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        options.ClientErrorMapping[StatusCodes.Status404NotFound].Link = <span style="color:#a5d6ff">&#34;https://httpstatuses.com/404&#34;</span>;
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> app = builder.Build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.UseHttpsRedirection();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.UseAuthorization();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.MapControllers();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app.Run();
+</span></span></code></pre></div><h1 id="binding-source-parameter-inference-documentationhttpslearnmicrosoftcomen-usaspnetcoreweb-apiviewaspnetcore-70binding-source-parameter-inference">Binding Source Parameter Inference [<a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-7.0#binding-source-parameter-inference">Documentation</a>]</h1>
+<p>A binding source attribute defines the location at which an action parameter&rsquo;s value is found:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Binding source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[FromBody]</code></td>
+<td>The HTTP request body</td>
+</tr>
+<tr>
+<td><code>[FromForm]</code></td>
+<td>HTTP form data in the request body</td>
+</tr>
+<tr>
+<td><code>[FromHeader]</code></td>
+<td>The HTTP request header</td>
+</tr>
+<tr>
+<td><code>[FromQuery]</code></td>
+<td>The query string portion of the HTTP request</td>
+</tr>
+<tr>
+<td><code>[FromRoute]</code></td>
+<td>The route data of the current request</td>
+</tr>
+<tr>
+<td><code>[FromServices]</code></td>
+<td>The HTTP request injected as an action parameter</td>
+</tr>
+<tr>
+<td><code>[AsParameters]</code></td>
+<td>Method parameters</td>
+</tr>
+</tbody>
+</table>
+<p>Without the <code>[ApiController]</code> attribute or the binding source attributes above, ASP.NET Core attempts to use the <em>complex object model binder</em>. This subsystem pulls data from <em>value providers</em> in a defined order.</p>
+<h2 id="inference-rules">Inference Rules</h2>
+<p>The <code>[ApiController]</code> attribute applies these inference rules for the default data sources of action parameters:</p>
+<ul>
+<li><code>[FromServices]</code> — inferred for complex type parameters registered in the DI container.</li>
+<li><code>[FromBody]</code> — inferred for complex type parameters <em>not</em> registered in the DI container.</li>
+<li><code>[FromForm]</code> — inferred for action parameters of type <code>IFormFile</code> and <code>IFormFileCollection</code>; not inferred for any simple or user-defined types.</li>
+<li><code>[FromRoute]</code> — inferred for any action parameter name matching a parameter in the route template.</li>
+<li><code>[FromQuery]</code> — inferred for any other action parameters.</li>
+</ul>
+<h3 id="frombody-considerations-documentationhttpslearnmicrosoftcomen-usaspnetcoreweb-apiviewaspnetcore-70frombody-inference-notes">FromBody Considerations [<a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-7.0#frombody-inference-notes">Documentation</a>]</h3>
+<h3 id="fromservice-considerations">FromService Considerations</h3>
+<p>The parameter binding subsystem binds parameters through dependency injection when the type is configured as a service. Thus, it is not required to explicitly apply the <code>[FromServices]</code> attribute to a parameter.</p>
+<p><o>In rare cases, automatic DI can break apps that have a type in DI that is also accepted in an API controller&rsquo;s action  methods</o>. It&rsquo;s not common to have a type in DI and as an argument in an API controller action.</p>
+<p>To disable <code>[FromServices]</code> inference globally:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.Configure&lt;ApiBehaviorOptions&gt;(options =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    options.DisableImplicitFromServicesParameters = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="disabling-all-inference-rules">Disabling All Inference Rules</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>    .ConfigureApiBehaviorOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>        options.SuppressInferBindingSourcesForParameters = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>    });
+</span></span></code></pre></div><h2 id="multi-partform-data-request-inference">Multi-part/form Data Request Inference</h2>
+<p>The <code>[ApiController]</code> attribute applies an inference rule for action parameters of type <code>IFormFile</code> and <code>IFormFileCollection</code>.  The <code>multipart/form-data</code> content type is inferred for these types.</p>
+<p>To disable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>    .ConfigureApiBehaviorOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>        options.SuppressConsumesConstraintForFormFileParameters = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span></code></pre></div><h1 id="problem-details-for-error-status-codes">Problem Details for Error Status Codes</h1>
+<p>MVC transforms an error result (HTTP status code 400+) to a result with <code>ProblemDetails</code>.</p>
+<p>To disable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>    .ConfigureApiBehaviorOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        options.SuppressMapClientErrors = <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span></code></pre></div><h1 id="consumes-attribute"><code>[Consumes]</code> Attribute</h1>
+<p>By default, actions support all available request content types. The <code>[Consumes]</code> attribute constrains this. It can be applied to a controller or an action.</p>
+<p>In this example, content type <code>application/xml</code> is specified, and any requests that do not specify this content type will receive a 415/Unsupported Media Type response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost]
+</span></span><span style="display:flex;"><span>[Consumes(&#34;application/xml&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult CreateProduct(Product product)
+</span></span></code></pre></div><p>This attribute can also resolve ambiguous matches. In this example, POST requests sent to <code>/api/Consumes</code> are handled by both of the actions it defines, which is ambiguous. The <code>[Consumes]</code> attribute resolves this ambiguity by defining which action method to use based on the <code>Content-Type</code> of the request:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[ApiController]
+</span></span><span style="display:flex;"><span>[Route(&#34;api/[controller]<span style="color:#a5d6ff">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ConsumesController</span> : ControllerBase
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    [HttpPost]
+</span></span><span style="display:flex;"><span>    [Consumes(&#34;application/json&#34;)]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IActionResult PostJson(IEnumerable&lt;<span style="color:#ff7b72">int</span>&gt; values) =&gt;
+</span></span><span style="display:flex;"><span>        Ok(<span style="color:#ff7b72">new</span> { Consumes = <span style="color:#a5d6ff">&#34;application/json&#34;</span>, Values = values });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [HttpPost]
+</span></span><span style="display:flex;"><span>    [Consumes(&#34;application/x-www-form-urlencoded&#34;)]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IActionResult PostForm([FromForm] IEnumerable&lt;<span style="color:#ff7b72">int</span>&gt; values) =&gt;
+</span></span><span style="display:flex;"><span>        Ok(<span style="color:#ff7b72">new</span> { Consumes = <span style="color:#a5d6ff">&#34;application/x-www-form-urlencoded&#34;</span>, Values = values });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="analyzers-documentationhttpslearnmicrosoftcomen-usaspnetcoreweb-apiadvancedanalyzersviewaspnetcore-70">Analyzers [<a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/advanced/analyzers?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p>The MVC analyzers package works with controllers annotated with <code>ApiControllerAttribute</code> and builds on <a href="../action-return-types#web-api-conventions">web API conventions</a>.</p>
+<p>Analyzers inspect controller actions and notify you of any that:</p>
+<ul>
+<li>return an undeclared status code</li>
+<li>return an undeclared success result</li>
+<li>document a status code that is not returned</li>
+<li>include an explicit model validation check</li>
+</ul>
+<h2 id="enabling">Enabling</h2>
+<p><code>.csproj</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;PropertyGroup&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;IncludeOpenAPIAnalyzers&gt;</span>true<span style="color:#7ee787">&lt;/IncludeOpenAPIAnalyzers&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/PropertyGroup&gt;</span>
+</span></span></code></pre></div><h1 id="json-patch">JSON Patch</h1>
+<p><a href="https://datatracker.ietf.org/doc/html/rfc6902">JSON Patch</a> is a standard for applying updates to a resource.  JSON Patch support in ASP.NET Core web API is based on <code>Newtonsoft.Json</code> and requires the <code>Microsoft.AspNetCore.Mvc.NewtonsoftJson</code> package.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/jsonpatch?view=aspnetcore-7.0">https://learn.microsoft.com/en-us/aspnet/core/web-api/jsonpatch?view=aspnetcore-7.0</a></p>
+</blockquote>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

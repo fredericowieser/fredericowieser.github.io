@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blazor server on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/</link>
+    <description>Recent content in blazor server on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/overview/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/overview/</guid>
+      
+      <description>Project Structure ├──Program.cs — entrypoint; host; startup
+Calls MapBlazorHub to set up an endpoint for the real-time communication w/browser (via SignalR) Calls MapFallbackToPage(&amp;quot;/_Host&amp;quot;) to set the root page (Pages/_Host.cshtml) and enable nav. ├──appsettings.json — environmental app settings
+├──App.razor — the root component
+Sets up client-side routing using the Router component; Router intercepts browser navigation and renders the page that matches the requested address ├──_Imports.razor — global namespaces made available to all components</description>
+      
+    </item>
+    
+    <item>
+      <title>call a web api</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/call-a-web-api/</link>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/call-a-web-api/</guid>
+      
+      <description>Overview Blazor Server apps call web APIs using HttpClient instances (typically created via IHttpClientFactory). These notes apply. Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-7.0&amp;amp;pivots=server Program.cs
+builder.Services.AddHttpClient(); Pages/CallWebAPI.razor
+@page &amp;#34;/call-web-api&amp;#34; @using System.Text.Json @using System.Text.Json.Serialization @inject IHttpClientFactory ClientFactory &amp;lt;h1&amp;gt;Call web API from a Blazor Server Razor component&amp;lt;/h1&amp;gt; @if (getBranchesError || branches is null) { &amp;lt;p&amp;gt;Unable to get branches from GitHub. Please try again later.&amp;lt;/p&amp;gt; } else { &amp;lt;ul&amp;gt; @foreach (var branch in branches) { &amp;lt;li&amp;gt;@branch.Name&amp;lt;/li&amp;gt; } &amp;lt;/ul&amp;gt; } @code { private IEnumerable&amp;lt;GitHubBranch&amp;gt;?</description>
+      
+    </item>
+    
+    <item>
+      <title>app startup</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/app-startup/</link>
+      <pubDate>Thu, 04 May 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/app-startup/</guid>
+      
+      <description>Overview Documentation: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup?view=aspnetcore-7.0 Program.cs
+builder.Services.AddRazorPages(); builder.Services.AddServerSideBlazor(); // add Blazor services to the DI container … app.MapBlazorHub(); // set up an endpoint for the real-time communication w/browser (via SignalR) app.MapFallbackToPage(&amp;#34;/_Host&amp;#34;); // set the root page (Pages/_Host.cshtml) and enable nav; when no matching endpoint is found, route requests here Controlling Headers Use middleware to control the headers collection:
+Program.cs app.Use(async (context, next) =&amp;gt; { context.Response.Headers.Add(&amp;#34;Content-Security-Policy&amp;#34;, &amp;#34;{POLICY STRING}&amp;#34;); await next(); }); </description>
+      
+    </item>
+    
+    <item>
+      <title>dependency injection</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/dependency-injection/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/dependency-injection/</guid>
+      
+      <description>Default Services Among others:
+Service Lifetime Description IJSRuntime Scoped An instance of a JavaScript runtime where JS calls are dispatched NavigationManager Scoped Helpers for working with URI and navigation state Adding &amp;amp; Using Services Note: In ASP.NET Core apps, scoped services are typically scoped to the current request. In Blazor Server apps, the request scope lasts for the duration of the client connection.
+Program.cs
+var builder = WebApplication.CreateBuilder(args); // builder has an IServiceCollection which is a list of service descriptor objects builder.</description>
+      
+    </item>
+    
+    <item>
+      <title>error handling</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/error-handling/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/error-handling/</guid>
+      
+      <description>Overview During development, when Blazor apps encounter an error, it displays a light yellow bar the bottom of the screen. Customize it in Pages/_Host.cshtml:
+&amp;lt;div id=&amp;#34;blazor-error-ui&amp;#34;&amp;gt; &amp;lt;environment include=&amp;#34;Staging,Production&amp;#34;&amp;gt; An error has occurred. This application may no longer respond until reloaded. &amp;lt;/environment&amp;gt; &amp;lt;environment include=&amp;#34;Development&amp;#34;&amp;gt; An unhandled exception has occurred. See browser dev tools for details. &amp;lt;/environment&amp;gt; &amp;lt;a href=&amp;#34;&amp;#34; class=&amp;#34;reload&amp;#34;&amp;gt;Reload&amp;lt;/a&amp;gt; &amp;lt;a class=&amp;#34;dismiss&amp;#34;&amp;gt;🗙&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; Detailed Circuit Errors To get detailed circuit errors, set CircuitOptions.</description>
+      
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/logging/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/logging/</guid>
+      
+      <description>Overview Without additional configuration, Blazor Server apps log to server-side .NET console in Development environment at LogLevel.Information or higher.
+SignalR Client Logging </description>
+      
+    </item>
+    
+    <item>
+      <title>static files</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/static-files/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/static-files/</guid>
+      
+      <description>Overview Serve static assets by calling UseStaticFiles in the request processing pipeline.
+Static Files in Non-Development Environments Static assets are only enabled by default in the Development environment. In other environments, call UseStaticWebAssets on the WebApplicationBuilder:
+Program.cs
+if (builder.Environment.IsStaging()) { builder.WebHost.UseStaticWebAssets(); } File Mappings and Static File Options </description>
+      
+    </item>
+    
+    <item>
+      <title>routing and navigation</title>
+      <link>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/routing-and-navigation/</link>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/web-apps/blazor/blazor-server/routing-and-navigation/</guid>
+      
+      <description>ASP.NET Core Endpoint Routing Integration Blazor Server integrates with ASP.NET Core endpoint routing via MapBlazorHub:
+app.UseRouting(); app.MapBlazorHub(); app.MapFallbackToPage(&amp;#34;/_Host&amp;#34;); </description>
+      
+    </item>
+    
+  </channel>
+</rss>

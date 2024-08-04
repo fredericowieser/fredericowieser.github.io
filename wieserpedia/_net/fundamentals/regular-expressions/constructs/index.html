@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">constructs | Fred Wieser</title>
+<meta property="og:title" content="constructs | Fred Wieser" />
+<meta name="twitter:title" content="constructs | Fred Wieser" />
+<meta itemprop="name" content="constructs | Fred Wieser" />
+<meta name="application-name" content="constructs | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/fundamentals/regular-expressions/constructs/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/fundamentals/regular-expressions/constructs/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">constructs</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-11-18T00:00:00-06:00" itemprop="datePublished"> 18 Nov 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="abstract">Abstract</h1>
+<p>These notes contain various .NET regular expression constructs used for forming regular expressions.</p>
+<h1 id="anchors">Anchors</h1>
+<p>Anchors cause a match to succeed or fail depending on the current position, but do not advance through the string.</p>
+<table>
+<thead>
+<tr>
+<th>Anchor</th>
+<th>Match must…</th>
+<th>Example</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^</code> or <code>\A</code></td>
+<td>start at beginning of string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>$</code> or <code>\Z</code></td>
+<td>occur at the end of the string or before the \n</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>\z</code></td>
+<td>occur at the end of the string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>\G</code></td>
+<td>occur at point where previous match ended</td>
+<td>\G\d\</td>
+<td>&ldquo;(1)&rdquo; &ldquo;(3)&rdquo; &ldquo;(5)&rdquo; in <code>(1)(3)(5)[7](9)</code></td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>occur on a boundary between a \w and a \W character</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>\B</code></td>
+<td>NOT occur on a \b boundary</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="character-escapes">Character Escapes</h1>
+<table>
+<thead>
+<tr>
+<th>Escaped char</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\a</code></td>
+<td>Bell character</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>Backspace</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>Tab</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>Carriage return (note: this is not the same as <code>\n</code>)</td>
+</tr>
+<tr>
+<td><code>\v</code></td>
+<td>Vertical tab</td>
+</tr>
+<tr>
+<td><code>\f</code></td>
+<td>Form feed</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Newline</td>
+</tr>
+<tr>
+<td><code>\e</code></td>
+<td>Escape key (\u001b)</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Back slash</td>
+</tr>
+</tbody>
+</table>
+<h1 id="character-classes">Character Classes</h1>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Matches any single…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[ae]</code></td>
+<td>character in the group (case-sensitive)</td>
+</tr>
+<tr>
+<td><code>[^aei]</code></td>
+<td>character NOT in the group (case-sensitive)</td>
+</tr>
+<tr>
+<td><code>[A-Z]</code></td>
+<td>character in the range</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>character except <code>\n</code></td>
+</tr>
+<tr>
+<td><code>\p{Lu}</code></td>
+<td>character in the Unicode category of Lu</td>
+</tr>
+<tr>
+<td><code>\P{Lu}</code></td>
+<td>character NOT in the Unicode category Lu</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>&ldquo;word&rdquo; character (alphanumeric)</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>non-word character</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>white-space character [cr/nl/ff, tab, space]</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>non-white-space character</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>digit [0-9]</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>non-digit character</td>
+</tr>
+</tbody>
+</table>
+<h2 id="character-class-subtraction">Character Class Subtraction</h2>
+<p><code>[base_group-[excluded_group]]</code></p>
+<table>
+<thead>
+<tr>
+<th>Use</th>
+<th>to match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[a-z-[m]]</code></td>
+<td>any character from a to z except m</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-character-classes">Custom Character Classes</h2>
+<ul>
+<li><code>[aeiouAEIOU]</code> matches any vowel, both lowercase and uppercase.</li>
+<li><code>[a-zA-Z0-9]</code> matches any lowercase letter, uppercase letter, or digit.</li>
+</ul>
+<h1 id="comments">Comments</h1>
+<p><code>(?# comment)</code> // an inline comment
+<code># comment</code> // an end-of-line comment</p>
+<h1 id="conditional-evaluation">Conditional Evaluation</h1>
+<p><code>(?(subexpression)yes|no)</code> or <code>?(name)yes|no)</code> where:</p>
+<ul>
+<li><em>subexpression</em> is a subexpression to match</li>
+<li><em>name</em> is a capturing group</li>
+<li><em>yes</em> is the string to match if <em>subexpression</em> is matched OR if <em>name</em> is a valid, non-empty captured group</li>
+<li><em>no</em> is the subexpression to match if <em>subexpression</em> is not matched OR <em>name</em> is not a valid, non-empty captured group</li>
+</ul>
+<p>Consider a text document with paragraphs marked with a &lt;PRIVATE&gt; tag, and this regex pattern that uses conditional evaluation
+to assign the contents of paragraphs intended for public and private use to different capturing groups:</p>
+<p><code>^(?&lt;Pvt&gt;\&lt;PRIVATE\&gt;\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$</code></p>
+<p>The colors below are used to differentiate the various parts of this regular expression:</p>
+<ul>
+<li>Begin the match at the beginning of the line ( <r>^</r> )</li>
+<li><c>(<y>?&lt;Pvt&gt;\</y>&lt;PRIVATE&gt;<bl>\s</bl>)<r>?</r></c>
+<ul>
+<li>Match zero or one instances ( <c><r>?</c></r> )
+<ul>
+<li>of <code>&lt;PRIVATE&gt;</code> followed by a whitespace character ( <c><bl>\s</c></bl> )</li>
+</ul>
+</li>
+<li>and assign the match to a capturing group named <code>Pvt</code> ( <c>(<y>?&lt;Pvt&gt;\</y></c> )</li>
+</ul>
+</li>
+<li><c>(?<y>(Pvt)</y><o>(</o>(<v>\w</v><r>+</r></bl><g>\p{P}</g><r>?</r><bl>\s</bl>)<in>+</in><o>)</o></c>
+<ul>
+<li>If the <code>Pvt</code> capturing group exists ( <c><y>?(Pvt)</y></c> )
+<ul>
+<li>match one or more instances ( <c><in>+</in></c> )
+<ul>
+<li>of one or more ( <c><r>+</r></c> )</li>
+<li>word characters ( <c><v>\w</v></c> )</li>
+<li>followed by zero or one ( <c><r>?</c></r> )</li>
+<li>punctuation characters ( <c><g>\p{P}</c></g> )</li>
+<li>followed by a single whitespace character ( <c><bl>\s</c></bl> )</li>
+</ul>
+</li>
+<li>and assign the match to the first capturing group ( <c><o>()</o></c> )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><c><r>|</r><o>(</o>(<v>\w</v><r>+</r></bl><g>\p{P}</g><r>?</r><bl>\s</bl>)<in>+</in><o>)</o></c>
+<ul>
+<li>Or if the <code>Pvt</code> capturing group does not exist ( <c><r>|</r></c> ),
+<ul>
+<li>match one or more instances ( <c><in>+</in></c> )
+<ul>
+<li>of one or more ( <c><r>+</r></c> )</li>
+<li>word characters ( <c><v>\w</v></c> )</li>
+<li>followed by zero or one ( <c><r>?</c></r> )</li>
+<li>punctuation characters ( <c><g>\p{P}</c></g> )</li>
+<li>followed by a single whitespace character ( <c><bl>\s</c></bl> )</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>End the match at the end of a line ( <c><r>\r?</c></r> ) or the end of the string ( <c><r>$</c></r> )</li>
+</ul>
+<p>Here is the same regular expression pattern again, this time with colorized brackets:</p>
+<p><c>^<r>(</r>?&lt;Pvt&gt;\&lt;PRIVATE&gt;\s<r>)</r>?<o>(</o>?<y>(</y>Pvt<y>)</y><g>(</g><bl>(</bl>\w+\p{P}?\s<bl>)</bl>+<g>)</g>|<in>(</in><v>(</v>\w+\p{P}?\s<v>)</v>+<in>)</in><o>)</o>\r?$</c></p>
+<h1 id="grouping">Grouping</h1>
+<h2 id="atomic-group">Atomic Group</h2>
+<p>A grouping construct that allows the backtracking engine to guarantee that a subexpression matches only the first match found for that subexpression:<br>
+<code>(?&gt; subexpression)</code></p>
+<p>For example, consider the regular expression <code>(a+)\w</code>:</p>
+<ul>
+<li>Matches one or more &ldquo;a&rdquo; characters ( <code>a+</code> )</li>
+<li>along with a word character that follows the sequence of &ldquo;a&rdquo; characters ( <code>\w</code> )</li>
+<li>and assigns the sequence of &ldquo;a&rdquo; characters to the first capturing group ( <code>()</code> )</li>
+</ul>
+<p>However, if the last character of the input is also an &ldquo;a&rdquo;, it is matched by <code>\w</code> and <em>not</em> included in the capture group.
+The regular expression <code>((?&gt;a+))\w</code> prevents this behavior because all consecutive &ldquo;a&rdquo; characters are matched without backtracking.</p>
+<h2 id="other-grouping-constructs">Other Grouping Constructs</h2>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(subexpression)</code></td>
+<td>Capture the matched <em>subexpression</em> and assign it a 1-based ordinal</td>
+</tr>
+<tr>
+<td><code>(?&lt;name&gt; subexpression)</code></td>
+<td>Capture the matched <em>subexpression</em> into a named group</td>
+</tr>
+<tr>
+<td><code>(?'name' subexpression)</code></td>
+<td>Same</td>
+</tr>
+<tr>
+<td><code>(?: subexpression)</code></td>
+<td>A non-capturing group</td>
+</tr>
+<tr>
+<td><code>(?&gt; subexpression)</code></td>
+<td>An atomic group; allows backtracking engine to guarantee that a subexpression matches only the first match found for that subexpression</td>
+</tr>
+</tbody>
+</table>
+<p>By default, groups are named with a number that matches the sequence in which they appear in the regular expression pattern. For
+example, the pattern <code>(\w+?)</code> matches one or more (<code>+</code>) word characters (<code>\w</code>) but as few as possible (<code>?</code>).
+Refer to this group via <code>\1</code>.</p>
+<h1 id="lookahead--lookbehind-assertions">Lookahead &amp; Lookbehind Assertions</h1>
+<p>Lookahead and lookbehind assertions are anchors that, without moving the pointer, look ahead or behind to test a condition.</p>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Name</th>
+<th>Description</th>
+<th>In other words&hellip;</th>
+<th>Example use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(?= subexpression)</code></td>
+<td>Positive lookahead</td>
+<td>Assert what follows the current position in the string is <em>subexpression</em></td>
+<td>Match the expression if the <em>subexpression</em> matches</td>
+<td>Match words that are not followed by punctuation symbols: <code>@&quot;\b[A-Z]+\b(?=\P{P})&quot;</code></td>
+</tr>
+<tr>
+<td><code>(?! subexpression)</code></td>
+<td>Negative lookahead</td>
+<td>Assert what follows the current position in the string is NOT <em>subexpression</em></td>
+<td>Match the expression if the <em>subexpression</em> <u>fails</u> to match</td>
+<td>Match words that do not begin with &ldquo;non&rdquo;: <code>@&quot;\b(?!non)\w+\b&quot;</code></td>
+</tr>
+<tr>
+<td><code>(?&lt;= subexpression)</code></td>
+<td>Positive lookbehind</td>
+<td>Assert what precedes the current position in the string is <em>subexpression</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>(?&lt;! subexpression)</code></td>
+<td>Negative lookbehind</td>
+<td>Assert what precedes the current position in the string is NOT <em>subexpression</em></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="quantifiers">Quantifiers</h1>
+<p><em>Lazy</em> quantifiers (<code>??</code>, <code>*?</code>, <code>+?</code>, <code>{n,m}?</code>) instruct the backtracking engine to search the minimum number of repetitions first,
+matching as few times as possible. Contrast with <em>greedy</em> quantifiers (<code>+</code>):</p>
+<ul>
+<li>In <code>.+(\d+)\.</code>, the <em>greedy</em> quantifier <code>.+</code> causes regex engine to capture only the last digit of a number.</li>
+<li>In <code>.+?(\d+)\.</code>, the <em>lazy</em> quantifier <code>.+?</code> causes regex engine to capture entire number.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Quantifier</th>
+<th>Matches the previous element…</th>
+<th>Pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>?</code> (lazy)</td>
+<td>zero or more times, but as few times as possible</td>
+<td><code>a.?c</code></td>
+<td>&ldquo;abc&rdquo; in &ldquo;abcbc&rdquo;</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>one or more times</td>
+<td><code>be+</code></td>
+<td>&ldquo;bee&rdquo; in &ldquo;been&rdquo;</td>
+</tr>
+<tr>
+<td><code>+?</code></td>
+<td>one or more times, but as few times as possible</td>
+<td><code>&quot;be?&quot;</code></td>
+<td>&ldquo;be&rdquo; in &ldquo;been&rdquo;</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>zero or one time</td>
+<td><code>&quot;rai?&quot;</code></td>
+<td>&ldquo;rai&rdquo; in &ldquo;rain&rdquo;</td>
+</tr>
+<tr>
+<td><code>??</code></td>
+<td>zero or one time, but as few times as possible</td>
+<td><code>&quot;rai??&quot;</code></td>
+<td>&ldquo;ra&rdquo; in &ldquo;rain&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n}</code></td>
+<td>exactly n times</td>
+<td><code>&quot;,\d{3}&quot;</code></td>
+<td>&ldquo;,043&rdquo; in &ldquo;1,043.6&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n}?</code></td>
+<td>exactly n times</td>
+<td><code>&quot;,\d{3}&quot;</code></td>
+<td>&ldquo;,043&rdquo; in &ldquo;1,043.6&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n,}</code></td>
+<td>at least n times</td>
+<td><code>&quot;\d{2,}&quot;</code></td>
+<td>&ldquo;166&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n,}?</code></td>
+<td>at least n times, but as few times as possible</td>
+<td><code>&quot;\d{2,}&quot;</code></td>
+<td>&ldquo;166&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n,m}</code></td>
+<td>between n and m times</td>
+<td><code>&quot;\d{3,5}&quot;</code></td>
+<td>&ldquo;19302&rdquo; in &ldquo;193024&rdquo;</td>
+</tr>
+<tr>
+<td><code>{n,m}?</code></td>
+<td>between n and m times, but as few times as possible</td>
+<td><code>&quot;\d{3,5}&quot;</code></td>
+<td>&ldquo;193&rdquo;, &ldquo;024&rdquo; in &ldquo;193024&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="backreference-constructs">Backreference Constructs</h1>
+<p><em>Backreferences</em> allow a previously matched subexpression to be identified later in the same regular expression.</p>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>Match the value of subexpression <em>n</em> where <em>n</em> is a digit</td>
+</tr>
+<tr>
+<td><code>\k&lt;name&gt;</code></td>
+<td>Match the value of subexpression <em>name</em></td>
+</tr>
+</tbody>
+</table>
+<h1 id="alternation-constructshttpslearnmicrosoftcomen-usdotnetstandardbase-typesregular-expression-language-quick-referencealternation-constructs"><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference#alternation-constructs">Alternation Constructs</a></h1>
+<h1 id="substitutionshttpslearnmicrosoftcomen-usdotnetstandardbase-typesregular-expression-language-quick-referencesubstitutions"><a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference#substitutions">Substitutions</a></h1>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$1</code></td>
+<td>Substitutes the substring matched by matching group 1</td>
+</tr>
+<tr>
+<td><code>${foo}</code></td>
+<td>Substitutes the substring matched by matching group named <code>foo</code></td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>Substitutes a literal &ldquo;$&rdquo; character</td>
+</tr>
+<tr>
+<td><code>$&amp;</code></td>
+<td>Substitutes a copy of the whole match</td>
+</tr>
+<tr>
+<td><code>$`</code></td>
+<td>Substitutes all of the text of the input string before the match</td>
+</tr>
+<tr>
+<td><code>$'</code></td>
+<td>Substitutes all of the text of the input string after the match</td>
+</tr>
+<tr>
+<td><code>$+</code></td>
+<td>Substitutes the last group that was captured</td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>Substitutes the entire input string</td>
+</tr>
+</tbody>
+</table>
+<h1 id="best-practices">Best Practices</h1>
+<h2 id="security">Security</h2>
+<blockquote>
+<p>When processing untrusted input, always pass a timeout.</p>
+</blockquote>
+<p>A threat actor can pass malicious input, knowing that the input will be matched against a regular expression pattern, and cause a denial of service condition
+by crafting that input to take excessively long to process.  A timeout mitigates this.</p>
+<h2 id="regex-vs-string-methods">Regex vs String Methods</h2>
+<p>Use <code>String</code> methods when searching for a specific string.<br>
+Use <code>Regex</code></p>
+<h2 id="use-the-best-technique-for-a-specific-regex-operation">Use the Best Technique for a Specific Regex Operation</h2>
+<ul>
+<li>Validate a match with <code>IsMatch()</code>.</li>
+<li>Retrieve a single match with <code>Match()</code>. Retrieve subsequent matches with <code>Match.NextMatch()</code>.</li>
+<li>Replace matched text with <code>Replace()</code>.</li>
+<li>Escape characters that may be interpreted as regex operators with <code>Escape()</code>. Or, remove them with <code>Unescape()</code>.</li>
+</ul>
+<h2 id="use-timeouts">Use Timeouts</h2>
+<ul>
+<li>Use the <code>Regex(string, RegexOptions, TimeSpan)</code> constructor to pass a timeout value.</li>
+<li>Set application-wide timeout by calling <code>AppDomain.SetData(&quot;REGEX_DEFAULT_MATCH_TIMEOUT&quot;, TimeSpan)</code>.</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

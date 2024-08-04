@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dependency injection on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/dependency-injection/</link>
+    <description>Recent content in dependency injection on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 May 2022 08:50:05 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/dependency-injection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/dependency-injection/overview/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/dependency-injection/overview/</guid>
+      
+      <description>Abstract https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-guidelines https://scottlilly.com/c-design-patterns-the-dependency-injection-pattern/ https://auth0.com/blog/dependency-injection-in-dotnet-core/
+Dependency Injection is a design pattern used to achieve Inversion of Control between classes and their dependencies. A dependency is an object that another object depends on.
+IoC Container Implements IServiceProvider Dependencies managed by this container are called services. Microsoft.Extensions.DependencyInjection.IServiceCollection. Functions of the IoC Container Registration — mapping a type to a class so that the IoC can create the correct dependency instance. Resolution — resolving dependencies by creating an object and injecting it into the requesting class.</description>
+      
+    </item>
+    
+    <item>
+      <title>3 types example</title>
+      <link>http://localhost:1313/notes/_net/dependency-injection/3-types-example/</link>
+      <pubDate>Fri, 26 Aug 2022 07:37:34 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/dependency-injection/3-types-example/</guid>
+      
+      <description>3 Types of Dependency Injection:
+Constructor Injection – Injector class supplies the Service (dependency) through the Client class constructor. Property Injection – Injector class supplies the Service through a public property of the Client class. Method Injection – Client class implements an interface which declares the methods to supply the Service (dependency); Injector uses this interface to supply the Service to the Client class. interface IService { void Serve(); } public class Service1 : IService { public void Serve() =&amp;gt; &amp;#34;Service1 is running.</description>
+      
+    </item>
+    
+    <item>
+      <title>another example</title>
+      <link>http://localhost:1313/notes/_net/dependency-injection/another-example/</link>
+      <pubDate>Fri, 26 Aug 2022 07:36:43 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/dependency-injection/another-example/</guid>
+      
+      <description>Using DI, we move the creation and binding of dependent objects outside of the class that depends on them. It involves 3 classes: (1) Client class – class which depends on the Service. (2) Service class – class that provides the Service that the Client class depends on. (3) Injector class – creates a Service class object and injects it into the Client object.
+Non-DI Example public interface ICustomerDataAccess { string GetCustomerName(int id); } public class CustomerDataAccess: ICustomerDataAccess { public CustomerDataAccess() { } public string GetCustomerName(int id) =&amp;gt; &amp;#34;Dummy Customer Name&amp;#34;; } public class DataAccessFactory { public static ICustomerDataAccess GetCustomerDataAccessObj() =&amp;gt; new CustomerDataAccess(); } public class CustomerBusinessLogic { ICustomerDataAccess _custDataAccess; public CustomerBusinessLogic() { // DataAccessFactory is used here.</description>
+      
+    </item>
+    
+    <item>
+      <title>microsoft&#39;s example</title>
+      <link>http://localhost:1313/notes/_net/dependency-injection/microsofts-example/</link>
+      <pubDate>Fri, 26 Aug 2022 07:34:23 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/dependency-injection/microsofts-example/</guid>
+      
+      <description>Dependent Service Implementation Example public class MessageWriter { public void WriteMessage(string message) =&amp;gt; Console.WriteLine($&amp;#34;MessageWriter.WriteMessage called. Message: {message}&amp;#34;); } If a class creates an instance of MessageWriter then, MessageWriter becomes a dependency of that class:
+public class Worker : BackgroundService { private readonly MessageWriter _messageWriter = new MessageWriter(); protected override async Task ExecuteAsync(CancellationToken stoppingToken) { while (!stoppingToken.IsCancellationRequested) { _messageWriter.Write($&amp;#34;Worker running at: {DateTimeOffset.Now}&amp;#34;); await Task.Delay(1000, stoppingToken); } } } Worker creates, and directly depends on, MessageWriter.</description>
+      
+    </item>
+    
+    <item>
+      <title>example</title>
+      <link>http://localhost:1313/notes/_net/dependency-injection/example/</link>
+      <pubDate>Tue, 23 Aug 2022 16:03:38 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/dependency-injection/example/</guid>
+      
+      <description>Dependency Injection with Generic Host &amp;amp; Default HostBuilder Example With a Hosted Service public class Program { public static async Task Main(string[] args) { await Host.CreateDefaultBuilder(args) // Set the ContentRoot to the path of the executing assembly: .UseContentRoot(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)) .ConfigureServices((hostContext, services) =&amp;gt; { services .AddHostedService&amp;lt;ConsoleService&amp;gt;(); // IHostedService has full access to the DI container: .AddSingleton&amp;lt;IWeatherService, WeatherService&amp;gt;(); services.AddOptions&amp;lt;WeatherSettings&amp;gt;() .Bind(hostContext.Configuration.GetSection(&amp;#34;Weather&amp;#34;)); }) .RunConsoleAsync(); } } internal sealed class ConsoleHostedService : IHostedService { private int? _exitCode; private readonly ILogger _logger; private readonly IHostApplicationLifetime _appLifetime; private readonly IWeatherService _weatherService; public ConsoleHostedService( ILogger&amp;lt;ConsoleHostedService&amp;gt; logger, IHostApplicationLifetime appLifetime, IWeatherService weatherService) { _logger = logger; _appLifetime = appLifetime; _weatherService = weatherService; } public Task StartAsync(CancellationToken cancellationToken) { _appLifetime.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

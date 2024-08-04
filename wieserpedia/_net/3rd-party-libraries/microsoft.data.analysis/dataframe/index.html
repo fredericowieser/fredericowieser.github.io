@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">dataframe | Fred Wieser</title>
+<meta property="og:title" content="dataframe | Fred Wieser" />
+<meta name="twitter:title" content="dataframe | Fred Wieser" />
+<meta itemprop="name" content="dataframe | Fred Wieser" />
+<meta name="application-name" content="dataframe | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframe/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/3rd-party-libraries/microsoft.data.analysis/dataframe/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">dataframe</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-01-25T13:17:51-07:00" itemprop="datePublished"> 25 Jan 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="dataframehttpsdocsmicrosoftcomen-usdotnetapimicrosoftdataanalysisdataframeviewml-dotnet-preview"><a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.analysis.dataframe?view=ml-dotnet-preview">DataFrame</a></h1>
+<p><code>Object</code> –&gt; <code>DataFrame</code></p>
+<p>A data structure to support indexing, binary operations, sorting, selecting, and other APIs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>dotnet add package Microsoft.<span style="color:#79c0ff">Data</span>.<span style="color:#79c0ff">Analysis</span>
+</span></span></code></pre></div><h1 id="accessing">Accessing</h1>
+<h2 id="elements">Elements</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Access the element at row, col:</span>
+</span></span><span style="display:flex;"><span>df[row, col]
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// or</span>
+</span></span><span style="display:flex;"><span>df.Rows[row, col]
+</span></span></code></pre></div><h2 id="rows">Rows</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Access the nth row:</span>
+</span></span><span style="display:flex;"><span>df.Rows[n]
+</span></span></code></pre></div><h2 id="columns">Columns</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Access a column by name:</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#a5d6ff">&#34;column_name&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Access the nth column:</span>
+</span></span><span style="display:flex;"><span>df.Columns[n]
+</span></span></code></pre></div><h2 id="dataframe">DataFrame</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Filter the DataFrame:</span>
+</span></span><span style="display:flex;"><span>df.Filter(df.Columns[<span style="color:#a5d6ff">&#34;column&#34;</span>].ElementwiseGreaterThan(<span style="color:#a5d6ff">50</span>)) <span style="color:#8b949e;font-style:italic">// All rows in column with values &gt; 50.</span>
+</span></span></code></pre></div><h1 id="manipulating">Manipulating</h1>
+<h2 id="elements-1">Elements</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>df[row, col] = <span style="color:#ff7b72">value</span>;
+</span></span></code></pre></div><h2 id="rows-1">Rows</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Add a row:</span>
+</span></span><span style="display:flex;"><span>df.Append(<span style="color:#ff7b72">new</span> List&lt;KeyValuePair&lt;<span style="color:#ff7b72">string</span>, <span style="color:#ff7b72">object</span>&gt;&gt;() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">new</span> KeyValuePair&lt;<span style="color:#ff7b72">string</span>, <span style="color:#ff7b72">object</span>&gt;(<span style="color:#a5d6ff">&#34;foo_column&#34;</span>, <span style="color:#ff7b72">value</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">new</span> KeyValuePair&lt;<span style="color:#ff7b72">string</span>, <span style="color:#ff7b72">object</span>&gt;(<span style="color:#a5d6ff">&#34;bar_column&#34;</span>, <span style="color:#ff7b72">value</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">new</span> KeyValuePair&lt;<span style="color:#ff7b72">string</span>, <span style="color:#ff7b72">object</span>&gt;(<span style="color:#a5d6ff">&#34;baz_column&#34;</span>, <span style="color:#ff7b72">value</span>)
+</span></span><span style="display:flex;"><span>}, <span style="color:#79c0ff">true</span>);
+</span></span></code></pre></div><h2 id="columns-1">Columns</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Manipulate all rows of a column:</span>
+</span></span><span style="display:flex;"><span>df.Columns[<span style="color:#a5d6ff">&#34;column_name&#34;</span>] = df.Columns[<span style="color:#a5d6ff">&#34;column_name&#34;</span>] + <span style="color:#ff7b72">value</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Add a column:</span>
+</span></span><span style="display:flex;"><span>df.Columns.Add(<span style="color:#ff7b72">new</span> DataFrameColumn(<span style="color:#a5d6ff">&#34;column_name&#34;</span>, numberOfRows);
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// In place of `numberOfRows`, consider `df.Rows.Count()`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Fill the nulls in a column with a value:</span>
+</span></span><span style="display:flex;"><span>df.Columns[<span style="color:#a5d6ff">&#34;column_name&#34;</span>].FillNulls(<span style="color:#ff7b72">value</span>, <span style="color:#79c0ff">true</span>);
+</span></span></code></pre></div><h2 id="dataframe-1">DataFrame</h2>
+<h3 id="sorting">Sorting</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Sort (order) by ascending:</span>
+</span></span><span style="display:flex;"><span>df.OrderBy(<span style="color:#a5d6ff">&#34;column&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Sort (order) by descending:</span>
+</span></span><span style="display:flex;"><span>df.OrderByDescending(<span style="color:#a5d6ff">&#34;column&#34;</span>);
+</span></span></code></pre></div><h3 id="grouping">Grouping</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Group dataframe rows by unique value in columns:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> groupByData = df.GroupBy(<span style="color:#a5d6ff">&#34;column&#34;</span>);
+</span></span></code></pre></div><h3 id="merging">Merging</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Merge df2 into df1 using a column of Type named df1_column_name in df1 and df2_column_name in df2:</span>
+</span></span><span style="display:flex;"><span>df1.Merge&lt;Type&gt;(df2, <span style="color:#a5d6ff">&#34;df1_column_name&#34;</span>, <span style="color:#a5d6ff">&#34;df2_column_name&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Merge df2 with df1 on the common column named &#34;Date&#34; of type DateTime:</span>
+</span></span><span style="display:flex;"><span>df1.Merge&lt;DateTime&gt;(df2, <span style="color:#a5d6ff">&#34;Date&#34;</span>, <span style="color:#a5d6ff">&#34;Date&#34;</span>);
+</span></span></code></pre></div><h1 id="properties">Properties</h1>
+<ul>
+<li><code>Columns</code> - Returns the columns in the DataFrame as a DataFrameColumnCollection.</li>
+<li><code>Item(rowIndex, colIndex)</code> - An indexer to get or set values.</li>
+<li><code>Item(someString)</code> - An indexer based on Name.</li>
+<li><code>Rows</code> - Returns the rows in the DataFrame as a DataFrameRowCollection.</li>
+</ul>
+<h1 id="methods">Methods</h1>
+<ul>
+<li><code>AddPrefix</code></li>
+<li><code>AddSuffix</code></li>
+<li><code>Append</code></li>
+<li><code>Clamp</code></li>
+<li><code>Clone</code> - Return a full copy of the DataFrame.</li>
+<li><code>Divide</code></li>
+<li><code>DropNulls(DropNullOptions)</code> - Return a DataFrame with no missing values.</li>
+<li><code>FillNulls</code></li>
+<li><code>Filter</code></li>
+<li><code>GroupBy</code> - Group the rows in the DataFrame by unique values.</li>
+<li><code>Head(n)</code> - Return the first n rows of the DataFrame.</li>
+<li><code>Info()</code> - Generate a concise summary of each column in the DataFrame.</li>
+<li><code>Join</code></li>
+<li><code>LoadCsv</code> - Read a CSV into a DataFrame.</li>
+<li><code>Merge</code> - Merge DataFrames with a database style join.</li>
+<li><code>Modulo</code></li>
+<li><code>OrderBy</code> - Orders the DataFrame by a specified column.</li>
+<li><code>Tail(n)</code> - Return the last n rows of the DataFrame.</li>
+<li><code>WriteCsv</code> - Write a DataFrame to a CSV.</li>
+</ul>
+<h2 id="comparison-methods">Comparison Methods</h2>
+<ul>
+<li><code>ElementwiseEquals</code></li>
+<li><code>ElementwiseGreaterThan</code></li>
+<li><code>ElementwiseGreaterThanOrEqual</code></li>
+<li><code>ElementwiseLessThan</code></li>
+<li><code>ElementwiseLessThanOrEqual</code></li>
+<li><code>ElementwiseNotEquals</code></li>
+</ul>
+<h2 id="mathematical-methods">Mathematical Methods</h2>
+<ul>
+<li><code>Add</code></li>
+<li><code>And</code></li>
+<li><code>Divide</code></li>
+<li><code>Modulo</code></li>
+<li><code>Multiply</code></li>
+<li><code>Or</code></li>
+<li><code>Subtract</code></li>
+<li><code>Xor</code></li>
+<li><code>ReverseAdd</code></li>
+<li><code>ReverseAnd</code></li>
+<li><code>ReverseDivide</code></li>
+<li><code>ReverseModulo</code></li>
+<li><code>ReverseMultiply</code></li>
+<li><code>ReverseSubtract</code></li>
+<li><code>ReverseXor</code></li>
+</ul>
+<h2 id="statistical-methods">Statistical Methods</h2>
+<ul>
+<li><code>Description()</code> - Generate descriptive statcs that summarize each numeric column.</li>
+<li><code>Sample(n)</code> - Return a random sample of n rows.</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

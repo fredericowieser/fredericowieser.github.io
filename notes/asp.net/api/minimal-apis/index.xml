@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>minimal apis on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/api/minimal-apis/</link>
+    <description>Recent content in minimal apis on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Aug 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/api/minimal-apis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/api/minimal-apis/overview/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/api/minimal-apis/overview/</guid>
+      
+      <description>Abstract [Documentation] Minimal APIs are a simplified approach to building fast HTTP APIs with ASP.NET Core that skip traditional scaffolding and avoid unnecessary controllers. They fluently declare API routes and actions:
+var app = WebApplication.Create(args); app.MapGet(&amp;#34;/&amp;#34;, () =&amp;gt; &amp;#34;Hello World!&amp;#34;); app.MapGet(&amp;#34;/users/{userId}/books/{bookId}&amp;#34;, (int userId, int bookId) =&amp;gt; $&amp;#34;The user id is {userId} and book id is {bookId}&amp;#34;); app.Run(); Middleware Sequencing in Minimal API Apps [Documentation] WebApplication adds the following middleware:
+Sequence Middleware Conditions 1 UseDeveloperExceptionPage HostingEnvironment == &amp;ldquo;Development&amp;rdquo; 2 UseRouting Endpoints are configured (like with app.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

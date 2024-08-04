@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">options pattern | Fred Wieser</title>
+<meta property="og:title" content="options pattern | Fred Wieser" />
+<meta name="twitter:title" content="options pattern | Fred Wieser" />
+<meta itemprop="name" content="options pattern | Fred Wieser" />
+<meta name="application-name" content="options pattern | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/configuration/options-pattern/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/configuration/options-pattern/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">options pattern</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-09-20T00:00:00-06:00" itemprop="datePublished"> 20 Sep 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usdotnetcoreextensionsoptions">Overview [<a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/options">Documentation</a>]</h1>
+<p>The options pattern uses classes to provide strongly-typed access to groups of related settings. It uses configuration files like <a href="../overview">configuration in .NET</a>.</p>
+<p>This pattern supports a mechanism to validate configuration data.</p>
+<h1 id="configuring-and-using-options">Configuring and Using Options</h1>
+<p>High-level Process:</p>
+<ol>
+<li>Create options classes that model the configuration data</li>
+<li>Add instances of <code>Option&lt;TOption&gt;</code> to the DI container</li>
+<li>Inject the <code>Option&lt;TOption&gt;</code> instances into classes that need them</li>
+</ol>
+<h2 id="1-create-options-classes">1. Create Options Classes</h2>
+<p>Options classes must:</p>
+<ol>
+<li>Be non-abstract</li>
+<li>Have a public, parameterless constructor</li>
+<li>Contain public, read-write properties to bind (fields are <strong>not</strong> bound)</li>
+</ol>
+<p>See <a href="../implementation">notes on Configuration</a> for an example of how to model a class after JSON-based configuration.</p>
+<h2 id="2-add-options-to-di-container">2. Add Options to DI Container</h2>
+<p><code>appsettings.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;SecretKey&#34;</span>: <span style="color:#a5d6ff">&#34;Secret key value&#34;</span>,
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#7ee787">&#34;SomeOptions&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;Enabled&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;AutoRetryDelay&#34;</span>: <span style="color:#a5d6ff">&#34;00:00:07&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Logging&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&#34;LogLevel&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&#34;Default&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&#34;Microsoft&#34;</span>: <span style="color:#a5d6ff">&#34;Warning&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#7ee787">&#34;Microsoft.Hosting.Lifetime&#34;</span>: <span style="color:#a5d6ff">&#34;Information&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.Configure&lt;SomeOptions&gt;(builder.Configuration.GetSection(key: nameof(SomeOptions)));
+</span></span></code></pre></div><h2 id="3-inject-options-into-classes">3. Inject Options into Classes</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ConsoleJson.Example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">sealed</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ExampleService</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> SomeOptions _options;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> ExampleService(IOptions&lt;SomeOptions&gt; options) =&gt;
+</span></span><span style="display:flex;"><span>        _options = options.Value;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> DisplayValues()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.Enabled={_options.Enabled}&#34;</span>);
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.AutoRetryDelay={_options.AutoRetryDelay}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="other-ways-to-configure-options">Other Ways to Configure Options</h1>
+<h2 id="using-configurationgetsection">Using <code>Configuration.GetSection</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>SomeOptions options = <span style="color:#ff7b72">new</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Configuration.GetSection(nameof(SomeOptions)) <span style="color:#8b949e;font-style:italic">// returns the configuration section</span>
+</span></span><span style="display:flex;"><span>                     .Bind(options);                  <span style="color:#8b949e;font-style:italic">// binds the configuration section to the options object</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.Enabled={options.Enabled}&#34;</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.AutoRetryDelay={options.AutoRetryDelay}&#34;</span>);
+</span></span></code></pre></div><h2 id="using-configurationget">Using <code>Configuration.Get</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> options =
+</span></span><span style="display:flex;"><span>    builder.Configuration.GetSection(nameof(SomeOptions)) <span style="color:#8b949e;font-style:italic">// returns the configuration section</span>
+</span></span><span style="display:flex;"><span>                         .Get&lt;SomeOptions&gt;();             <span style="color:#8b949e;font-style:italic">// binds the configuration section to the options object and</span>
+</span></span><span style="display:flex;"><span>                                                          <span style="color:#8b949e;font-style:italic">// returns the object.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.Enabled={options.Enabled}&#34;</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.AutoRetryDelay={options.AutoRetryDelay}&#34;</span>);
+</span></span></code></pre></div><h1 id="options-interfaces">Options Interfaces</h1>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Can read config data after app starts</th>
+<th>Supports named options</th>
+<th>Service lifetime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IOptions&lt;T&gt;</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Singleton</td>
+</tr>
+<tr>
+<td><code>IOptionsSnapshot&lt;T&gt;</code></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Scoped</td>
+</tr>
+<tr>
+<td><code>IOptionsMonitor&lt;T&gt;</code></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Singleton</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioptionssnapshott-vs-ioptionsmonitort"><code>IOptionsSnapshot&lt;T&gt;</code> vs <code>IOptionsMonitor&lt;T&gt;</code></h2>
+<p>Use <code>IOptionsSnapshot</code> to read updated configuration data. With this interface, options are computed once per request when accessed and are cached for the lifetime of the request.</p>
+<p><code>IOptionsSnapshot</code> is a scoped service and provides a snapshot of the options at the time the object is constructed. It is designed for use with transient and scoped dependencies.</p>
+<p><code>IOptionsMonitor</code> is a singleton service that retrieves the current option values at any time. It is designed for use with singleton dependencies.</p>
+<h3 id="using-ioptionsmonitort">Using <code>IOptionsMonitor&lt;T&gt;</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ConsoleJson.Example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">sealed</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MonitorService</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> IOptionsMonitor&lt;SomeOptions&gt; _monitor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> MonitorService(IOptionsMonitor&lt;SomeOptions&gt; monitor) =&gt;
+</span></span><span style="display:flex;"><span>        _monitor = monitor;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> DisplayValues()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        SomeOptions options = _monitor.CurrentValue;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.Enabled={options.Enabled}&#34;</span>);
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#a5d6ff">$&#34;SomeOptions.AutoRetryDelay={options.AutoRetryDelay}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="named-options">Named Options</h1>
+<p>Use named options when multiple configuration sections bind to the same properties. Consider:
+<code>appsettings.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;Features&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Personalize&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;Enabled&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;ApiKey&#34;</span>: <span style="color:#a5d6ff">&#34;aGEgaGEgeW91IHRob3VnaHQgdGhhdCB3YXMgcmVhbGx5IHNvbWV0aGluZw==&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;WeatherStation&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;Enabled&#34;</span>: <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#7ee787">&#34;ApiKey&#34;</span>: <span style="color:#a5d6ff">&#34;QXJlIHlvdSBhdHRlbXB0aW5nIHRvIGhhY2sgdXM/&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Notice how both <code>Personalize</code> and <code>WeatherStation</code> have properties of the same name. Instead of creating two classes to bind the options, this class can be used for both sections:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span> <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Features</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">const</span> <span style="color:#ff7b72">string</span> Personalize = nameof(Personalize);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">const</span> <span style="color:#ff7b72">string</span> WeatherStation = nameof(WeatherStation);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">bool</span> Enabled { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> ApiKey { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="configuring-named-options">Configuring Named Options</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Omitted for brevity...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.Configure&lt;Features&gt;(Features.Personalize,
+</span></span><span style="display:flex;"><span>                                     builder.Configuration.GetSection(<span style="color:#a5d6ff">&#34;Features:Personalize&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.Configure&lt;Features&gt;(Features.WeatherStation,
+</span></span><span style="display:flex;"><span>                                     builder.Configuration.GetSection(<span style="color:#a5d6ff">&#34;Features:WeatherStation&#34;</span>));
+</span></span></code></pre></div><h2 id="using-named-options">Using Named Options</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">sealed</span> Service
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> Features _personalizeFeature;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> Features _weatherStationFeature;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Service(IOptionsSnapshot&lt;Features&gt; namedOptionsAccessor)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _personalizeFeature = namedOptionsAccessor.Get(Features.Personalize);
+</span></span><span style="display:flex;"><span>        _weatherStationFeature = namedOptionsAccessor.Get(Features.WeatherStation);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="options-validation">Options Validation</h1>
+<p>Options can be validated with <code>System.ComponentModel.DataAnnotations</code>.</p>
+<p>By default, validation is performed the first time an options instance is created. Validation can be performed eagerly (see notes in step 3).</p>
+<p>High-level Process:</p>
+<ol>
+<li>Annotate the options model with the appropriate data annotations</li>
+<li>Add support for options validation</li>
+<li>Enable validation</li>
+</ol>
+<h2 id="1-annotate-the-options-model">1. Annotate the Options Model</h2>
+<p>Consider this configuration file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#7ee787">&#34;MyConfig&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Key1&#34;</span>: <span style="color:#a5d6ff">&#34;My Key One&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Key2&#34;</span>: <span style="color:#a5d6ff">10</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&#34;Key3&#34;</span>: <span style="color:#a5d6ff">32</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Here is the model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">System.ComponentModel.DataAnnotations</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyConfigOptions</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">const</span> <span style="color:#ff7b72">string</span> MyConfig = <span style="color:#a5d6ff">&#34;MyConfig&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [RegularExpression(@&#34;^[a-zA-Z&#39;&#39;-&#39;\s]{<span style="color:#a5d6ff">1</span>,<span style="color:#a5d6ff">40</span>}<span style="color:#a5d6ff">$&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    public string Key1 { get; set; }
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    [Range(0, 1000, ErrorMessage = &#34;</span>Value <span style="color:#ff7b72">for</span> {<span style="color:#a5d6ff">0</span>} must be between {<span style="color:#a5d6ff">1</span>} and {<span style="color:#a5d6ff">2</span>}.<span style="color:#a5d6ff">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Key2 { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Key3 { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="2-add-support-for-options-validation">2. Add Support for Options Validation</h2>
+<p>Note: this package is already included in web apps:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>dotnet add package Microsoft.<span style="color:#79c0ff">Extensions</span>.<span style="color:#79c0ff">Options</span>.<span style="color:#79c0ff">DataAnnotations</span> 
+</span></span></code></pre></div><h2 id="3-enable-validation">3. Enable Validation</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Options.DataAnnotations</span>; <span style="color:#8b949e;font-style:italic">// not required for web apps</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.AddOptions&lt;SomeOptions&gt;()
+</span></span><span style="display:flex;"><span>                .Bind(Configuration.GetSection(nameof(SomeOptions)))
+</span></span><span style="display:flex;"><span>                .ValidateDataAnnotations();
+</span></span><span style="display:flex;"><span>              <span style="color:#8b949e;font-style:italic">//.ValidateOnStart(); &lt;-- Optionally, validate eagerly</span>
+</span></span></code></pre></div><h2 id="validation-sample">Validation Sample</h2>
+<p>A sample class that displays the configuration values or the validation errors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Logging</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ConsoleJson.Example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">sealed</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ValidationService</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> ILogger&lt;ValidationService&gt; _logger;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">readonly</span> IOptions&lt;MyConfigOptions&gt; _config;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> ValidationService(ILogger&lt;ValidationService&gt; logger, IOptions&lt;MyConfigOptions&gt; config)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _config = config;
+</span></span><span style="display:flex;"><span>        _logger = logger;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">try</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            MyConfigOptions options = _config.Value;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">catch</span> (OptionsValidationException ex)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">foreach</span> (<span style="color:#ff7b72">string</span> failure <span style="color:#ff7b72">in</span> ex.Failures)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                _logger.LogError(failure);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Or, perform complex validation using a delegate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services
+</span></span><span style="display:flex;"><span>    .AddOptions&lt;MyConfigOptions&gt;()
+</span></span><span style="display:flex;"><span>    .Bind(Configuration.GetSection(MyConfigOptions.MyConfig))
+</span></span><span style="display:flex;"><span>    .ValidateDataAnnotations()
+</span></span><span style="display:flex;"><span>    .Validate(config =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (config.Scale != <span style="color:#a5d6ff">0</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic">// Validate must return true if validation succeeds, false otherwise</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> config.VerbosityLevel &gt; config.Scale;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">true</span>;
+</span></span><span style="display:flex;"><span>    }, <span style="color:#a5d6ff">&#34;VerbosityLevel must be &gt; than Scale.&#34;</span>); <span style="color:#8b949e;font-style:italic">// the error message</span>
+</span></span></code></pre></div><h2 id="complex-validation-with-ivalidateoptionst">Complex Validation with <code>IValidateOptions&lt;T&gt;</code></h2>
+<p>For complex validation scenarios, use <code>IValidateOptions&lt;TOptions&gt;</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">System.Text</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">System.Text.RegularExpressions</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Configuration</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">using</span> <span style="color:#ff7b72">Microsoft.Extensions.Options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">ConsoleJson.Example</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">sealed</span> <span style="color:#ff7b72">partial</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">ValidateMyConfigOptions</span> : IValidateOptions&lt;MyConfigOptions&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> MyConfigOptions? _settings { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> ValidateMyConfigOptions(IConfiguration config) =&gt;
+</span></span><span style="display:flex;"><span>        _settings = config.GetSection(MyConfigOptions.MyConfig)
+</span></span><span style="display:flex;"><span>                          .Get&lt;MyConfigOptions&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> ValidateOptionsResult Validate(<span style="color:#ff7b72">string?</span> name, MyConfigOptions options)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        StringBuilder? failure = <span style="color:#79c0ff">null</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (!ValidationRegex().IsMatch(options.SiteTitle))
+</span></span><span style="display:flex;"><span>            (failure ??= <span style="color:#ff7b72">new</span>()).AppendLine(<span style="color:#a5d6ff">$&#34;{options.SiteTitle} doesn&#39;t match RegEx&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (options.Scale <span style="color:#ff7b72">is</span> &lt; <span style="color:#a5d6ff">0</span> or &gt; <span style="color:#a5d6ff">1_000</span>)
+</span></span><span style="display:flex;"><span>            (failure ??= <span style="color:#ff7b72">new</span>()).AppendLine(<span style="color:#a5d6ff">$&#34;{options.Scale} isn&#39;t within Range 0 - 1000&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (_settings <span style="color:#ff7b72">is</span> { Scale: <span style="color:#a5d6ff">0</span> } &amp;&amp; _settings.VerbosityLevel &lt;= _settings.Scale)
+</span></span><span style="display:flex;"><span>            (failure ??= <span style="color:#ff7b72">new</span>()).AppendLine(<span style="color:#a5d6ff">&#34;VerbosityLevel must be &gt; than Scale.&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> failure <span style="color:#ff7b72">is</span> not <span style="color:#79c0ff">null</span> ?
+</span></span><span style="display:flex;"><span>            ? ValidateOptionsResult.Fail(failure.ToString())
+</span></span><span style="display:flex;"><span>            : ValidateOptionsResult.Success;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [GeneratedRegex(&#34;^[a-zA-Z&#39;&#39;-&#39;\\s]{<span style="color:#a5d6ff">1</span>,<span style="color:#a5d6ff">40</span>}<span style="color:#f85149">$</span><span style="color:#a5d6ff">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>    <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">partial</span> Regex ValidationRegex();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Enable validation when using <code>IValidateOptions&lt;TOptions&gt;</code> like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.Configure&lt;MyConfigOptions&gt;(builder.Configuration.GetSection(MyConfigOptions.MyConfig));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder.Services.AddSingleton&lt;IValidateOptions&lt;MyConfigOptions&gt;, MyConfigValidation&gt;();
+</span></span></code></pre></div><h2 id="complex-validation-with-ivalidatableobject">Complex Validation with <code>IValidatableObject</code></h2>
+<p>Class-level validation can be performed on the options class itself by:</p>
+<ol>
+<li>Implementing <code>IValidatableObject</code> and its <code>Validate</code> method on the class</li>
+<li>Calling <code>ValidateDataAnnotations</code> in <code>Program.cs</code></li>
+</ol>
+<h2 id="complex-validation-with-customvalidationattribute">Complex Validation with <code>CustomValidationAttribute</code></h2>
+<p>Mark the member to be validated with <code>[CustomValidation]</code> and create a custom validation method:</p>
+<p>When annotating with the <code>CustomValidation</code> attribute, its first argument is the type of the validation method that will be used, and its second argument is the name of the validation method that will be used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MyConfigOptions</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">const</span> <span style="color:#ff7b72">string</span> MyConfig = <span style="color:#a5d6ff">&#34;MyConfig&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [RegularExpression(@&#34;^[a-zA-Z&#39;&#39;-&#39;\s]{<span style="color:#a5d6ff">1</span>,<span style="color:#a5d6ff">40</span>}<span style="color:#a5d6ff">$&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    public string Key1 { get; set; }
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    [Range(0, 1000, ErrorMessage = &#34;</span>Value <span style="color:#ff7b72">for</span> {<span style="color:#a5d6ff">0</span>} must be between {<span style="color:#a5d6ff">1</span>} and {<span style="color:#a5d6ff">2</span>}.<span style="color:#a5d6ff">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff"></span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Key2 { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex; background-color:#6e7681"><span>    [CustomValidation(typeof(Validate), nameof(IsKey3NonNegative))]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Key3 { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The custom validation method must:</p>
+<ol>
+<li>Be public</li>
+<li>Be static</li>
+<li>Return ValidationResult</li>
+<li>Accept a parameter of the same type as the member being validated</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Validate</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex; background-color:#6e7681"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> ValidationResult IsKey3NonNegative(<span style="color:#ff7b72">int</span> key) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> key &lt; <span style="color:#a5d6ff">0</span> 
+</span></span><span style="display:flex;"><span>            ? <span style="color:#ff7b72">new</span> ValidationResult(<span style="color:#a5d6ff">&#34;key cannot be negative&#34;</span>)
+</span></span><span style="display:flex;"><span>            : ValidationResult.Success;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="post-configuration">Post-configuration</h1>
+<p>Post-configuration runs after all options configuration occurs. It is useful when you need to override configuration without changing the configuration file itself:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.PostConfigure&lt;CustomOptions&gt;(customOptions =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    customOptions.Option1 = <span style="color:#a5d6ff">&#34;post_configured_option1_value&#34;</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Or, with named options:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.PostConfigure&lt;CustomOptions&gt;(<span style="color:#a5d6ff">&#34;named_options_1&#34;</span>, customOptions =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    customOptions.Option1 = <span style="color:#a5d6ff">&#34;post_configured_option1_value&#34;</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Or, to post-configure all configuration instances:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.PostConfigureAll&lt;CustomOptions&gt;(customOptions =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    customOptions.Option1 = <span style="color:#a5d6ff">&#34;post_configured_option1_value&#34;</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h1 id="accessing-options-in-programcs">Accessing Options in <code>Program.cs</code></h1>
+<p>Use GetRequiredService:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">var</span> app = builder.Build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> option1 = app.Services.GetRequiredService&lt;IOptionsMonitor&lt;MyOptions&gt;&gt;().CurrentValue.Option1;
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

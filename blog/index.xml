@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Fred Wieser</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blog on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#2 Multi-Player ELO Systems</title>
+      <link>http://localhost:1313/blog/makig-a-hugo-blog-copy/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/makig-a-hugo-blog-copy/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>#1 Making A Hugo Blog</title>
+      <link>http://localhost:1313/blog/makig-a-hugo-blog/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/makig-a-hugo-blog/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

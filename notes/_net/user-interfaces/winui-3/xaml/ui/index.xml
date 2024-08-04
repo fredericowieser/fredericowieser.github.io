@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ui on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/</link>
+    <description>Recent content in ui on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>attached properties</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/attached-properties/</link>
+      <pubDate>Mon, 12 Dec 2022 13:16:42 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/attached-properties/</guid>
+      
+      <description>In XAML Grid.Column is an attached property; it is a property defined in the Grid class but set on the Rectangle.
+Set Grid.Row=&amp;quot;1&amp;quot; to move to the second row of the grid.
+In C# var btn = new Button(); btn.SetValue(Grid.RowProperty, 1); var row = (int)btn.GetValue(Grid.RowProperty); </description>
+      
+    </item>
+    
+    <item>
+      <title>positioning elements</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/positioning-elements/</link>
+      <pubDate>Sun, 11 Dec 2022 19:00:58 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/positioning-elements/</guid>
+      
+      <description>Positioning Elements with Layout Properties HorizontalAlignment property has values of Left, Center, Right, Stretch
+VerticalAlignment property has values of Top, Center, Bottom, Stretch
+When Width and Height properties are set, the element will not grow or shrink:
+Margin Margin=&amp;quot;&amp;lt;Left Top Right Bottom&amp;gt;&amp;quot;
+Margin=&amp;quot;50&amp;quot; results in a margin of 50 pixels on all sides.
+Margin=&amp;quot;50 10&amp;quot; results in 50 pixels for left and right margins and 10 pixels for top and bottom margins.</description>
+      
+    </item>
+    
+    <item>
+      <title>sizing rows and columns</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/sizing-rows-and-columns/</link>
+      <pubDate>Sun, 11 Dec 2022 18:40:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/sizing-rows-and-columns/</guid>
+      
+      <description>Sizing Setting Height to &amp;quot;*&amp;quot; for both RowDefinitions results in both rows growing proportionally:
+Star Sizing Setting the first RowDefinition to &amp;quot;3*&amp;quot; results in a total of 4 stars for the two RowDefinitions, 3 of which go to the first RowDefinition:
+Absolute Sizing Absolute sizing uses pixels.
+Here, the first RowDefinition is 100 pixels; the other two split the remaining space evenly:
+Setting the third row of the grid to &amp;quot;Auto&amp;quot; results in the row using the height of the tallest element in the row (in this case, the orange rectangle):</description>
+      
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/ui/</link>
+      <pubDate>Sat, 10 Dec 2022 17:28:28 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/user-interfaces/winui-3/xaml/ui/ui/</guid>
+      
+      <description>WinUI Layout Panels StackPanel Often used to stack OK/Cancel buttons.
+Note: StackPanel.Children can be omitted
+Grid Often used for the main layout of a UI. Displays a UI&amp;rsquo;s elements in rows and columns.
+Add RowDefinitions to the Grid.RowDefinitions property. Specifying two RowDefinitions results in two rows.
+The same is true for ColumnDefinitions.
+RowDefinition has a Height property; ColumnDefinition has a Width property.
+ColumnSpan and RowSpan properties span an element across multiple columns or rows.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

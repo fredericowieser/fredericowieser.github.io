@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/web/http/</link>
+    <description>Recent content in http on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/web/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ihttpclientfactory</title>
+      <link>http://localhost:1313/wieserpedia/_net/web/http/ihttpclientfactory/</link>
+      <pubDate>Fri, 22 Jul 2022 09:36:06 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/web/http/ihttpclientfactory/</guid>
+      
+      <description>Problems with HttpClient HttpClient implements IDisposable, but when the object gets disposed of, the underlying socket is not immediately released. This can lead to socket exhaustion. When using a shared instances of HttpClient in long-running processes, the if instantiated as a singleton or static object, HttpClient will fail to handle DNS changes. Overview IHttpClientFactory offers these benefits:
+Supports DI. Injected HttpClient instances are Scoped. A central location for naming and configuring HttpClient objects.</description>
+      
+    </item>
+    
+    <item>
+      <title>httputility</title>
+      <link>http://localhost:1313/wieserpedia/_net/web/http/httputility/</link>
+      <pubDate>Sun, 28 Nov 2021 09:17:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/web/http/httputility/</guid>
+      
+      <description>System.Web.HttpUtility Use to encode or decode URLs when building web applications.
+To encode or decode values outside of a web application, use System.Net.WebUtility.</description>
+      
+    </item>
+    
+    <item>
+      <title>httpclient</title>
+      <link>http://localhost:1313/wieserpedia/_net/web/http/httpclient/</link>
+      <pubDate>Thu, 11 Nov 2021 09:41:47 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/web/http/httpclient/</guid>
+      
+      <description>HttpClient Object –&amp;gt; HttpMessageInvoker –&amp;gt; HttpClient
+Sending HTTP requests and receiving HTTP responses via URI.
+HttpClient is intended to be instantiated once per application. HttpClient works only on async methods for its long-running APIs. Every HttpClient instance uses its own connection pool. Thread Safety Warning: HttpClient is not thread safe. However, all HTTP verb methods, except Send(), are thread safe.
+Flaw When the HttpClient object gets disposed of, the underlying socket is not immediately released, which can lead to a socket exhaustion problem.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

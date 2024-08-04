@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cli on Fred Wieser</title>
+    <link>http://localhost:1313/notes/cli/</link>
+    <description>Recent content in cli on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>onedrive</title>
+      <link>http://localhost:1313/notes/cli/onedrive/</link>
+      <pubDate>Fri, 31 May 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/onedrive/</guid>
+      
+      <description>Resetting OneDrive Two options - try them in this order:
+Option 1 Win &amp;gt; Run &amp;gt; wsreset.exe Close the Microsoft Store window. Option 2 Win &amp;gt; Run &amp;gt; %localappdata%\Microsoft\OneDrive\onedrive.exe /reset If the above fails, try:
+Win &amp;gt; Run &amp;gt; C:\Program Files\Microsoft OneDrive\onedrive.exe /reset </description>
+      
+    </item>
+    
+    <item>
+      <title>qpdf</title>
+      <link>http://localhost:1313/notes/cli/qpdf/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/qpdf/</guid>
+      
+      <description>Overview [Documentation] qpdf is a command line tool that performs content-preserving transformations on PDF files.
+Installation winget install qpdf Usage Merge several PDF documents into one:
+qpdf --empty --pages firstFile.pdf secondFile.pdf -- output.pdf </description>
+      
+    </item>
+    
+    <item>
+      <title>github cli</title>
+      <link>http://localhost:1313/notes/cli/github-cli/</link>
+      <pubDate>Thu, 22 Dec 2022 00:00:00 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/cli/github-cli/</guid>
+      
+      <description>Authenticate gh auth login --git-protocol ssh | https --scopes strings --web --with-token # Read token from STDIN gh auth logout gh auth refresh --scopes strings gh auth setup-git # Configure git to use GitHub CLI as credential helper gh auth status --show-token gh auth token Aliases gh alias set prd &amp;#34;pr create --draft&amp;#34; # gh prd will now run gh pr create --draft Browse gh browse # Open browser to issue/PR # gh browse filename:line-number gh browse --commit # Open the last commit --no-browser # Just print destination URL --projects # Open repo projects --repo owner/repo --settings # Open repo settings --wiki # Open repo wiki Codespace gh codespace # Manage codespaces Config gh config get key gh config list gh config set key value Keys:</description>
+      
+    </item>
+    
+  </channel>
+</rss>

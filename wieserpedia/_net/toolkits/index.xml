@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>toolkits on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/toolkits/</link>
+    <description>Recent content in toolkits on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/toolkits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>communitytoolkit.diagnostics</title>
+      <link>http://localhost:1313/wieserpedia/_net/toolkits/communitytoolkit.diagnostics/</link>
+      <pubDate>Tue, 28 Feb 2023 15:58:54 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/toolkits/communitytoolkit.diagnostics/</guid>
+      
+      <description>Overview APIs to validate parameters and throw exceptions in faulting code paths.
+dotnet add package CommunityToolkit.Diagnostics using CommunityToolkit.Diagnostics; Guard Helper methods that verify conditions when code is running and throw exceptions in one line.
+Contains methods for comparisons, strings, collections, and tasks.
+Engineering Note 2023-03-02: Guard.IsNullOrEmpty is not considered a null check by the C# analyzer and so even types with this guard will still report as maybe-null.
+Without Guard public static void SampleMethod(int[] array, int index, Span&amp;lt;int&amp;gt; span, string text) { if (array is null) throw new ArgumentNullException(nameof(array), &amp;#34;The array must not be null&amp;#34;); if (array.</description>
+      
+    </item>
+    
+    <item>
+      <title>communitytoolkit</title>
+      <link>http://localhost:1313/wieserpedia/_net/toolkits/communitytoolkit/</link>
+      <pubDate>Sun, 23 Oct 2022 20:55:20 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/toolkits/communitytoolkit/</guid>
+      
+      <description>.NET Community Toolkit https://learn.microsoft.com/en-us/dotnet/communitytoolkit/
+A collection of helpers and APIs; UI platform agnostic Includes the MVVM Toolkit which was formerly a separate toolkit CommunityToolkit.Mvvm (formerly &amp;ldquo;Microsoft MVVM Toolkit&amp;rdquo;) — platform-agnostic MVVM library
+CommunityToolkit.Diagnostics — helper APIs for argument validation and error checking.
+CommunityToolkit.HighPerformance
+Windows Community Toolkit Helpers, extensions, and custom controls for UWP apps on Windows 10/11 .NET Community Toolkit was historically part of Windows Community Toolkit .NET MAUI Community Toolkit Reusable elements for .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clauses on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/linq/clauses/</link>
+    <description>Recent content in clauses on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/linq/clauses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>let clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/let-clause/</link>
+      <pubDate>Wed, 27 Apr 2022 18:53:40 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/let-clause/</guid>
+      
+      <description>Let clause Use the let clause to store the result of an expression, such as a method call, in a new range variable (identifier).
+Example 1 var studentQuery = from student in students let totalScore = studentScores[0] + student.Scores[1] + studentScores[2] + student.Scores[3] select totalScore; // The new identifer can also be selected Example 2 var studentQuery = from student in students let x = student.Scores[0] + student.Scores[1] + student.Scores[2] + student.</description>
+      
+    </item>
+    
+    <item>
+      <title>join clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/join-clause/</link>
+      <pubDate>Wed, 27 Apr 2022 18:45:49 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/join-clause/</guid>
+      
+      <description>Join clause Use join to associate and/or combine elements from one data source with elements from another based on an equality comparison between keys in each element.
+After you have joined two sequences, you must use a select or group statement to specify which element to store in the output sequence.
+var categoryQuery = from cat in categories // `categories` is a string array. // join `prod` objects whose `Category` property matches one of the categories in the `categories` string array: join prod in products on cat equals prod.</description>
+      
+    </item>
+    
+    <item>
+      <title>orderby clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/orderby-clause/</link>
+      <pubDate>Mon, 25 Apr 2022 21:09:01 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/orderby-clause/</guid>
+      
+      <description>Orderby clause Use the orderby clause to sort results in either ascending or descending order. You can also specify a secondary sort:
+IEnumerable&amp;lt;Country&amp;gt; querySortedCountries = from country in countries orderby country.Area, country.Population descending // Sort first by Area (ascending), then Population. select country; </description>
+      
+    </item>
+    
+    <item>
+      <title>where clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/where-clause/</link>
+      <pubDate>Mon, 25 Apr 2022 21:06:54 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/where-clause/</guid>
+      
+      <description>Where clause Use the where clause to filter out elements from the data based on one or more predicate expressions:
+IEnumerable&amp;lt;City&amp;gt; queryCityPop = from city in cities where city.Population &amp;lt; 200_000 &amp;amp;&amp;amp; city.Population &amp;gt; 100_000 // One predicate, two conditions. select city; </description>
+      
+    </item>
+    
+    <item>
+      <title>into keyword</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/into-keyword/</link>
+      <pubDate>Mon, 25 Apr 2022 21:03:34 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/into-keyword/</guid>
+      
+      <description>Into keyword The into keyword is used in a select or group clause to create a temporary identifier that stores a query.
+Use this when you must perform additional query operations on a query after a grouping or select operation:
+// percentileQuery is an IEnumerable&amp;lt;IGrouping&amp;lt;int, Country&amp;gt;&amp;gt; var percentileQuery = from country in countries let percentile = (int)country.Population / 10_000_000 // Group according to population in ranges of 10M. group country by percentile into countryGroup // countryGroup is the temporary identifier.</description>
+      
+    </item>
+    
+    <item>
+      <title>select clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/select-clause/</link>
+      <pubDate>Mon, 25 Apr 2022 20:59:19 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/select-clause/</guid>
+      
+      <description>Select clause A select clause produces all other types of sequences. A simple select clause just produces a sequence of the same type of objects as the objects in the data source:
+IEnumerable&amp;lt;Country&amp;gt; sortedQuery = from country in countries orderby country.Area // Sort the elements in some new order. select country; // Produce a sequence of the reordered objects. But it can also transform (project) data into sequences of new types:</description>
+      
+    </item>
+    
+    <item>
+      <title>group clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/group-clause/</link>
+      <pubDate>Mon, 25 Apr 2022 20:57:23 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/group-clause/</guid>
+      
+      <description>Group clause The group clause produces a sequence of groups organized by a specified key. The key is specified after the by keyword.
+var queryCountryGroups = from country in countries group country by country.Name[0]; // Here, country.Name[0] is the key. </description>
+      
+    </item>
+    
+    <item>
+      <title>from clause</title>
+      <link>http://localhost:1313/wieserpedia/_net/linq/clauses/from-clause/</link>
+      <pubDate>Mon, 25 Apr 2022 20:57:19 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/linq/clauses/from-clause/</guid>
+      
+      <description>Multiple From Clauses Use additional from clauses when each element in the source is itself a collection or contains a collection.
+IEnumerable&amp;lt;City&amp;gt; cityQuery = from country in countries // Here, countries is a collection of Country objects. from city in country.Cities // Here, Cities is a collection of City objects. where city.Population &amp;gt; 10000 select city; </description>
+      
+    </item>
+    
+  </channel>
+</rss>

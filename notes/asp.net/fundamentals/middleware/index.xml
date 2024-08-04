@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>middleware on Fred Wieser</title>
+    <link>http://localhost:1313/notes/asp.net/fundamentals/middleware/</link>
+    <description>Recent content in middleware on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/asp.net/fundamentals/middleware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/asp.net/fundamentals/middleware/overview/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/fundamentals/middleware/overview/</guid>
+      
+      <description>Overview Middleware is a pipeline of components to handle requests and responses. Each component can:
+Pass the request to the next component; Perform work before and after the next component.
+(black arrows = thread of execution) Request Pipeline Built with request delegates. The delegates handle each HTTP request.
+Request delegates are configured with Run, Map, and Use extension methods: Use extensions add to the pipeline. Map extensions branch the pipeline. Run extensions short-circuit the pipeline.</description>
+      
+    </item>
+    
+    <item>
+      <title>list of built in middleware</title>
+      <link>http://localhost:1313/notes/asp.net/fundamentals/middleware/list-of-built-in-middleware/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/asp.net/fundamentals/middleware/list-of-built-in-middleware/</guid>
+      
+      <description>Overview Middleware Description Order Authentication Provides authentication support. Before HttpContext.User is needed. Terminal for OAuth callbacks. Authorization Provides authorization support. Immediately after the Authentication Middleware. Cookie Policy Tracks consent from users for storing personal information and enforces minimum standards for cookie fields, such as secure and SameSite. Before middleware that issues cookies. Examples: Authentication, Session, MVC (TempData). CORS Configures Cross-Origin Resource Sharing. Before components that use CORS. UseCors currently must go before UseResponseCaching due to this bug.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

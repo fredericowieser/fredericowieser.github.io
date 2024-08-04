@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>creational on Fred Wieser</title>
+    <link>http://localhost:1313/notes/software-engineering/patterns/creational/</link>
+    <description>Recent content in creational on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/software-engineering/patterns/creational/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fluent interface</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/fluent-interface/</link>
+      <pubDate>Wed, 08 Mar 2023 13:29:19 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/fluent-interface/</guid>
+      
+      <description>// Defines the data context class Context { public string FirstName { get; set; } public string LastName { get; set; } public string Sex { get; set; } public string Address { get; set; } } class Customer { private Context _context = new Context(); // Initializes the context // set the value for properties public Customer FirstName(string firstName) { _context.FirstName = firstName; return this; } public Customer LastName(string lastName) { _context.</description>
+      
+    </item>
+    
+    <item>
+      <title>singleton</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/singleton/</link>
+      <pubDate>Sun, 05 Mar 2023 15:30:17 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/singleton/</guid>
+      
+      <description>Singleton Type: Creational
+Purpose: Ensure that a class has only one instance while providing a global access point to this instance.
+Use to:
+Solve for needing a single instance of a class available to all clients (like a database instance). Provide strict control over global variables.
+Principles: Violates Single Responsibility Principle
+Complexity: 1/3
+Popularity: 2/3 This pattern is not natively thread-safe.
+Overview The Singleton class declares the static method getInstance that returns the same instance of its own class.</description>
+      
+    </item>
+    
+    <item>
+      <title>prototype</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/prototype/</link>
+      <pubDate>Sun, 05 Mar 2023 15:08:44 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/prototype/</guid>
+      
+      <description>Prototype Type: Creational
+Purpose: Copy (clone) existing objects without making your code dependent on their classes.
+Use to:
+Prevent a dependency on the concrete classes of objects needing cloned. Reduce the number of subclasses that only differ in the way they initialize their respective objects.
+Principles:
+Complexity: 1/3
+Popularity: 2/3
+In .NET: System.Net.Http.Headers Overview Basic Implementation The Prototype interface declares the cloning methods. In most cases, it’s a single clone method.</description>
+      
+    </item>
+    
+    <item>
+      <title>builder</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/builder/</link>
+      <pubDate>Sun, 05 Mar 2023 09:51:45 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/builder/</guid>
+      
+      <description>Builder Type: Creational
+Purpose: Produce different types and representations of an object using the same construction code.
+Use to:
+Create different representations of some product Create composite trees or other complex objects
+Principles: Single Responsibility Principle
+Complexity: 2/3
+Popularity: 3/3
+In .NET: StringBuilder, ApplicationBuilder, EF CoreModelBuilder Overview The Builder interface declares product construction steps that are common to all types of builders. Concrete Builders provide different implementations of the construction steps.</description>
+      
+    </item>
+    
+    <item>
+      <title>factory method</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/factory-method/</link>
+      <pubDate>Sat, 04 Mar 2023 20:28:08 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/factory-method/</guid>
+      
+      <description>Factory Method Type: Creational
+Purpose: Provides an interface for creating objects in a superclass but allows subclasses to alter the type of the objects created.
+Use when:
+You don&amp;rsquo;t know ahead of time the exact types and dependencies of the objects your code will work with. You want to provide users of your code with a way to extend its internal components.
+Principles: Single Responsibility Principle; Open/Closed Principle
+Complexity: 1/3</description>
+      
+    </item>
+    
+    <item>
+      <title>abstract factory</title>
+      <link>http://localhost:1313/notes/software-engineering/patterns/creational/abstract-factory/</link>
+      <pubDate>Sat, 04 Mar 2023 18:52:25 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/software-engineering/patterns/creational/abstract-factory/</guid>
+      
+      <description>Abstract Factory Type: Creational
+Purpose: Produce families of related objects without specifying their concrete classes.
+Use when: You have a class with a set of factory methods that blur its primary responsibility.
+Principles: Single Responsibility Principle; Open/Closed Principle
+Complexity: 2/3
+Popularity: 3/3
+In .NET: IHttpClientFactory
+Overview Abstract Products declare interfaces for a set of distinct but related products which make up a product family. Concrete Products are various implementations of abstract products, grouped by variants.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

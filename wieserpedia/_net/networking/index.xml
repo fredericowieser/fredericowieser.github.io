@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>networking on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/networking/</link>
+    <description>Recent content in networking on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 09 Jan 2022 19:29:17 -0700</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/networking/overview/</link>
+      <pubDate>Sun, 09 Jan 2022 19:29:17 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/networking/overview/</guid>
+      
+      <description>System.Net Types for working with network resources.
+Common Types
+DNS, IP Addresses, and Web Requests: Dns, Uri, Cookie, WebClient, IPAddress FTP: FtpStatusCode, FtpWebRequest, FtpWebResponse Uri string url = &amp;#34;https://stackoverflow.com/search?q=securestring&amp;#34;; Uri uri = new(url); Fields .Scheme — https .Port — 443 .Host — stackoverflow.com .Path — /search .Query — ?q=securestring IPHostEntry IPHostEntry entry = Dns.GetHostEntry(uri.Host); foreach (IPAddress address in entry.AddressList) { // address returns 151.101.193.69 // address.AddressFamily returns InterNetwork } System.Net.NetworkInformation Types for working with low-level network protocols.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

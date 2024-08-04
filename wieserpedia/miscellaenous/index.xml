@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>miscellaenous on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/miscellaenous/</link>
+    <description>Recent content in miscellaenous on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 06 Jun 2021 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/miscellaenous/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>obsidian</title>
+      <link>http://localhost:1313/wieserpedia/miscellaenous/obsidian/</link>
+      <pubDate>Mon, 10 Jun 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/miscellaenous/obsidian/</guid>
+      
+      <description>Abstract Obsidian is a Markdown-powered note taking tool.
+Callouts To create a callout, add [!info] to the first line of a blockquote, like so:
+&amp;gt; [!info] &amp;gt; Here&amp;#39;s a callout block. &amp;gt; It supports **Markdown**, [[Wikilinks]], and [[Embedded files|embeds]]. &amp;gt; ![[Somefile.jpg]] Callout Types There are the callout types and their aliases:
+abstract (summary, tldr) info todo tip (hint, important) success (check, done) question (help, faq) warning (caution, attention) failure (fail, missing) danger (error) bug example quote (cite) Folding Fallouts are made foldable by adding a + (expanded by default) or - (collapsed by default) after the type identifier:</description>
+      
+    </item>
+    
+    <item>
+      <title>mermaid</title>
+      <link>http://localhost:1313/wieserpedia/miscellaenous/mermaid/</link>
+      <pubDate>Sat, 08 Jun 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/miscellaenous/mermaid/</guid>
+      
+      <description>Absract Documentation: https://mermaid.js.org/intro/
+A JavaScript-based diagramming and charting tool that renders Markdown-inspired text into diagrams.
+Syntax Declaration All diagrams begin with a diagram type declaration: this is the first line of the code.
+Comments Comments are prefixed with %% and must be on their own line:
+flowchart LR %% this is a sample comment A --&amp;gt; B --&amp;gt; C flowchart LR %% this is a sample comment A --&amp;gt; B --&amp;gt; C Keywords The following are restricted keywords/phrases with workarounds:</description>
+      
+    </item>
+    
+    <item>
+      <title>bpmn 2.0</title>
+      <link>http://localhost:1313/wieserpedia/miscellaenous/bpmn-2/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/miscellaenous/bpmn-2/</guid>
+      
+      <description>Abstract Business Process Modeling Notation (BPMN) 2.0 is a standard for graphically representing business process models.
+Credit: Some content from https://www.drawio.com/blog/bpmn-2-0
+This mind map describes the elements of BPMN 2.0 along with rules and naming conventions. Click the image for the full-size version.
+Credit: This mind map was created with content from https://www.bpmnquickguide.com/
+Rules Overview A BPMN Diagram depicts a subset (which may be complete) of a BPMN Process Model. A BPMN Diagram is not a dataflow diagram.</description>
+      
+    </item>
+    
+    <item>
+      <title>latex</title>
+      <link>http://localhost:1313/wieserpedia/miscellaenous/latex/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/miscellaenous/latex/</guid>
+      
+      <description>Reference Script Symbol LaTeX Accents Hat $\hat{y}$ \hat{y} Bar $\bar{a}$ \bar{a} Dot $\dot{a}$ \dot{a} Double dot $\ddot{a}$ \ddot{a} Alphabet (Greek) alpha $\alpha$ \alpha beta $\beta$ \beta gamma $\gamma$ \gamma delta $\delta$ \delta Delta $\Delta$ \Delta epsilon $\epsilon$ \epsilon zeta $\zeta$ \zeta theta $\theta$ \theta Theta $\Theta$ \Theta lambda $\lambda$ \lambda mu $\mu$ \mu omicron $\omicron$ \omicron pi $\pi$ \pi rho $\rho$ \rho sigma $\sigma$ \sigma Arrows Gets $\gets$ \gets To $\to$ \to Brackets Parenthesis $\left ( \frac{a}{b} \right )$ \left ( \frac{a}{b} \right ) Bracket $\left[ \frac{a}{b} \right]$ \left[ \frac{a}{b} \right] Angle Bracket $\left \langle \frac{a}{b} \right \rangle$ \left \langle \frac{a}{b} \right \rangle Brace $\left{ \frac{a}{b} \right}$ \left\{ \frac{a}{b} \right\} Fractions &amp;amp; coefficients Fractions $\frac{1}{2}$ \frac{1}{2} Small fractions $\tfrac{1}{2}$ \tfrac{1}{2} Large fractions $\dfrac{k}{k-1}$ \dfrac{k}{k-1} Binomial coefficients $\binom{n}{k}$ \binom{n}{k} Functions Function $f(x)$ f(x) Sum $\sum_{k=1}^N k^2$ \sum_{k=1}^N k^2 Operators Plus-minus $\pm$ \pm Times $\times$ \times Division $\div$ \div Not equal $\neq$ \neq Approximately $\approx$ \approx Equivalent $\equiv$ \equiv Not equivalent $\not\equiv$ \not\equiv Square root $\sqrt{3}$ \sqrt{3} Nth root $\sqrt[n]{3}$ \sqrt[n]{3} Scripts Superscript $a^2$ a^2 Subscript $a_2$ a_2 Grouping $a^{2+2}$ a^{2+2} Super &amp;amp; sub $x_2^3$ x_2^3 Wide hat $\widehat{a b c}$ \widehat{a b c} Overline $\overline{a b c}$ \overline{a b c} Underline $\underline{a b c}$ \underline{a b c} More https://xmind.</description>
+      
+    </item>
+    
+    <item>
+      <title>devops engineer</title>
+      <link>http://localhost:1313/wieserpedia/miscellaenous/devops-engineer/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/miscellaenous/devops-engineer/</guid>
+      
+      <description>Abstract An IT generalist with knowledge of development and operations including programming, infrastructure management, systems administration and DevOps toolchains. They are DevOps evangelists, automation experts, release managers, CAB members, software developers, and QA engineers.
+Roles and Responsibilities Release Engineering Build and deploy application code Select, provision, and maintain CI/CD tooling Writing &amp;amp; maintaining build and deploy scripts Infrastructure Provisioning Deploy and maintain servers, storage and network resources required to host applications DevOps Advocacy Evangelize the DevOps culture Educate others on DevOps processes throughout the organization Skills Communication &amp;amp; collaboration With teams, managers and customers Soliciting feedback on the value stream System administration Provisioning and managing servers, databases, storage and network resources Security monitoring System patching Managing internal and external network connectivity Experience with DevOps toolchains Configuration management Configuration management tools such as Chef, Puppet or Ansible Containers and container orchestration CI/CD practices and tools System architecture &amp;amp; provisioning Infrastructure as Code Clouds (Azure, AWS, GCP) Programming and scripting </description>
+      
+    </item>
+    
+  </channel>
+</rss>

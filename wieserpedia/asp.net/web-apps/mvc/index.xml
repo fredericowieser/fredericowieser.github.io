@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mvc on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/</link>
+    <description>Recent content in mvc on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/overview/</link>
+      <pubDate>Wed, 11 Jan 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/overview/</guid>
+      
+      <description>From Pluralsight/ASP.NET Core 6 Fundamentals
+Overview Project type = ASP.NET Core Web App (dotnet new mvc)
+MVC Pattern Requests are routed to a controller. Controllers have actions—public methods associated with a URL.
+The controller works with the model to perform actions and/or retrieve data.
+The controller chooses the view to display to the user and provides that view with any model data it requires.
+Both the view and the controller depend on the model.</description>
+      
+    </item>
+    
+    <item>
+      <title>unit testing controllers</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/unit-testing-controllers/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/unit-testing-controllers/</guid>
+      
+      <description>Overview [Documentation] Unit testing controller logic involves testing a single action (not the dependencies of that action). It does not test filters, routing, model binding, or model validation (these aspects are tested in integration testing).
+These notes also apply:
+Notes on Unit Testing
+See also: Moq
+See also: JustMockLite
+See also: MyTested.AspNetCore.Mvc
+Example Consider this controller with an Index action method:
+public class HomeController : Controller { private readonly IBrainstormSessionRepository _sessionRepository; public HomeController(IBrainstormSessionRepository sessionRepository) { _sessionRepository = sessionRepository; } public async Task&amp;lt;IActionResult&amp;gt; Index() { var sessionList = await _sessionRepository.</description>
+      
+    </item>
+    
+    <item>
+      <title>dependency injection</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/dependency-injection/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/dependency-injection/</guid>
+      
+      <description>Dependency Injection into Controllers Code sample: View or download sample code (github.com)
+MVC controllers request dependencies explicitly via constructors. Assuming an IDateTime service:
+public class HomeController : Controller { private readonly IDateTime _dateTime; public HomeController(IDateTime dateTime) =&amp;gt; _dateTime = dateTime; // … } Dependency Injection into Actions Use the [FromServices] attribute:
+public IActionResult About([FromServices] IDateTime dateTime) =&amp;gt; Content( $&amp;#34;Current server time: {dateTime.Now}&amp;#34;); Options Pattern to Access Settings Generally, do not inject IConfiguration into a controller.</description>
+      
+    </item>
+    
+    <item>
+      <title>controllers</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/controllers/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/controllers/</guid>
+      
+      <description>Overview [Documentation] A controller defines a set of actions. An action is a method on a controller which handles requests. Requests are mapped to actions through routing.
+A controller is responsible for initial processing of the request and instantiation of the model. Business logic should remain in the model.
+The controller:
+validates request data takes the result of the model&amp;rsquo;s processing (if any) returns either the appropriate proper view or the result of the API call.</description>
+      
+    </item>
+    
+    <item>
+      <title>routing</title>
+      <link>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/routing/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/asp.net/web-apps/mvc/routing/</guid>
+      
+      <description>Overview MVC Controllers use Routing middleware to match a URL of an incoming request to and map them to actions.
+Route templates are defined in Program.cs, describe how URL paths are matched to actions, and are used to generate URLs for links which are typically returned in responses.
+To Use Controllers Call MapControllers to map attribute routed Controllers. Call MapControllerRoute or MapAreaControllerRoute to map both conventionally routed Controllers and attribute routed Controllers.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

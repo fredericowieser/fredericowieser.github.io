@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>json on Fred Wieser</title>
+    <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/</link>
+    <description>Recent content in json on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/_net/fundamentals/serialization/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/overview/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/overview/</guid>
+      
+      <description>Overview [Documentation] These notes are for System.Text.Json.
+There are two approaches for serializing and deserializing with System.Text.Json:
+Using JsonSerializer See notes. Using the JSON DOM Use the DOM when you receive JSON that doesn&amp;rsquo;t have a fixed schema and must be inspected to know what it contains. Two JSON DOM approaches: JsonDocument (see notes) A read-only (immutable) DOM. Cannot be changed after creation. Faster. Uses JsonElements. JsonElement has JSON Array and Object enumerators.</description>
+      
+    </item>
+    
+    <item>
+      <title>json contracts</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/json-contracts/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/json-contracts/</guid>
+      
+      <description>Overview System.Text.Json creates a JSON contract for each .NET type that determines how it is serialized and deserialized. The contract is created based on the shape of the type — its properties, fields and interfaces it implements. Types are mapped to contracts either at run time (via reflection) or compile time (via source generation). Documentation: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/custom-contracts Customizing JSON Contracts Availability: .NET 7
+Modifiers A modifier is an Action&amp;lt;JsonTypeInfo&amp;gt; or a static void method with a JsonTypeInfo parameter that gets the current state of the contract as an argument and makes modifications to it.</description>
+      
+    </item>
+    
+    <item>
+      <title>control serialization behavior</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/serialization-behavior/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/serialization-behavior/</guid>
+      
+      <description>Overview [Documentation] JSON serialization/deserialization behavior can be controlled through JsonSerializerOptions and various attributes.
+Serialization Behavior By default:
+Public properties are serialized Fields are ignored Casing of JSON names matches the .NET names Deserialization Behavior By default:
+Property name matching is case sensitive Read-only properties are ignored (no value is deserialized into readonly properties) Fields are ignored Non-public constructors are ignored Enums are supported as numbers JsonSerializerOptions Web Defaults The defaults in ASP.</description>
+      
+    </item>
+    
+    <item>
+      <title>polymorphic serialization</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/polymorphic-serialization/</link>
+      <pubDate>Thu, 27 Jul 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/polymorphic-serialization/</guid>
+      
+      <description>Overview Availability: .NET 7
+Documentation: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism?pivots=dotnet-7-0 System.Text.Json supports polymorphic type hierarchies with these attributes:
+[JsonDerivedType] — indicates that the specified subtype should be opted into polymorphic serialization [JsonPolymorphic] — indicates that the type should be serialized polymorphically Serializing Properties of a Derived Class Consider this base class&amp;hellip;
+[JsonDerivedType(typeof(WeatherForecastWithCity))] public class WeatherForecastBase { public DateTimeOffset Date { get; set; } public int TemperatureCelsius { get; set; } public string? Summary { get; set; } } &amp;hellip;and this derived class:</description>
+      
+    </item>
+    
+    <item>
+      <title>jsonnode</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsonnode/</link>
+      <pubDate>Sun, 30 Jan 2022 12:35:13 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsonnode/</guid>
+      
+      <description>JsonNode Types: JsonNode, JsonArray, JsonObject, JsonValue, JsonNodeOptions
+using System.Text.Json.Nodes; // Create a JsonNode DOM from a JSON string. JsonNode forecastNode = JsonNode.Parse(jsonString)!; // Parse can also parse a JsonArray or JsonObject // Write JSON from a JsonNode var options = new JsonSerializerOptions { WriteIndented = true }; Console.WriteLine(forecastNode!.ToJsonString(options)); // Get value from a JsonNode. JsonNode temperatureNode = forecastNode![&amp;#34;Temperature&amp;#34;]!; Console.WriteLine($&amp;#34;Type={temperatureNode.GetType()}&amp;#34;); // Type = System.Text.Json.Nodes.JsonValue`1[System.Text.Json.JsonElement] Console.WriteLine($&amp;#34;JSON={temperatureNode.ToJsonString()}&amp;#34;); // JSON = 25 // Get a typed value from a JsonNode.</description>
+      
+    </item>
+    
+    <item>
+      <title>jsondocument and jsonelement</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsondocument-and-jsonelement/</link>
+      <pubDate>Sun, 30 Jan 2022 12:11:30 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsondocument-and-jsonelement/</guid>
+      
+      <description>Serializing and Deserializing with JsonDocument Parsing into a JsonDocument JsonDocument doc = JsonDocument.Parse(json); // MUST dispose. Once a JsonDocument is disposed, all instances of JsonElement are also lost.
+JsonElement JsonElement root = doc.RootElement; JsonElement propertyElement = root.GetProperty(&amp;#34;property&amp;#34;); // Get a JsonElement of property. // Assuming prop is a JSON Array: foreach (JsonElement prop in propertyElement.EnumerateArray()) { // Try to get Property from prop and store it in output if successful: if (prop.</description>
+      
+    </item>
+    
+    <item>
+      <title>jsonserializer</title>
+      <link>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsonserializer/</link>
+      <pubDate>Thu, 11 Nov 2021 10:57:32 -0700</pubDate>
+      
+      <guid>http://localhost:1313/notes/_net/fundamentals/serialization/json/jsonserializer/</guid>
+      
+      <description>Overview [Documentation] A high-level, automatic serialization and deserialization API. JsonSerializer&amp;rsquo;s source generator eliminates use of reflection which is important for trimming and native AOT apps.
+Serializing and Deserializing with JsonSerializer These examples use the following classes:
+public class WeatherForecast { public DateTimeOffset Date { get; set; } public int TemperatureCelsius { get; set; } public string? Summary { get; set; } public string? SummaryField; public IList&amp;lt;DateTimeOffset&amp;gt;? DatesAvailable { get; set; } public Dictionary&amp;lt;string, HighLowTemps&amp;gt;?</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Fred Wieser</title>
+    <link>http://localhost:1313/notes/operating-systems/linux/</link>
+    <description>Recent content in linux on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jun 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/operating-systems/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>checksums</title>
+      <link>http://localhost:1313/notes/operating-systems/linux/checksums/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/operating-systems/linux/checksums/</guid>
+      
+      <description>Overview Use checksums to verify file integrity by reading their SHA hash digest.
+Use shasum [OPTIONS] FILE # reads SHA-1 sum for FILE Options:
+--algorithm &amp;lt;n&amp;gt; # Use hash algorith n where n is 1 (default), 224, 256, 384, 512, 512224, 512256. Note: 512224 is 512/224 and 512256 is 512/256. --binary Read in binary mode (default = --text mode) --UNIVERSAL Read in universal newlines mode (produces the same digest on Windows/Unix/Mac) </description>
+      
+    </item>
+    
+    <item>
+      <title>berkeley packet filter</title>
+      <link>http://localhost:1313/notes/operating-systems/linux/berkeley-packet-filter/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/operating-systems/linux/berkeley-packet-filter/</guid>
+      
+      <description>Berkeley Packet Filter (BPF) Provides a raw interface to netlayer 2, bypassing kernel Allows userland process to filter packets; BPF returns only those packets; other packets not copied from kernel to this process BPF = this filter + raw interface BPF Raw Datalink Interface Pseudo-devices taht bind to network interfaces READ retrieves buffers full of packets received on the interface WRITE injects packets on the interface Extended BFP (eBPF) (2014) Enables running sandboxed apps in privileged context This extends capabilities of kernel without changes to kernel source or loading kernel modules Uses High-throughput load balancers Cluster networking Security / DDoS protection Observability Express Data Path (XDP) (2016) eBPF-based technology to send and receive packets at high rates by bypassing most of the OS network stack Works by adding a hook in the receiving path of the kernel and letting a userland eBPF app decide the disposition of the packet The hook sits in the NIC driver just after interrupt and before malloc for the network stack XDP can drop 26M packets per second per core The eBPF app can be offloaded to NICs that support running such apps The eBPF app inspects the packet and returns: XDP_PASS — pass the packet onto the network stack XDP_DROP — silently drop the packet XDP_ABORTED — drop the packet with an exception XDP_TX — bounce the packet back to the same NIC it was received on XDP_REDIRECT — bounce the packet to another NIC or userland socket </description>
+      
+    </item>
+    
+  </channel>
+</rss>

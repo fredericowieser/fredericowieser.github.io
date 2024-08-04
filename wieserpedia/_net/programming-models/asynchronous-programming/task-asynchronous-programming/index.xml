@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>task-based asynchronous pattern (tap) (async await) on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/</link>
+    <description>Recent content in task-based asynchronous pattern (tap) (async await) on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 29 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/overview/</link>
+      <pubDate>Mon, 21 Nov 2022 21:16:58 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/overview/</guid>
+      
+      <description>Abstract [Documentation] The Task Asynchronous Pattern is a different pattern for using tasks, async, and await than the pattern described in notes on asynchronous programming.
+The TAP pattern uses Task and Task&amp;lt;T&amp;gt; objects which model asynchronous operations. Generally:
+For I/O-bound code, await a Task or Task&amp;lt;T&amp;gt; in async method. For CPU-bound code, await an operation that is started on a background thread via Task.Run. The TAP pattern uses a single method to represent the initiation and completion of an asynchronous operation (unlike EAP (Begin and End) and APM (IAsyncResult)).</description>
+      
+    </item>
+    
+    <item>
+      <title>consuming tap</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/consuming-tap/</link>
+      <pubDate>Mon, 21 Nov 2022 22:06:24 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/consuming-tap/</guid>
+      
+      <description>Overview [Documentation] In this pattern, callbacks achieve waiting without blocking. Language-based async support hides the callbacks.
+Await keyword The await keyword suspends execution. It installs a callback by using continuation. The callback resumes the async method at the point of suspension.
+When the async method is resumed:
+If operation completed successfully and was a Task&amp;lt;TResult&amp;gt;, then TResult is returned. If awaited task ended in Canceled state, an OperationCanceledException is thrown. If awaited task ended in Faulted state, the exception that caused the fault is thrown.</description>
+      
+    </item>
+    
+    <item>
+      <title>implementing tap</title>
+      <link>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/implementing-tap/</link>
+      <pubDate>Mon, 21 Nov 2022 22:06:15 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/programming-models/asynchronous-programming/task-asynchronous-programming/implementing-tap/</guid>
+      
+      <description>Overview [Documentation] The TAP pattern can be implemented via the C# compiler, manually, or in a hybrid of both.
+Creating TAP Methods Compiler Approach Create TAP methods by using the async keyword. Compiler will automatically perform necessary transformations to implement TAP.
+TAP methods must return Task or Task&amp;lt;T&amp;gt;. Any exceptions that go unhandled in body of task are marshalled to the output task and task ends in Faulted state. Except when an OperationCanceledException goes unhandled; then task ends in Canceled state.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

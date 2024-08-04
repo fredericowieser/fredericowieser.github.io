@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on Fred Wieser</title>
+    <link>http://localhost:1313/notes/tools/</link>
+    <description>Recent content in tools on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jul 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/notes/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>draw.io</title>
+      <link>http://localhost:1313/notes/tools/draw.io/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 -0600</pubDate>
+      
+      <guid>http://localhost:1313/notes/tools/draw.io/</guid>
+      
+      <description>Canvas Action Keystrokes Grid (toggle) Ctrl + Shift + G Move drawing area Space + drag mouse Zoom Alt + scroll wheel Connectors Action Keystrokes Clone connectors Ctrl + Select connector&amp;rsquo;s endpoint + Drag Connect to a point within the shape Drag &amp;gt; hold Alt &amp;gt; Release mouse button at destination Add another Waypoint to connector Right-click connector &amp;gt; Add Waypoint Connections Floating connections connect to the frame of a shape.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

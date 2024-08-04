@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">model binding | Fred Wieser</title>
+<meta property="og:title" content="model binding | Fred Wieser" />
+<meta name="twitter:title" content="model binding | Fred Wieser" />
+<meta itemprop="name" content="model binding | Fred Wieser" />
+<meta name="application-name" content="model binding | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/notes/asp.net/advanced/model-binding/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/notes/asp.net/advanced/model-binding/">
+    <link href="/style.min.73295c85acf7e5d4c6dd75adf636b950eb3a36631ac65ac412967de1d45be339.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/readings/">
+                        
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/notes/">
+                        W
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">model binding</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2023-05-03T00:00:00-06:00" itemprop="datePublished"> 3 May 2023 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="overview-documentationhttpslearnmicrosoftcomen-usaspnetcoremvcmodelsmodel-bindingviewaspnetcore-70">Overview [<a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0">Documentation</a>]</h1>
+<p><em>Model binding</em> is the automated process of retrieving data values from an HTTP request and converting the resulting string to a .NET type.</p>
+<p>The model binding system:</p>
+<ul>
+<li>Retrieves data from route data, form data, and query strings</li>
+<li>Passes that data to controllers and Razor Pages in method parameters and public properties</li>
+<li>Converts string data to .NET types</li>
+<li>Updates properties of complex types</li>
+</ul>
+<h1 id="example">Example</h1>
+<p>Consider this action method&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpGet(&#34;{id}&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ActionResult&lt;Pet&gt; GetById(<span style="color:#ff7b72">int</span> id, <span style="color:#ff7b72">bool</span> dogsOnly)
+</span></span></code></pre></div><p>&hellip;and this HTTP request:
+<code>https://contoso.com/api/pets/2?DogsOnly=true</code></p>
+<p>Model binding performs these steps:</p>
+<ol>
+<li>Get the first parameter of <code>GetById</code>, <code>id</code></li>
+<li>Finds <code>id=&quot;2&quot;</code> in the route data</li>
+<li>Converts &ldquo;2&rdquo; to 2</li>
+<li>Gets the next parameter of <code>GetById</code>, <code>dogsOnly</code></li>
+<li>Finds <code>DogsOnly=true</code> in the query string (case-insensitive matching)</li>
+<li>Converts &ldquo;true&rdquo; to to <code>true</code></li>
+</ol>
+<p>ASP.NET Core then calls <code>GetById(2, true)</code>.</p>
+<p>After each property is bound, <a href="../model-validation">model validation</a> occurs for that property. The record of what data is bound to the model and any validation errors that occurred are stored in <code>ControllerBase.ModelState</code> or <code>PageModel.ModelState</code>.</p>
+<h1 id="model-binding-targets">Model Binding Targets</h1>
+<p>Model binding has the following <em>targets</em>:</p>
+<ul>
+<li>Parameters of the controller action method to which a request is routed</li>
+<li>Parameters of the Razor Pages handler method to which a request is routed</li>
+<li>Public properties of a controller or <code>PageModel</code> class if specified by attributes</li>
+</ul>
+<h2 id="bindproperty"><code>[BindProperty]</code></h2>
+<p>Applied to a public property of a controller or <code>PageModel</code> class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">EditModel</span> : PageModel
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    [BindProperty]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Instructor? Instructor { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="bindproperties"><code>[BindProperties]</code></h2>
+<p>Applied to a controller or <code>PageModel</code> class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[BindProperties]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">CreateModel</span> : PageModel
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Instructor? Instructor { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="model-binding-with-http-get-requests">Model Binding with HTTP GET Requests</h2>
+<p>By default, <o>properties are not bound</o> for HTTP GET requests. This is because, normally, GET requests only contain a record ID parameter. To force model binding for GET requests:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[BindProperty(Name = &#34;ai_user&#34;, SupportsGet = true)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string?</span> ApplicationInsightsCookie { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span></code></pre></div><h1 id="data-types-for-model-binding">Data Types for Model Binding</h1>
+<ul>
+<li><em>Simple type</em> — a type converted from a single string (using a <code>TypeConverter</code> or <code>TryParse</code> method).</li>
+<li><em>Complex type</em> — a type converted from multiple input values.</li>
+</ul>
+<h1 id="model-binding-sources">Model Binding Sources</h1>
+<p>The default sources for HTTP requests are:</p>
+<ol>
+<li>Form fields</li>
+<li>Request body (for controllers with the <code>[ApiController]</code> attribute)</li>
+<li>Route data</li>
+<li>Query string parameters</li>
+<li>Uploaded files</li>
+</ol>
+<p>The source can also be defined explicitly via decorating properties in the model class with these <em>binding source attributes</em>:</p>
+<ul>
+<li><code>[FromQuery]</code></li>
+<li><code>[FromRoute]</code></li>
+<li><code>[FromForm]</code></li>
+<li><code>[FromBody]</code></li>
+<li><code>[FromHeader]</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Instructor</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Id { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [FromQuery(Name = &#34;Note&#34;)]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string?</span> NoteFromQueryString { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>These attributes have a <code>Name</code> property that can be used when the property name does not match the value in the request:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> OnGet( [FromHeader(Name = <span style="color:#a5d6ff">&#34;Accept-Language&#34;</span>)] <span style="color:#ff7b72">string</span> language )
+</span></span></code></pre></div><h2 id="frombody-attribute"><code>[FromBody]</code> Attribute</h2>
+<p>When applied to a complex type parameter, any binding source attributes applied to its properties are ignored:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ActionResult&lt;Pet&gt; Create( [FromBody] Pet pet ) <span style="color:#8b949e;font-style:italic">// FromBody attribute applied.</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Pet</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Name { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; } = <span style="color:#79c0ff">null</span>!;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [FromQuery] <span style="color:#8b949e;font-style:italic">// Attribute is ignored.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Breed { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; } = <span style="color:#79c0ff">null</span>!;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><o>Caution</o>: do not apply <code>[FromBody]</code> to more than one parameter per action method; it can only process one parameter.</p>
+<h2 id="other-sources">Other Sources</h2>
+<p>Source data is provided to the model binding system by <em>value providers</em>. Custom value providers can be built to get data from other sources. See the documentation.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#additional-sources">https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#additional-sources</a></p>
+</blockquote>
+<h1 id="model-state">Model State</h1>
+<h2 id="model-properties-with-no-values-found">Model Properties with No Values Found</h2>
+<p>By default, if no value is found for a model property, a model state error <strong>is not</strong> created. That property is set to <code>null</code> or a default value.</p>
+<p>To force a model state error when no value is found for a property, use the <code>[BindRequired]</code> attribute.</p>
+<ul>
+<li><o>Note</o>: This attribute applies only to <em>posted form</em> data, not JSON or XML data which is handled by <em>input formatters</em>.</li>
+</ul>
+<h2 id="type-conversion-errors">Type Conversion Errors</h2>
+<p>If a source is found but cannot be converted to the target type, a model state error <strong>is</strong> created (<code>ModelState.IsValid = false</code>).</p>
+<h1 id="binding-simple-types">Binding Simple Types</h1>
+<p>Model binding can convert source strings into various simple types.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#simple-types">https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#simple-types</a></p>
+</blockquote>
+<h1 id="binding-complex-types">Binding Complex Types</h1>
+<p>To bind, a complex type must have a public default constructor and public writable properties.</p>
+<h2 id="how-model-binding-matches-properties-to-sources">How Model Binding Matches Properties to Sources</h2>
+<p>For each property, model binding looks through the sources for <code>PREFIX.PROPERTY_NAME</code>. If not found, it looks for <code>PROPERTY_NAME</code>.</p>
+<p>For query <code>?Instructor.Id=100&amp;Name=Foo</code>, and given method <code>OnGet(Instructor instructor)</code>, model binding will bind <code>Id</code> to <code>100</code> and <code>Name</code> to <code>null</code>. This is because <code>Instructor.Id</code> was used for the first query parameter, so it expected <code>Instructor.Name</code> (instead of just <code>Name</code>) for the second parameter.</p>
+<h2 id="attributes-for-complex-type-targets">Attributes for Complex Type Targets</h2>
+<p><o>Note</o>: these attributes apply to <em>posted form data</em> only. They do not apply to <em>input formatters</em> which process posted JSON and XML bodies.</p>
+<h3 id="bind"><code>[Bind]</code></h3>
+<p>Specifies which properties of a model should be included in model binding.</p>
+<p>Can be applied to a class&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[Bind(&#34;LastName,FirstMidName,HireDate&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Instructor</span>
+</span></span></code></pre></div><p>&hellip;or a method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult OnPost( [Bind(<span style="color:#a5d6ff">&#34;LastName,FirstMidName,HireDate&#34;</span>)] Instructor instructor )
+</span></span></code></pre></div><h3 id="modelbinder"><code>[ModelBinder]</code></h3>
+<p>Specifies the type of model binder used to bind the instance or type.</p>
+<p>Can be applied to a parameter&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> IActionResult OnPost( [ModelBinder(<span style="color:#ff7b72">typeof</span>(MyInstructorModelBinder))] Instructor instructor )
+</span></span></code></pre></div><p>&hellip;or property (in this cse, changing the name of the property when it is bound)&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">Instructor</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    [ModelBinder(Name = &#34;instructor_id&#34;)]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Id { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>&hellip;or a type.</p>
+<h3 id="bindrequired"><code>[BindRequired]</code></h3>
+<p>Causes model binding to add a model state error if binding cannot occur for a property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">InstructorBindRequired</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [BindRequired]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> DateTime HireDate { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="bindnever"><code>[BindNever]</code></h3>
+<p>Prevents model binding from setting a model&rsquo;s property.  Can be applied to a property or a type.  When applied to a type, excludes all properties of that type from model binding.</p>
+<h2 id="collections">Collections</h2>
+<p>For collection targets, model binding looks for matches to <code>PARAMETER_NAME</code> or <code>PROPERTY_NAME</code>.  Avoid using a parameter or property named <code>index</code> or <code>Index</code> if it is adjacent to a collection value since model binding attempts to use <code>index</code> as the index for the collection.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#collections">https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#collections</a>)</p>
+</blockquote>
+<h2 id="dictionaries">Dictionaries</h2>
+<p>For Dictionary targets, model binding looks for matches to <code>PARAMETER_NAME</code> or <code>PROPERTY_NAME</code>.</p>
+<blockquote>
+<p>Documentation: <a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#dictionaries">https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#dictionaries</a></p>
+</blockquote>
+<h2 id="record-types">Record Types</h2>
+<p>Model binding and model validation have special considerations with record types:</p>
+<ol>
+<li>Model binding (and model validation) supports record types with a single constructor:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">record</span> <span style="color:#f0883e;font-weight:bold">Person</span>( [Required] <span style="color:#ff7b72">string</span> Name, [Range(<span style="color:#a5d6ff">0</span>, <span style="color:#a5d6ff">150</span>)] <span style="color:#ff7b72">int</span> Age, [BindNever] <span style="color:#ff7b72">int</span> Id );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">PersonController</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IActionResult Index() =&gt; View();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [HttpPost]
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> IActionResult Index(Person person)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// ...</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>Binding and validation metadata is used only on parameters and ignored on properties:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">record</span> <span style="color:#f0883e;font-weight:bold">Person</span> (<span style="color:#ff7b72">string</span> Name, <span style="color:#ff7b72">int</span> Age)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    [BindProperty(Name = &#34;SomeName&#34;)] <span style="color:#8b949e;font-style:italic">// This does not get used</span>
+</span></span><span style="display:flex;"><span>    [Required] <span style="color:#8b949e;font-style:italic">// This does not get used</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Name { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">init</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li><code>TryUpdateModel</code> does not update parameters on a record type:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">record</span> <span style="color:#f0883e;font-weight:bold">Person</span>(<span style="color:#ff7b72">string</span> Name)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">int</span> Age { <span style="color:#ff7b72">get</span>; <span style="color:#ff7b72">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> person = <span style="color:#ff7b72">new</span> Person(<span style="color:#a5d6ff">&#34;initial-name&#34;</span>);
+</span></span><span style="display:flex;"><span>TryUpdateModel(person, ...);
+</span></span></code></pre></div></li>
+</ol>
+<h1 id="input-formatters-data-in-request-body-json--xml">Input Formatters (Data in Request Body (JSON &amp; XML))</h1>
+<p>ASP.NET Core includes a JSON-based input formatter for handling JSON data.</p>
+<p>To use the built-in XML input formatters:</p>
+<ol>
+<li>Add the middleware:<br>
+<code>Program.cs</code>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddControllers()
+</span></span><span style="display:flex;"><span>                .AddXmlSerializerFormatters();
+</span></span></code></pre></div></li>
+<li>Apply the <code>Consumes</code> attribute to controller classes or action methods that expect XML:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>[HttpPost]
+</span></span><span style="display:flex;"><span>[Consumes(&#34;application/xml&#34;)]
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> ActionResult&lt;Pet&gt; Create(Pet pet)
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="configuring-input-formatters-documentationhttpslearnmicrosoftcomen-usaspnetcoremvcmodelsmodel-bindingviewaspnetcore-70customize-model-binding-with-input-formatters">Configuring Input Formatters [<a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#customize-model-binding-with-input-formatters">Documentation</a>]</h2>
+<h1 id="excluding-specified-types-from-model-binding">Excluding Specified Types from Model Binding</h1>
+<p>To disable model binding on all models of a specified type (ie: <code>System.Version</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddRazorPages()
+</span></span><span style="display:flex;"><span>    .AddMvcOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        options.ModelMetadataDetailsProviders.Add(<span style="color:#ff7b72">new</span> ExcludeBindingMetadataProvider(<span style="color:#ff7b72">typeof</span>(Version)));
+</span></span><span style="display:flex;"><span>        options.ModelMetadataDetailsProviders.Add(<span style="color:#ff7b72">new</span> SuppressChildValidationMetadataProvider(<span style="color:#ff7b72">typeof</span>(Guid)));
+</span></span><span style="display:flex;"><span>    });
+</span></span></code></pre></div><p>To disable validation on properties of a specified type (ie: <code>System.Guid</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>builder.Services.AddRazorPages()
+</span></span><span style="display:flex;"><span>    .AddMvcOptions(options =&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        options.ModelMetadataDetailsProviders.Add(<span style="color:#ff7b72">new</span> ExcludeBindingMetadataProvider(<span style="color:#ff7b72">typeof</span>(Version)));
+</span></span><span style="display:flex;"><span>        options.ModelMetadataDetailsProviders.Add(<span style="color:#ff7b72">new</span> SuppressChildValidationMetadataProvider(<span style="color:#ff7b72">typeof</span>(Guid)));
+</span></span><span style="display:flex;"><span>    });
+</span></span></code></pre></div><h1 id="invoking-model-binding-manually">Invoking Model Binding Manually</h1>
+<p><o>Note</o>: this is typically used in Razor Pages and MVC apps to prevent over-posting, or web APIs that consume form data, query strings, and route data.
+Use the <code>TryUpdateModelAsync</code> method of both the <code>ControllerBase</code> and <code>PageModel</code> classes. Overloads accept a prefix and value provider:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">if</span> (<span style="color:#ff7b72">await</span> TryUpdateModelAsync(newInstructor, <span style="color:#a5d6ff">&#34;Instructor&#34;</span>, x =&gt; x.Name, x =&gt; x.HireDate!))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    _instructorStore.Add(newInstructor);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> RedirectToPage(<span style="color:#a5d6ff">&#34;./Index&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">return</span> Page();
+</span></span></code></pre></div><h1 id="other-topics">Other topics</h1>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#globalization-behavior-of-model-binding-route-data-and-query-strings">Globalization behavior of model binding route data and query strings</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/model-binding?view=aspnetcore-7.0#special-data-types">Special data types</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/hugo-sid" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+<a href="https://keybase.io/chrisxfire" target="_blank" rel="noopener noreferrer me"
+    title="Keybase">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 76.3" version="1.1" fill="currentColor" stroke="none">
+    <path
+        d="M6.68 73.99c-.6-1.3-1.4-3.1-1.8-4l-.6-1.7-2 2.2-2 2.2-.2-4.2c-.3-6 .2-12.2 1.2-16.6 2.3-9.8 9.5-18.7 18.8-23.4l2.1-1-.5-1.5c-.3-.8-.6-2.5-.7-3.6l-.2-2.1-2.1-.2c-3.2-.3-4.9-1.2-6-3.5-.6-1.2-.6-1.4-.4-4.6.2-4.2.5-5.1 1.8-6.5 1.6-1.8 2.7-2.1 6.7-1.9 2.9.2 3.5.3 4.8.9.8.4 1.5.8 1.6.8.1 0 1-1.1 2.1-2.6l1.9-2.7 1.2.7c.7.4 1.5.9 1.9 1.1l.7.4-.6 1.5c-.3.8-.7 2.2-.8 2.9l-.2 1.4 1.7.2c6.1.6 10.7 4.3 12.4 9.9.5 1.8.5 5.3 0 7-.5 1.6-.5 1.7-.1 1.7.7 0 5.4 2.3 7.3 3.5 3.7 2.4 8 6.6 10.4 10.2 4.5 6.7 6.4 14 5.6 22-.4 4.8-1.3 8.6-2.9 12.3l-.6 1.4h-5l1.2-2.4c1.3-2.6 2.3-6.2 2.8-9.4.3-2.2.4-8.2.1-9.3l-.2-.7-1.3 1.4c-3.2 3.5-7.9 4.5-14.2 2.8-5.4-1.4-7.6-1.7-12.7-1.7-3.9 0-5.2.1-7.3.6-5.8 1.3-9.9 3.2-15.6 7.3-2.1 1.5-3.8 2.7-3.9 2.7-.1 0 .2-1 .6-2.3.4-1.3 1.1-3.4 1.5-4.8l.8-2.5-.9.9c-.5.5-1.9 1.9-3.1 3.2l-2.1 2.3.5 1.9c.6 2.5 2 5.6 3.5 7.9.6 1 1.1 1.8 1.1 1.9s-1.2.1-2.6.1h-2.6l-1.1-2.1zm8.8-24.2c4.8-5.1 8.7-9.2 8.8-9.2.1.1-.4 1.6-.9 3.3-3.3 10.4-4 12.4-3.9 12.5 0 0 1.2-.4 2.5-.9 8.5-3.7 18.4-4.2 28.9-1.4 4.7 1.2 6.5 1.2 8.8 0 1.3-.7 1.8-1.1 2.4-2.1 1.1-1.7 1.2-4.1.5-6.3-1.7-4.8-8.3-11-14.5-13.7-3.2-1.4-3.4-1.4-4.1-.7l-.6.6 2.6 3.2c1.4 1.7 2.9 3.6 3.1 4.1.6 1.2.7 3.1.1 4.3-.8 1.7-3.2 2.9-5.1 2.5-.8-.2-1.1-.1-1.9.5-2.2 1.6-4.6 1.2-6.6-1.2-1.6-1.8-2-2.7-2.1-4.5 0-.9-.3-2-.5-2.4-.3-.6-.4-1.3-.4-2.2l.1-1.4-1.3-.3c-1.8-.5-3.9-1.5-5.1-2.4-.6-.4-1.1-.8-1.3-.8s-1.5.6-2.9 1.3c-9.7 5-16 14.3-17 24.8-.1 1-.2 2.3-.3 2.8l-.1.9 1.1-1.1c.5-.5 4.9-5.1 9.7-10.2zm25.9-7.4c.9-.7 1.7-1.3 1.9-1.3.1 0 .4.3.7.7.5.8 1.4.8 1.8.1.3-.5.3-.6-5.6-7.8-3.5-4.3-4.2-5-4.7-5-1.2.1-.9 1 1 3.3l1.8 2.2-1 .8c-1.1 1-1.2 1.2-.5 1.8.5.5.6.4 1.6-.3l1.1-.7.7.6c.4.3.6.8.6.9 0 .2-.8.9-1.7 1.7-.9.7-1.6 1.5-1.6 1.7 0 .3.5 1.1 1.4 2.2.3.6.8.4 2.5-.9zm-10.3-14.2c.6-1.8 2.6-3.2 4.6-3.2 1.1 0 2.7.9 3.8 2.1l1 1.2.9-1.1c2.5-2.8 2.8-6.7.8-10.1-1.5-2.5-4.3-4-8.2-4.4-2.1-.2-2.6-.4-3.7-1.5l-.8-.8-.4.6c-.8 1.2-2.5 5.1-3 6.6-.7 2.3-.4 5.9.5 7.7.9 1.7 3.3 4 4 3.7.1.1.3-.3.5-.8zm-8.9-13.6c.2-.5.7-1.8 1.2-2.8.5-1 .9-2 .9-2.3 0-.9-1-1.3-3.7-1.5-2.4-.2-2.6-.1-3.1.4-.4.4-.6.9-.6 1.6 0 .6-.1 1.7-.2 2.6-.2 2.1.1 2.5 2.2 2.8 3.1.2 3 .2 3.3-.8zm-3.1-2.4c0-1.7.2-1.9 1.6-1.9h1.3v2.8h-2.8v-.9zm6.3 58.3c-.6-.6-.8-1-.8-2 0-1.9 1.1-3 2.9-3 1.7 0 2.9 1.2 2.9 2.9 0 1.8-1.1 2.8-3 2.9-1 0-1.4-.2-2-.8zm19.3.3a2.93 2.93 0 011.8-5.3c1.8 0 2.8 1.1 2.9 3 0 1.1-.1 1.4-.8 2s-1 .8-2 .8c-.9 0-1.5-.2-1.9-.5z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>value types on Fred Wieser</title>
+    <link>http://localhost:1313/wieserpedia/_net/types/value-types/</link>
+    <description>Recent content in value types on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 30 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/_net/types/value-types/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overview</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/overview/</link>
+      <pubDate>Fri, 05 Nov 2021 21:11:04 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/overview/</guid>
+      
+      <description>Primitive Types Value types store on the stack.
+Signed integrals For Integers (zero, positive, and negative whole numbers).
+.NET Type C# Alias Range Suffix System.Sbyte sbyte -128 to 127 System.Int16 short -32768 to 32767 System.Int32 int -2147483648 to 2147483647 System.Int64 long -9223372036854775808 to 9223372036854775807l or L Unsigned integrals For Cardinals (zero and positive whole numbers).
+.NET Type C# Alias Range Suffix System.Byte byte 0 to 255 System.Uint16 ushort 0 to 65535 System.</description>
+      
+    </item>
+    
+    <item>
+      <title>ref structs</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/ref-structs/</link>
+      <pubDate>Thu, 03 Nov 2022 20:34:52 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/ref-structs/</guid>
+      
+      <description>ref Structs Instances of a ref struct are allocated on the stack and cannot escape to the managed heap.
+Restrictions:
+A ref struct cannot implement interfaces A ref struct cannot be a type argument A ref struct variable cannot be captured via lambda expression or local function A ref struct variable cannot be used in an async method (but can be used in a synchronous method that return Task/Task&amp;lt;T&amp;gt;) Disposable A ref struct can be made disposable: create an instance or extension Dispose method that is accessible, parameterless, and returns void.</description>
+      
+    </item>
+    
+    <item>
+      <title>constants</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/constants/</link>
+      <pubDate>Sat, 19 Feb 2022 11:32:28 -0700</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/constants/</guid>
+      
+      <description>Constant Constants – immutable values known at compile time which do not change.
+Only built-in types may be declared const. Constants cannot be declared static (this would be redundant). Use Constants are used instead of magic numbers to provide meaningful names for special values.
+Constant Integrals Instead of a constant int, byte, etc, use an enum.
+Best Practice Constants can be grouped in a single, static class named Constants. This helps ensure those who use the constant understand it is constant and cannot be modified:</description>
+      
+    </item>
+    
+    <item>
+      <title>tuples</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/tuples/</link>
+      <pubDate>Fri, 05 Nov 2021 21:38:53 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/tuples/</guid>
+      
+      <description>Tuples System.ValueTuple is modern; System.Tuple is legacy.
+Tuple public (string, int) GetFruit() { return (&amp;#34;Apples&amp;#34;, 5) } var fruit = GetFruit(); The tuple&amp;rsquo;s fields are automatically named Item1 and Item2:
+fruit.Item1 // returns &amp;#34;Apples&amp;#34; fruit.Item2 // returns 5 Tuple with Named Fields public (string Name, int Qty) GetNamedFruit() { return (Name: &amp;#34;Apples&amp;#34;, Qty: 5); } var namedFruit = GetNamedFruit(); namedFruit.Name // returns &amp;#34;Apples&amp;#34; namedFruit.Qty // returns 5 Tuple Deconstruction (type v1, type v2, …) = function(); // … or … var (v1, v2, …) = function(); // … or … type var1 = val1; type var2 = val2; (var1, var2) = function(); Example Store return value in a tuple with two named fields:</description>
+      
+    </item>
+    
+    <item>
+      <title>enums</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/enums/</link>
+      <pubDate>Fri, 05 Nov 2021 21:33:38 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/enums/</guid>
+      
+      <description>Enums System.ValueType –&amp;gt; System.Enum
+Enums store choices that are optionally related to values.
+Enums are thread safe.
+Best Practices If there is no enum member with value 0, create a None constant. (The memory used for the enum is initialized to 0 by the CLR. If you do not define a constant whose value = 0, the enum will contain an illegal value when created.) When you define a method or property that takes an enum constant as a value, validate the value.</description>
+      
+    </item>
+    
+    <item>
+      <title>structs</title>
+      <link>http://localhost:1313/wieserpedia/_net/types/value-types/structs/</link>
+      <pubDate>Fri, 05 Nov 2021 21:23:37 -0600</pubDate>
+      
+      <guid>http://localhost:1313/wieserpedia/_net/types/value-types/structs/</guid>
+      
+      <description>Structs A value type that encapsulates data and related functionality.
+Characteristics Allocation: Stack Equality: Value (albeit inefficient) Semantics: Value (a variable of a struct type contains an instance of that type) Inheritance: None (sealed) Mutability: Mutable (but, recommended to be made immutable with readonly modifier) Use When You need a small, data-centric type with little or no behavior You need a type whose fields are only value types The total bytes used by all the fields in the type is 16 bytes or less .</description>
+      
+    </item>
+    
+  </channel>
+</rss>

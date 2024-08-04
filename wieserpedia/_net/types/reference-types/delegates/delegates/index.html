@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">delegates | Fred Wieser</title>
+<meta property="og:title" content="delegates | Fred Wieser" />
+<meta name="twitter:title" content="delegates | Fred Wieser" />
+<meta itemprop="name" content="delegates | Fred Wieser" />
+<meta name="application-name" content="delegates | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/wieserpedia/_net/types/reference-types/delegates/delegates/" title="" />
+
+
+
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/wieserpedia/_net/types/reference-types/delegates/delegates/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    </head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">delegates</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2022-01-02T20:36:26-07:00" itemprop="datePublished"> 2 Jan 2022 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="delegates">Delegates</h1>
+<p>Delegates represent references to <em>methods</em> with the same signature as the <em>delegate</em>.</p>
+<ul>
+<li>Note: Unlike in overloading, for delegates, a method must have the same return type as the delegate.<br>
+They provide another way (instead of the dot operator) to call a method.<br>
+They are defined in namespace scope (like a class).<br>
+They support chaining (multiple methods can be called on a single event).<br>
+Delegates have built-in support for async operations that run on a different thread.<br>
+Delegates can also encapsulate a named or anonymous method.</li>
+</ul>
+<h1 id="uses">Uses</h1>
+<ul>
+<li>Passing methods as arguments to other methods.</li>
+<li>Defining <em>callback</em> methods.</li>
+<li>Events.</li>
+</ul>
+<h1 id="creating-delegates">Creating Delegates</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Declare a delegate:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> Del(<span style="color:#ff7b72">string</span> str);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> Notify(<span style="color:#ff7b72">string</span> name) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#a5d6ff">$&#34;Notification received for {name}&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Instantiate a delegate:</span>
+</span></span><span style="display:flex;"><span>Del del1 = <span style="color:#ff7b72">new</span> Del(notify);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// OR</span>
+</span></span><span style="display:flex;"><span>Del del2 = Notify;
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#f85149">`</span><span style="color:#ff7b72">int</span><span style="color:#f85149">`</span> Del(<span style="color:#f85149">`</span><span style="color:#ff7b72">int</span> n1, <span style="color:#ff7b72">int</span> n2<span style="color:#f85149">`</span>); <span style="color:#8b949e;font-style:italic">// Create a delegate.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">SomeClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// …</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#f85149">`</span><span style="color:#ff7b72">int</span><span style="color:#f85149">`</span> Add(<span style="color:#f85149">`</span><span style="color:#ff7b72">int</span> n1, <span style="color:#ff7b72">int</span> n2<span style="color:#f85149">`</span>) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> n1 + n2;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Del <span style="color:#f85149">`</span>d<span style="color:#f85149">`</span> = Add; <span style="color:#8b949e;font-style:italic">// Instantiate the delegate.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Because the instantiated delegate is an object, it can be passed as a parameter, or assigned to a property.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">int</span> result = <span style="color:#f85149">`</span>d<span style="color:#f85149">`</span>(<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>); <span style="color:#8b949e;font-style:italic">// Call the Delegate, which calls the method.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    result; <span style="color:#8b949e;font-style:italic">// 3</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="anonymous-delegates">Anonymous Delegates</h2>
+<p>Anonymous delegates allow you to create a delegate inline without having to define it elsewhere:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Del del3 = <span style="color:#ff7b72">delegate</span>(<span style="color:#ff7b72">string</span> name) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#a5d6ff">$&#34;Notification received for {name}&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Or:</span>
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#ff7b72">int</span>&gt; list = <span style="color:#ff7b72">new</span>() { <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>, <span style="color:#a5d6ff">8</span>, <span style="color:#a5d6ff">9</span>, <span style="color:#a5d6ff">10</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#ff7b72">int</span>&gt; result = list.FindAll(
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">delegate</span> (<span style="color:#ff7b72">int</span> num) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> (num % <span style="color:#a5d6ff">2</span> == <span style="color:#a5d6ff">0</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h2 id="lambda-expressions">Lambda Expressions</h2>
+<p>Lambda Expressions are just a convenient syntax for using delegates. They have a parameter list and method body but no formal identity:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Del del4 = name =&gt; 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#a5d6ff">$&#34;Notification received for {name}&#34;</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Or:</span>
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#ff7b72">int</span>&gt; list = <span style="color:#ff7b72">new</span>() { <span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>, <span style="color:#a5d6ff">8</span>, <span style="color:#a5d6ff">9</span>, <span style="color:#a5d6ff">10</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#ff7b72">int</span>&gt; result = list.FindAll(x =&gt; x % <span style="color:#a5d6ff">2</span> == <span style="color:#a5d6ff">0</span>);
+</span></span></code></pre></div><h1 id="callbacks">Callbacks</h1>
+<p>Because instantiated delegates are objects, they can be passed as arguments to some method. The receiving method can then call the delegate sometime later. This is known as a <em>callback</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Use the SomeDelegate type as a parameter:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> CallbackMethod(<span style="color:#ff7b72">int</span> p1, <span style="color:#ff7b72">int</span> p1, Del callback) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    callback(<span style="color:#a5d6ff">$&#34;{p1 - p2}&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Pass the delegate created above to the method:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">int</span> result = CallbackMethod(<span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#f85149">`</span>d<span style="color:#f85149">`</span>);
+</span></span></code></pre></div><h1 id="multicasting">Multicasting</h1>
+<p>Multicasting is a delegate calling more than one method when invoked.</p>
+<h2 id="adding-methods-to-a-delegates-invocation-list">Adding Methods to a Delegate&rsquo;s Invocation List</h2>
+<p>Methods are added to a delegate&rsquo;s list of methods with the + operator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">C</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> M1(<span style="color:#ff7b72">string</span> message) { Console.WriteLine(<span style="color:#a5d6ff">$&#34;M1: {message}&#34;</span>); }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> M2(<span style="color:#ff7b72">string</span> message) { Console.WriteLine(<span style="color:#a5d6ff">$&#34;M2: {message}&#34;</span>); }
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> M3(<span style="color:#ff7b72">string</span> message) { Console.WriteLine(<span style="color:#a5d6ff">$&#34;M3: {message}&#34;</span>); }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">var</span> obj = <span style="color:#ff7b72">new</span> C();
+</span></span><span style="display:flex;"><span>Del d1 = obj.M1;
+</span></span><span style="display:flex;"><span>Del d2 = obj.M2;
+</span></span><span style="display:flex;"><span>Del d3 = obj.M3;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Del multiDel = d1 + d2;
+</span></span><span style="display:flex;"><span>multiDel += d3; <span style="color:#8b949e;font-style:italic">// dWithAllMethods now has M1, M2, and M3 in its invocation list.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>multiDel(<span style="color:#a5d6ff">&#34;foo bar baz&#34;</span>);
+</span></span></code></pre></div><h2 id="invoke-methods-in-a-delegates-invocation-list">Invoke Methods in a Delegate&rsquo;s Invocation List</h2>
+<ul>
+<li>When invoked, all 3 methods are called in order.</li>
+<li>If a delegate uses reference parameters, the reference is passed sequentially to each of the 3 methods.</li>
+<li>If a method throws an exception not caught in that method, it is passed to the caller of the delegate and no more methods in the invocation list are called.</li>
+<li>If a delegate has a return value, it returns the return value and parameters of the last method invoked.</li>
+</ul>
+<h2 id="removing-methods-from-a-delegates-invocation-list">Removing Methods from a Delegate&rsquo;s Invocation List</h2>
+<p>Use the <code>-</code> operator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>multiDel -= d3; <span style="color:#8b949e;font-style:italic">// dWithAllMethods now only has M1 and M2 in its invocation list.</span>
+</span></span></code></pre></div><h1 id="delegates-with-named-methods">Delegates with Named Methods</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Declare a delegate:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> Del(<span style="color:#ff7b72">int</span> i, <span style="color:#ff7b72">int</span> j);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">MathClass</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">static</span> <span style="color:#ff7b72">void</span> Main() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        MathClass m = <span style="color:#ff7b72">new</span> MathClass();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Instantiate a delegate of MultiplyNumbers():</span>
+</span></span><span style="display:flex;"><span>        Del d = m.MultiplyNumbers; <span style="color:#8b949e;font-style:italic">// Delegate d is mapped to the MultiplyNumbers instance method.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic">// Invoke the delegate object.</span>
+</span></span><span style="display:flex;"><span>        d(<span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">6</span>); <span style="color:#8b949e;font-style:italic">// This runs MultiplyNumbers(6, 6)</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> MultiplyNumbers(<span style="color:#ff7b72">int</span> m, <span style="color:#ff7b72">int</span> n) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.Writeline(<span style="color:#a5d6ff">$&#34;{m * n}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="comprehensive-example">Comprehensive Example</h1>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">namespace</span> <span style="color:#ff7b72">Bookstore</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">struct</span> <span style="color:#f0883e;font-weight:bold">Book</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Title;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">string</span> Author;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">decimal</span> Price;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> book Paperback;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> Book(<span style="color:#ff7b72">string</span> title, <span style="color:#ff7b72">string</span> author, <span style="color:#ff7b72">decimal</span> price, <span style="color:#ff7b72">bool</span> paperBack) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Title = title;
+</span></span><span style="display:flex;"><span>        Author = author;
+</span></span><span style="display:flex;"><span>        Price = price;
+</span></span><span style="display:flex;"><span>        Paperback = paperBack;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Declare the delegate:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> ProcessBookCallback(Book book);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">BookDB</span> 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    ArrayList list = <span style="color:#ff7b72">new</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> AddBook(<span style="color:#ff7b72">string</span> title, <span style="color:#ff7b72">string</span> author, <span style="color:#ff7b72">decimal</span> price, <span style="color:#ff7b72">bool</span> paperBack) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        list.Add(<span style="color:#ff7b72">new</span> Book(title, author, price, paperBack));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// Call a passed-in delegate on each book to process it:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">void</span> ProcessPaperbackBooks(ProcessBookCallback processBook) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">foreach</span> (Book b <span style="color:#ff7b72">in</span> list)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">if</span> (b.Paperback)
+</span></span><span style="display:flex;"><span>                processBook(b);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="delegates-as-events">Delegates as Events</h1>
+<p>There are two pre-defined <em>delegates</em> to use as <em>events</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> EventHandler(<span style="color:#ff7b72">object?</span> sender, EventArgs e);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">delegate</span> <span style="color:#ff7b72">void</span> EventHandler&lt;TEventArgs&gt;(<span style="color:#ff7b72">object?</span> sender, TEventArgs e);
+</span></span></code></pre></div><h1 id="delegates-vs-interfaces">Delegates vs. Interfaces</h1>
+<p>Use delegates for:</p>
+<ul>
+<li>Events</li>
+<li>Encapsulating a static method</li>
+<li>Easy composition</li>
+<li>A class that may need more than one implementation of a method.</li>
+</ul>
+<p>Use interfaces for:</p>
+<ul>
+<li>A group of related methods that need to be called.</li>
+<li>A class that needs only one implementation of a method.</li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>
