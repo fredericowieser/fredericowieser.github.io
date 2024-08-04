@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematics on Fred Wieser</title>
-    <link>https://hba.sid.one/wieserpedia/maths/</link>
+    <link>https://fredericowieser.github.io/wieserpedia/maths/</link>
     <description>Recent content in Mathematics on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="https://hba.sid.one/wieserpedia/maths/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 -0600</lastBuildDate><atom:link href="https://fredericowieser.github.io/wieserpedia/maths/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

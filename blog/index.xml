@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Fred Wieser</title>
-    <link>https://hba.sid.one/blog/</link>
+    <link>https://fredericowieser.github.io/blog/</link>
     <description>Recent content in Blog on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hba.sid.one/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>#2 Multi-Player ELO Systems</title>
-      <link>https://hba.sid.one/blog/makig-a-hugo-blog-copy/</link>
+      <link>https://fredericowieser.github.io/blog/makig-a-hugo-blog-copy/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hba.sid.one/blog/makig-a-hugo-blog-copy/</guid>
+      <guid>https://fredericowieser.github.io/blog/makig-a-hugo-blog-copy/</guid>
       
       <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>#1 Making A Hugo Blog</title>
-      <link>https://hba.sid.one/blog/makig-a-hugo-blog/</link>
+      <link>https://fredericowieser.github.io/blog/makig-a-hugo-blog/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hba.sid.one/blog/makig-a-hugo-blog/</guid>
+      <guid>https://fredericowieser.github.io/blog/makig-a-hugo-blog/</guid>
       
       <description></description>
       
