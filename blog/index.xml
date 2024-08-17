@@ -8,24 +8,13 @@
     <language>en-gb</language>
     <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>#2 Multi-Player ELO Systems</title>
-      <link>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</link>
-      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <title>#1 Making A Hugo Website</title>
+      <link>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</guid>
+      <guid>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</guid>
       
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>#2 Multi-Player ELO Systems</title>
-      <link>https://fredericowieser.github.io/blog/3-building-a/</link>
-      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://fredericowieser.github.io/blog/3-building-a/</guid>
-      
-      <description></description>
+      <description>What is a Hugo Website Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&amp;rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</description>
       
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming Languages on Fred Wieser</title>
+    <link>https://fredericowieser.github.io/wieserpedia/programming-languages/</link>
+    <description>Recent content in Programming Languages on Fred Wieser</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/wieserpedia/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asynchronous Python</title>
+      <link>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</guid>
+      
+      <description>What is Asynchronous Programming? &amp;ldquo;Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events.
+These may be &amp;ldquo;outside&amp;rdquo; events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.&amp;rdquo; - Wikipedia
+One can also think that in a way asynchronous programming is analogous to the programmer giving up control of execution to the computer.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

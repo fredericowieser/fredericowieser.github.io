@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Asynchronous Python | Fred Wieser</title>
+<meta property="og:title" content="Asynchronous Python | Fred Wieser" />
+<meta name="twitter:title" content="Asynchronous Python | Fred Wieser" />
+<meta itemprop="name" content="Asynchronous Python | Fred Wieser" />
+<meta name="application-name" content="Asynchronous Python | Fred Wieser" />
+<meta property="og:site_name" content="Fred Wieser" />
+
+<meta name="description" content="Professional Problem Solver">
+<meta itemprop="description" content="Professional Problem Solver" />
+<meta property="og:description" content="Professional Problem Solver" />
+<meta name="twitter:description" content="Professional Problem Solver" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/" title="" />
+
+
+
+  <meta itemprop="image" content="https://fredericowieser.github.io/" />
+  <meta property="og:image" content="https://fredericowieser.github.io/" />
+  <meta name="twitter:image" content="https://fredericowieser.github.io/" />
+  <meta name="twitter:image:src" content="https://fredericowieser.github.io/" />
+
+
+
+
+
+<meta name="generator" content="Hugo 0.128.0">
+
+    
+
+    <link rel="canonical" href="https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/">
+    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://fredericowieser.github.io/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+  
+
+</head>
+<body data-theme = "auto" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://fredericowieser.github.io/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/projects/">
+                        Projects
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/blog/">
+                        Blog
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/wieserpedia/">
+                        Wieserpedia
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/cv/">
+                        CV
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Asynchronous Python</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-08-04T00:00:00&#43;00:00" itemprop="datePublished"> 4 Aug 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="what-is-asynchronous-programming">What is Asynchronous Programming?</h1>
+<p>&ldquo;Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events.</p>
+<p>These may be &ldquo;outside&rdquo; events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.&rdquo; - Wikipedia</p>
+<p>One can also think that in a way asynchronous programming is analogous to the programmer giving up control of execution to the computer.</p>
+<h2 id="why-care">Why care?</h2>
+<p>We want our program to run faster and spend less time hanging.</p>
+<p>It is important to note that not all subroutines can benefit or even be treated concurrently. It is also important to note that these kinds of implementations will be more difficult than serial. Sometimes task A has to be done before task B.</p>
+<p>Asynchronous programs are good for scalability as you are usually interacting with many servers which you will need to wait on, this lends itself perfectly.</p>
+<h2 id="scenarios">Scenarios</h2>
+<p>With Python there are really two main reasons for using asynchronous programming (I have included relevant packages for these use cases).</p>
+<ol>
+<li>Doing more at once, using asyncio or threads.</li>
+<li>Doing things faster, using multiprocessing or C/Cython.</li>
+</ol>
+<p>To these easier one can also use trio or unsync.</p>
+<h2 id="why-dont-threads-add-computational-speed">Why don&rsquo;t threads add computational speed?</h2>
+<p>Because of a memory management feature called the GIL (Global Interpreter Lock).</p>
+<p>But this is not very important for this topic.</p>
+<h2 id="doing-more-at-once">Doing More at Once</h2>
+<p>Using asyncio we are going to make many groups of tasks which have to run in serial.</p>
+<h1 id="code">Code</h1>
+<h2 id="generators-and-their-similarity-to-asynchronous-programming">Generators and their Similarity to Asynchronous Programming</h2>
+<p>Classic Fibonnacci CS101 function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">fib</span>(n: int) <span style="color:#ff7b72;font-weight:bold">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>    numbers <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    current, nxt <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0</span>, <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">while</span> len(numbers) <span style="color:#ff7b72;font-weight:bold">&lt;</span> n:
+</span></span><span style="display:flex;"><span>        current, nxt <span style="color:#ff7b72;font-weight:bold">=</span> nxt, current <span style="color:#ff7b72;font-weight:bold">+</span> nxt
+</span></span><span style="display:flex;"><span>        numbers<span style="color:#ff7b72;font-weight:bold">.</span>append(current)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> numbers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#ff7b72;font-weight:bold">=</span> fib(<span style="color:#a5d6ff">50</span>) <span style="color:#8b949e;font-style:italic"># List of Fib numbers</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">for</span> n <span style="color:#ff7b72;font-weight:bold">in</span> result:
+</span></span><span style="display:flex;"><span>    print(n, end<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> n <span style="color:#ff7b72;font-weight:bold">&gt;</span> <span style="color:#a5d6ff">10000</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">break</span>
+</span></span></code></pre></div><p>Same Method but now as a generator, where are breaking our work up into chunks which are quantified by the yield keyword. Similar to asynchronous programming, this generator is called multipel times for the next job.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">fib</span>(n: int):
+</span></span><span style="display:flex;"><span>    current, nxt <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0</span>, <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">while</span> len(numbers) <span style="color:#ff7b72;font-weight:bold">&lt;</span> n:
+</span></span><span style="display:flex;"><span>        current, nxt <span style="color:#ff7b72;font-weight:bold">=</span> nxt, current <span style="color:#ff7b72;font-weight:bold">+</span> nxt
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">yield</span> current
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result <span style="color:#ff7b72;font-weight:bold">=</span> fib() <span style="color:#8b949e;font-style:italic"># Instantiating the generator</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">for</span> n <span style="color:#ff7b72;font-weight:bold">in</span> result:
+</span></span><span style="display:flex;"><span>    print(n, end<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#39;, &#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> n <span style="color:#ff7b72;font-weight:bold">&gt;</span> <span style="color:#a5d6ff">10000</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">break</span>
+</span></span></code></pre></div><h2 id="anatomy-of-an-async-method">Anatomy of an async method</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">asyncio</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Begin by making the method async.</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">async</span> <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">process_data</span>(num: int, data: asyncio<span style="color:#ff7b72;font-weight:bold">.</span>Queue):
+</span></span><span style="display:flex;"><span>    processed <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">while</span> processed <span style="color:#ff7b72;font-weight:bold">&lt;</span> num:
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># Await all async methods you call.</span>
+</span></span><span style="display:flex;"><span>        item <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> data<span style="color:#ff7b72;font-weight:bold">.</span>get()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># PROCESS DATA</span>
+</span></span></code></pre></div><h2 id="real-life-example">Real Life Example</h2>
+<p>We are going to go to a random website used for getting information about podcast episodes. Once</p>
+<h3 id="synchronous-version">Synchronous Version</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">requests</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">bs4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">colorama</span> <span style="color:#ff7b72">import</span> Fore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">main</span>():
+</span></span><span style="display:flex;"><span>    get_title_range()
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;Done.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_html</span>(episode_number: int) <span style="color:#ff7b72;font-weight:bold">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Get website HTML</span>
+</span></span><span style="display:flex;"><span>    print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>YELLOW <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Getting HTML for episode </span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    url <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#39;https://talkpython.fm/</span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;</span>
+</span></span><span style="display:flex;"><span>    resp <span style="color:#ff7b72;font-weight:bold">=</span> requests<span style="color:#ff7b72;font-weight:bold">.</span>get(url)
+</span></span><span style="display:flex;"><span>    resp<span style="color:#ff7b72;font-weight:bold">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> resp<span style="color:#ff7b72;font-weight:bold">.</span>text
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_title</span>(html: str, episode_number: int) <span style="color:#ff7b72;font-weight:bold">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Get podcast title from HTML</span>
+</span></span><span style="display:flex;"><span>    print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>CYAN <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Getting TITLE for episode </span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>    soup <span style="color:#ff7b72;font-weight:bold">=</span> bs4<span style="color:#ff7b72;font-weight:bold">.</span>BeautifulSoup(html, <span style="color:#a5d6ff">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>    header <span style="color:#ff7b72;font-weight:bold">=</span> soup<span style="color:#ff7b72;font-weight:bold">.</span>select_one(<span style="color:#a5d6ff">&#39;h1&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> <span style="color:#ff7b72;font-weight:bold">not</span> header:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#34;MISSING&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> header<span style="color:#ff7b72;font-weight:bold">.</span>text<span style="color:#ff7b72;font-weight:bold">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_title_range</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Please keep this range pretty small to not DDoS my site. ;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Range of episodes to get, n</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> n <span style="color:#ff7b72;font-weight:bold">in</span> range(<span style="color:#a5d6ff">185</span>, <span style="color:#a5d6ff">200</span>):
+</span></span><span style="display:flex;"><span>        html <span style="color:#ff7b72;font-weight:bold">=</span> get_html(n)
+</span></span><span style="display:flex;"><span>        title <span style="color:#ff7b72;font-weight:bold">=</span> get_title(html, n)
+</span></span><span style="display:flex;"><span>        print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>WHITE <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Title found: </span><span style="color:#a5d6ff">{</span>title<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> __name__ <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><h3 id="asynchronous-version">Asynchronous Version</h3>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">asyncio</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">asyncio</span> <span style="color:#ff7b72">import</span> AbstractEventLoop
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">aiohttp</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">requests</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">bs4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">colorama</span> <span style="color:#ff7b72">import</span> Fore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">main</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Create loop</span>
+</span></span><span style="display:flex;"><span>    loop <span style="color:#ff7b72;font-weight:bold">=</span> asyncio<span style="color:#ff7b72;font-weight:bold">.</span>get_event_loop()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Run Event loop</span>
+</span></span><span style="display:flex;"><span>    loop<span style="color:#ff7b72;font-weight:bold">.</span>run_until_complete(get_title_range(loop))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#a5d6ff">&#34;Done.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">async</span> <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_html</span>(episode_number: int) <span style="color:#ff7b72;font-weight:bold">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>YELLOW <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Getting HTML for episode </span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Make this async with aiohttp&#39;s ClientSession</span>
+</span></span><span style="display:flex;"><span>    url <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#39;https://talkpython.fm/</span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># resp = await requests.get(url)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># resp.raise_for_status()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">with</span> aiohttp<span style="color:#ff7b72;font-weight:bold">.</span>ClientSession() <span style="color:#ff7b72">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">with</span> session<span style="color:#ff7b72;font-weight:bold">.</span>get(url) <span style="color:#ff7b72">as</span> resp:
+</span></span><span style="display:flex;"><span>            resp<span style="color:#ff7b72;font-weight:bold">.</span>raise_for_status()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            html <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> resp<span style="color:#ff7b72;font-weight:bold">.</span>text()
+</span></span><span style="display:flex;"><span>            <span style="color:#ff7b72">return</span> html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_title</span>(html: str, episode_number: int) <span style="color:#ff7b72;font-weight:bold">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>    print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>CYAN <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Getting TITLE for episode </span><span style="color:#a5d6ff">{</span>episode_number<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>    soup <span style="color:#ff7b72;font-weight:bold">=</span> bs4<span style="color:#ff7b72;font-weight:bold">.</span>BeautifulSoup(html, <span style="color:#a5d6ff">&#39;html.parser&#39;</span>)
+</span></span><span style="display:flex;"><span>    header <span style="color:#ff7b72;font-weight:bold">=</span> soup<span style="color:#ff7b72;font-weight:bold">.</span>select_one(<span style="color:#a5d6ff">&#39;h1&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> <span style="color:#ff7b72;font-weight:bold">not</span> header:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#a5d6ff">&#34;MISSING&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> header<span style="color:#ff7b72;font-weight:bold">.</span>text<span style="color:#ff7b72;font-weight:bold">.</span>strip()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">async</span> <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_title_range</span>(loop: AbstractEventLoop):
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Please keep this range pretty small to not DDoS my site. ;)</span>
+</span></span><span style="display:flex;"><span>    tasks <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> n <span style="color:#ff7b72;font-weight:bold">in</span> range(<span style="color:#a5d6ff">190</span>, <span style="color:#a5d6ff">200</span>):
+</span></span><span style="display:flex;"><span>        tasks<span style="color:#ff7b72;font-weight:bold">.</span>append((loop<span style="color:#ff7b72;font-weight:bold">.</span>create_task(get_html(n)), n))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">for</span> task, n <span style="color:#ff7b72;font-weight:bold">in</span> tasks:
+</span></span><span style="display:flex;"><span>        html <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> task
+</span></span><span style="display:flex;"><span>        title <span style="color:#ff7b72;font-weight:bold">=</span> get_title(html, n)
+</span></span><span style="display:flex;"><span>        print(Fore<span style="color:#ff7b72;font-weight:bold">.</span>WHITE <span style="color:#ff7b72;font-weight:bold">+</span> <span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Title found: </span><span style="color:#a5d6ff">{</span>title<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>, flush<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span> __name__ <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><h1 id="some-common-questions">Some Common Questions</h1>
+<h2 id="does-speed-change-on-different-operating-systems">Does speed change on different Operating Systems?</h2>
+<p>Test would have to be run to test this but more interestingly instead of using the normal asyncio event loop, one can use the UV Loop.</p>
+<p>The UV Loop can be significantly faster than the standard asyncio event loop, but, according to a the Jetbrains lecture used to make these notes, it does not work on Windows.</p>
+<h2 id="asynio-vs-threading-in-terms-of-learning-curve">Asynio vs Threading in terms of learning curve?</h2>
+<p>Threads is harder by about 3 times.</p>
+<h2 id="book-recomedations">Book Recomedations</h2>
+<p>&ldquo;Fluent Python&rdquo; has a good section, although out of date (Python 3.7 brought a lot of updates)</p>
+<h2 id="can-asynio-and-multiprocessing-be-used-together">Can <code>asynio</code> and <code>multiprocessing</code> be used together?</h2>
+<p>Yes they are for different use cases. There is a package called multiprocessingio which does this.</p>
+<h2 id="what-is-a-coroutine">What is a coroutine?</h2>
+<p>Similar to a generator function where you run up to a point and then execute only parts of the program. Returning interim values.</p>
+<p>But look it up for more details.</p>
+<h2 id="when-things-are-not-async-compatible">When things are not async compatible?</h2>
+<p>Short answer: Can try using threads.</p>
+<h2 id="example-making-faster-api-calls">Example: Making Faster API Calls</h2>
+<p>By using Asynchronous Programming, we are going to be able to increase the speed by which our requests are going to be executed by using the concept of an &ldquo;event loop&rdquo;. An event loop is a kind of program which will initialise a function call or subroutine and not wait until the subroutine is finished. Instead the event loop will launch the next subroutine, and the one after that. This is until it has no more subroutines to initialise to then come back to check if the subroutines previously initialised have given a return.</p>
+<p>By doing this we reduce the amount of time left just waiting for the subroutine to finish.</p>
+<h3 id="example-program">Example Program:</h3>
+<p>Making faster api calls for financial data (taken from: [[https://www.youtube.com/watch?v=nFn4_nA_yk8][This YT Video]])</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">asyncio</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">aiohttp</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">os</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">time</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Important to note that requests is a synchronous</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># library and cannot work asynchronous.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>api_key <span style="color:#ff7b72;font-weight:bold">=</span> os<span style="color:#ff7b72;font-weight:bold">.</span>getenv(<span style="color:#a5d6ff">&#39;ALPHAVANTAGE_API_KEY&#39;</span>)
+</span></span><span style="display:flex;"><span>url <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#39;https://www.alphavantage.co/query?function=OVERVIEW&amp;symbol=</span><span style="color:#a5d6ff">{}</span><span style="color:#a5d6ff">&amp;apikey=</span><span style="color:#a5d6ff">{}</span><span style="color:#a5d6ff">&#39;</span>  
+</span></span><span style="display:flex;"><span>tickers <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">&#39;AAPL&#39;</span>, <span style="color:#a5d6ff">&#39;GOOG&#39;</span>, <span style="color:#a5d6ff">&#39;TSLA&#39;</span>, <span style="color:#a5d6ff">&#39;MSFT&#39;</span>, <span style="color:#a5d6ff">&#39;AAPL&#39;</span>] 
+</span></span><span style="display:flex;"><span>results <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Timing!</span>
+</span></span><span style="display:flex;"><span>start <span style="color:#ff7b72;font-weight:bold">=</span> time<span style="color:#ff7b72;font-weight:bold">.</span>time()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># async keyword tells python that this</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># method can do asynchronous stuff. </span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">async</span> <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_tickers_v1</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#a5d6ff">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    Request data from api using requests
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># Context Manager for running an asynchronous</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic"># session.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">with</span> aiohttp<span style="color:#ff7b72;font-weight:bold">.</span>ClientSession() <span style="color:#ff7b72">as</span> session:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">for</span> ticker <span style="color:#ff7b72;font-weight:bold">in</span> tickers:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># Make API requests synchronously</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># response = requests.get(url.format(ticker, api_key))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># results.append(response.json())</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># Make API requests asynchronously</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># await - Tells Python this method is to be treated</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8b949e;font-style:italic"># asynchronously.</span>
+</span></span><span style="display:flex;"><span>            response <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> session<span style="color:#ff7b72;font-weight:bold">.</span>get(
+</span></span><span style="display:flex;"><span>                url<span style="color:#ff7b72;font-weight:bold">.</span>format(ticker, api_key)
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            results<span style="color:#ff7b72;font-weight:bold">.</span>append(<span style="color:#ff7b72">await</span> response<span style="color:#ff7b72;font-weight:bold">.</span>json())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">async</span> <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_tickers_v2</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">get_tasks</span>(session)
+</span></span><span style="display:flex;"><span>        tasks <span style="color:#ff7b72;font-weight:bold">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">for</span> ticker <span style="color:#ff7b72;font-weight:bold">in</span> tickers:
+</span></span><span style="display:flex;"><span>            tasks<span style="color:#ff7b72;font-weight:bold">.</span>append(
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic"># asyncio.create_task puts the subroutine</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic"># on the event loop</span>
+</span></span><span style="display:flex;"><span>                asyncio<span style="color:#ff7b72;font-weight:bold">.</span>create(
+</span></span><span style="display:flex;"><span>                    session<span style="color:#ff7b72;font-weight:bold">.</span>get(
+</span></span><span style="display:flex;"><span>                        url<span style="color:#ff7b72;font-weight:bold">.</span>format(ticker, api_key), ssl<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">False</span>
+</span></span><span style="display:flex;"><span>        )))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">async</span> <span style="color:#ff7b72">with</span> aiohttp<span style="color:#ff7b72;font-weight:bold">.</span>ClientSession() <span style="color:#ff7b72">as</span> session:
+</span></span><span style="display:flex;"><span>        tasks <span style="color:#ff7b72;font-weight:bold">=</span> get_tasks(session)
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># asyncio.gather puts or takes subroutine on or</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># off of the event loop, depending on if they</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># have been initialized.</span>
+</span></span><span style="display:flex;"><span>        responses <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> asyncio<span style="color:#ff7b72;font-weight:bold">.</span>gather(<span style="color:#ff7b72;font-weight:bold">*</span>tasks)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">for</span> response <span style="color:#ff7b72;font-weight:bold">in</span> responses:
+</span></span><span style="display:flex;"><span>            results<span style="color:#ff7b72;font-weight:bold">.</span>append(<span style="color:#ff7b72">await</span> response<span style="color:#ff7b72;font-weight:bold">.</span>json())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Event loop - Long Version</span>
+</span></span><span style="display:flex;"><span>loop <span style="color:#ff7b72;font-weight:bold">=</span> asyncio<span style="color:#ff7b72;font-weight:bold">.</span>get_event_loop()
+</span></span><span style="display:flex;"><span>loop<span style="color:#ff7b72;font-weight:bold">.</span>run_until_complete(get_tickers())
+</span></span><span style="display:flex;"><span>loop<span style="color:#ff7b72;font-weight:bold">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Event loop - Short Version</span>
+</span></span><span style="display:flex;"><span>asyncio<span style="color:#ff7b72;font-weight:bold">.</span>run(get_tickers())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Timing!</span>
+</span></span><span style="display:flex;"><span>end <span style="color:#ff7b72;font-weight:bold">=</span> time<span style="color:#ff7b72;font-weight:bold">.</span>time()
+</span></span><span style="display:flex;"><span>total_time <span style="color:#ff7b72;font-weight:bold">=</span> end <span style="color:#ff7b72;font-weight:bold">-</span> start
+</span></span><span style="display:flex;"><span>print(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;That took </span><span style="color:#a5d6ff">{</span>total_time<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff"> seconds&#34;</span>)
+</span></span></code></pre></div><h1 id="references">References</h1>
+<p>[[https://www.youtube.com/watch?v=F19R_M4Nay4&amp;t=3s&amp;ab_channel=JetBrains][Demystifying Python&rsquo;s Async and Await Keywords, by JetBrains Youtube]]</p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
+    title="Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+    </path>
+</svg>
+</a>
+<a href="https://www.youtube.com/channel/UCl3L6n0BcAsESYhQSx2uomg" target="_blank" rel="noopener noreferrer me"
+    title="Youtube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+    </path>
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+</a>
+<a href="mailto:frederico.wieser@uclmail.net" target="_blank" rel="noopener noreferrer me"
+    title="Email">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <div>
+        Feel free to <b><a href="//buymeacoffee.com/fredwieser" target="_blank" rel="noopener noreferrer me">Buy Me A Coffee</a></b> if you like my work!
+    </div>
+    <small class="footer_copyright">
+        © 2024 Fred Wieser.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://fredericowieser.github.io/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>

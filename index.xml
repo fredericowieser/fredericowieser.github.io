@@ -6,13 +6,13 @@
     <description>Recent content on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 04 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asynchronous Python</title>
-      <link>https://fredericowieser.github.io/wieserpedia/cs--swe/asynchronous-python/</link>
+      <link>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</link>
       <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/wieserpedia/cs--swe/asynchronous-python/</guid>
+      <guid>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</guid>
       
       <description>What is Asynchronous Programming? &amp;ldquo;Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events.
 These may be &amp;ldquo;outside&amp;rdquo; events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.&amp;rdquo; - Wikipedia
@@ -51,40 +51,19 @@ Interests In my free time, I enjoy exploring the intersections of technology and
       
       <guid>https://fredericowieser.github.io/cv/</guid>
       
-      <description></description>
+      <description>Work Experience Education Extra-Curricular Hackathons Volunteering Unify Contributor Projects NES Emulator Poker Dash Skills Levels of Understanding:
+Fluent Advanced Working Knowledge (WK) Beginner Programming Languages Python (Fluent) C/C++ (Working Knowledge) SQL (Advanced) JavaScript (Working Knowledge) Bash (Advanced) Java (Beginner) C# (Beginner) Go (Beginner) Rust (Beginner) Technologies Linux (Advanced) Docker (Working Knowledge) Kubernetes (Beginner) MongoDB (Working Knowledge) Apache Kafka (Working Knowledge) HTML/CSS (Working Knowledge) Jupyter (Working Knowledge) Languages English (Fluent) Portuguese (Advanced) </description>
       
     </item>
     
     <item>
-      <title>#2 Multi-Player ELO Systems</title>
-      <link>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</link>
-      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <title>#1 Making A Hugo Website</title>
+      <link>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/2-multi-player-elo-systems/</guid>
+      <guid>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</guid>
       
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>#2 Multi-Player ELO Systems</title>
-      <link>https://fredericowieser.github.io/blog/3-building-a/</link>
-      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://fredericowieser.github.io/blog/3-building-a/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://fredericowieser.github.io/wieserpedia/cs--swe/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fredericowieser.github.io/wieserpedia/cs--swe/python/</guid>
-      
-      <description></description>
+      <description>What is a Hugo Website Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&amp;rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</description>
       
     </item>
     
