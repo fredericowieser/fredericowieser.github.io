@@ -2,17 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Fred Wieser</title>
-    <link>https://fredericowieser.github.io/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blog on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#2 Llama Impact Hackathon</title>
+      <link>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</guid>
+      
+      <description>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&amp;rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</description>
+      
+    </item>
+    
     <item>
       <title>#1 Making A Hugo Website</title>
-      <link>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</link>
+      <link>http://localhost:1313/blog/1-making-a-hugo-website/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</guid>
+      <guid>http://localhost:1313/blog/1-making-a-hugo-website/</guid>
       
       <description>What is a Hugo Website Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&amp;rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</description>
       

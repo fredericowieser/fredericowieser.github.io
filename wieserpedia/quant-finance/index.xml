@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantitative Finance on Fred Wieser</title>
-    <link>https://fredericowieser.github.io/wieserpedia/quant-finance/</link>
+    <link>http://localhost:1313/wieserpedia/quant-finance/</link>
     <description>Recent content in Quantitative Finance on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/wieserpedia/quant-finance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/wieserpedia/quant-finance/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,66 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fred Wieser</title>
-    <link>https://fredericowieser.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Asynchronous Python</title>
-      <link>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</link>
-      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://fredericowieser.github.io/wieserpedia/programming-languages/asynchronous-python/</guid>
-      
-      <description>What is Asynchronous Programming? &amp;ldquo;Asynchrony, in computer programming, refers to the occurrence of events independent of the main program flow and ways to deal with such events.
-These may be &amp;ldquo;outside&amp;rdquo; events such as the arrival of signals, or actions instigated by a program that take place concurrently with program execution, without the program blocking to wait for results.&amp;rdquo; - Wikipedia
-One can also think that in a way asynchronous programming is analogous to the programmer giving up control of execution to the computer.</description>
-      
-    </item>
-    
-    <item>
-      <title>ISIC Kaggle</title>
-      <link>https://fredericowieser.github.io/projects/isic-kaggle/</link>
-      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://fredericowieser.github.io/projects/isic-kaggle/</guid>
-      
-      <description>ISIC Kaggle Competition </description>
-      
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://fredericowieser.github.io/about/</link>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       
-      <description>Hi&amp;hellip; Hi, I&amp;rsquo;m Fred. I&amp;rsquo;m passionate about technology and mathematics, blending my love for problem-solving with practical applications.
-Education I hold a BSc in Theoretical Physics from University College London, where I developed a solid foundation in analytical reasoning and computational physics. My studies ignited my interest in machine learning, leading me to pursue further education in this field.
-Interests In my free time, I enjoy exploring the intersections of technology and creativity.</description>
+      <description>About Me Hi, I&amp;rsquo;m Fred - an enthusiast of technology, mathematics, and computing with a passion for solving complex problems that lie at their intersection. My journey began with a deep interest in mathematical modeling and theoretical physics, which led me to complete my BSc at UCL, where I specialized in computational approaches and mathematical analysis. During my studies, I developed a particular fascination with using computational methods to analyze nonlinear, noisy, and complex systems, culminating in a research project on Cellular Automata simulations for modeling forest fires.</description>
       
     </item>
     
     <item>
-      <title>Curiculum Vitae / Résume</title>
-      <link>https://fredericowieser.github.io/cv/</link>
-      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+      <title>#2 Llama Impact Hackathon</title>
+      <link>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/cv/</guid>
+      <guid>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</guid>
       
-      <description>Work Experience Education Extra-Curricular Hackathons Volunteering Unify Contributor Projects NES Emulator Poker Dash Skills Levels of Understanding:
-Fluent Advanced Working Knowledge (WK) Beginner Programming Languages Python (Fluent) C/C++ (Working Knowledge) SQL (Advanced) JavaScript (Working Knowledge) Bash (Advanced) Java (Beginner) C# (Beginner) Go (Beginner) Rust (Beginner) Technologies Linux (Advanced) Docker (Working Knowledge) Kubernetes (Beginner) MongoDB (Working Knowledge) Apache Kafka (Working Knowledge) HTML/CSS (Working Knowledge) Jupyter (Working Knowledge) Languages English (Fluent) Portuguese (Advanced) </description>
+      <description>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&amp;rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</description>
       
     </item>
     
     <item>
       <title>#1 Making A Hugo Website</title>
-      <link>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</link>
+      <link>http://localhost:1313/blog/1-making-a-hugo-website/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</guid>
+      <guid>http://localhost:1313/blog/1-making-a-hugo-website/</guid>
       
       <description>What is a Hugo Website Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&amp;rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</description>
       
