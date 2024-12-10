@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fred Wieser</title>
-    <link>http://localhost:1313/</link>
+    <link>https://fredericowieser.github.io/</link>
     <description>Recent content on Fred Wieser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://fredericowieser.github.io/about/</link>
       <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://fredericowieser.github.io/about/</guid>
       
       <description>About Me Hi, I&amp;rsquo;m Fred - an enthusiast of technology, mathematics, and computing with a passion for solving complex problems that lie at their intersection. My journey began with a deep interest in mathematical modeling and theoretical physics, which led me to complete my BSc at UCL, where I specialized in computational approaches and mathematical analysis. During my studies, I developed a particular fascination with using computational methods to analyze nonlinear, noisy, and complex systems, culminating in a research project on Cellular Automata simulations for modeling forest fires.</description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>#2 Llama Impact Hackathon</title>
-      <link>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</link>
+      <link>https://fredericowieser.github.io/blog/2-llama-impact-hackathon-2024/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/2-llama-impact-hackathon-2024/</guid>
+      <guid>https://fredericowieser.github.io/blog/2-llama-impact-hackathon-2024/</guid>
       
       <description>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&amp;rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>#1 Making A Hugo Website</title>
-      <link>http://localhost:1313/blog/1-making-a-hugo-website/</link>
+      <link>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/1-making-a-hugo-website/</guid>
+      <guid>https://fredericowieser.github.io/blog/1-making-a-hugo-website/</guid>
       
       <description>What is a Hugo Website Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&amp;rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</description>
       
