@@ -64,6 +64,7 @@
   
 
 </head>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
@@ -87,6 +88,27 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+ 
+.pixelify-sans {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+ 
+.wrapper {
+     
+    min-height: 100vh;
+}
+
+ 
+.blurry {
+    filter: blur(5px);
+    transition: filter 0.3s;
+}
+
+ 
 .dashboard {
     display: grid;
     gap: 1ch;
@@ -145,14 +167,9 @@ body {
     .recent-posts { --gc: span 3; }
     .notable-projects { --gc: span 4; }
 }
-
-.pixelify-sans {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
 </style>
+
+
 <script>
 (() => {
     "use strict";
@@ -192,7 +209,7 @@ body {
         if (state === THEMES.DARK) {
             document.documentElement.classList.add(THEMES.DARK);
             document.documentElement.classList.remove(THEMES.LIGHT);
-        } else if (state === THEMES.LIGHT) {
+        } else {
             document.documentElement.classList.remove(THEMES.DARK);
             document.documentElement.classList.add(THEMES.LIGHT);
         }
@@ -204,42 +221,33 @@ body {
 
     const toggleTheme = () => {
         const state = getThemeState();
-        const htmlElement = document.documentElement;
-
         if (state === THEMES.DARK) {
             localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
-            htmlElement.classList.remove(THEMES.DARK);
-            htmlElement.classList.add(THEMES.LIGHT);
-
-            document.querySelectorAll('.dashboard > *, .profile, .intro-text, .recent-posts, .notable-projects').forEach(element => {
-                element.style.backgroundColor = 'var(--box-bg-light)';
-                element.style.borderColor = 'var(--box-bg-dark)';
-            });
-
-        } else if (state === THEMES.LIGHT) {
+            initTheme(THEMES.LIGHT);
+        } else {
             localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
-            htmlElement.classList.remove(THEMES.LIGHT);
-            htmlElement.classList.add(THEMES.DARK);
-
-            document.querySelectorAll('.dashboard > *, .profile, .intro-text, .recent-posts, .notable-projects').forEach(element => {
-                element.style.backgroundColor = 'var(--box-bg-dark)';
-                element.style.borderColor = 'var(--box-bg-light)';
-            });
+            initTheme(THEMES.DARK);
         }
     };
 
     window.addEventListener("DOMContentLoaded", () => {
+        
         const lamp = document.getElementById("mode");
         lamp.addEventListener("click", (event) => {
             event.preventDefault();
             toggleTheme();
         });
 
+        
         const cbox = document.getElementById("menu-trigger");
         cbox.addEventListener("change", function () {
             const area = document.querySelector(".wrapper");
-            if (this.checked) return area.classList.add("blurry");
-            area.classList.remove("blurry");
+            if (!area) return;
+            if (this.checked) {
+                area.classList.add("blurry");
+            } else {
+                area.classList.remove("blurry");
+            }
         });
     });
 })();
@@ -261,26 +269,30 @@ stroke-linejoin="round" class="feather feather-home">
 </svg>
                 <a href="https://fredericowieser.github.io/" class="logo pixelify-sans">FRED WIESER</a>
             </a>
+
+            
             <input type="checkbox" id="menu-trigger" class="menu-trigger" />
             <label for="menu-trigger">
                 <span class="menu-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
                 </span>
             </label>
-    
+
             <div class="trigger">
                 <ul class="trigger-container">
                     
                     
                     <li>
-                        <a class="menu-link active" href="/">
+                        <a class="menu-link active"
+                           href="/">
                             Home
                         </a>
                         
                     </li>
                     
                     <li>
-                        <a class="menu-link " href="/blog/">
+                        <a class="menu-link "
+                           href="/blog/">
                             Blog
                         </a>
                         
@@ -302,6 +314,7 @@ stroke-linejoin="round" class="feather feather-home">
         </nav>
     </div>
 
+    <div class="wrapper">
     <div class="dashboard">
         <div class="profile">
             <div class="bio">
@@ -383,6 +396,7 @@ stroke-linejoin="round" class="feather feather-home">
                 
             </div>
         </div>
+    </div>
     </div><footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
