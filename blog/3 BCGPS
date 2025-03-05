@@ -1,0 +1,149 @@
+
+---
+title: "#3 Making A Hugo Website"
+date: 2025-02-21
+draft: false
+---
+# Boundary-Constrained Gaussian Processes (BCGPs) for Physics-Informed Machine Learning
+
+## Introduction
+
+Physics-informed machine learning (PIML) has gained significant traction in recent years, particularly for solving partial differential equations (PDEs) with known physical constraints. Traditional machine learning approaches struggle to incorporate physical laws directly, often requiring large amounts of data and suffering from interpretability issues.
+
+Gaussian Processes (GPs) offer a probabilistic framework for regression problems and can naturally encode prior knowledge, including PDE constraints. A key challenge, however, is enforcing **boundary conditions (BCs)** exactly within the GP framework. This is where **Boundary-Constrained Gaussian Processes (BCGPs)** come into play.
+
+This blog post provides an in-depth look at BCGPs, exploring their formulation, theoretical foundations, and applications.
+
+---
+
+## Physics-Informed Machine Learning (PIML)
+
+Physics-informed machine learning integrates prior knowledge from physics (e.g., conservation laws, PDEs, boundary conditions) into learning algorithms. Two primary approaches exist:
+
+1. **Physics-informed Neural Networks (PINNs)**: Constraints are added as penalty terms in the loss function, enforcing physics approximately.
+2. **Physics-informed Gaussian Processes (PIGPs)**: Kernel-based methods where constraints can be incorporated exactly.
+
+BCGPs belong to the latter category, ensuring exact enforcement of **linear boundary conditions**.
+
+---
+
+## Formulation of BCGPs
+
+### Problem Setup
+
+We consider a PDE with boundary conditions defined on a domain \(\Omega\):
+
+$$
+L u(x) = f(x), \quad x \in \Omega
+$$
+
+with boundary constraints:
+
+$$
+\mathcal{B} u(x) = g(x), \quad x \in \partial\Omega.
+$$
+
+Here, \(L\) is a linear differential operator, and \(\mathcal{B}\) represents boundary operators such as Dirichlet, Neumann, or Robin conditions.
+
+### Enforcing Boundary Conditions in GPs
+
+A Gaussian Process (GP) is a distribution over functions:
+
+$$
+u(x) \sim \mathcal{GP}(m(x), k(x, x')).\]
+
+To enforce the boundary conditions **exactly**, we modify the mean and kernel functions:
+
+- **Mean function adjustment**: \( m(x) \) is chosen to satisfy the boundary conditions.
+- **Kernel transformation**: A constrained kernel \( \tilde{k}(x, x') \) is designed so that any sampled function respects the BCs.
+
+Using an **Approximate Distance Function (ADF)**, \( \phi(x) \), which vanishes at the boundary, the modified GP is:
+\[
+\tilde{u}(x) = b(x) + \phi(x) \hat{u}(x),
+\]
+
+where \(\hat{u}(x) \sim \mathcal{GP}(0, k(x, x'))\). The adjusted kernel is then:
+
+$$
+\tilde{k}(x, x') = \phi(x) k(x, x') \phi(x').
+$$
+
+---
+
+## Theoretical Foundations
+
+### Universality of the Constrained Kernel
+
+A crucial property of Gaussian processes is their **universal approximation ability**. A kernel \(k\) is **universal** if its corresponding Reproducing Kernel Hilbert Space (RKHS) is dense in \(C(\Omega)\).
+
+The key result for BCGPs is:
+
+> \(\tilde{k}(x, x') = \phi(x) k(x, x') \phi(x')\) remains **universal** within the space of functions satisfying the given boundary conditions.
+
+This ensures that BCGPs can approximate any function satisfying \(\mathcal{B} u(x) = g(x)\) arbitrarily well.
+
+### Equivalence Between BCGPs and BCNNs
+
+There exists a deep connection between **Boundary-Constrained Neural Networks (BCNNs)** and BCGPs:
+
+- In the **infinite width limit**, a single-layer BCNN converges to a BCGP.
+- This follows from Neal’s theorem, which states that infinitely wide neural networks behave as Gaussian Processes.
+
+Thus, both BCNNs and BCGPs are universal approximators within their constrained function space, but BCGPs have the advantage of exact constraint enforcement **without training**.
+
+---
+
+## Computational Considerations
+
+### Advantages of BCGPs
+
+- **Exact Boundary Satisfaction**: No need for penalty terms.
+- **Uncertainty Quantification**: GPs provide well-calibrated uncertainty estimates.
+- **Data Efficiency**: Achieves high accuracy with fewer training points.
+
+### Limitations
+
+- **Computational Cost**: Constructing constrained kernels is expensive, limiting scalability.
+- **High-Dimensional Challenges**: Standard GP inference scales as \(\mathcal{O}(N^3)\), making large-scale applications infeasible.
+
+### Potential Solutions
+
+- **Sparse GP Approximations**: Reduces computational complexity via inducing points.
+- **Hybrid Models**: Combines the strengths of BCNNs (efficient representation) with BCGPs (uncertainty quantification).
+
+---
+
+## Applications of BCGPs
+
+BCGPs are applicable in various scientific and engineering domains, including:
+
+- **Fluid Mechanics**: Predicting flow fields with exact boundary constraints.
+- **Climate Modeling**: Learning temperature distributions with known BCs.
+- **Structural Mechanics**: Modeling stress distributions in materials.
+- **Biomedical Imaging**: Reconstructing images with precise physical constraints.
+
+---
+
+## Summary and Future Directions
+
+BCGPs provide a powerful framework for physics-informed machine learning, enforcing boundary conditions exactly while maintaining uncertainty quantification. Future research directions include:
+
+- Extending BCGPs to **nonlinear boundary conditions**.
+- Developing **efficient scalable inference methods**.
+- Exploring connections with deep learning for **hybrid physics-informed models**.
+
+As computational efficiency improves, BCGPs will likely become a standard tool in physics-informed ML, bridging the gap between statistical inference and domain-specific knowledge.
+
+---
+
+## References
+
+- Dalton et al., "Boundary-Constrained Gaussian Processes for Robust Physics-Informed Machine Learning of Linear PDEs," JMLR, 2024.
+- Raissi et al., "Physics-Informed Neural Networks," Journal of Computational Physics, 2019.
+- Neal, "Bayesian Learning for Neural Networks," PhD Thesis, 1996.
+- Rasmussen & Williams, "Gaussian Processes for Machine Learning," MIT Press, 2006.
+
+---
+
+This post provides an overview of BCGPs, their theoretical foundations, and applications. If you’re interested in practical implementations, check out the GitHub repositories linked in the references!
+
