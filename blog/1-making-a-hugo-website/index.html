@@ -169,6 +169,50 @@ stroke-linejoin="round" class="feather feather-home">
 <p>The use cases are pretty wide. I myself have made Hugo powered websites for the technical documentation of a few teams at one of my previous roles and have also now used it to write the website you are most likely reading this on at <a href="https://fredericowieser.github.io/">https://fredericowieser.github.io/</a>.</p>
 <h1 id="how-to-get-started">How to get started?</h1>
 <p>I would recommend going to the <a href="https://gohugo.io/getting-started/quick-start/">Quick start | Hugo</a> guide. After that direct yourself to the <a href="https://themes.gohugo.io/">Complete List | Hugo Themes</a> where you can pick out a base template to then customise and work on, I have found this to be the fastest way to achieving a Minimal Viable Product. All the themes will have git repositories available for you to then build on locally.</p>
+<h1 id="examples-of-what-can-be-done-in-this-blog">Examples Of What Can Be Done In This Blog</h1>
+<p>This blog post uses Markdown, and I&rsquo;ll demonstrate some of the cool things you can include!</p>
+<h2 id="code-examples">Code Examples</h2>
+<p>You can easily include code snippets in your Hugo posts. Here&rsquo;s an example of a simple HTML structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#8b949e;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">html</span> lang<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">meta</span> charset<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">meta</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;viewport&#34;</span> content<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">title</span>&gt;My Hugo Website&lt;/<span style="color:#7ee787">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">h1</span>&gt;Hello from Hugo!&lt;/<span style="color:#7ee787">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#7ee787">p</span>&gt;This is a simple paragraph.&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">html</span>&gt;
+</span></span></code></pre></div><p>And here&rsquo;s a little bit of CSS to style it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#7ee787">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">font-family</span>: <span style="color:#79c0ff">sans-serif</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">line-height</span>: <span style="color:#a5d6ff">1.6</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">margin</span>: <span style="color:#a5d6ff">20</span><span style="color:#ff7b72">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">h1</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">color</span>: <span style="color:#a5d6ff">#333</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can also show more complex code, like a Go function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ff7b72">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#d2a8ff;font-weight:bold">Println</span>(<span style="color:#a5d6ff">&#34;This is a Go program!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="latex-for-mathematical-expressions">LaTeX for Mathematical Expressions</h2>
+<p>If you need to include mathematical equations, you can use LaTeX syntax. Here&rsquo;s an inline example: The famous equation $E=mc^2$ relates energy and mass.</p>
+<p>And here&rsquo;s a display math example:</p>
+<p>$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$</p>
+<p>Another example, the quadratic formula:
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$</p>
 
             </div>
         </article></main>
@@ -225,7 +269,7 @@ stroke-linejoin="round" class="feather feather-home">
 </a>
 </div>
     <div>
-        Disclaimer: I use AI to assist me. Please excuse/notify me of any errors or mistakes.
+        Please excuse/notify me of any errors or mistakes at frederico.wieser@proton.me
     </div>
     <small class="footer_copyright">
         © 2025 Fred Wieser.
