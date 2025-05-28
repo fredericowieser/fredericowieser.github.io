@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Fred Wieser</title>
-        <link>http://localhost:1313/</link>
-        <description>This is my cool site</description>
+        <title>All Posts - Fred Wieser</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>All Posts | Fred Wieser</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>frederico.wieser@proton.me (Fred Wieser)</managingEditor>
-            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Llama Impact Hackathon</title>
     <link>http://localhost:1313/2024/11/llama_impact_hackathon/</link>
     <pubDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</pubDate>

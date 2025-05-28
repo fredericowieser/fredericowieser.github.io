@@ -1,526 +1,591 @@
-<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta name="generator" content="Hugo 0.145.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Fred Wieser</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Fred Wieser">
+  <meta property="og:title" content="Fred Wieser">
+  <meta property="og:description" content="This is my cool site">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
 
-<title itemprop="name">Fred Wieser | Fred Wieser</title>
-<meta property="og:title" content="Fred Wieser | Fred Wieser" />
-<meta name="twitter:title" content="Fred Wieser | Fred Wieser" />
-<meta itemprop="name" content="Fred Wieser | Fred Wieser" />
-<meta name="application-name" content="Fred Wieser | Fred Wieser" />
-<meta property="og:site_name" content="Fred Wieser" />
-
-<meta name="description" content="Professional Problem Solver">
-<meta itemprop="description" content="Professional Problem Solver" />
-<meta property="og:description" content="Professional Problem Solver" />
-<meta name="twitter:description" content="Professional Problem Solver" />
-
-<meta property="og:locale" content="en-gb" />
-<meta name="language" content="en-gb" />
-
-  <link rel="alternate" hreflang="en-gb" href="https://fredericowieser.github.io/" title="" />
-
-
-
-  <meta itemprop="image" content="https://fredericowieser.github.io/" />
-  <meta property="og:image" content="https://fredericowieser.github.io/" />
-  <meta name="twitter:image" content="https://fredericowieser.github.io/" />
-  <meta name="twitter:image:src" content="https://fredericowieser.github.io/" />
-
-
-
-
-
-<meta name="generator" content="Hugo 0.128.0">
-
-    
-
-    <link rel="canonical" href="https://fredericowieser.github.io/">
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Fred Wieser">
-    <link href="/index.xml" rel="feed" type="application/rss+xml" title="Fred Wieser">
-    <link href="/style.min.457a762023c72861206ec5bb10e1b9c48ab24b334b14f6149cddaafd400b6391.css" rel="stylesheet">
-    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
-
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-
-<link rel="manifest" href="https://fredericowieser.github.io/site.webmanifest">
-
-<meta name="msapplication-config" content="/browserconfig.xml">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="theme-color" content="#434648">
-
-    
-    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
-    integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" crossorigin="anonymous" />
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
-    integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA=="
-    crossorigin="anonymous"></script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-    integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" onload="renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false}
-      ]
-    });"></script>
-
-    
-  
-
-</head>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-    --body-bg-light: #fff;
-    --body-bg-dark: #121212;
-    --body-color-light: #000;
-    --body-color-dark: #fff;
-    --box-bg-light: #EEE;
-    --box-bg-dark: #333;
-    --text-color-light: hsl(215, 75%, 10%);
-    --text-color-dark: #fff;
-}
-
-body {
-    font-family: system-ui;
-    background-color: var(--body-bg-light);
-    color: var(--body-color-light);
-    transition: background-color 0.3s, color 0.3s;
-}
-
- 
-.pixelify-sans {
-    font-family: "Pixelify Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
- 
-.wrapper {
-     
-    margin: auto;
-    max-width: 90%;
-    position: relative;
-}
-
- 
-.blurry {
-    filter: blur(10px);
-    transition: filter 0.3s;
-}
-
- 
-.dashboard {
-    display: grid;
-    gap: 1ch;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-.dashboard > * {
-    border-radius: 1ch;
-    container-type: inline-size;
-    grid-column: var(--gc, auto);
-    grid-row: var(--gr, auto);
-    padding: 2ch;
-    transition: background-color 0.3s;
-    border: 1px solid var(--box-bg-dark);
-}
-
-.dashboard > * h2 {
-    margin-block: 0 1ch;
-}
-
-.dashboard ul {
-    all: unset;
-    display: grid;
-    gap: 1.5ch;
-}
-
-.dashboard ul li {
-    list-style-position: inside;
-}
-
-.profile {
-    font-size: 1.5em;
-    text-align: center;
-    border-radius: 1ch;
-    transition: background-color 0.3s;
-}
-
-.profile .bio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro-text, .recent-posts, .notable-projects {
-    border-radius: 1ch;
-    transition: background-color 0.3s;
-}
-
-@media (min-width: 768px) {
-    .dashboard {
-        grid-template-columns: repeat(7, 1fr);
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="Fred Wieser">
+  <meta name="twitter:description" content="This is my cool site">
+<meta name="application-name" content="Fred Wieser">
+<meta name="apple-mobile-web-app-title" content="Fred Wieser">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="Fred Wieser">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="Fred Wieser"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "http:\/\/localhost:1313\/","inLanguage": "en","author": {
+                "@type": "Person",
+                "name": "Fred Wieser"
+            },"description": "This is my cool site","name": "Fred Wieser"
     }
-    .profile { --gc: span 3; }
-    .intro-text { --gc: span 4; }
-    .recent-posts { --gc: span 3; }
-    .notable-projects { --gc: span 4; }
-}
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Fred Wieser">Fred Wieser</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts-by-Date </a><a class="menu-item" href="/categories/"> Posts-by-Category </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Fred Wieser">Fred Wieser</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts-by-Date</a><a class="menu-item" href="/categories/" title="">Posts-by-Category</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><style>
+         
+        .home-section {
+            margin-bottom: 3rem !important;
+            clear: both !important;
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .home-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .profile-section {
+            margin-bottom: 2rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .custom-content-section {
+            margin: 1.5rem 0 !important;
+            padding: 1rem 0 !important;
+            clear: both !important;
+        }
+
+        .posts-section {
+            margin: 3rem 0 !important;
+            clear: both !important;
+        }
+
+        .github-projects-section {
+            margin: 4rem 0 !important;
+            padding: 2rem 0 !important;
+            clear: both !important;
+        }
+
+        .github-projects-section h2 {
+            margin-bottom: 2rem !important;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+         
+        #github_projects {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .github-project-card {
+            border: 1px solid var(--border-color, rgba(128, 128, 128, 0.3)) !important;
+            border-radius: 8px !important;
+            padding: 1.5rem !important;
+            background-color: var(--card-background, transparent) !important;
+            box-shadow: 0 2px 4px var(--shadow-color, rgba(0,0,0,0.1)) !important;
+            transition: all 0.3s ease !important;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .github-project-card:hover {
+            border-color: var(--accent-color, #007acc) !important;
+            box-shadow: 0 4px 8px var(--shadow-color, rgba(0,0,0,0.15)) !important;
+            transform: translateY(-2px) !important;
+            text-decoration: none;
+        }
+
+        .github-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .github-project-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--accent-color, #007acc) !important;
+            margin: 0;
+            flex: 1;
+        }
+
+        .github-project-stats {
+            color: var(--text-muted, #666) !important;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        .github-project-description {
+            color: var(--text-color, inherit) !important;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+         
+        @media (min-width: 768px) {
+            #github_projects {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+         
+        @media (prefers-color-scheme: dark) {
+            .github-project-card {
+                border-color: rgba(255, 255, 255, 0.2) !important;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+            }
+            
+            .github-project-card:hover {
+                box-shadow: 0 4px 8px rgba(0,0,0,0.4) !important;
+            }
+        }
+
+        [data-theme="dark"] .github-project-card,
+        .dark .github-project-card,
+        body.dark .github-project-card {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+        }
+
+         
+        .single.summary {
+            border: 1px solid var(--border-color, rgba(128, 128, 128, 0.3)) !important;
+            border-radius: 8px !important;
+            padding: 1.5rem !important;
+            margin-bottom: 2rem !important;
+            background-color: var(--card-background, transparent) !important;
+            box-shadow: 0 2px 4px var(--shadow-color, rgba(0,0,0,0.1)) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .single.summary:hover {
+            border-color: var(--accent-color, #007acc) !important;
+            box-shadow: 0 4px 8px var(--shadow-color, rgba(0,0,0,0.15)) !important;
+            transform: translateY(-2px) !important;
+        }
+
+         
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-size: 1.1rem;
+            color: var(--text-muted, #666);
+        }
+
+         
+        .home-section h2 {
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+            font-size: inherit !important;
+            font-weight: bold !important;
+            text-decoration: underline !important;
+        }
+
+        .home-section h2::after {
+            content: ":";
+        }
+
+        .github-projects-section h2 {
+            margin-bottom: 2rem !important;
+            text-align: left !important;
+            font-size: inherit !important;
+            font-weight: bold !important;
+            text-decoration: underline !important;
+        }
+
+        .github-projects-section h2::after {
+            content: ":";
+        }
+
+        
+
+    </style>
+
+    <div class="page home" data-home="posts"><section class="home-section profile-section"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="Posts-by-Date">
+                    <img src="/profile_hu_37a723422d7ac487.webp" alt="Profile Picture" class="avatar-img" />
+                </a></div><h1 class="home-title">Fred Wieser</h1><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/fredericowieser" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://linkedin.com/in/frederico-wieser" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/fredericowieser" title="YouTube" target="_blank" rel="noopener noreffer me"><i class="fab fa-youtube fa-fw" aria-hidden="true"></i></a><a href="mailto:frederico.wieser@proton.me" title="Email" rel="me"><i class="far fa-envelope fa-fw" aria-hidden="true"></i></a></div></div>
+</section><section class="home-section custom-content-section">
+                    <div class="single">
+                        <div class="content" id="custom-content"><p>I am currently finishing my <strong>MSc in Computational Statistics and Machine Learning at UCL</strong>. Prior to this, I obtained a BSc in Theoretical Physics at UCL, during which I started to get more interested in Computers than Physics 🤦. After my BSc, I worked for 3 years doing professional software engineering for both a startup laser technology company, and an event-driven trading systems company for sports betting.</p>
+<p>I am currently completing my Master&rsquo;s thesis under the guidance of <a href="http://www0.cs.ucl.ac.uk/staff/Jun.Wang/index.html" target="_blank" rel="noopener noreffer ">Prof. Jun Wang</a> and <a href="https://zfountas.com" target="_blank" rel="noopener noreffer ">Dr. Zafeirios Fountas</a> as part of being a Research Intern at <a href="https://noahlab.com.hk/#/home" target="_blank" rel="noopener noreffer ">Huawei&rsquo;s Reinforcement Learning Lab (Noah&rsquo;s Ark)</a>.</p>
+<p>Outside of work, I also enjoy coding, F1, board games, and art. If you&rsquo;re interested in connecting contact me below. I am always open to discussing new projects, ideas, or collaborations.</p>
+<p>📝 <strong>Curriculum Vitae</strong></p>
+<ul>
+<li><a href="/cv.pdf" rel="">Open PDF</a></li>
+</ul>
+<p>📧 <strong>E-Mails:</strong></p>
+<ul>
+<li>General: <a href="mailto:frederico.wieser@proton.me" rel="">frederico.wieser@proton.me</a></li>
+<li>Academic: <a href="mailto:zcapfwi@ucl.ac.uk" rel="">zcapfwi@ucl.ac.uk</a></li>
+</ul>
+<p>👥 <strong>Social Links:</strong></p>
+<ul>
+<li><a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreffer ">🐱 Github</a></li>
+<li><a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreffer ">💼 Linkedin</a></li>
+<li><a href="https://huggingface.co/fredericowieser" target="_blank" rel="noopener noreffer ">🤗 Hugging Face</a></li>
+<li><a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreffer ">🐦 Twitter</a></li>
+<li><a href="https://www.youtube.com/@FredericoWieser" target="_blank" rel="noopener noreffer ">📺 Youtube</a></li>
+</ul>
+</div>
+                    </div>
+                </section><section class="home-section posts-section">
+                <h2>Recent Blog Posts</h2><style>
+     
+    .single.summary {
+        border: 1px solid var(--border-color, rgba(128, 128, 128, 0.3)) !important;
+        border-radius: 8px !important;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+         
+        background-color: var(--card-background, transparent) !important;
+        box-shadow: 0 2px 4px var(--shadow-color, rgba(0,0,0,0.1)) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .single.summary:hover {
+        border-color: var(--accent-color, #007acc) !important;
+        box-shadow: 0 4px 8px var(--shadow-color, rgba(0,0,0,0.15)) !important;
+        transform: translateY(-2px) !important;
+    }
+
+     
+    .single.summary .featured-image-preview {
+        margin-bottom: 1rem !important;
+        border-radius: 4px !important;
+        overflow: hidden !important;
+    }
+
+     
+    .single.summary .single-title {
+        margin-bottom: 0.75rem !important;
+        padding-bottom: 0.5rem !important;
+        border-bottom: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+    }
+
+    .single.summary .single-title a {
+        color: var(--text-color, inherit) !important;
+        text-decoration: none !important;
+    }
+
+    .single.summary .single-title a:hover {
+        color: var(--accent-color, #007acc) !important;
+    }
+
+     
+    .single.summary .post-meta {
+        margin-bottom: 1rem !important;
+        padding: 0.5rem 0 !important;
+        font-size: 0.9rem !important;
+        color: var(--text-muted, inherit) !important;
+        opacity: 0.8;
+    }
+
+     
+    .single.summary .content {
+        margin-bottom: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+     
+    .single.summary .post-footer {
+        padding-top: 1rem !important;
+        border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .single.summary .post-footer a {
+        color: var(--accent-color, #007acc) !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+    }
+
+    .single.summary .post-footer a:hover {
+        text-decoration: underline !important;
+    }
+
+     
+    .single.summary .post-tags {
+        margin-top: 0.5rem !important;
+    }
+
+    .single.summary .post-tags a {
+        background-color: var(--tag-background, rgba(128, 128, 128, 0.1)) !important;
+        color: var(--text-color, inherit) !important;
+        padding: 0.2rem 0.5rem !important;
+        border-radius: 3px !important;
+        text-decoration: none !important;
+        font-size: 0.8rem !important;
+        margin-left: 0.25rem !important;
+        border: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+    }
+
+    .single.summary .post-tags a:hover {
+        background-color: var(--accent-color, #007acc) !important;
+        color: var(--accent-text, white) !important;
+        border-color: var(--accent-color, #007acc) !important;
+    }
+
+     
+    @media (prefers-color-scheme: dark) {
+        .single.summary {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+        }
+        
+        .single.summary:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4) !important;
+        }
+        
+        .single.summary .post-tags a {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+    }
+
+     
+    [data-theme="dark"] .single.summary,
+    .dark .single.summary,
+    body.dark .single.summary {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    
+    [data-theme="dark"] .single.summary .post-tags a,
+    .dark .single.summary .post-tags a,
+    body.dark .single.summary .post-tags a {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+    }
 </style>
 
-
-<script>
-(() => {
-    "use strict";
-    const LS_THEME_KEY = "theme";
-    const THEMES = {
-        LIGHT: "light",
-        DARK: "dark",
-        AUTO: "auto",
-    };
-
-    const body = document.body;
-    const config = body.getAttribute("data-theme");
-
-    const getThemeState = () => {
-        const lsState = localStorage.getItem(LS_THEME_KEY);
-        if (lsState) return lsState;
-
-        let state;
-        switch (config) {
-            case THEMES.DARK:
-                state = THEMES.DARK;
-                break;
-            case THEMES.LIGHT:
-                state = THEMES.LIGHT;
-                break;
-            case THEMES.AUTO:
-            default:
-                state = window.matchMedia("(prefers-color-scheme: dark)").matches
-                    ? THEMES.DARK
-                    : THEMES.LIGHT;
-                break;
-        }
-        return state;
-    };
-
-    const initTheme = (state) => {
-        if (state === THEMES.DARK) {
-            document.documentElement.classList.add(THEMES.DARK);
-            document.documentElement.classList.remove(THEMES.LIGHT);
-        } else {
-            document.documentElement.classList.remove(THEMES.DARK);
-            document.documentElement.classList.add(THEMES.LIGHT);
-        }
-    };
-
-    
-    initTheme(getThemeState());
-    requestAnimationFrame(() => body.classList.remove("notransition"));
-
-    const toggleTheme = () => {
-        const state = getThemeState();
-        if (state === THEMES.DARK) {
-            localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
-            initTheme(THEMES.LIGHT);
-        } else {
-            localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
-            initTheme(THEMES.DARK);
-        }
-    };
-
-    window.addEventListener("DOMContentLoaded", () => {
-        
-        const lamp = document.getElementById("mode");
-        lamp.addEventListener("click", (event) => {
-            event.preventDefault();
-            toggleTheme();
-        });
-
-        
-        const cbox = document.getElementById("menu-trigger");
-        cbox.addEventListener("change", function () {
-            const area = document.querySelector(".wrapper");
-            if (!area) return;
-            if (this.checked) {
-                area.classList.add("blurry");
-            } else {
-                area.classList.remove("blurry");
-            }
-        });
-    });
-})();
-</script>
-
-<body data-theme="auto" class="notransition">
-
-<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
-
-<div class="navbar" role="navigation">
-        <nav class="menu" aria-label="Main Navigation">
-            <a href="https://fredericowieser.github.io/" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
-viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
-stroke-linejoin="round" class="feather feather-home">
-<title>Home</title>
-<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-<polyline points="9 22 9 12 15 12 15 22"></polyline>
-</svg>
-                <a href="https://fredericowieser.github.io/" class="logo pixelify-sans">FRED WIESER</a>
-            </a>
-
-            
-            <input type="checkbox" id="menu-trigger" class="menu-trigger" />
-            <label for="menu-trigger">
-                <span class="menu-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
-                </span>
-            </label>
-
-            <div class="trigger">
-                <ul class="trigger-container">
-                    
-                    
-                    <li>
-                        <a class="menu-link active"
-                           href="/">
-                            Home
-                        </a>
-                        
-                    </li>
-                    
-                    <li>
-                        <a class="menu-link "
-                           href="/blog/">
-                            Blog
-                        </a>
-                        
-                    </li>
-                    
-                    <li class="menu-separator">
-                        <span>|</span>
-                    </li>
-                    
-                    
-                </ul>
-                <a id="mode" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
-<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
-                </a>
-            </div>
-        </nav>
-    </div>
-
-    <div class="wrapper">
-    <div class="dashboard">
-        <div class="profile">
-            <div class="bio">
-                
-
-
-<div class="author">
-    
-    
-    <img class="author-avatar" src="/profile_hu1e40b877e809587767301b1372a125c8_41193_1024x1024_fill_q75_h2_box_smart1.webp"/>
-    
-    <h1 class="author-name">Fred Wieser</h1>
-    
-</div>
-
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me" title="Github">🐱 Github</a><br>
-                <a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me" title="Linkedin">💼 Linkedin</a><br>
-                <a href="https://huggingface.co/fredericowieser" target="_blank" rel="noopener noreferrer me" title="Hugging Face">🤗 Hugging Face</a><br>
-                <a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me" title="Twitter">🐦 Twitter</a><br>
-                <a href="https://www.youtube.com/@FredericoWieser" target="_blank" rel="noopener noreferrer me" title="Youtube">📺 Youtube</a><br>
-            </div>
-        </div>
-
-        <div class="intro-text">
-            <p>
-                Hi 👋,  I am a currently finishing my MSc in Computational Statistics and Machine Learning at UCL. Prior to this, I obtained a BSc in Theoretical Physics at UCL, during which I started to get more interested in Computers than Physics 🤦. After my BSc, I worked for 3 years doing professional software enginnering for both a startup laser technology company, and an event-driven trading systems company for sports betting.
-            </p>
-            <br>
-            <p>
-                I am currently completing my Master's thesis under the guidance of <a href="http://www0.cs.ucl.ac.uk/staff/Jun.Wang/index.html">Prof. Jun Wang</a> and <a href="https://zfountas.com">Dr. Zafeirios Fountas</a> as part of being a Research Intern at <a href="https://noahlab.com.hk/#/home">Huawei’s Reinforcement Learning Lab (Noah’s Ark)</a>.
-            </p>
-            <br>
-            <p>
-                Outside of work, I also enjoy coding, F1, board games, and art. If you're interested in connecting contact me below. I am always open to discussing new projects, ideas, or collaborations.
-            </p>
-            <br>
-            <p>
-                📧 E-Mails:
-            </p>
-            <p>
-                General: <a href="mailto:frederico.wieser@proton.me" target="_blank" rel="noopener noreferrer me" title="Email">frederico.wieser@proton.me</a><br>
-            </p>
-            <p>
-                Academic: <a href="mailto:zcapfwi@ucl.ac.uk" target="_blank" rel="noopener noreferrer me" title="Email">zcapfwi@ucl.ac.uk</a><br>
-            </p>
-        </div>
-
-        <div class="recent-posts">
-            <h3>Recent Blog Posts</h3>
-            <h3 class="posts-item-note"></h3>
-            
-            
-            
-            
-            <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/blog/2-llama-impact-hackathon-2024/">Llama Impact Hackathon</a>
-    </h4>
-    
-    
-    
-    <time class="post-item-meta" datetime="2024-11-17T00:00:00Z">
-        Nov 2024
-        
-    </time>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2024/11/llama_impact_hackathon/">Llama Impact Hackathon</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fred Wieser</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-11-17">2024-11-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/personal/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Personal</a></span></div><div class="content"><p>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</p></div><div class="post-footer">
+        <a href="/2024/11/llama_impact_hackathon/">Read More</a></div>
 </article>
+<style>
+     
+    .single.summary {
+        border: 1px solid var(--border-color, rgba(128, 128, 128, 0.3)) !important;
+        border-radius: 8px !important;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+         
+        background-color: var(--card-background, transparent) !important;
+        box-shadow: 0 2px 4px var(--shadow-color, rgba(0,0,0,0.1)) !important;
+        transition: all 0.3s ease !important;
+    }
 
-            
-            <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/blog/1-making-a-hugo-website/">Making A Hugo Website</a>
-    </h4>
-    
-    
-    
-    <time class="post-item-meta" datetime="2024-07-25T00:00:00Z">
-        Jul 2024
+    .single.summary:hover {
+        border-color: var(--accent-color, #007acc) !important;
+        box-shadow: 0 4px 8px var(--shadow-color, rgba(0,0,0,0.15)) !important;
+        transform: translateY(-2px) !important;
+    }
+
+     
+    .single.summary .featured-image-preview {
+        margin-bottom: 1rem !important;
+        border-radius: 4px !important;
+        overflow: hidden !important;
+    }
+
+     
+    .single.summary .single-title {
+        margin-bottom: 0.75rem !important;
+        padding-bottom: 0.5rem !important;
+        border-bottom: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+    }
+
+    .single.summary .single-title a {
+        color: var(--text-color, inherit) !important;
+        text-decoration: none !important;
+    }
+
+    .single.summary .single-title a:hover {
+        color: var(--accent-color, #007acc) !important;
+    }
+
+     
+    .single.summary .post-meta {
+        margin-bottom: 1rem !important;
+        padding: 0.5rem 0 !important;
+        font-size: 0.9rem !important;
+        color: var(--text-muted, inherit) !important;
+        opacity: 0.8;
+    }
+
+     
+    .single.summary .content {
+        margin-bottom: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+     
+    .single.summary .post-footer {
+        padding-top: 1rem !important;
+        border-top: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .single.summary .post-footer a {
+        color: var(--accent-color, #007acc) !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+    }
+
+    .single.summary .post-footer a:hover {
+        text-decoration: underline !important;
+    }
+
+     
+    .single.summary .post-tags {
+        margin-top: 0.5rem !important;
+    }
+
+    .single.summary .post-tags a {
+        background-color: var(--tag-background, rgba(128, 128, 128, 0.1)) !important;
+        color: var(--text-color, inherit) !important;
+        padding: 0.2rem 0.5rem !important;
+        border-radius: 3px !important;
+        text-decoration: none !important;
+        font-size: 0.8rem !important;
+        margin-left: 0.25rem !important;
+        border: 1px solid var(--border-color, rgba(128, 128, 128, 0.2)) !important;
+    }
+
+    .single.summary .post-tags a:hover {
+        background-color: var(--accent-color, #007acc) !important;
+        color: var(--accent-text, white) !important;
+        border-color: var(--accent-color, #007acc) !important;
+    }
+
+     
+    @media (prefers-color-scheme: dark) {
+        .single.summary {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+        }
         
-    </time>
+        .single.summary:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4) !important;
+        }
+        
+        .single.summary .post-tags a {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+    }
+
+     
+    [data-theme="dark"] .single.summary,
+    .dark .single.summary,
+    body.dark .single.summary {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    
+    [data-theme="dark"] .single.summary .post-tags a,
+    .dark .single.summary .post-tags a,
+    body.dark .single.summary .post-tags a {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+</style>
+
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/2024/07/make_a_hugo_site/">Making A Hugo Website</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fred Wieser</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-25">2024-07-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/technical/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Technical</a></span></div><div class="content"><p>Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</p></div><div class="post-footer">
+        <a href="/2024/07/make_a_hugo_site/">Read More</a></div>
 </article>
-
-            
-            
-        </div>
-
-        <div class="notable-projects">
-            <h3>GitHub Projects</h3>
+</section><section class="home-section github-projects-section">
+            <h2>Popular GitHub Projects</h2>
             <div id="github_projects">
-                
+                <div class="loading-spinner">
+                    <p>Loading GitHub projects...</p>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
-    </div><footer class="footer">
-    <span class="footer_item"> </span>
-    &nbsp;
 
-    <div class="footer_social-icons">
-<a href="https://github.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
-    title="Github">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-</a>
-<a href="https://twitter.com/fredericowieser" target="_blank" rel="noopener noreferrer me"
-    title="Twitter">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-    </path>
-</svg>
-</a>
-<a href="https://www.youtube.com/@fredericowieser" target="_blank" rel="noopener noreferrer me"
-    title="Youtube">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-    </path>
-    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-</svg>
-</a>
-<a href="mailto:frederico.wieser@proton.me" target="_blank" rel="noopener noreferrer me"
-    title="Email">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-</svg>
-</a>
-<a href="https://www.linkedin.com/in/frederico-wieser/" target="_blank" rel="noopener noreferrer me"
-    title="Linkedin">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-</svg>
-</a>
-</div>
-    <div>
-        Please excuse/notify me of any errors or mistakes at frederico.wieser@proton.me
-    </div>
-    <small class="footer_copyright">
-        © 2025 Fred Wieser.
-        
-    </small>
-</footer><a href="#" title="Go to top" id="totop">
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
-    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
-</svg>
-
-</a>
-
-
-    
-
-
-
-
-    
-    
-        
-    
-
-    
-    
-        
-    
-
-
-
-    
-    <script src="https://fredericowieser.github.io/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
-
-    
-
-<script>
-        window.onload = function () {
-            let script = document.createElement("script");
-            script.src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js";
-            document.body.appendChild(script);
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             
             const sortOnKey = (key, desc) => {
                 return (a, b) => {
@@ -530,46 +595,90 @@ stroke-linejoin="round" class="feather feather-home">
                 }
             };
 
-            String.prototype.replaceAt = function (index, replacement) {
-                return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-            }
+            
             fetch("https://api.github.com/users/fredericowieser/repos?per_page=100")
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('GitHub API request failed');
+                    }
+                    return response.json();
+                })
                 .then(projects => {
                     
                     projects = projects.sort(sortOnKey("stargazers_count", true));
                     
+                    
                     let projectsDiv = document.getElementById("github_projects");
                     
+                    
                     projectsDiv.innerHTML = "";
-                    projectsDiv.classList = "";
-                    for (let i = 0; i < 3; i++) {
-                        let projectDiv = document.createElement("div");
-                        projectDiv.classList = "card hoverable";
+                    
+                    
+                    const projectsToShow = Math.min(4, projects.length);
+                    
+                    for (let i = 0; i < projectsToShow; i++) {
                         let project = projects[i];
-                        if (project != undefined) {
-                            if (project.description == null)
-                                project.description = "No description.";
-                            project.name = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
-                            projectDiv.innerHTML = `
-                                <div class="media">
-                                    <div class="media-body">
-                                        <a href="${project.html_url}" onclick="plausible('${project.name}')" target="_blank">
-                                            <strong class="d-block text-gray-dark">${project.name}</strong>
-                                        </a>
-                                        <div class="stars" style="float:right;">
-                                            ${project.language === "Jupyter Notebook" ? "Python" : project.language} | ${project.stargazers_count} ⭐
-                                        </div>
+                        if (project) {
+                            
+                            if (!project.description || project.description === null) {
+                                project.description = "No description available.";
+                            }
+                            
+                            
+                            let displayName = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
+                            
+                            
+                            let language = project.language;
+                            if (language === "Jupyter Notebook") {
+                                language = "Python";
+                            } else if (!language) {
+                                language = "Text";
+                            }
+                            
+                            
+                            let projectCard = document.createElement("a");
+                            projectCard.href = project.html_url;
+                            projectCard.target = "_blank";
+                            projectCard.rel = "noopener noreferrer";
+                            projectCard.className = "github-project-card";
+                            
+                            projectCard.innerHTML = `
+                                <div class="github-project-header">
+                                    <h3 class="github-project-title">${displayName}</h3>
+                                    <div class="github-project-stats">
+                                        ${language} | ${project.stargazers_count} ⭐
                                     </div>
-                                    <p>${project.description}</p>
                                 </div>
+                                <p class="github-project-description">${project.description}</p>
                             `;
-                            projectsDiv.appendChild(projectDiv);
+                            
+                            projectsDiv.appendChild(projectCard);
                         }
                     }
+                })
+                .catch(error => {
+                    console.error('Error fetching GitHub projects:', error);
+                    let projectsDiv = document.getElementById("github_projects");
+                    projectsDiv.innerHTML = `
+                        <div class="loading-spinner">
+                            <p>Unable to load GitHub projects at this time.</p>
+                        </div>
+                    `;
                 });
-        };
-    </script>
-</body>
+        });
+    </script></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Fred Wieser</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
 
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/typeit/index.umd.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script src="/lib/cookieconsent/cookieconsent.min.js"></script><script>window.config={"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"Hi there, and welcome to my corner of the internet!"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script src="/js/theme.min.js"></script></body>
 </html>
