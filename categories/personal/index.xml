@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Personal - Category - Fred Wieser</title>
-        <link>http://localhost:1313/categories/personal/</link>
+        <link>http://example.org/categories/personal/</link>
         <description>Personal - Category - Fred Wieser</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>frederico.wieser@proton.me (Fred Wieser)</managingEditor>
-            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/personal/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/categories/personal/" rel="self" type="application/rss+xml" /><item>
     <title>Llama Impact Hackathon</title>
-    <link>http://localhost:1313/2024/11/llama_impact_hackathon/</link>
+    <link>http://example.org/2024/11/llama_impact_hackathon/</link>
     <pubDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>Fred Wieser</author>
-    <guid>http://localhost:1313/2024/11/llama_impact_hackathon/</guid>
+    <guid>http://example.org/2024/11/llama_impact_hackathon/</guid>
     <description><![CDATA[<p>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</p>]]></description>
 </item>
 </channel>
