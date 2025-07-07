@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data Structures and Algorithms - Fred Wieser</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/2025/05/dsa/">
+  <meta property="og:site_name" content="Fred Wieser">
+  <meta property="og:title" content="Data Structures and Algorithms">
+  <meta property="og:description" content="For the sake of this guide to the knowledge of data structures and algortihms (DSA) needed to do well in interview scenarios or genearally for having strong fundementats in this core Computer Science subject we will be using a mix of C&#43;&#43; and Python throughout this interview. The idea is to convey the deeper workings of some of these topics with C&#43;&#43; and then present a compressed version in Python.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-29T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/logo.png">
+  <meta name="twitter:title" content="Data Structures and Algorithms">
+  <meta name="twitter:description" content="For the sake of this guide to the knowledge of data structures and algortihms (DSA) needed to do well in interview scenarios or genearally for having strong fundementats in this core Computer Science subject we will be using a mix of C&#43;&#43; and Python throughout this interview. The idea is to convey the deeper workings of some of these topics with C&#43;&#43; and then present a compressed version in Python.">
+<meta name="application-name" content="Fred Wieser">
+<meta name="apple-mobile-web-app-title" content="Fred Wieser">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/2025/05/dsa/" /><link rel="prev" href="http://localhost:1313/2024/11/llama_impact_hackathon/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data Structures and Algorithms",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/2025\/05\/dsa\/"
+        },"genre": "posts","wordcount":  934 ,
+        "url": "http:\/\/localhost:1313\/2025\/05\/dsa\/","datePublished": "2025-05-29T00:00:00+00:00","dateModified": "2025-05-29T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fred Wieser"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Fred Wieser">Fred Wieser</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/" title="Go to homepage"> Home </a><a class="menu-item" href="/posts/"> Posts-by-Date </a><a class="menu-item" href="/categories/"> Posts-by-Category </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Fred Wieser">Fred Wieser</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/" title="Go to homepage">Home</a><a class="menu-item" href="/posts/" title="">Posts-by-Date</a><a class="menu-item" href="/categories/" title="">Posts-by-Category</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data Structures and Algorithms</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Fred Wieser</a></span>&nbsp;<span class="post-category">included in <a href="/categories/technical/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Technical</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-05-29">2025-05-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;934 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#fundementals">Fundementals</a>
+      <ul>
+        <li><a href="#process-of-problem-solving">Process of Problem Solving</a></li>
+      </ul>
+    </li>
+    <li><a href="#programming-basics">Programming Basics</a>
+      <ul>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#c">C++</a></li>
+      </ul>
+    </li>
+    <li><a href="#time-complexity-and-bigo">Time Complexity and BigO</a></li>
+    <li><a href="#data-structures-ds">Data Structures (DS)</a>
+      <ul>
+        <li><a href="#strings">Strings</a></li>
+        <li><a href="#static-and-dynamic-arrays">Static and Dynamic Arrays</a></li>
+        <li><a href="#linked-lists">Linked Lists</a></li>
+        <li><a href="#sets">Sets</a></li>
+        <li><a href="#hash-maps">Hash Maps</a></li>
+        <li><a href="#bitset">Bitset</a></li>
+        <li><a href="#deque">Deque</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#queue">Queue</a></li>
+      </ul>
+    </li>
+    <li><a href="#algorithms">Algorithms</a>
+      <ul>
+        <li><a href="#maximum-subarray-sum">Maximum Subarray Sum</a></li>
+        <li><a href="#bubble-sort">Bubble Sort</a></li>
+        <li><a href="#counting-sort">Counting Sort</a></li>
+        <li><a href="#binary-search">Binary Search</a></li>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#classic-problems-in-dsa">Classic Problems in DSA</a>
+      <ul>
+        <li><a href="#solution-1-on3">Solution 1 $O(n^3)$</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>For the sake of this guide to the knowledge of data structures and algortihms (DSA) needed to do well in interview scenarios or genearally for having strong fundementats in this core Computer Science subject we will be using a mix of C++ and Python throughout this interview. The idea is to convey the deeper workings of some of these topics with C++ and then present a compressed version in Python.</p>
+<p>Generally this guide preassumes a knowledge of Calculus and some Maths.</p>
+<p>Here are some example outlines of a Python and C++ projects:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div></div>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// solution comes here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Generally the main idea behind being good at DSA is to have practical knowedge and good abilities to implement a program practically and efficiently as well as knowing the solution theoretically and from an abstract place.</p>
+<p>I want to also note that alot of this post has been inspired and taken some parts from the following sources:</p>
+<ul>
+<li>Competitive Programmer’s Handbook, Antti Laaksonen, Draft July 3, 2018:
+<ul>
+<li><a href="https://cses.fi/book/book.pdf" target="_blank" rel="noopener noreffer ">https://cses.fi/book/book.pdf</a></li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/playlist?list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu" target="_blank" rel="noopener noreffer ">Data structures playlist - YouTube</a></li>
+<li></li>
+</ul>
+<p>The way this post adds to that body of my knowledge is try and make an all encompassing post, building on the sources, that explains a lot of the concepts people need to know for interviews for jobs where you are expected to program.</p>
+<p>Cracking The Coding Interview Key Sections</p>
+<ul>
+<li>
+<p>Introduction Parts I-VI should be revisisted before interviews.</p>
+</li>
+<li>
+<p>VII: Technical Questions gives a rough outline of how to generally solve all the prolems that you come across</p>
+</li>
+<li>
+<p>Interview Questions</p>
+<ul>
+<li>
+<p>Ch 1-4, on DS is important</p>
+</li>
+<li>
+<p>Ch 5-6, not really as imporant</p>
+</li>
+<li>
+<p>Ch 8, Recusion &amp; DP important</p>
+</li>
+<li>
+<p>Ch 7 &amp; 9 &amp; 11, skim</p>
+</li>
+<li>
+<p>Ch 10, sorting important</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Knowledge Based, just skim</p>
+</li>
+<li>
+<p>Ch 16-17, Additional Review Problems v. good</p>
+</li>
+<li>
+<p>Advanced Topics, all the following are fairly important</p>
+<ul>
+<li>
+<p>Useful Math</p>
+</li>
+<li>
+<p>Topological Sort</p>
+</li>
+<li>
+<p>Dijkstra&rsquo;s Algorithm</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="fundementals">Fundementals</h2>
+<h3 id="process-of-problem-solving">Process of Problem Solving</h3>
+<p><strong>Process for problem solving I use in Leetcode</strong></p>
+<ul>
+<li>Read the problem twice to understand it – (ask clarifying questions)</li>
+<li>Try think basically of different ways to solve problem</li>
+<li>Think end-to-end (E2E) of the best solutions based on complexity</li>
+<li>Write the Algorithm from patterns in drawing</li>
+<li>Code it out</li>
+<li>Try and Improve it once you think you’re finished</li>
+<li>Go through other solutions (even if you answered correctly).</li>
+</ul>
+<h2 id="programming-basics">Programming Basics</h2>
+<h3 id="python">Python</h3>
+<h3 id="c">C++</h3>
+<p><strong>Basics</strong></p>
+<p>Compile:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">g++ -std<span class="o">=</span>c++11 -O2 -Wall test.cpp -o test</span></span></code></pre></div></div>
+<p>Creating a 64-Bit Integer:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">long</span> <span class="kt">long</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">123456789123456789LL</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Creating a 64-Bit Floating Point:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">double</span></span></span></code></pre></div></div>
+<p>Creating a ???-Bit Floating Point:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">long</span> <span class="kt">double</span></span></span></code></pre></div></div>
+<p>Comparing Floating Numbers:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-9</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// a and b are equal
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>Give a shorter name to a datatype:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-cpp">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vi</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">pi</span><span class="p">;</span></span></span></code></pre></div></div>
+<p><strong>Macros</strong></p>
+<p>P9 COMPETITIVE PORGRRAMMING HANDBOOK</p>
+<h2 id="time-complexity-and-bigo">Time Complexity and BigO</h2>
+<p>Big O notation gives an upper bound of the complexity in the worst case scenario, helping us to quantify performance as the input size becomes arbitrarily large.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Constant Time</td>
+          <td>$O(1)$</td>
+      </tr>
+      <tr>
+          <td>Logarithmic Time</td>
+          <td>$O(log(n))$</td>
+      </tr>
+      <tr>
+          <td>Linear Time</td>
+          <td>$O(n)$</td>
+      </tr>
+      <tr>
+          <td>Linearithmic Time</td>
+          <td>$O(n log(n))$</td>
+      </tr>
+      <tr>
+          <td>Quadratic Time</td>
+          <td>$O(n^2)$</td>
+      </tr>
+      <tr>
+          <td>Cubic Time</td>
+          <td>$O(n^3)$</td>
+      </tr>
+      <tr>
+          <td>Exponential Time</td>
+          <td>$O(x^n), x &gt; 1$</td>
+      </tr>
+      <tr>
+          <td>Factorial Time</td>
+          <td>$O(n!)$</td>
+      </tr>
+  </tbody>
+</table>
+<p>BINARY SEARCH BIG O SOLUTION EXAMPLE AND OTHERS</p>
+<p>P20 COMPETITIVE PORGRRAMMING HANDBOOK
+P21 COMPETITIVE PORGRRAMMING HANDBOOK</p>
+<h2 id="data-structures-ds">Data Structures (DS)</h2>
+<p>A data strucutre is a way of organising data so that it can be used effectively.</p>
+<p>Some reasons why we should use them:</p>
+<ul>
+<li>
+<p>Essential ingredients in powerful algorithms</p>
+</li>
+<li>
+<p>Help to manage and organise data</p>
+</li>
+<li>
+<p>Can make your code &ldquo;cleaner&rdquo;</p>
+</li>
+</ul>
+<p><u><em><strong>Abstract data types (ADT)</strong></em></u></p>
+<p>An ADT is an abstraction of a DS which provides only the interface to which a DS must adhere to. Their is nothing to specify which language and how it should be implemented.</p>
+<p>Examples:</p>
+<table>
+  <thead>
+      <tr>
+          <th>ADT</th>
+          <th>DS</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>List</td>
+          <td>Dynamic Array, Linked List</td>
+      </tr>
+      <tr>
+          <td>Queue</td>
+          <td>Linked List based Queue, Array based Queue, Stack Based Queue</td>
+      </tr>
+      <tr>
+          <td>Map</td>
+          <td>Tree Map, Hash Map / Hash Table</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="strings">Strings</h3>
+<h3 id="static-and-dynamic-arrays">Static and Dynamic Arrays</h3>
+<p>A static array is a fixed sized container with n elements indexable from the range $i = [0, n-1]$, where the index is some integer.</p>
+<p>A dynamic array builds on the idea of a static arry by allowing the array to grow and shrink in size. Dynamic arrays are implemented ussualy by usssing static arrays.</p>
+<p>IMPLEMENT DYNAMIC ARRAY WITH C++</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Static Array</th>
+          <th>Dynamic Array</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Access</td>
+          <td>$O(1)$</td>
+          <td>$O(1)$</td>
+          <td>Due to arrays being indexable.</td>
+      </tr>
+      <tr>
+          <td>Search</td>
+          <td>$O(n)$</td>
+          <td>$O(n)$</td>
+          <td>Potentially have to traverse all the elements in the array.</td>
+      </tr>
+      <tr>
+          <td>Insertion</td>
+          <td>N/A</td>
+          <td>$O(n)$</td>
+          <td>We potentially to shift all the elements over and potentially copy over the data.</td>
+      </tr>
+      <tr>
+          <td>Appending</td>
+          <td>N/A</td>
+          <td>$O(1)$</td>
+          <td>NOT SURE?</td>
+      </tr>
+      <tr>
+          <td>Deletion</td>
+          <td>N/A</td>
+          <td>$O(n)$</td>
+          <td>Same as Insertion.</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="linked-lists">Linked Lists</h3>
+<p>A linked list is a sequential list of nodes that holds data which point to the other nodes also contatining data.</p>
+<p>MERMAID DIAGRAM</p>
+<p>Uses of Linked Lists:</p>
+<ul>
+<li>
+<p>Implementation of a List / Queue / Stack / Hash Map &hellip;</p>
+</li>
+<li>
+<p>Making Circular Lists</p>
+</li>
+<li>
+<p>Modelling Real World Objects (Trains)</p>
+</li>
+</ul>
+<p>Terminology:</p>
+<ul>
+<li>
+<p><strong>Head</strong>: The first node in a linked list</p>
+</li>
+<li>
+<p><strong>Tail</strong>: The last node in a linked list</p>
+</li>
+<li>
+<p><strong>Pointer</strong>: Reference to another node</p>
+</li>
+<li>
+<p><strong>Node</strong>: An object containing data and pointer(s)</p>
+</li>
+</ul>
+<p>Singly linked lists only hold a reference to the next node.</p>
+<p>Doubly linked lists at any node hold a reference to the next and previous node.</p>
+<p>In implementations we ussually in all linked lists also maintain a reference to the head and tail of the linked list.</p>
+<p>MERMAID DIAGRAM</p>
+<h3 id="sets">Sets</h3>
+<h3 id="hash-maps">Hash Maps</h3>
+<h3 id="bitset">Bitset</h3>
+<h3 id="deque">Deque</h3>
+<h3 id="stack">Stack</h3>
+<h3 id="queue">Queue</h3>
+<h2 id="algorithms">Algorithms</h2>
+<blockquote>
+<p><strong>The basic problem of sorting</strong> : &ldquo;Given an array that contains $n$ elements, your task is to sort the elements in increasing order.&rdquo;</p></blockquote>
+<h3 id="maximum-subarray-sum">Maximum Subarray Sum</h3>
+<h3 id="bubble-sort">Bubble Sort</h3>
+<h3 id="counting-sort">Counting Sort</h3>
+<h3 id="binary-search">Binary Search</h3>
+<h3></h3>
+<h2 id="classic-problems-in-dsa">Classic Problems in DSA</h2>
+<p>P21 COMPETITIVE PORGRRAMMING HANDBOOK</p>
+<h3 id="solution-1-on3">Solution 1 $O(n^3)$</h3>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-05-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/2025/05/dsa/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2024/11/llama_impact_hackathon/" class="prev" rel="prev" title="Llama Impact Hackathon"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Llama Impact Hackathon</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Fred Wieser</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/contrib/auto-render.min.js"></script><script src="/lib/katex/contrib/copy-tex.min.js"></script><script src="/lib/katex/contrib/mhchem.min.js"></script><script src="/lib/cookieconsent/cookieconsent.min.js"></script><script>window.config={"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>
