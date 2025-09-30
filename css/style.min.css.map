@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/Users/fredericowieser/Documents/flow/___blog/___website",
+	"sourceRoot": "/media/flow/Flow-Server/___blog/___website",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/lib/modern-normalize/modern-normalize.css",

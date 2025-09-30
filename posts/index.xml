@@ -1,24 +1,48 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Fred Wieser</title>
-        <link>http://localhost:1313/posts/</link>
+        <link>https://fredericowieser.github.io/posts/</link>
         <description>All Posts | Fred Wieser</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>frederico.wieser@proton.me (Fred Wieser)</managingEditor>
-            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Thu, 29 May 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>frederico.wieser@proton.me (Fred Wieser)</webMaster><lastBuildDate>Tue, 30 Sep 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://fredericowieser.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ASAL&#43;&#43;: Guiding Evolution of Artificial Life Using Vision-Language Models</title>
+    <link>https://fredericowieser.github.io/2025/09/asal_plus_plus/</link>
+    <pubDate>Tue, 30 Sep 2025 00:00:00 &#43;0000</pubDate>
+    <author>Fred Wieser</author>
+    <guid>https://fredericowieser.github.io/2025/09/asal_plus_plus/</guid>
+    <description><![CDATA[This post contains the gifs from the ASAL++ runs, with their corresponding prompts.
+Temporal vs NonTemporal Comparison Primordial Soup Non-Temporal Iteration 1
+primordial soup
+Iteration 2
+Symbiotic crystalline networks
+Iteration 3
+Bioluminescent fractal fungal networks
+Iteration 4
+Bioluminescent symbiotic mycelial clusters
+Iteration 5
+Symbiotic bioluminescent fungal networks subterranean architecture
+Iteration 6
+Subterranean bioluminescent mineral processing colonies
+Iteration 7
+Subterranean fungal networks mineralbased symbiosis
+Iteration 8
+Mineralbased bioluminescent mycelial networks]]></description>
+</item>
+<item>
     <title>Llama Impact Hackathon</title>
-    <link>http://localhost:1313/2024/11/llama_impact_hackathon/</link>
+    <link>https://fredericowieser.github.io/2024/11/llama_impact_hackathon/</link>
     <pubDate>Sun, 17 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>Fred Wieser</author>
-    <guid>http://localhost:1313/2024/11/llama_impact_hackathon/</guid>
-    <description><![CDATA[<p>This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.</p>]]></description>
+    <guid>https://fredericowieser.github.io/2024/11/llama_impact_hackathon/</guid>
+    <description><![CDATA[This past weekend, I had the incredible opportunity to participate in the Meta Llama Impact Hackathon in London, and what an intense experience it turned out to be! The event brought together some of the most passionate developers and innovators I&rsquo;ve seen in quite a while, with participants flying in from as far as Switzerland and the USA. The stakes were high, with substantial prizes on the line, and you could feel the energy in the room.]]></description>
 </item>
 <item>
     <title>Making A Hugo Website</title>
-    <link>http://localhost:1313/2024/07/make_a_hugo_site/</link>
+    <link>https://fredericowieser.github.io/2024/07/make_a_hugo_site/</link>
     <pubDate>Thu, 25 Jul 2024 00:00:00 &#43;0000</pubDate>
     <author>Fred Wieser</author>
-    <guid>http://localhost:1313/2024/07/make_a_hugo_site/</guid>
-    <description><![CDATA[<p>Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.</p>]]></description>
+    <guid>https://fredericowieser.github.io/2024/07/make_a_hugo_site/</guid>
+    <description><![CDATA[Hugo is a static site generator for creating fast and fairly complex websites, written in Go. When using you do not have to be familiar with Go and it is even possible to only have to write Markdown files when making your own website. When I have used it though I have found it very useful to know some HTML/CSS and Javascript, these tools allow you to customise your website much more and have helped me to tailor the websites I&rsquo;ve made in the past to have great features such as tools to pull information from other sites to then be displayed or even to implement your own commenting system.]]></description>
 </item>
 </channel>
 </rss>
